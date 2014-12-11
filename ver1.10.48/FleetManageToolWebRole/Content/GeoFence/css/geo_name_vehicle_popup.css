@@ -1,0 +1,273 @@
+﻿/********geo_name_vehicle_popup******/
+
+.geo_name_vehicle_vehicle_sel label {
+    top:-6px;
+    text-align:left;
+    line-height:23px;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+.geo_name_vehicle_vehicle_sel td{
+    line-height:5px;
+    text-align:left;
+}
+
+#geo_name_vehicle_background {
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background:#FFF;
+    opacity:0.7;
+    filter:Alpha(Opacity="70");
+    /* 发现百度地图的z-index是1100，所以此处加1 */
+    z-index:1101;
+}
+
+#geo_name_vehicle_popup {
+    position:fixed;
+    background-image:url('../images/popup_bk.png');
+    width:465px;
+    height:430px;
+    z-index:1102;
+    opacity:1;
+    filter:Alpha(Opacity="100");
+    top:100px;
+    margin-left:50%;
+    left:-232px;
+}
+
+.geo_name_vehicle_title {
+    position:absolute;
+    top:10px;
+    left:16px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+#geo_name_vehicle_cls {
+    position:absolute;
+    float:right;
+    top:12px;
+    right:20px;
+    width:16px;
+    height:16px;
+    background-image:url('../images/InfoClose.png');
+    cursor:pointer;
+}
+
+.geo_name_vehicle_con_name {
+    position:absolute;
+    top:45px;
+    left:16px;
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+#geo_name_vehicle_input_name {
+    position:absolute;
+    top:70px;
+    left:16px;
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    width: 390px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+
+
+
+
+
+.geo_name_vehicle_con_center {
+    position:absolute;
+    top:125px;
+    left:16px;
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+#geo_name_vehicle_input_center {
+    position:absolute;
+    top:150px;
+    left:16px;
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    width: 390px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.geo_name_vehicle_con_vehicle {
+    position:absolute;
+    top:215px;
+    left:16px;
+    width:300px;
+    height:34px;
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.geo_name_vehicle_vehicle_sel {
+    background-color:#fff;
+    position:absolute;
+    height:123px;
+    width:420px;
+    left:16px;
+    top:240px;
+    border-width:1px;
+    border-color:#777d86;
+    border-style:solid;
+    background-color:#FFF;
+    overflow-y:auto;
+}
+
+.geo_name_vehicle_con_save {
+    /*20140228caoyandong*/
+    line-height:22px;
+    border-width:1px;
+    border-color:#808080;
+    border-style:solid;
+    background-color:white;
+    border-radius:5px;
+    cursor:pointer;
+    position:absolute;
+    right: 114px;
+    height: 25px;
+    width: 75px;
+    bottom: 17px;
+    letter-spacing:2px;
+}
+
+.geo_name_vehicle_con_save div {
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    cursor:pointer;
+    letter-spacing:2px;
+    /*20140228caoyandong*/
+    /*position:absolute;*/
+    height: 25px;
+    right: 21px;
+    bottom: -1px;
+}
+
+#geo_name_vehicle_con_cancel {
+    line-height:24px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    border-width:1px;
+    border-color:#808080;
+    border-style:solid;
+    background-color:#FFF;
+    border-radius:5px;
+    cursor:pointer;
+    position:absolute;
+    right: 23px;
+    height: 24px;
+    width: 75px;
+    bottom: 17px;
+    letter-spacing:2px;
+}
+
+.GeoFence_Vehicle {
+    font-family:Microsoft YaHei;
+    font-size:12px;
+    text-align:left;
+    letter-spacing:1px;
+    width:250px;
+}
+
+.show_name_right {
+    position:absolute;
+    left:430px;
+    width:19px;
+    height:19px;
+    top:74px;
+    color:red;
+}
+/*li-xiaofei*/
+.show_name_must_fill {
+    position:absolute;
+    left:415px;
+    width:19px;
+    height:19px;
+    top:74px;
+    color:red;
+}
+.show_name_center_must_fill {
+    position:absolute;
+    left:415px;
+    width:19px;
+    height:19px;
+    top:154px;
+    color:red;
+}
+
+
+
+.show_location_right {
+    position:absolute;
+    left:430px;
+    width:19px;
+    height:19px;
+    top:154px;
+    color:red;
+}
+
+
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+}
+.validateTips { 
+    border: 1px solid transparent;
+    margin-top:0px; 
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+.ui-button .ui-button-text {
+    line-height:1.1em;
+}
+.ui-dialog {
+    position:fixed; 
+}
+.ui-button {
+    margin-top:0em;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+        background:#f3f3f3;
+}

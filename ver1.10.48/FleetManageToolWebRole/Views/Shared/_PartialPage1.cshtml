@@ -1,0 +1,970 @@
+﻿@{
+    Resource.ResourceLoader.SetCurrentThreadCulture(Session);
+}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <!--chenyangwen 2014/3/8-->
+    <!--<meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />-->
+    <meta http-equiv="Expires" content="30000" />
+    
+    <title>@Resource.String.ihpleD_String_cn.common_FleetManagerTool</title>
+   
+</head>
+<body>
+    <link href = "@Url.Content("~/Content/Common/css/common.css")?@Session["version"]" +  rel="stylesheet" type="text/css">
+    @Styles.Render("~/Content/themes/base/css")
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")?@Session["version"]" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.24.min.js")?@Session["version"]" type="text/javascript"></script>
+    <script src = "@Url.Content("~/Content/Common/js/common.js")?@Session["version"]" type="text/javascript"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=90QmZMzM5kBE6s8cYFSyoARH"></script>
+    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+    
+    <div style="height: 500px; display: none; margin: 0px auto; top: 400px; width: 948px; left: -474px; text-align: center;" id="wait">
+        <div style="padding-top: 300px;">
+            <!-- <img src="@Url.Content("~/Content/Common/images/load.gif")"/> -->
+            <script language="javascript">
+                var p = 0;
+                var color = "lightskyblue";
+                for (i = 0; i < 30; i++) document.write("<input class=proccess>");
+                window.setInterval("process();", 50);
+                function process() {
+                    var element = $(".proccess").get(p);
+                    element.style.background = color;
+                    p += 1;
+                    if (p == 30) {
+                        p = 0;
+                        if ("lightskyblue" == color) {
+                            color = "white";
+                        } else {
+                            color = "lightskyblue";
+                        }
+                    }
+                }
+            </script>
+            @*20140308caoyandong-jquery*@
+            @*等待动画字体统一liangjiajie20140325*@
+            <div style="font-size: 15pt; font-family: 'Microsoft YaHei'">@Resource.String.ihpleD_String_cn.common_LoadingWait</div>
+        </div>
+    </div>
+    <div id="body_position">
+        <div class="cls_title">
+
+            <div id="title_logo" class="cls_title_logo">
+                <div id="title_logo_img" class="cls_title_logo_normal detectCanvas">
+                    <img id="logo_img" src="@Url.Content("~/Content/Tenant/images/Logo.png")" />
+                </div>
+
+            </div>
+            <div id="title_update" class="cls_title_update" data-label="paragraph">
+				    <span style="color:black;font-size:11pt;">
+                   @Resource.String.ihpleD_String_cn.common_FleetManagerTool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				   </span>
+                    <span class="common_span3">
+                        @Resource.String.ihpleD_String_cn.page_location_lastUpdatedLabel 
+                    </span>
+                    <span id="title_update_time" class="common_span3" ></span>
+            </div>
+            <div id="tile_seach" class="cls_tile_seach">
+                @*wenti*@
+                <div>
+                    <input type="text" class="cls_search" id="id_search" value="" style="border-radius: 5px;" disabled="disabled" />
+                </div>
+                <div id="tile_seach_img" >
+                    <img src=@Url.Content("~/Content/Common/images/title_seach.png") style=" position: absolute; right: 0; width: 100%; height: 27px; ">
+                    <div id="tile_seach_input" class="cls_tile_seach_input">
+                        @*modified by caoyandong*@
+                        @if (("Landing" == ViewBag.Title) || ("EditShapes" == ViewBag.Title))
+                        { 
+                            <input id="Drug" placeholder ="@Resource.String.ihpleD_String_cn.page_geofence_NoGeoOrLocationInput" type="text" style="position:absolute; padding:0; width:82%; border:none; background:none; outline:none; font-family:'Microsoft YaHei';background-color:#fff;top:4px;left:5px;margin:0;" value ="@ViewBag.strSelect" />
+                        }
+                        else if ("Vehicles Page" == ViewBag.Title)
+                        {
+                            <input id="Drug" placeholder ="@Resource.String.ihpleD_String_cn.common_NoVehicleorInput_pageDetail" type="text" style="position:absolute; padding:0; width:82%; border:none; background:none; outline:none; font-family:'Microsoft YaHei';background-color:#fff;top:4px;left:5px;margin:0;" value ="@ViewBag.strSelectName" />
+                        }
+                        else {
+                            <input id="Drug" placeholder ="@Resource.String.ihpleD_String_cn.common_NoVehicleorLocationInput" type="text" style="position:absolute; padding:0; width:82%; border:none; background:none; outline:none; font-family:'Microsoft YaHei';background-color:#fff;top:4px;left:5px;margin:0;" value ="@ViewBag.strSelectName" />
+                        }
+                    </div>
+                </div>
+                <div id="tile_seach_icon" class="cls_tile_seach_icon">
+                    <div id="tile_seach_icon_img" class="cls_tile_seach_icon_img detectCanvas"></div>
+                </div>
+            </div>
+            
+
+            <div id="title_line" class="cls_title_line">
+                <div class="cls_title_line_line"></div>
+            </div>
+            <div id="title_logout" class="cls_title_logout">
+                
+                        @Resource.String.ihpleD_String_cn.page_shared_headerUserArea_logOut
+                    
+            </div>
+        </div>
+        @*20140304caoyandong start*@
+        <div class="cls_main">
+            <div id="u_left" class="cls_left">
+                @*<div id="common_dashboard_cover" class="common_dashboard_cover"></div>*@
+                <div id="left_dashboard" class="cls_left_dashboard" style="cursor: pointer;">
+                    <div id="left_dashboard_img" class=" @ViewBag.Left_Dashboard_Background">
+
+                        <div id="left_dashboard_text" class="cls_left_dashboard_text">
+                            <div id="left_Dashboard_text_img" class="cls_left_Dashboard_text_img detectCanvas"></div>
+                            <p class="common_p_center">
+                                <span class="common_span1">
+                                    @Resource.String.ihpleD_String_cn.common_dashboard
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                @*<div id="common_vehicle_cover"class="common_vehicle_cover"></div>*@
+                <div id="left_Vehicles" class="cls_left_dashboard" style="cursor: pointer;">
+                    <div id="left_Vehicles_img" class="@ViewBag.Left_Vehicles_Background">
+                        <div id="left_Vehicles_text" class="cls_left_Vehicles_text" aria-checked="false" aria-dropeffect="popup">
+                            <div id="left_Vehicles_text_img" class="cls_left_Vehicles_text_img detectCanvas"></div>
+                            <p class="common_p_center">
+                                <span class="common_span1">
+                                    @Resource.String.ihpleD_String_cn.page_vehicle_index
+
+                                </span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                @*<div id="common_geofence_cover" class="common_geofence_cover"></div>*@
+                <div id="left_GeoFence" class="cls_left_dashboard" style="cursor: pointer;">
+                    <div id="left_GeoFence_img" class="@ViewBag.Left_GeoFence_Background">
+                        <div id="left_GeoFence_text" class="cls_left_GeoFence_text">
+                            <div id="left_GeoFence_text_img" class="cls_left_GeoFence_text_img detectCanvas"></div>
+                            <p class="common_p_center">
+                                <span class="common_span1">
+                                    @*&nbsp;&nbsp;*@ @Resource.String.ihpleD_String_cn.common_geofence
+                                    <!--fengpan 20140324 #872-->
+
+                                </span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                @*<div id="common_report_cover" class="common_report_cover"></div>*@
+                <div id="left_Reports" class="cls_left_dashboard" style="cursor: pointer;">
+                    <div id="left_Reports_img" class="@ViewBag.Left_Reports_Background">
+                        <div id="left_Reports_text" class="cls_left_Reports_text">
+                            <div id="left_Reports_text_img" class="cls_left_Reports_text_img detectCanvas"></div>
+                            <p class="common_p_center">
+                                <span class="common_span1">
+                                    @Resource.String.ihpleD_String_cn.page_report_Report
+
+                                </span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                @*<div id="common_setting_cover" class="common_setting_cover"></div>*@
+                <div id="left_settings" class="cls_left_dashboard" style="cursor: pointer;">
+                    <div id="left_settings_img" class="@ViewBag.Left_Settings_Background">
+                        <div id="left_settings_text" class="cls_left_settings_text">
+                            <div id="left_settings_text_img" class="cls_left_settings_text_img detectCanvas"></div>
+                            <p class="common_p_center">
+                                <span class="common_span1">
+                                    @Resource.String.ihpleD_String_cn.common_set
+
+                                </span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*20140304caoyandong end*@
+            <div id="u_right" class="cls_right">
+                @RenderSection("featured", required: false)
+                <section class="content-wrapper main-content clear-fix" style="width:100%;height:100%">
+                    <script>
+                        var language_string = "@ViewBag.Language".replace(/&quot;/g, "'");
+                        if (language_string != "") {
+                            LanguageScript = eval(language_string)[0].Shared;
+                        }
+                    </script>
+                    @RenderBody()
+                </section>
+            </div>
+            <div class="clear"></div>
+            <div id="u_bottom" class="cls_bottom">
+                <!--mabiao for 20140304 #601-->
+                @*<div id="version_icon"></div>*@
+                <div id="version">@Resource.String.ihpleD_String_cn.common_Version:@Session["version"].ToString().Substring(0, @Session["version"].ToString().LastIndexOf('.'))</div>
+                @*<a href="#" style="color: #888; font-family: 'Microsoft YaHei'; font-size: 10pt; text-decoration: none;">@Resource.String.ihpleD_String_cn.common_privacyPolicy</a>&nbsp;&nbsp;|&nbsp;&nbsp;*@
+              <a href="../../Content/Term_of_use_April_2014_cn_.html" target="_blank" style="color: #888; font-family: 'Microsoft YaHei'; font-size: 10pt; text-decoration: none;">@Resource.String.ihpleD_String_cn.page_settings_about_termsOfUseButton</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="#" style="color: #888; font-family: 'Microsoft YaHei'; font-size: 10pt; text-decoration: none;">@Resource.String.ihpleD_String_cn.common_AboutFleetManager</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="../../Content/Help_Host.html" target="_blank" style="color: #888; font-family: 'Microsoft YaHei'; font-size: 10pt; text-decoration: none;">@Resource.String.ihpleD_String_cn.page_footer_helpcenter</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        @*var language_string = "@ViewBag.Language".replace(/&quot;/g, "'");
+        if (language_string != "") {
+            LanguageScript = eval(language_string)[0].Shared;
+        }*@
+        TrailerDistance = Number(@Session["TrailerDistance"]);
+        var allurl = window.location.href;
+        var noParamUrl = allurl.split('?');
+        var index = noParamUrl[0].lastIndexOf('/');
+        var url = noParamUrl[0].substr(index + 1);
+        $(document).ready(function () {
+            //console.log("Version : " + "@Session["version"]");
+            var searchid;
+            var autoUrl = "";
+            var marker = null;
+            var pageFlag = false;
+            if (null != url && url != "Landing"
+                && url != "SetLocation" && url != "EditShape") {
+                autoUrl = "/@Session["companyID"]/Home/GetVehiclesDrugList";
+                pageFlag = true;
+            }
+            else {
+                autoUrl = "/@Session["companyID"]/Home/GetGeoFenceDrugList";
+                pageFlag = false;
+            }
+            var mapPointList = [{ title: "", address: "", lat: 0, lng: 0, zoom: 0 }];
+            $("#Drug").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: autoUrl + "?time=" + (new Date()).getTime(),// 20140310Gaoqingbo
+                        dataType: "json",
+                        data: {
+                            key: $.trim(request.term)
+                        },
+                        success: function (data) {
+                            if (data.length != 0) {
+                                if (pageFlag == true) {
+                                    response($.map(data, function (item) {
+
+                                        $("#id_search").hide();
+                                        //Add by LiYing start
+                                        var license = "";
+                                        var vin = "";
+                                        var selectlabel;
+                                        var selectvalue;
+                                        var textValue;
+                                        if (item.licence != null && item.licence.length > 0) {
+                                            license = ", " + item.licence;
+                                        }
+                                        if (item.vin != null && item.vin.length > 0) {
+                                            if (vin.toLowerCase() == "unknown vin") {
+                                                vin = "";
+                                            } else {
+                                                vin = ", " + item.vin;
+                                            }
+                                            
+                                        }
+                                        selectlabel = item.name + license + vin;
+                                        selectvalue = item.name + license + vin;
+                                        //Add by LiYing start 2014-07-11
+                                        var key = $.trim(request.term);
+                                        if (item.name.indexOf(key) > -1) {
+                                            textValue = item.name;
+                                        } else if (item.licence != null && item.licence.length > 0) {
+                                            textValue = item.licence;
+                                        }
+                                        //Add by LiYing End 2014-07-11
+                                        //Add by LiYing end
+                                        return {
+                                            label: selectlabel,
+                                            value: item.pkid,
+                                            text: textValue
+                                        }
+                                    }));
+                                } else {
+                                    response($.map(data, function (item) {
+
+                                        $("#id_search").hide();
+                                        return {
+                                            label: item,
+                                            value: item,
+                                            text: item
+                                        }
+                                    }));
+                                }
+                                
+                            }
+                            else {
+                                function getresult(results) {
+                                    // 判断状态是否正确
+                                    if (local.getStatus() == BMAP_STATUS_SUCCESS) {
+                                        mapPointList.length = 0;
+                                        for (var i = 0; i < results.getCurrentNumPois() ; i++) {
+                                            if (results.getPoi(i).point.lat != null || results.getPoi(i).point.lng != null ||
+                                               (results.getPoi(i).point.lat != 0 && results.getPoi(i).point.lng != 0)) {
+                                                var mapPoint = { title: "", address: "", lat: 0, lng: 0 };
+                                                mapPoint.title = results.getPoi(i).title;
+                                                mapPoint.address = results.getPoi(i).address;
+                                                mapPoint.lng = results.getPoi(i).point.lng;
+                                                mapPoint.lat = results.getPoi(i).point.lat;
+                                                mapPoint.zoom = getZoomlvlByAddress(results.getPoi(i).address, results.getPoi(i).title);
+                                                mapPointList.push(mapPoint);
+                                            }
+                                        }
+                                        if (null != url && url.toLowerCase() != "detail") {
+                                            response($.map(mapPointList, function (item) {
+
+                                                $("#id_search").hide();
+                                                return {
+                                                    label: item.title + "," + item.address + "",
+                                                    value: item.title + "," + item.address + "",
+                                                    text: item.title + "," + item.address + "",
+                                                }
+                                            }));
+                                        }
+                                        
+                                    }
+                                    else {
+                                        response($.map("", function (item) {
+
+                                            $("#id_search").hide();
+                                            return {
+                                                label: "",
+                                                value: "",
+                                                text: ""
+                                            }
+                                        }));
+                                        mapPointList.length = 0;
+                                    }
+                                }
+                                var opts = { onSearchComplete: getresult };
+
+                                var local = new BMap.LocalSearch("全国", opts);
+                                local.search(request.term);
+                            }
+                        }
+                    });
+                },
+                select: function (e, ui) {
+                    //Modify by LiYing start
+                    var selectVal = ui.item.label;
+                    searchid = ui.item.value + "";
+                    setMapPoint($.trim(searchid));
+                   // setMapPoint($.trim(selectVal));
+                   //setMapPoint_select(searchid);
+                    //Modify by LiYing end
+                }
+                // 20140310Gaoqingbo
+                ,
+                cacheLength: 0
+            });
+       
+            
+            var searchID_keypress;
+            var keypressFirst = true;
+            function setMapPoint(select, splitFlag, keypressFlag) {
+                var initSelect;
+                initSelect = select;
+                if (keypressFirst) {
+                    keypressFirst = false;
+
+                    select = select.replace(/[^a-zA-Z0-9\_\-\s\,\.\u4e00-\u9fa5]/g, '');
+                    if (null == select || $.trim(select) == "") {
+                        //20140304caoyandong
+                        $("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01226");
+                    setTimeout(function () {
+                        $("#id_search").show();
+                    }, 100);
+                    //alert("aaa");
+                    return;
+                }
+                var selectAll = select;
+                splitFlag ? splitFlag = false : splitFlag = true;
+                var selectSplit = "";
+                if (splitFlag) {
+                    selectSplit = selectAll.split(",")[0];
+                } else {
+                    selectSplit = selectAll;
+                }
+
+                //Add by LiYing for Bug 1889 start
+                var selectFromDrop = false;
+                //Add by LiYing for Bug 1889 End
+                var selectVal = selectSplit;
+                var searchUrl = "";
+                var jumpUrl = "";
+                var ajaxUrl = "";
+                if (null != url && url != "Landing"
+                    && url != "SetLocation" && url != "EditShape") {
+                    searchUrl = "/@Session["companyID"]/Home/SearchVehiclesByID";
+                        jumpUrl = "/@Session["companyID"]/DashBoard/Home";
+                        ajaxUrl = "/@Session["companyID"]/DashBoard";
+                        if (keypressFlag) {
+                            searchUrl = "/@Session["companyID"]/Home/SearchVehicles";
+                        }
+                    }
+                    else {
+                        searchUrl = "/@Session["companyID"]/Home/SearchGeoFence";
+                        jumpUrl = "/@Session["companyID"]/GeoFence/Landing";
+                        ajaxUrl = "/@Session["companyID"]/GeoFence";
+                    }
+
+                    $.ajax({
+                        url: searchUrl,
+                        dataType: "json",
+                        data: {
+                            selectcontent: selectVal
+                        },
+                        success: function (data) {
+                            var jumpAllUrl = "";
+                            //Add by LiYing start
+							var xx = "";
+							var yy = "";
+							var dataLoacation = "";
+							var radius = "";
+							var addressFlag = false;
+							var searchContinueFlag = false;
+							var searchName = $.trim($("#Drug").val());
+							//回车事件
+							if(data.id != undefined){
+							    selectFromDrop = false;
+								if (data.gpsList.length > 0) {
+									if (null != data.gpsList[0] || (0 != data.gpsList[0].lat && 0 != data.gpsList[0].lng)) {
+										dataLocation = data.gpsList;
+										xx = dataLocation[0].lng;
+										yy = dataLocation[0].lat;
+										//如果是电子围栏，那么还有半径的参数，用来设定比例尺！
+										radius = dataLocation[0].radius;
+										select = data.id;
+										
+										searchContinueFlag = true;
+										
+									} else {
+										//20140304caoyandong
+										$("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01226");
+										setTimeout(function () {
+											$("#id_search").show();
+										}, 100);
+										//alert("1");
+									}
+                                    addressFlag = false;
+                                } else {
+                                    //Modify by LiYing start
+                                    if (null != url && url.toLowerCase() != "detail") {
+                                        addressFlag = true;
+                                    } else {
+                                        addressFlag = false;
+                                        $("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01240");
+                                        setTimeout(function () {
+                                            $("#id_search").show();
+                                        }, 100);
+                                    }
+
+                                    //addressFlag = true;
+                                    //Modify by LiYing End
+                                }
+
+							} else {
+							//下拉选择时间
+							    selectFromDrop = true;
+								if(data.length != 0) {
+									if (null != data[0] || 0 != data[0].lat && 0 != data[0].lng) {
+
+										xx = data[0].lng;
+										yy = data[0].lat;
+										//如果是电子围栏，那么还有半径的参数，用来设定比例尺！
+										radius = data[0].radius;
+										
+										searchContinueFlag = true;
+									} else {
+										//20140304caoyandong
+										$("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01226");
+										setTimeout(function () {
+											$("#id_search").show();
+										}, 100);
+										//alert("1");
+									}
+									addressFlag = false;
+								} else {
+									addressFlag = true;
+								}
+							}
+							
+							if(searchContinueFlag) {
+                                //Add by LiYing Start
+                                if (null != url && url == "Detail") {
+                                    var Detailurl = "/@Session["companyID"]/Vehicles/Detail?VehicleID=" + select;
+                                    location.href = Detailurl;
+                                }
+
+                                //Add by LiYing End
+
+                                else if (null != url && url != "Landing"
+									&& url != "SetLocation" && url != "EditShape") {
+									var point = new BMap.Point(xx, yy);
+									if (point == null || (point.lat == 0 && point.lng == 0)) {
+										//20140304caoyandong
+										$("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01226");
+										setTimeout(function () {
+											$("#id_search").show();
+										}, 100);
+									}
+										//车辆位置在（0.x,0.y）
+									else if (0 < point.lng && 1 > point.lng && 0 < point.lat && 1 > point.lat) {
+										$("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01293");
+											setTimeout(function () {
+												$("#id_search").show();
+											}, 100);
+										}
+										else {
+
+										//在Home画面能够检索的车辆的场合，设置地图中心点
+											if (url == "Home") {
+
+												//设定地图中心：在Home画面能够检索的车辆的场合，显示汽车在中心，并且比例尺为14
+												setMapNewView(point.lng, point.lat, 14);
+												//modified by caoyandongv
+												List_Map_Change();
+												// modified by gaoqingbo 
+												$("#id_search").hide();
+												$("#Home_choose_vehicle option").each(function (index, optionObj) {
+
+													if (optionObj.value == $.trim(select)) {
+														getTripLogData(optionObj.value);
+														$("#Home_choose_vehicle option[value='" + optionObj.value + "']").attr("selected", "selected");
+														$("#Home_choose_vehicle").selectpicker('refresh');
+														return false;
+													}
+												});
+
+												//一下两行代码是触发地图上的mark显示popup
+												$("#showPopUpForSearch")[0].value = $.trim(select);
+												$('#showPopUpForSearch').trigger("click");
+											}
+
+												//在非Home画面能够检索的车辆的场合，画面必须跳转！显示汽车在中心，并且比例尺为14，showType为1，表示汽车
+											else {
+
+												$.ajax({
+													type: "POST",
+													async: false,
+													url: ajaxUrl + "/SearchPara",
+													contentType: "application/x-www-form-urlencoded",
+													data: { zoom: 14, showType: 1, lat: point.lat, lng: point.lng, strSelect: searchName, strSelectID: select},
+													dataType: "json",
+													success: function (msg) {
+													}
+												});
+
+												//#930若在编辑态进行搜索操作，需确认跳转liangjiajie20140402
+												WaitHrefUrl = jumpUrl;
+												if (1 <= HrefFlag) {
+													user_dialog_href();
+													return;
+												}
+
+												location.href = jumpUrl;
+											}
+										}
+								}
+								else {
+									//在Landing画面能够检索到电子围栏的场合，设置地图中心点
+									if (url == "Landing") {
+
+										//根据围栏半径radius调整合适的地图比例尺
+										var zoom = getZoomByRadius(radius);
+
+										//设定地图中心
+										setMapNewView(xx, yy, zoom);
+										List_Map_Change();
+									}
+
+										//在非Landing画面能够检索到电子围栏的场合，画面必须跳转！显示围栏在中心，并且比例尺调整，showType为2，表示围栏
+									else {
+
+										//根据围栏半径radius调整合适的地图比例尺
+										var zoom = getZoomByRadius(radius);
+
+										$.ajax({
+											type: "POST",
+											async: false,
+											url: ajaxUrl + "/SearchPara",
+											contentType: "application/x-www-form-urlencoded",
+											data: { zoom: zoom, showType: 2, lat: yy, lng: xx, strSelect: select },
+											dataType: "json",
+											success: function (msg) {
+											}
+										});
+
+										//#930若在编辑态进行搜索操作，需确认跳转liangjiajie20140402
+										WaitHrefUrl = jumpUrl;
+										if (1 <= HrefFlag) {
+											user_dialog_href();
+											return;
+										}
+										location.href = jumpUrl;
+									}
+								}
+							}
+							
+							//检索不到车辆或者电子围栏的场合
+							if(addressFlag) {
+                                //如果是从下拉中选择地址，则搜索关键字不去掉特殊字符
+                                if (selectFromDrop) {
+                                    selectAll = initSelect;
+                                }
+                                var flag = false;
+                                for (var i = 0; i < mapPointList.length; i++) {
+                                    var point = mapPointList[i];
+                                    var nameaddr = point.title + "," + point.address + "";
+                                    if (selectAll == nameaddr) {
+
+                                        //设置地图中心点
+                                        if (url == "Landing" || url == "Home") {
+
+                                            //设定地图中心
+                                            setMapNewView(point.lng, point.lat, point.zoom);
+                                            List_Map_Change();
+                                            arrLocationforMarker = [];
+                                            setTimeout(function () { addMarkerForCommonAddress(BMapObj, point.lng, point.lat); }, 1000);
+                                            var a = { lng: point.lng, lat: point.lat, zoom: point.zoom };
+                                            arrLocationforMarker.push(a);
+                                        }
+                                        else {
+                                            //电子围栏页面不能检索到电子围栏的场合
+                                            if (ajaxUrl.indexOf("DashBoard") < 0) {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    async: false,
+                                                    url: ajaxUrl + "/SearchPara",
+                                                    contentType: "application/x-www-form-urlencoded",
+                                                    data: { zoom: point.zoom, showType: 3, lat: point.lat, lng: point.lng, strSelect: searchName},
+                                                    dataType: "json",
+                                                    success: function (msg) {
+                                                    }
+                                                });
+                                            } else {
+                                                //其他页面不能检索到车辆的场合
+                                                $.ajax({
+                                                    type: "POST",
+                                                    async: false,
+                                                    url: ajaxUrl + "/SearchPara",
+                                                    contentType: "application/x-www-form-urlencoded",
+                                                    data: { zoom: point.zoom, showType: 3, lat: point.lat, lng: point.lng, strSelect: searchName, strSelectID: searchName },
+                                                    dataType: "json",
+                                                    success: function (msg) {
+                                                    }
+                                                });
+                                            }
+
+                                            //需要跳转的场合，showType为3，表示普通地点
+                                            //#930若在编辑态进行搜索操作，需确认跳转liangjiajie20140402
+                                            WaitHrefUrl = jumpUrl;
+                                            if (1 <= HrefFlag) {
+                                                user_dialog_href();
+                                                return;
+                                            }
+                                            location.href = jumpUrl;
+                                        }
+
+                                        flag = true;
+                                        break;
+                                    }
+                                }
+                                if (!flag) {
+                                    function getresult(results) {
+                                        // 判断状态是否正确
+                                        if (local.getStatus() == BMAP_STATUS_SUCCESS) {
+                                            var flag = false;
+                                            //Search name and address match.
+                                            for (var i = 0; i < results.getCurrentNumPois() ; i++) {
+                                                var nameaddress = results.getPoi(i).title;
+                                                if (selectAll == nameaddress) {
+                                                    if (results.getPoi(i).point.lat != null || results.getPoi(i).point.lng != null ||
+                                                       (results.getPoi(i).point.lat != 0 && results.getPoi(i).point.lng != 0)) {
+                                                        var latitude = results.getPoi(i).point.lat;
+                                                        var longitude = results.getPoi(i).point.lng;
+
+                                                        //设置地图中心点
+                                                        if (url == "Landing" || url == "Home") {
+
+                                                            //设定地图中心
+                                                            var zoom = getZoomlvlByAddress(results.getPoi(i).address, results.getPoi(i).title);
+                                                            setMapNewView(longitude, latitude, zoom);
+
+                                                            //modified by caoyandong
+                                                            List_Map_Change();
+                                                            arrLocationforMarker = [];
+                                                            setTimeout(function () { addMarkerForCommonAddress(BMapObj, longitude, latitude); }, 1000);
+                                                            var a = { lng: longitude, lat: latitude, zoom: zoom };
+                                                            arrLocationforMarker.push(a);
+                                                        }
+                                                        else {
+
+                                                            var zoom = getZoomlvlByAddress(results.getPoi(i).address, results.getPoi(i).title);
+															//电子围栏页面不能检索到电子围栏的场合
+                                                            if (ajaxUrl.indexOf("DashBoard") < 0) {
+																$.ajax({
+																	type: "POST",
+																	async: false,
+																	url: ajaxUrl + "/SearchPara",
+																	contentType: "application/x-www-form-urlencoded",
+																	data: { zoom: zoom, showType: 3, lat: latitude, lng: longitude, strSelect: searchName },
+																	dataType: "json",
+																	success: function (msg) {
+																	}
+																});
+															} else {
+																//其他页面不能检索到车辆的场合
+																$.ajax({
+																	type: "POST",
+																	async: false,
+																	url: ajaxUrl + "/SearchPara",
+																	contentType: "application/x-www-form-urlencoded",
+																	data: { zoom: zoom, showType: 3, lat: latitude, lng: longitude, strSelect: searchName, strSelectID: searchName },
+																	dataType: "json",
+																	success: function (msg) {
+																	}
+																});
+															}
+
+                                                            //#930若在编辑态进行搜索操作，需确认跳转liangjiajie20140402
+                                                            WaitHrefUrl = jumpUrl;
+                                                            if (1 <= HrefFlag) {
+                                                                user_dialog_href();
+                                                                return;
+                                                            }
+                                                            location.href = jumpUrl;
+                                                        }
+                                                        flag = true;
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            if (!flag) {
+                                                //Search name match.
+                                                for (var i = 0; i < results.getCurrentNumPois() ; i++) {
+                                                    if (results.getPoi(i).point.lat != null || results.getPoi(i).point.lng != null ||
+                                                           (results.getPoi(i).point.lat != 0 && results.getPoi(i).point.lng != 0)) {
+                                                        var latitude = results.getPoi(i).point.lat;
+                                                        var longitude = results.getPoi(i).point.lng;
+
+                                                        //设置地图中心点
+                                                        if (url == "Landing" || url == "Home") {
+
+                                                            //设定地图中心
+                                                            var zoom = getZoomlvlByAddress(results.getPoi(i).address, results.getPoi(i).title);
+                                                            setMapNewView(longitude, latitude, zoom);
+
+                                                            //modified by caoyandong
+                                                            List_Map_Change();
+                                                            arrLocationforMarker = [];
+                                                            setTimeout(function () { addMarkerForCommonAddress(BMapObj, longitude, latitude); }, 1000);
+                                                            var a = { lng: longitude, lat: latitude, zoom: zoom };
+                                                            arrLocationforMarker.push(a);
+                                                        }
+                                                        else {
+
+                                                            var zoom = getZoomlvlByAddress(results.getPoi(i).address, results.getPoi(i).title);
+
+                                                            //电子围栏页面不能检索到电子围栏的场合
+                                                            if (ajaxUrl.indexOf("DashBoard") < 0) {
+																$.ajax({
+																	type: "POST",
+																	async: false,
+																	url: ajaxUrl + "/SearchPara",
+																	contentType: "application/x-www-form-urlencoded",
+																	data: { zoom: zoom, showType: 3, lat: results.getPoi(i).point.lat, lng: results.getPoi(i).point.lng, strSelect: searchName },
+																	dataType: "json",
+																	success: function (msg) {
+																	}
+																});
+															} else {
+																//其他页面不能检索到车辆的场合
+																$.ajax({
+																	type: "POST",
+																	async: false,
+																	url: ajaxUrl + "/SearchPara",
+																	contentType: "application/x-www-form-urlencoded",
+																	data: { zoom: zoom, showType: 3, lat: results.getPoi(i).point.lat, lng: results.getPoi(i).point.lng, strSelect: searchName, strSelectID: searchName },
+																	dataType: "json",
+																	success: function (msg) {
+																	}
+																});
+															}
+
+                                                            //#930若在编辑态进行搜索操作，需确认跳转liangjiajie20140402
+                                                            WaitHrefUrl = jumpUrl;
+                                                            if (1 <= HrefFlag) {
+                                                                user_dialog_href();
+                                                                return;
+                                                            }
+                                                            location.href = jumpUrl;
+                                                        }
+                                                        flag = true;
+                                                        break;
+                                                    }
+                                                }
+                                                if (!flag) {
+                                                    //20140304caoyandong
+                                                    $("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01226");
+                                                    setTimeout(function () {
+                                                        $("#id_search").show();
+                                                    }, 100);
+                                                    //alert("2");
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            //20140304caoyandong
+                                            $("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01240");
+                                            setTimeout(function () {
+                                                $("#id_search").show();
+                                            }, 100);
+                                            //alert("3");
+                                        }
+                                    }
+                                    var opts = { onSearchComplete: getresult };
+                                    var local = new BMap.LocalSearch("全国", opts);
+                                    local.search(selectVal);
+                                }
+                            }
+							
+                            if (!splitFlag) {
+                                $("#Drug").autocomplete("close");
+                            }
+
+                            keypressFirst = true;
+                        },
+                        failure: function () {
+                            //20140304caoyandong
+                            $("#id_search").attr("value", "@Resource.String.ihpleD_String_cn.error_e01240");
+                            setTimeout(function () {
+                                $("#id_search").show();
+                            }, 100);
+                            //alert("4");
+                            keypressFirst = true;
+                        }
+                    });
+                }
+               
+            }
+
+            function setMapNewView(lng, lat, zoom) {
+                //检索功能跳转时，清除地图上的Infowindow
+                var mapObj = BMapObj.get_mapObj();
+                var Panes = mapObj.getPanes();
+                $(Panes.floatPane.children).remove();
+                if (!zoom)
+                    var zoom = 14;
+                BMapObj.setNewMapView(lng, lat, zoom);
+            }
+
+            $("#Drug").keypress(function (e) {
+                var curKey = e.which;
+                //20140304caoyandong
+                if (curKey == 13) {
+                    $("#id_search").hide();
+                    setTimeout(function () {
+                        $("#id_search").hide();
+                    }, 4000);
+                    var keyValue = $("#Drug").val();
+                    setMapPoint($.trim(keyValue),true, true);
+                }
+                else {
+                    $("#id_search").hide();
+                }
+            });
+            //20140304caoyanong
+            $("#Drug").mousedown(function (e) {
+                $("#id_search").hide();
+            });
+            $("#Drug").blur(function (e) {
+                $("#id_search").hide();
+            });
+            $("#tile_seach_icon_img").click(function () {
+                var inputcontent = $("#Drug").val();
+                setMapPoint($.trim(inputcontent), true, true);
+            })
+        });
+            var GetCompanyID = function () {
+                var companyID = '@Session["companyID"]';
+            return companyID;
+        }
+        var GetRoleID = function () {
+            var roleID = '@Session["roleID"]';
+            return roleID;
+        }
+        //modified by caoyandong
+        function List_Map_Change() {
+            if (url == "Landing") {
+                $("#select_group").attr("value", '-1');
+                updateGeoFencesByGroup(-1, false);
+                $("#geofence_tablelist").hide();
+                $("#geofence_BMap")[0].style.zIndex = "";
+                $("#geofence_choosed_bg_img").removeClass("geofence_unchoosed_bg_normal");
+                $("#geofence_choosed_bg_img").addClass("geofence_choosed_bg_normal");
+                $("#geofence_unchoosed_bg_img").removeClass("geofence_choosed_bg_normal");
+                $("#geofence_unchoosed_bg_img").addClass("geofence_unchoosed_bg_normal");
+                $("#geofence_choosed_bg").removeClass("cursor_style");
+                $("#geofence_showmap_bg").removeClass("cursor_style");
+                $("#geofence_unchoosed_bg").addClass("cursor_style");
+                $("#geofence_showlist_bg").addClass("cursor_style");
+            }
+            if (url == "Home") {
+                getVehicleInfoForList(-1);
+                Click_List();
+                var intervalToken = Math.round(Math.random() * 1000000);
+                getVehicleInfoForMapUpdate(-1, false, intervalToken, false);
+                Click_Map();
+                $("#dashboard_vehicleslist").hide();
+                $("#dashboard_vehicleslist_long").hide();
+                $("#dashboard_BMap")[0].style.zIndex = "";
+                $("#dashboard_choosed_bg_img").removeClass("dashboard_unchoosed_bg_normal");
+                $("#dashboard_choosed_bg_img").addClass("dashboard_choosed_bg_normal");
+                $("#dashboard_unchoosed_bg_img").removeClass("dashboard_choosed_bg_normal");
+                $("#dashboard_unchoosed_bg_img").addClass("dashboard_unchoosed_bg_normal");
+                $("#dashboard_choosed_bg").removeClass("cursor_style");
+                $("#dashboard_showmap_bg").removeClass("cursor_style");
+                $("#dashboard_unchoosed_bg").addClass("cursor_style");
+                $("#dashboard_showlist_bg").addClass("cursor_style");
+                $("#select_group").attr("value", '-1');
+            }
+        }
+        //modified by caoyandong
+        function scroll() {
+            var width = 0;
+            if (window.innerWidth)
+                width = window.innerWidth;
+            else if ((document.body) && (document.body.clientWidth))
+                width = document.body.clientWidth;
+            var left_distance = (width - 1100) / 2;
+            if (left_distance < 0) {
+                left_distance = 0;
+            }
+            $("#body_position").css("left", left_distance + "px");
+        }
+        window.onload = function () {                        
+            //scroll();
+        }
+        window.onresize = function () {
+            //scroll();
+        }
+        document.onreadystatechange = function change() {
+            if (window.document.readyState == "complete") {
+                $("#wait").hide();
+                $("#body_position").show();
+            }
+        }
+        function trans() {
+            $("#wait").show();
+            $("#body_position").hide();
+        }
+    </script>
+</body>
+</html>

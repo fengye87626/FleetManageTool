@@ -1,0 +1,173 @@
+body {
+    margin: 0px;
+}
+
+select {
+    cursor:pointer;
+}
+
+div {
+    background-repeat: repeat;
+}
+
+.u2_container {
+    position:absolute;
+    background-color:#ececec;
+    right:0px;
+    left:0px;
+    top:260px;
+    width:auto;
+    height:240px;
+}
+
+.form_div {
+    position:absolute;
+    margin:0px auto;
+    text-align:center;
+    width:32%;
+    height:500px;
+    margin-left:50%;
+    left:-16%;
+}
+
+
+
+.u4_container {
+    position:relative;
+    text-align:center;
+    /*mabiao for 20140304 #366*/
+    /*top:20px;*/
+    top:100px;
+    /*mabiao for 20140304 #366*/
+    /*left:56px;*/
+    width:100%;
+    height:33px;
+    margin:0 auto;
+}
+
+#u4_img {
+    position:relative;
+	width:72%;
+    height:33px;
+}
+
+.error_container_inActive {
+    position:absolute;
+    top:270px;
+    left:0px;
+    height:33px;
+	font-family:'Microsoft YaHei';
+    color:red;
+    text-align:center;
+    width:100%;
+}
+.error_container_wrong {
+    position:absolute;
+    top:270px;
+    left:0;
+    height:33px;
+	font-family:'Microsoft YaHei';
+    color:red;
+    text-align:center;
+    width:100%;
+}
+
+.u6_normal {
+    background-image: url('../images/u4_normal.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.u6_container {
+    position:relative;
+    /*left:123px;*/
+    top:180px;
+    width:100%;
+    height:35px;
+    text-align:center;
+}
+
+#u6_img {
+    position:relative;
+	width:100%;
+    height:35px;
+    font-family:'Microsoft YaHei';
+    font-size:27pt;
+    color:#b3b3b3;
+    line-height:35px;
+}
+
+
+.u8 {
+    position:absolute;
+    /*left:40px;*/
+    top:300px;
+    width:100%;
+}
+
+.u9 {
+    position:absolute;
+    /*left:40px;*/
+    top:375px;
+    width:100%;
+}
+
+/*chenyangwen 2014/3/6*/
+/*.u10 {
+    position:absolute;
+    top:450px;
+    left:121px;
+    z-index:1;
+}*/
+.u10 {
+    position:absolute;
+    top:450px;
+    left:10%;
+    width:39%;
+    z-index:1;
+}
+
+.RegistBtn {
+    position:absolute;
+    top:450px;
+    /*left:206px;*/
+    right:-20%;
+    width:39%;
+    z-index:1;
+    right:10%;
+}
+
+.regist_text {
+    position:absolute;
+    /*top:448px;*/
+    /*left:255px;*/
+    font-family:'Microsoft YaHei';
+    /*height:33px;*/
+    font-size:28px;
+    text-align:center;
+    color:#b3b3b3;
+    z-index:2;
+    width: 100%;
+    height: 100%;
+}
+/*chenyangwen 2014/3/6*/
+
+.login_text {
+    position:absolute;
+    /*top:448px;*/
+    /*chenyangwen 2014/3/6*/
+    /*left:90px;*/
+    /*left:170px;*/
+    /*chenyangwen 2014/3/6*/
+    font-family:'Microsoft YaHei';
+    /*height:33px;*/
+    font-size:28px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    color:#b3b3b3;
+    z-index:2;
+    width: 100%;
+    height: 100%;
+}

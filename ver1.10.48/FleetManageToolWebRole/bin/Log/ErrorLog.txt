@@ -1,0 +1,1314 @@
+
+[Header]
+2014-04-19 18:59:49 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 18:59:49 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:00:15 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+
+[Header]
+2014-04-19 19:03:30 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:03:30 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:03:41 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:03:43 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.RedirectResult ; Exception : 
+2014-04-19 19:03:53 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:03:53 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:03:53 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:04:02 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:04:02 Debug:para( groupID:-1)
+2014-04-19 19:04:03 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:04:03 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:04:03 Debug:[dashboard controller]SaveTimeZone  paras:[timeZone = 8]
+2014-04-19 19:04:04 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:04:04 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:04:06 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:04:06 Debug:para(vehicleID：10063;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:04:06 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:04:06 Debug:para(vehicleID：10063;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:04:06 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:04:07 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:04:07 Debug:para( groupID:-1)
+2014-04-19 19:04:07 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:04:07 Debug:para(vehicleID：10063;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:04:07 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:04:07 Debug:para(vehicleID：10063;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:04:08 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:04:08 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:04:08 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:04:08 Debug:para( companyID:ishallwin)
+2014-04-19 19:04:11 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:04:12 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:04:12 Debug:para( groupID:-1)
+2014-04-19 19:04:12 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:04:13 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:04:13 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:04:32 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:04:32 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:04:32 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:04:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:04:33 Debug:para( groupID:-1)
+2014-04-19 19:04:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:04:33 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:04:34 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:04:34 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:04:34 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:04:36 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:04:36 Debug:para( groupID:-1)
+2014-04-19 19:04:36 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:04:36 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:04:37 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:04:37 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:04:37 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:04:37 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:04:37 Debug:para( companyID:ishallwin)
+2014-04-19 19:04:37 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:04:39 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:04:39 Debug:para( groupID:-1)
+2014-04-19 19:04:39 Debug:未将对象引用设置到对象的实例。
+2014-04-19 19:04:39 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:04:39 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:04:39 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Index;Parameters:tabNum : 0;
+2014-04-19 19:04:39 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Index ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:04:42 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:04:42 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:04:43 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:04:43 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:04:43 Debug:para( companyID:ishallwin)
+2014-04-19 19:04:43 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:04:44 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:04:44 Debug:para( groupID:-1)
+2014-04-19 19:04:44 Debug:未将对象引用设置到对象的实例。
+2014-04-19 19:04:44 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:04:44 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:05:03 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:05:03 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:05:03 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:05:05 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:05:05 Debug:para( groupID:-1)
+2014-04-19 19:05:05 OtherException:未将对象引用设置到对象的实例。
+2014-04-19 19:05:05 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End (return null)
+2014-04-19 19:05:06 Debug:[dashboard controller]SaveTimeZone  paras:[timeZone = 8]
+2014-04-19 19:05:06 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:05:06 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:05:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:05:07 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:05:07 Debug:para( companyID:ishallwin)
+2014-04-19 19:05:07 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:05:07 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:05:07 Debug:para( groupID:-1)
+2014-04-19 19:05:07 Debug:未将对象引用设置到对象的实例。
+2014-04-19 19:05:07 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:05:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:06:05 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:06:05 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:06:05 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:06:06 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:06:06 Debug:para( groupID:-1)
+2014-04-19 19:06:07 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:06:07 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:06:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:06:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:06:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:06:07 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:06:07 Debug:para( companyID:ishallwin)
+2014-04-19 19:06:07 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:06:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:06:33 Debug:para( groupID:-1)
+2014-04-19 19:06:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:06:33 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:06:33 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:07:05 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:07:05 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:07:05 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:07:23 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:07:23 Debug:para( groupID:-1)
+2014-04-19 19:07:23 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:07:27 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:07:28 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:07:28 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:07:28 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:07:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:07:33 Debug:para( groupID:-1)
+2014-04-19 19:07:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:07:33 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:07:34 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:07:34 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:07:35 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:07:35 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:07:36 Debug:[dashboard controller]SaveTimeZone  paras:[timeZone = 8]
+2014-04-19 19:07:41 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:07:41 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:07:41 Debug:para( companyID:ishallwin)
+2014-04-19 19:07:41 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:07:45 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:07:45 Debug:para( groupID:-1)
+2014-04-19 19:07:46 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:07:46 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:07:46 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:07:46 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:07:46 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:07:46 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:07:46 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:07:46 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:07:50 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:07:50 Debug:para( groupID:-1)
+2014-04-19 19:07:50 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:07:50 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:07:50 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:07:50 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:07:50 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:08:06 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Index;Parameters:tabNum : 0;
+2014-04-19 19:08:06 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Index ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:08:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:08:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:08:08 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:08:08 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:08:08 Debug:para( companyID:ishallwin)
+2014-04-19 19:08:08 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:08:09 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:08:09 Debug:para( groupID:-1)
+2014-04-19 19:08:10 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:08:10 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:08:10 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:08:15 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:08:15 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:08:16 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:08:16 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:08:16 Debug:para( companyID:ishallwin)
+2014-04-19 19:08:16 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:08:17 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:08:17 Debug:para( groupID:-1)
+2014-04-19 19:08:18 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:08:18 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:08:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:08:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:08:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:08:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:08:18 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:08:18 Debug:para( companyID:ishallwin)
+2014-04-19 19:08:18 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:08:20 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:08:20 Debug:para( groupID:-1)
+2014-04-19 19:08:20 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:08:20 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:08:20 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:24 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Index;Parameters:tabNum : 0;
+2014-04-19 19:10:24 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Index ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:10:26 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:26 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:27 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:27 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:27 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:27 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:28 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:28 Debug:para( groupID:-1)
+2014-04-19 19:10:28 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:28 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:28 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:32 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:32 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:32 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:32 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:32 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:32 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:33 Debug:para( groupID:-1)
+2014-04-19 19:10:34 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:34 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:34 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:34 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:34 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:34 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:34 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:34 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:34 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:36 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:36 Debug:para( groupID:-1)
+2014-04-19 19:10:36 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:36 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:36 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:38 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:38 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:38 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:40 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:40 Debug:para( groupID:-1)
+2014-04-19 19:10:40 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:40 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:40 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:40 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:40 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:41 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:41 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:41 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:41 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:42 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:42 Debug:para( groupID:-1)
+2014-04-19 19:10:42 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:42 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:42 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:44 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:44 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:44 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:44 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:44 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:44 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:46 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:46 Debug:para( groupID:-1)
+2014-04-19 19:10:46 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:46 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:46 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:49 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:49 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:50 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:50 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:50 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:50 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:51 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:51 Debug:para( groupID:-1)
+2014-04-19 19:10:51 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:51 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:51 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:56 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:10:56 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:56 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:10:56 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:10:56 Debug:para( companyID:ishallwin)
+2014-04-19 19:10:56 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:10:57 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:10:57 Debug:para( groupID:-1)
+2014-04-19 19:10:58 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:10:58 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:10:58 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:10:59 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail;Parameters:VehicleID : 10067;
+2014-04-19 19:10:59 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:11:01 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:11:01 Debug:para( groupID:-1)
+2014-04-19 19:11:01 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:11:02 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:11:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsOfOnePage;Parameters:vehicleId : 10067;pageNum : 1;month : 2014年04月;
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetVehicleAlertInfo(string companyID, long VehicleID,string month) Start
+2014-04-19 19:11:07 Debug:para(companyID:ishallwin;vehicleID:10067;month:2014年04月)
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) Start
+2014-04-19 19:11:07 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) End
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) Start
+2014-04-19 19:11:07 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) End
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetVehicleAlertInfoFromDBOfOnePage(string companyID, long vehicleID) Start
+2014-04-19 19:11:07 Debug:para( companyID:ishallwin;vehicleID:10067 )
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetVehicleAlertInfoFromDBOfOnePage(string companyID, long vehicleID) End
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetVehicleAlertInfo(string companyID, long VehicleID,string month) End
+2014-04-19 19:11:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsOfOnePage ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:11:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetFuelLog;Parameters:
+2014-04-19 19:11:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetFuelLog ; Result : System.Web.Mvc.ContentResult ; Exception : 
+2014-04-19 19:11:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsOfOnePage;Parameters:vehicleId : 10067;pageNum : 1;month : 2014年04月;
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetVehicleGeofenceAlertInfo(string companyID, long VehicleID,string month) Start
+2014-04-19 19:11:07 Debug:para(companyID:ishallwin;vehicleID:10067;month:2014年04月)
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetGeofenceAlertInfoFromDBOfOnePage(string companyID, long vehicleID) Start
+2014-04-19 19:11:07 Debug:para( companyID:ishallwin;vehicleID:10067 )
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) Start
+2014-04-19 19:11:07 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) End
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) Start
+2014-04-19 19:11:07 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) End
+2014-04-19 19:11:07 Debug:[AlertFetcher] GetGeofenceAlertInfoFromDBOfOnePage(string companyID, long vehicleID) End
+2014-04-19 19:11:07 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsOfOnePage ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:11:08 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsPageCount;Parameters:vehicleId : 10067;month : 2014年04月;
+2014-04-19 19:11:08 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsPageCount ; Result : System.Web.Mvc.ContentResult ; Exception : 
+2014-04-19 19:11:08 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : ;timeZone : 8;
+2014-04-19 19:11:08 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:11:08 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:11:08 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:11:08 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:11:08 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:11:09 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:11:09 Debug:para( groupID:-1)
+2014-04-19 19:11:09 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:11:09 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:11:09 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:11:10 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:11:10 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:11:10 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:11:10 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:11:10 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : ;timeZone : 8;
+2014-04-19 19:11:10 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:11:10 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:11:10 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:11:10 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:11:10 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:11:11 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:11:11 Debug:para( groupID:-1)
+2014-04-19 19:11:12 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:11:12 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:11:12 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:11:12 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:11:12 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:11:12 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:11:12 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsPageCount;Parameters:vehicleId : 10067;month : 2014年04月;
+2014-04-19 19:11:12 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsPageCount ; Result : System.Web.Mvc.ContentResult ; Exception : 
+
+[Header]
+2014-04-19 19:14:12 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:14:12 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:14:22 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:14:24 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.RedirectResult ; Exception : 
+2014-04-19 19:14:31 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:14:31 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:14:31 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:14:40 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:14:40 Debug:para( groupID:-1)
+2014-04-19 19:14:40 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:14:40 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:14:42 Debug:[dashboard controller]SaveTimeZone  paras:[timeZone = 8]
+2014-04-19 19:14:42 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:14:42 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:14:43 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:14:43 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:14:43 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:14:43 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:14:43 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:14:44 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:14:44 Debug:para( groupID:-1)
+2014-04-19 19:14:44 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:14:44 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:14:44 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:14:44 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:14:45 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:14:45 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:14:45 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:14:45 Debug:para( companyID:ishallwin)
+2014-04-19 19:14:50 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:14:51 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:14:51 Debug:para( groupID:-1)
+2014-04-19 19:14:52 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:14:52 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:14:52 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:14:55 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail;Parameters:VehicleID : 10067;
+2014-04-19 19:14:55 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:14:57 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:14:57 Debug:para( groupID:-1)
+2014-04-19 19:14:57 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:15:49 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail ; Result : System.Web.Mvc.EmptyResult ; Exception : System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 FleetManageToolWebRole.Controllers.VehiclesController.Detail(Int32 VehicleID) 位置 c:\Users\IA-ihpleD\Desktop\20140419\查分专用\FleetManageToolWebRole\Controllers\VehiclesController.cs:行号 181
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+2014-04-19 19:16:03 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:16:03 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:16:03 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:16:03 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:16:03 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:16:04 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:16:04 Debug:para( groupID:-1)
+2014-04-19 19:18:13 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:18:13 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:18:13 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:18:13 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:18:13 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:18:20 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:18:20 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:18:20 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:18:20 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:18:20 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:18:22 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:18:22 Debug:para( groupID:-1)
+2014-04-19 19:18:25 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:18:25 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:18:27 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:18:27 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:18:27 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:18:29 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:18:29 Debug:para( groupID:-1)
+2014-04-19 19:18:29 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:18:29 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:18:30 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:18:30 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:18:31 Debug:[dashboard controller]SaveTimeZone  paras:[timeZone = 8]
+2014-04-19 19:18:31 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:18:31 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:18:31 Debug:para( companyID:ishallwin)
+2014-04-19 19:18:31 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:18:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:18:33 Debug:para( groupID:-1)
+2014-04-19 19:18:33 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:18:33 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:18:33 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:18:34 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:18:34 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:18:34 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:18:34 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:18:34 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:18:35 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:18:35 Debug:para( groupID:-1)
+2014-04-19 19:18:35 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:18:35 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:18:35 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:18:35 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:18:35 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:18:39 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail;Parameters:VehicleID : 10067;
+2014-04-19 19:18:39 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:18:40 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:18:40 Debug:para( groupID:-1)
+2014-04-19 19:18:41 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+
+[Header]
+2014-04-19 19:20:29 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:20:29 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:20:37 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:20:39 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.RedirectResult ; Exception : 
+2014-04-19 19:20:46 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:20:46 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:20:46 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:20:53 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:20:53 Debug:para( groupID:-1)
+2014-04-19 19:20:53 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:20:53 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:20:54 Debug:[dashboard controller]SaveTimeZone  paras:[timeZone = 8]
+2014-04-19 19:20:55 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:20:55 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:20:56 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:20:56 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:20:56 Debug:para( companyID:ishallwin)
+2014-04-19 19:20:57 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:20:59 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:20:59 Debug:para( groupID:-1)
+2014-04-19 19:20:59 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:20:59 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:20:59 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:21:00 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:21:00 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:00 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:21:00 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:00 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:21:06 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:21:06 Debug:para( groupID:-1)
+2014-04-19 19:21:06 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:21:06 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:21:06 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:21:06 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:21:06 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:21:15 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail;Parameters:VehicleID : 10067;
+2014-04-19 19:21:15 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:21:16 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:21:16 Debug:para( groupID:-1)
+2014-04-19 19:21:17 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:21:33 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:21:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsOfOnePage;Parameters:vehicleId : 10067;pageNum : 1;month : 2014年04月;
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetVehicleAlertInfo(string companyID, long VehicleID,string month) Start
+2014-04-19 19:21:38 Debug:para(companyID:ishallwin;vehicleID:10067;month:2014年04月)
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) Start
+2014-04-19 19:21:38 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) End
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) Start
+2014-04-19 19:21:38 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) End
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetVehicleAlertInfoFromDBOfOnePage(string companyID, long vehicleID) Start
+2014-04-19 19:21:38 Debug:para( companyID:ishallwin;vehicleID:10067 )
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetVehicleAlertInfoFromDBOfOnePage(string companyID, long vehicleID) End
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetVehicleAlertInfo(string companyID, long VehicleID,string month) End
+2014-04-19 19:21:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsOfOnePage ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:21:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsPageCount;Parameters:vehicleId : 10067;month : 2014年04月;
+2014-04-19 19:21:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsPageCount ; Result : System.Web.Mvc.ContentResult ; Exception : 
+2014-04-19 19:21:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsOfOnePage;Parameters:vehicleId : 10067;pageNum : 1;month : 2014年04月;
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetVehicleGeofenceAlertInfo(string companyID, long VehicleID,string month) Start
+2014-04-19 19:21:38 Debug:para(companyID:ishallwin;vehicleID:10067;month:2014年04月)
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetGeofenceAlertInfoFromDBOfOnePage(string companyID, long vehicleID) Start
+2014-04-19 19:21:38 Debug:para( companyID:ishallwin;vehicleID:10067 )
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) Start
+2014-04-19 19:21:38 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) End
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) Start
+2014-04-19 19:21:38 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) End
+2014-04-19 19:21:38 Debug:[AlertFetcher] GetGeofenceAlertInfoFromDBOfOnePage(string companyID, long vehicleID) End
+2014-04-19 19:21:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsOfOnePage ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:21:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : ;timeZone : 8;
+2014-04-19 19:21:38 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:21:38 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:38 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:21:38 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:38 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:21:40 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:21:40 Debug:para( groupID:-1)
+2014-04-19 19:21:40 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:21:40 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:21:40 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:21:41 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:21:41 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:21:41 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:21:41 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:21:41 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : ;timeZone : 8;
+2014-04-19 19:21:41 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:21:41 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:41 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:21:41 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:41 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:21:42 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:21:42 Debug:para( groupID:-1)
+2014-04-19 19:21:42 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:21:42 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:21:42 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:21:43 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:21:43 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:21:43 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:21:43 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:21:43 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsPageCount;Parameters:vehicleId : 10067;month : 2014年04月;
+2014-04-19 19:21:43 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsPageCount ; Result : System.Web.Mvc.ContentResult ; Exception : 
+2014-04-19 19:21:44 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetFuelLog;Parameters:
+2014-04-19 19:21:44 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetFuelLog ; Result : System.Web.Mvc.ContentResult ; Exception : 
+2014-04-19 19:21:56 Debug:[TripLogFetcher] GetTripDetail(string tripGUID) Start
+2014-04-19 19:21:56 Debug:para(tripGUID:757eee11-1bc2-4e27-94c3-fefd58a20283)
+2014-04-19 19:21:56 Debug:[TripLogFetcher] GetTripFromApi(string tripGUID) Start
+2014-04-19 19:21:56 Debug:para(tripGUID:757eee11-1bc2-4e27-94c3-fefd58a20283)
+2014-04-19 19:21:58 Debug:HalClient GetToken getResult = OK
+2014-04-19 19:21:58 Debug:HalClient GetToken token.access_token = 4ekX633Gz91ENB5ddoVrObqa9FX9YFQfql8_ileQ6CYk_fyrsonb3it7H0Ane5My6aJxlgkZHtSZ4SRy3Xut9Lb0tsYA_JfFPK_wrllq76O6tRqSsveVoMWfFGoyr7X6u4fgvsAYQd48QNRGHkBYhe5Vjmmb-3fQVXOcLSUHwZ_1xhmZ1qee-ikJ0wjC5snAnUetoAfDNqdEFA7MByAjLmzX_bCkgMrH7ZVcXsHHMOJoQOtxV92jxWPLQjGNtuByDmKFO5tLCdMCmzKraZ82RsjbuN9zy9pWIdBxw3cdCE5KQtlp99CH6tPCFcrVxVoM6lqidFLi05LVhV-umeBCo-KaDY5Obah0gJ9bQ-3ZVz0NnXfXSUwIRmwD6E_2rriUrHvW74ihOEOpRpPUjLfcXbuQDP8ac2bH4ovvrIgnT5HUg-6o302s9bZY5ZnRQzuYSewMe4xqImHKeTKBdUYloYjP5FpXgHJHgczR2a3Hnp5cGmZR6Xo4olq8p28R5M5SqKIirh-csxxeyThsWHq3UAx-KfQ;token.expires_in = 3599;token.refresh_token = d6533b51-a51d-443f-8a14-1a1ca77f7b0c
+2014-04-19 19:21:59 Debug:[TripLogFetcher] GetTripFromApi(string tripGUID) End
+2014-04-19 19:21:59 Debug:HalClient Get link = /api/v1/trips/{ID}
+2014-04-19 19:21:59 Debug:HalClient Get getResult = OK ;link = /api/v1/trips/{ID}
+2014-04-19 19:21:59 Debug:[TripLogFetcher] GetTripDetail(string tripGUID) End
+2014-04-19 19:22:18 Debug:[TripLogFetcher] GetTripDetail(string tripGUID) Start
+2014-04-19 19:22:18 Debug:para(tripGUID:29372fb3-2bb8-460e-bced-8ab4c159eaf4)
+2014-04-19 19:22:18 Debug:[TripLogFetcher] GetTripFromApi(string tripGUID) Start
+2014-04-19 19:22:18 Debug:para(tripGUID:29372fb3-2bb8-460e-bced-8ab4c159eaf4)
+2014-04-19 19:22:20 Debug:HalClient GetToken getResult = OK
+2014-04-19 19:22:20 Debug:HalClient GetToken token.access_token = C2EsrtbROjfuwf1Gqg3B11UW2KHoCoEhUgDJHPnGWy54sY5WUe9s4EU3Cae-Dtw5dtFOLrCc2iHMnc6KhswJZZAcK5H9GTPrBur2vHuQNhG53V-YgM6JiQLazdu7sI_1jvyhRUqmS8RGol5QYQLyGft0tDEblw2Q4HmD1uoZ_pw9jAr-SnqDdTufAISB0pC9QSZi6znNK0lgPBwIaMJMGzna9pe04hO-Cbg51eiTPcPkE320ZVr7lI_vP3Z12sPNm4js1WSa9Gd5Cr8iAtuPwzvH1pNd-IX-lHTcbq_nicqn1DcvuPoBx7qjliiVY-pvsFCixaKWqHqa2tk1wKRznJLUuLju8KIghC9ZHhf-JE2LkvNeikAocTN_4F5XL6D4LEPjzrQooxM_2o7lVN2HzVN3YjzMID4CpGkGnArv-YM610xMKYIH5WXfSTD4saXG5ZzrB-Lu5H42z4FV-R5-OhtLUxQmegMVrhkMcT2piu7AzwUAfPOkIwjMnex6qNHVtHE7EhvQJ2KR_UxJgBiFlzzN0d4;token.expires_in = 3599;token.refresh_token = 2a838a75-87da-4105-a4d3-7437c8e913cd
+2014-04-19 19:22:20 Debug:[TripLogFetcher] GetTripFromApi(string tripGUID) End
+2014-04-19 19:22:20 Debug:HalClient Get link = /api/v1/trips/{ID}
+2014-04-19 19:22:21 Debug:HalClient Get getResult = OK ;link = /api/v1/trips/{ID}
+2014-04-19 19:22:21 Debug:[TripLogFetcher] GetTripDetail(string tripGUID) End
+2014-04-19 19:22:59 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : 20140416174230;timeZone : 8;
+2014-04-19 19:22:59 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:22:59 Debug:para(vehicleID：10067;time.ToString():2014-04-16;flag:False)
+2014-04-19 19:22:59 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:22:59 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;flag:False)
+2014-04-19 19:22:59 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:23:00 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:23:00 Debug:para( groupID:-1)
+2014-04-19 19:23:01 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:23:01 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:23:01 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;flag:False)
+2014-04-19 19:23:01 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:01 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:01 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:01 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:01 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:23:01 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:23:01 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:23:01 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:18)
+2014-04-19 19:23:01 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:23:01 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:23:08 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : 20140418175752;timeZone : 8;
+2014-04-19 19:23:08 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:23:08 Debug:para(vehicleID：10067;time.ToString():2014-04-18;flag:False)
+2014-04-19 19:23:08 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:23:08 Debug:para(vehicleID：10067;startTime.ToString():2014-04-18;flag:False)
+2014-04-19 19:23:08 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:23:09 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:23:09 Debug:para( groupID:-1)
+2014-04-19 19:23:10 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:23:10 Debug:para(vehicleID：10067;startTime.ToString():2014-04-18;flag:False)
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:23:10 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:23:10 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:9)
+2014-04-19 19:23:10 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:23:10 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:23:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : 20140417121414;timeZone : 8;
+2014-04-19 19:23:18 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:23:18 Debug:para(vehicleID：10067;time.ToString():2014-04-17;flag:False)
+2014-04-19 19:23:18 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:23:18 Debug:para(vehicleID：10067;startTime.ToString():2014-04-17;flag:False)
+2014-04-19 19:23:18 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:23:19 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:23:19 Debug:para( groupID:-1)
+2014-04-19 19:23:20 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:23:20 Debug:para(vehicleID：10067;startTime.ToString():2014-04-17;flag:False)
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:23:20 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:23:20 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:23:20 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:23:20 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:16)
+2014-04-19 19:23:20 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:23:20 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:23:38 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex;Parameters:
+2014-04-19 19:23:38 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:23:45 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripReportView;Parameters:
+2014-04-19 19:23:46 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripReportView ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:23:47 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripMonthReport;Parameters:key : 2014年04月;intkey : 1;timezone : 8;
+2014-04-19 19:23:48 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripMonthReport ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:23:53 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex;Parameters:
+2014-04-19 19:23:53 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:23:54 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : UtilizationReportView;Parameters:
+2014-04-19 19:23:55 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : UtilizationReportView ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:23:57 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : UtilizationMonthReport;Parameters:key : 2014年04月;intkey : 1;timezone : 8;
+2014-04-19 19:23:57 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : UtilizationMonthReport ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:23:58 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex;Parameters:
+2014-04-19 19:23:58 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:00 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HealthReportView;Parameters:
+2014-04-19 19:24:01 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HealthReportView ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:02 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HealthMonthReport;Parameters:key : 2014年04月;intkey : 1;timezone : 8;
+2014-04-19 19:24:03 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HealthMonthReport ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:04 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex;Parameters:
+2014-04-19 19:24:04 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:05 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : FuelReportView;Parameters:
+2014-04-19 19:24:05 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : FuelReportView ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:06 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : FuelMonthReport;Parameters:key : 2014年04月;intkey : 1;
+2014-04-19 19:24:06 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : FuelMonthReport ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:07 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex;Parameters:
+2014-04-19 19:24:07 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:09 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HistoryReportView;Parameters:
+2014-04-19 19:24:10 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HistoryReportView ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:11 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HistoryMonthReport;Parameters:key : 2014年04月;intkey : 1;timezone : 8;
+2014-04-19 19:24:11 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : HistoryMonthReport ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:11 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : getHistoryInfoInMonth_DB;Parameters:key : 2014年04月;itimezone : 8;
+2014-04-19 19:24:12 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : getHistoryInfoInMonth_DB ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:12 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex;Parameters:
+2014-04-19 19:24:12 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ReportIndex ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:14 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripReportView;Parameters:
+2014-04-19 19:24:15 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripReportView ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:15 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripMonthReport;Parameters:key : 2014年04月;intkey : 1;timezone : 8;
+2014-04-19 19:24:16 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : TripMonthReport ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:20 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ExportTripReport;Parameters:
+2014-04-19 19:24:21 Debug:Controller : FleetManageToolWebRole.Controllers.ExportController; Action : ExportTripReport ; Result : System.Web.Mvc.EmptyResult ; Exception : 
+2014-04-19 19:24:25 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : Tenant;Parameters:
+2014-04-19 19:24:25 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : Tenant ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:24:28 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetAccunt_info;Parameters:
+2014-04-19 19:24:28 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetAccunt_info ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:29 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetTenant_info;Parameters:
+2014-04-19 19:24:29 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetTenant_info ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:36 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetUser;Parameters:
+2014-04-19 19:24:36 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetUser ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:37 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetOBU_Vehicles;Parameters:
+2014-04-19 19:24:37 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetOBU_Vehicles ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:39 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetGroup;Parameters:
+2014-04-19 19:24:39 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetGroup ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:24:40 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetAlertThresholdsInfo;Parameters:
+2014-04-19 19:24:40 Debug:[AlertFetcher] GetAlertConfigInfoFromDB(string companyID, long vehicleID) Start
+2014-04-19 19:24:40 Debug:para( companyID:ishallwin)
+2014-04-19 19:24:41 Debug:[AlertFetcher] GetAlertConfigInfoFromDB(string companyID, long vehicleID) End
+2014-04-19 19:24:41 Debug:[AlertFetcher] GetAlertConfigInfoFromDB(string companyID, long vehicleID) Start
+2014-04-19 19:24:41 Debug:para( companyID:ishallwin)
+2014-04-19 19:24:41 Debug:[AlertFetcher] GetAlertConfigInfoFromDB(string companyID, long vehicleID) End
+2014-04-19 19:24:41 Debug:Controller : FleetManageToolWebRole.Controllers.SettingController; Action : GetAlertThresholdsInfo ; Result : System.Web.Mvc.JsonResult ; Exception : 
+
+[Header]
+2014-04-19 19:27:51 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:27:51 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:27:58 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login;Parameters:
+2014-04-19 19:28:00 Debug:Controller : FleetManageToolWebRole.Controllers.AccountController; Action : Login ; Result : System.Web.Mvc.RedirectResult ; Exception : 
+2014-04-19 19:28:08 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) Start
+2014-04-19 19:28:08 Debug:para( groupID:-1;companyID:ishallwin)
+2014-04-19 19:28:08 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:28:16 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:28:16 Debug:para( groupID:-1)
+2014-04-19 19:28:16 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:28:16 Debug:[FleetInfoFetcher] GetVehicleInfo(long groupID, string companyID) End
+2014-04-19 19:28:17 Debug:[dashboard controller]SaveTimeZone  paras:[timeZone = 8]
+2014-04-19 19:28:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups;Parameters:
+2014-04-19 19:28:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGroups ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:28:18 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation;Parameters:
+2014-04-19 19:28:18 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) Start
+2014-04-19 19:28:18 Debug:para( companyID:ishallwin)
+2014-04-19 19:28:19 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:28:20 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:28:20 Debug:para( groupID:-1)
+2014-04-19 19:28:21 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:28:21 Debug:[FleetInfoFetcher] GetVehicleListInfo(string companyID) End
+2014-04-19 19:28:21 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleInformation ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:28:22 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:28:22 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:22 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:28:22 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:22 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:28:25 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:28:25 Debug:para( groupID:-1)
+2014-04-19 19:28:25 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:28:25 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:28:25 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:28:25 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:28:25 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:28:25 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail;Parameters:VehicleID : 10067;
+2014-04-19 19:28:25 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:28:27 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:28:27 Debug:para( groupID:-1)
+2014-04-19 19:28:27 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:28:31 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : Detail ; Result : System.Web.Mvc.ViewResult ; Exception : 
+2014-04-19 19:28:38 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsOfOnePage;Parameters:vehicleId : 10067;pageNum : 1;month : 2014年04月;
+2014-04-19 19:28:38 Debug:[AlertFetcher] GetVehicleGeofenceAlertInfo(string companyID, long VehicleID,string month) Start
+2014-04-19 19:28:38 Debug:para(companyID:ishallwin;vehicleID:10067;month:2014年04月)
+2014-04-19 19:28:38 Debug:[AlertFetcher] GetGeofenceAlertInfoFromDBOfOnePage(string companyID, long vehicleID) Start
+2014-04-19 19:28:38 Debug:para( companyID:ishallwin;vehicleID:10067 )
+2014-04-19 19:28:38 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) Start
+2014-04-19 19:28:38 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:28:38 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) End
+2014-04-19 19:28:38 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) Start
+2014-04-19 19:28:38 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:28:38 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) End
+2014-04-19 19:28:39 Debug:[AlertFetcher] GetGeofenceAlertInfoFromDBOfOnePage(string companyID, long vehicleID) End
+2014-04-19 19:28:39 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsOfOnePage ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:28:39 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : ;timeZone : 8;
+2014-04-19 19:28:39 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:28:39 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:39 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:28:39 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:39 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:28:41 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:28:41 Debug:para( groupID:-1)
+2014-04-19 19:28:41 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:28:41 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:28:41 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:28:41 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:28:42 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:28:42 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:28:42 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips;Parameters:vehicleID : 10067;dateTime : ;timeZone : 8;
+2014-04-19 19:28:42 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:28:42 Debug:para(vehicleID：10067;time.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:42 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) Start
+2014-04-19 19:28:42 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:42 Debug:[FleetInfoFetcher] getInfoFromCache  paras[companyID = ishallwin , groupID = -1]
+2014-04-19 19:28:44 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) Start
+2014-04-19 19:28:44 Debug:para( groupID:-1)
+2014-04-19 19:28:44 Debug:[FleetInfoFetcher] DataProcess(List<Models.API.Vehicle> apiVehicleInfos, long groupID) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) Start
+2014-04-19 19:28:44 Debug:para(vehicleID：10067;startTime.ToString():2014-04-19;flag:True)
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) Start
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpAlertsInfo(TripLog tripLog, List<Alert> alerts) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] PickUpTripByTime(long vehicleID, DateTime startTime ,List<Models.API.Trip> tripsApi,Boolean flag) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] GetTripsFromCache(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:28:44 Debug:[TripLogFetcher] GetTripsFromDB(long vehicleID, DateTime startTime, int count) Start
+2014-04-19 19:28:44 Debug:para(vehicleID：10067;startTime.ToString():2014-04-16;count:3)
+2014-04-19 19:28:44 Debug:[TripLogFetcher] GetTrips(long vehicleID, DateTime time,Boolean flag) End
+2014-04-19 19:28:44 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetTrips ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:28:45 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetFuelLog;Parameters:
+2014-04-19 19:28:45 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetFuelLog ; Result : System.Web.Mvc.ContentResult ; Exception : 
+2014-04-19 19:28:46 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsOfOnePage;Parameters:vehicleId : 10067;pageNum : 1;month : 2014年04月;
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetVehicleAlertInfo(string companyID, long VehicleID,string month) Start
+2014-04-19 19:28:46 Debug:para(companyID:ishallwin;vehicleID:10067;month:2014年04月)
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) Start
+2014-04-19 19:28:46 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetDateTimeMonthFirstDay(DateTime dateTime) End
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) Start
+2014-04-19 19:28:46 Debug:para(dateTime.ToString():2014-04-01)
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetDateTimeMonthLastDay(DateTime dateTime) End
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetVehicleAlertInfoFromDBOfOnePage(string companyID, long vehicleID) Start
+2014-04-19 19:28:46 Debug:para( companyID:ishallwin;vehicleID:10067 )
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetVehicleAlertInfoFromDBOfOnePage(string companyID, long vehicleID) End
+2014-04-19 19:28:46 Debug:[AlertFetcher] GetVehicleAlertInfo(string companyID, long VehicleID,string month) End
+2014-04-19 19:28:46 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsOfOnePage ; Result : System.Web.Mvc.JsonResult ; Exception : 
+2014-04-19 19:28:46 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsPageCount;Parameters:vehicleId : 10067;month : 2014年04月;
+2014-04-19 19:28:46 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetVehicleAlertsPageCount ; Result : System.Web.Mvc.ContentResult ; Exception : 
+2014-04-19 19:28:47 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsPageCount;Parameters:vehicleId : 10067;month : 2014年04月;
+2014-04-19 19:28:47 Debug:Controller : FleetManageToolWebRole.Controllers.VehiclesController; Action : GetGeofenceAlertsPageCount ; Result : System.Web.Mvc.ContentResult ; Exception : 

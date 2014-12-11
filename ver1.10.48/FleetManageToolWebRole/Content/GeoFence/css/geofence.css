@@ -1,0 +1,1200 @@
+﻿div {
+    background-repeat: no-repeat;
+}
+
+select {
+    cursor:pointer;
+}
+
+a{
+	text-decoration:none;
+}
+
+span {
+    font-family:'Microsoft YaHei';
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+
+td {
+    text-align:center;
+    font-family:'Microsoft YaHei';
+}
+
+/*.geofence_title {
+    position:absolute;
+    left:18px;
+    top:21px;
+    width:140px;
+    height:22px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}*/
+
+.geofence_track_text {
+    position:absolute;
+    right:32.8%;
+    top:23px;
+    width:22.5%;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.geofence_selectgroup {
+    position:absolute;
+    left:54.6%;
+    top:30px;
+    width:14.28%;
+    height:25px;
+}
+
+.geofence_addgeofence_bg_normal {
+    background-image: url('../images/geofence_addgeofence_bg.png');
+}
+
+#geofence_addgeofence_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:126px;
+    height:31px;
+}
+
+.geofence_addgeofence_text {
+    position:absolute;
+    left:-2px;
+    top:-13px;
+    width:128px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.cursor_style {
+    cursor:pointer;
+}
+
+.geofence_unchoosed_bg_normal {
+    background-image: url('../images/geofence_unchoosed_bg.png');
+}
+
+.geofence_unchoosed_bg_container {
+    position:absolute;
+    left:88.4%;
+    top:36px;
+    width:4%;
+    height:21px;
+}
+
+#geofence_unchoosed_bg_img {
+    position:absolute;
+    left:-5px;
+    top:-3px;
+    width:32px;
+    height:27px;
+}
+
+.geofence_showlist_bg_normal {
+    background-image: url('../images/geofence_showlist_bg.png');
+}
+
+.geofence_showlist_bg_container {
+    position:absolute;
+    left:91.9%;
+    top:40px;
+    width:4%;
+    height:14px;
+}
+
+#geofence_showlist_bg_img {
+    position:absolute;
+    left:6px;
+    top:3px;
+    width:14px;
+    height:14px;
+}
+
+.geofence_choosed_bg_normal {
+    background-image: url('../images/geofence_choosed_bg.png');
+}
+
+.geofence_choosed_bg_container {
+    position:absolute;
+    left:93%;
+    top:36px;
+    width:3.8%;
+    height:21px;
+}
+
+#geofence_choosed_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:32px;
+    height:27px;
+}
+
+.geofence_showmap_bg_normal {
+    background-image: url('../images/geofence_showmap_bg.png');
+}
+
+.geofence_showmap_bg_container {
+    position:absolute;
+    left:97.4%;
+    top:40px;
+    width:4%;
+    height:15px;
+}
+
+#geofence_showmap_bg_img {
+    position:absolute;
+    left:8px;
+    top:3px;
+    width:10px;
+    height:15px;
+}
+
+.select_group {
+    font-family:'Microsoft YaHei';
+    font-size:10pt;
+    width:100%;
+    height:25px;
+    border-radius:5px;
+    border-radius:5px;
+}
+
+.geofence_table_style {
+}
+
+.geofence_tablelist {
+    position:absolute;
+    left:0.8%;
+    top:70px;
+    width:98.3%;
+    background-color:#f3f3f3;
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+}
+
+.geofence_tablelist table {
+    border-spacing:0px 0px;
+    width:100%;
+}
+
+.geofence_tablelist td {
+    padding-left:3.6%;
+    border-bottom:1px solid #ddd;
+}
+
+.geofence_tablelist tr{
+    vertical-align:central;
+    margin:20px 0px 0px 0px;
+}
+
+.geofence_BMap_style {
+    position:absolute;
+    left:0.84%;
+    top:70px;
+    width:98.5%;
+    height:755px;
+}
+
+#geofence_map_for_hide {
+    position:absolute;
+    left:7px;
+    top:70px;
+    width:862px;
+    height:755px;
+}
+
+.infoBox{
+    cursor:default;
+}
+
+.GeoFenceInfo_style {
+    position:absolute;
+    float:left;
+    top:10px;
+    left:3.19%;
+    width:93.6%;
+    height:183px;
+}
+.GeoFenceInfo_Top_style{
+
+    position:relative;
+    width:100%;
+    height:40px;
+}
+
+.GeoFenceInfo_Name_style {
+    position:absolute;
+    float:left;
+    top:5px;
+    left:1.7%;
+    width:92.15%;
+    height:20px;
+    font-family:Helvetica;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    font-weight:bolder;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+/*.GeoFenceInfo_EditLocation_style {
+    position:absolute;
+    float:left;
+    top:0px;
+    left:175px;
+    width:88px;
+    height:24px;
+    background-color:#FFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}*/
+
+/*.GeoFenceInfo_Close_style {
+    position:absolute;
+    float:right;
+    top:-2px;
+    right:-2px;
+    width:16px;
+    height:16px;
+    background-repeat:no-repeat;
+    background-image:url('../images/InfoClose.png');
+}*/
+
+.GeoFenceInfo_Location_style {
+    position:absolute;
+    float:left;
+    top:25px;
+    left:1.7%;
+    width:68.26%;
+    height:20px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.GeoFenceInfo_Pop_Radiu_style {
+    position:absolute;
+    float:left;
+    top:25px;
+    right:3.4%;
+    height:20px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.InactiveGeoFenceInfo_Pop_Radiu_style {
+    position:absolute;
+    float:left;
+    top:25px;
+    right:3.4%;
+    height:20px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.GeoFenceInfo_centre_style {
+    position:relative;
+    width:93.6%;
+    height:110px;
+}
+
+.GeoFenceInfo_TopLine_style {
+    position:absolute;
+    float:left;
+    top:5px;
+    left:1.7%;
+    width:100%;
+    height:3px;
+    background-repeat:no-repeat;
+    background-image:url('../images/u94_line.png');
+}
+.GeoFenceInfo_Title_style{
+    position:absolute;
+    float:left;
+    top:10px;
+    left:1.7%;
+    width:auto;
+    height:20px;
+    font-family:Helvetica;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    font-weight:bolder;
+    text-decoration:none;
+    color:#424242;
+}
+
+.GeoFenceInfo_VehiclesList_style{
+    position:absolute;
+    float:left;
+    top:26px;
+    left:1.7%;
+    width:96.24%;
+    height:78px;
+    overflow-y:auto;
+}
+
+.GeoFenceInfo_vehicleButton_style {
+    position:relative;
+    float:left;
+    top:4px;
+    left:1.7%;
+    width:37%;
+    height:18px;
+    background-color:#FFFFFF;
+    border-radius:5px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:18px;
+    color:#424242;
+    margin:2px 2px 2px 2px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+}
+
+/*Redmine#640liangjiajie0306*/
+.GeoFenceInfo_vehicleStateButton_style {
+    position:relative;
+    float:left;
+    top:4px;
+    left:-25%;
+    width:32.3%;
+    height:18px;
+    border-radius:5px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:18px;
+    color:#424242;
+    margin:2px 2px 2px 2px;
+    border-color:#808080;
+}
+.GeoFenceInfo_vehicleStateNameTxt_style {
+    position:relative;
+    float:left;
+    left:30%;
+    width:100%;/*#电子围栏列表操作调整liangjiajie0308*/
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:10pt;/*#电子围栏列表操作调整liangjiajie0308*/
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:left;
+    vertical-align:middle;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+/*Redmine#640liangjiajie0306*/
+
+.GeoFenceInfo_vehicleButton_style_mousecover {
+    position:relative;
+    float:left;
+    top:4px;
+    left:1.7%;
+    width:37%;
+    height:18px;
+    background-color:#ddd;
+    border-radius:5px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:18px;
+    color:#424242;
+    margin:2px 2px 2px 2px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+}
+
+.GeoFenceInfo_vehicleNameTxt_style {
+    position:relative;
+    float:left;
+    left:1%;
+    width:100%;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.GeoFenceInfo_vehicleButtonDelete_style {
+    position:relative;
+    float:right;
+    top:-14px;
+    margin-left:0px;
+    margin-right:2px;
+    width:11px;
+    height:11px;
+    background-repeat:no-repeat;
+    background-image:url('../images/VehicleButtonDelete.png');
+}
+
+.GeoFenceInfo_bottom_style{
+    position:relative;
+    width:293px;
+    height:35px;
+}
+
+/*.GeoFenceInfo_AddVehicle_style{
+    position:absolute;
+    float:left;
+    top:9px;
+    left:235px;
+    width:auto;
+    height:15px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    font-weight:bolder;
+    text-decoration:none;
+    color:#0026ff;
+}*/
+
+.GeoFenceInfo_BottomLine_style {
+    position:absolute;
+    float:left;
+    /*top:20px;*/
+    left:1.7%;
+    width:100%;
+    height:3px;
+    background-repeat:no-repeat;
+    background-image:url('../images/u94_line.png');
+}
+
+.GeoFenceInfo_BottomButton_style {
+    position:relative;
+    float:left;
+    /*top:25px;*/
+    top:5px;
+    left:1.7%;
+    width:21.5%;
+    height:23px;
+    background-color:#FFFFFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    margin:2px 2px 2px 2px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}
+
+.GeoFenceInfo_Arrow_style {
+    position:absolute;
+    overflow:hidden;
+    float:left;
+    top: 190px;
+    left: 44.34%;
+    width: 14.14%;
+    height: 31px;
+    background-repeat:no-repeat;
+}
+
+.GeoFenceInfo_ArrowIcon_style {
+    position:absolute;
+    float:left;
+    top: -10px;
+    left: 0.7%;
+    width: 100%;
+    height: 34px;
+    background-image:url('../images/info_arrow.png');
+    background-repeat:no-repeat;
+}
+
+.InactiveGeoFenceInfo_style {
+    position:absolute;
+    float:left;
+    top:10px;
+    left:3.2%;
+    width:93.6%;
+    height:82px;
+}
+.InactiveGeoFenceInfo_Top_style{
+    position:relative;
+    width:100%;
+    height:40px;
+}
+
+.InactiveGeoFenceInfo_Name_style {
+    position:absolute;
+    float:left;
+    top:5px;
+    left:1.6%;
+    width:89.45%;
+    height:20px;
+    font-family:Helvetica;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    font-weight:bolder;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+/*.InactiveGeoFenceInfo_Close_style {
+    position:absolute;
+    float:right;
+    top:-2px;
+    right:-2px;
+    width:16px;
+    height:16px;
+    background-repeat:no-repeat;
+    background-image:url('../images/InfoClose.png');
+}*/
+
+.InactiveGeoFenceInfo_Location_style {
+    position:absolute;
+    float:left;
+    top:25px;
+    left:1.6%;
+    width:63.90%;
+    height:20px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.InactiveGeoFenceInfo_bottom_style{
+    position:relative;
+    width:100%;
+    height:40px;
+}
+
+.InactiveGeoFenceInfo_BottomLine_style {
+    position:absolute;
+    float:left;
+    top:7px;
+    left:1.6%;
+    width:100%;
+    height:3px;
+    background-repeat:no-repeat;
+    background-image:url('../images/u94_line.png');
+}
+
+.InactiveGeoFenceInfo_ActivateButton_style {
+    position:relative;
+    float:left;
+    top:13px;
+    left:1.6%;
+    width:32%;
+    height:24px;
+    margin:2px 2px 2px 2px;
+    background-color:#FFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}
+
+.InactiveGeoFenceInfo_DeleteButton_style {
+    position:relative;
+    float:left;
+    top:13px;
+    left:26.7%;
+    width:32%;
+    height:24px;
+    margin:2px 2px 2px 2px;
+    background-color:#FFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}
+
+.InactiveGeoFenceInfo_Arrow_style {
+    position:absolute;
+    overflow:hidden;
+    float:left;
+    top: 86px;
+    left: 44%;
+    width: 100%;
+    height: 31px;
+    background-repeat:no-repeat;
+}
+
+.InactiveGeoFenceInfo_ArrowIcon_style {
+    position:absolute;
+    float:left;
+    top: -10px;
+    left: 1%;
+    width: 100%;
+    height: 34px;
+    background-image:url('../images/info_arrow.png');
+    background-repeat:no-repeat;
+}
+
+/*.geofenceSetLocation_Top_style {
+    position:absolute;
+    float:left;
+    left:7px;
+    top:70px;
+    width:862px;
+    height:52px;
+    background-color:rgba(233, 233, 233, 0.75);
+}*/
+
+/*.geofenceSetLocation_Tips_style {
+    position:absolute;
+    float:left;
+    top:13px;
+    left:20px;
+    width:630px;
+    height:25px;
+    background-color:#f6f1b5;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:left;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}*/
+
+/*.geofenceSetLocation_SetLocation_style {
+    position:absolute;
+    float:left;
+    top:13px;
+    left:665px;
+    width:98px;
+    height:25px;
+    background-color:#FFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}*/
+
+/*.geofenceSetLocation_Cancel_style {
+    position:absolute;
+    float:left;
+    top:13px;
+    left:778px;
+    width:63px;
+    height:25px;
+    background-color:#FFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}*/
+
+/*.CoverCircle_style {
+    position:absolute;
+    float:left;
+    top:447.5px;
+    left:438px;
+    margin:-50px 0 0 -50px;
+    background-color:rgba(0, 38, 255, 0.40);
+    border-radius: 78.5px 78.5px 78.5px 78.5px;
+    padding:50px;
+}*/
+
+/*.Cross_HorizontalLine_style {
+    position:absolute;
+    float:left;
+    left:50%;
+    top:50%;
+    margin:-1.5px 0 0 -20px;
+    height:3px;
+    width:40px;
+    background-repeat:no-repeat;
+    background-color:#424242;
+}*/
+
+/*.Cross_VerticalLine_style {
+    position:absolute;
+    float:left;
+    left:50%;
+    top:50%;
+    margin:-20px 0 0 -1.5px;
+    height:40px;
+    width:3px;
+    background-repeat:no-repeat;
+    background-color:#424242;
+}*/
+
+.geofenceEditShapes_Top_style {
+    position:absolute;
+    float:left;
+    left:0.8%;
+    top:70px;
+    width:98.9%;
+    height:52px;
+    background-color:rgba(233, 233, 233, 0.75);
+}
+
+.geofenceEditShapes_Tips_style {
+    position:absolute;
+    float:left;
+    top:13px;
+    left:1.6%;
+    width:51.5%;
+    height:25px;
+    background-color:#f6f1b5;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:left;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+    white-space:nowrap; 
+    text-overflow:ellipsis; 
+    overflow: hidden; 
+}
+
+.geofenceEditShapes_Address_style {
+    position:absolute;
+    float:left;
+    top:0px;
+    left:1%;
+    width:8.2%;
+    height:25px;
+}
+
+.geofenceEditShapes_Location_style {
+    position:absolute;
+    float:left;
+    top:0px;
+    left:8%;
+    width:auto;
+    height:25px;
+}
+
+.geofenceEditShapes_EditShape_style {
+    position:absolute;
+    float:right;
+    top:0px;
+    right:2%;
+    width:auto;
+    height:25px;
+}
+
+.geofenceEditShapes_SaveShape_style {
+    position:absolute;
+    float:left;
+    top:13px;
+    left:87%;
+    width:11.7%;
+    height:25px;
+    background-color:#FFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}
+
+/*.geofenceEditShapes_Back_style {
+    position:absolute;
+    float:left;
+    top:13px;
+    left:778px;
+    width:63px;
+    height:25px;
+    background-color:#FFF;
+    border-radius:5px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+    color:#424242;
+}*/
+
+.geofence_addgeofence_bg_container {
+    position:absolute;
+    left:71.1%;
+    top:35px;
+    width:14.8%;
+    height:25px;
+    line-height: 25px;
+    text-align: center;
+    font-family: Microsoft YaHei;
+    font-size: 10pt;
+    border-width: 1px;
+    border-color: #808080;
+    border-style: solid;
+    background-color: #FFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.location_seach_style {
+    position:absolute;
+    top:13px;
+    left:56%;
+    width:28%;
+    height:27px;
+}
+
+.location_seach_img_style {
+    position:absolute;
+    left:0%;
+    top:0px;
+    width:100%;
+    height:27px;
+   /* background-image: url('../../../Content/Common/images/title_seach.png'); */
+   /* background-size:100% 27px;*/
+}
+
+.location_seach_input_style {
+    position:absolute;
+    left:0%;
+    top:0px;
+    width:98%;
+    height:25px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.location_seach_input_drug_style {
+    padding-left:2%;
+    /*height:25px;*/
+    width:82%;
+    border:none;
+    background:none;
+    outline:none;
+    font-family:'Microsoft YaHei';
+    position:relative;
+    top:2px;
+    height:18px;
+    left:5px;
+    background-color:#fff;
+}
+
+
+.location_seach_input_icon_style {
+    position:absolute;
+    top:6px;
+    left:90%;
+    width:16px;
+    height:15px;
+    cursor:pointer;
+    background-image: url('../../../Content/Common/images/title_seach_icon.png');
+}
+/**edit by li-xiaofei*/
+.location_search_warning_style {
+    position:absolute;
+    left:56%;
+    top:40px;
+    width:27.3%;
+    height:22px;
+    border-radius: 5px;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    display:none;
+    word-break:break-all;
+    z-index:2;
+    background-color:#f3f3f3;
+}
+
+.geofence_dialog_style {
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+    text-align:center;
+}
+
+/********dialog******/
+#dialog_background {
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background:#FFF;
+    opacity:0.7;
+    filter:Alpha(Opacity="70");
+    z-index:1101;
+}
+
+/*#dialog {
+    position:fixed;
+    background-image:url('../images/popup_bk.png');
+    width:465px;
+    height:329px;
+    z-index:1102;
+    opacity:1;
+    filter:Alpha(Opacity="100");
+    margin-top:20%;
+    margin-left:50%;
+    left:-232px;
+}*/
+/*.dialog_title {
+    position:absolute;
+    top:10px;
+    left:40px;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+}*/
+/*.dialog_text {
+    position:absolute;
+    top:137px;
+    left:30px;
+    width:400px;
+    height:100px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+}*/
+
+/*.cls_dialog_sure {
+    line-height:30px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    border-width:1px;
+    border-color:#ddd;
+    border-style:solid;
+    background-color:#FFF;
+    border-radius:5px;
+    cursor:pointer;
+}*/
+/*#user_error,#user_back{
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:40px;
+    height:30px;
+}*/
+
+/*#user_sure {
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:140px;
+    height:30px;
+}*/
+
+/*#user_copy {
+    position:absolute;
+    width:90px;
+    bottom:15px;
+    right:140px;
+    height:30px;
+}
+
+#user_edit_sure {
+    position:absolute;
+    top:10px;
+    right:140px;
+}
+#user_edit_back {
+    position:absolute;
+    top:10px;
+    right:40px;
+}*/
+
+
+
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+}
+.validateTips { 
+    border: 1px solid transparent;
+    margin-top:0px; 
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+.ui-button .ui-button-text {
+    line-height:1.9em;
+}
+.ui-dialog {
+    position:fixed; 
+}
+.ui-button {
+    margin-top:0em;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+        background:#f3f3f3;
+}
+
+/*fengpan 20140619*/
+.title_edit_geofence {
+    position: absolute;
+    top: 26px;
+    left: 1.34%;
+    width: 15%;
+    height: 20px;
+    text-align: left;
+    font-family: Microsoft YaHei;
+    font-size: 18px;
+    font-style: normal;
+    text-decoration: none;
+    color: #424242;
+    font-weight: normal;
+}

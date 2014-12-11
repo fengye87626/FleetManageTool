@@ -1,0 +1,676 @@
+div {
+    background-repeat: no-repeat;
+}
+a {
+    text-decoration:none;
+    color:#424242;
+}
+/*wenti*/
+.addVehilce {
+    position:absolute;
+    right:2%;
+    top:20px;
+    width:15%;
+    height:25px;
+    line-height:25px;
+    font-size:10pt;
+    color:#333333;
+    background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:7px;
+    border-color:#808080;
+    font-family:'Microsoft YaHei';
+}
+
+span {
+    font-family:'Microsoft YaHei';
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+    .v2_container td {
+        font-family:'Microsoft YaHei';
+        font-weight:normal;
+        font-style:normal;
+        text-decoration:none;
+        border-bottom:1px solid #ddd;
+        font-size:10pt;
+        color:#424242;
+        height:50px;
+    }
+    .v2_container table {
+        border-left:1px solid #ddd;
+        border-right:1px solid #ddd;
+        border-top:1px solid #ddd;
+        width:837px;
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+    }
+
+    .v2_container tr {
+        background-color:#f1f1f1;
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+    }
+/*button*/
+.view_detail_button {
+    width:100%;
+    height:20px;
+    /*background-color:#FFF;*/
+    /*border-width:1px;*/
+    /*border-style:solid;*/
+    /*border-radius:7px;*/
+    /*border-color:#808080;*/
+    color:blue;/*liangjiajie0312*/
+    line-height:20px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+}
+
+/*liangjiajie26表格占位*/
+.view_detail_button_title {
+    width:75px;
+    height:20px;
+
+}
+
+/*popup*/
+#add_vehicle_popup_background {
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    background:#FFF;
+    opacity:0.7;
+    filter:Alpha(Opacity="70");
+    z-index:10;
+}
+.add_vehicle_popup_title {
+    position:absolute;
+    top:10px;
+    left:40px;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+}
+#add_vehicle_popup {
+    position:absolute;
+    background-image:url('../images/popup_bk.png');
+    width:465px;
+    height:329px;
+    z-index:11;
+    opacity:1;
+    filter:Alpha(Opacity="100");
+    top:140px;/*liangjiajie#292*/
+    margin-left:50%;
+    left:-232px;
+}
+.OBU_popup_ESN {
+    position:relative;
+    left:100px;
+    top:100px;
+}
+.OBU_popup_KEY {
+    position:relative;
+    left:100px;
+    top:130px;
+}
+.popup_error_info {
+    position:absolute;
+    left:170px;
+    bottom:55px;
+    font-size:10pt;
+    color:#ff0000;
+    display:none;
+}
+.cls_popup_btn {
+    line-height:30px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    border-width:1px;
+    border-color:#ddd;
+    border-style:solid;
+    background-color:#FFF;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#popup_back{
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:40px;
+    height:30px;
+}
+
+#popup_sure {
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:140px;
+    height:30px;
+}
+.right {
+    background-image:url("../images/Right.png");
+    position:absolute;
+    left:159px;
+    top:3px;
+    height:15px;
+    width:13px;
+}
+.error{
+    background-image:url("../images/Error.png");
+    font-family:'Microsoft YaHei';
+    position:absolute;
+    left:159px;
+    top:3px;
+    height:15px;
+    line-height:15px;
+    width:130px;
+    font-size:8pt;
+    color:#ff0000;
+}
+/*popup*/
+.vehicle_title {
+    position:absolute;
+    left:28px;
+    top:0px;
+    width:140px;
+    height:22px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_add_vehicle_normal {
+    background-image: url('../images/vehicle_add_vehicle.png');
+}
+
+.vehicle_add_vehicle_container {
+    position:absolute;
+    left:735px;
+    top:14px;
+    width:113px;
+    height:500px;
+    text-align:center;
+}
+
+#vehicle_add_vehicle_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:126px;
+    height:31px;
+}
+
+.vehicle_add_vehicle_text {
+    position:absolute;
+    left:2px;
+    top:-13px;
+    width:109px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+
+/*20140307caoyandong#520*/
+.vehicle_img_bg_normal {
+    width:10%;
+	height:30px;
+    font-size:10pt;
+    font-family:'Microsoft YaHei';
+    text-align:center;
+    line-height:27px;
+    background-color:#f1f1f1;
+    border:1px solid #ddd;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+/*20140307caoyandong#520*/
+.vehicle_img_bg_disable {
+    width:10%;
+	height:30px;
+    font-size:10pt;
+    font-family:'Microsoft YaHei';
+    text-align:center;
+    line-height:27px;
+    background-color:#ddd;
+    border:1px solid #ddd;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+.vehicle_cursor_normal {
+    cursor:pointer;
+}
+.vehicle_cursor_disable {
+    cursor:none;
+}
+#vehicle_all {
+    position:absolute;
+	left:2%;
+	top:69px;
+}
+#vehicle_drive {
+    position:absolute;
+	left:14%;
+	top:69px;
+}
+#vehicle_stop {
+    position:absolute;
+	left:26%;
+	top:69px;
+}
+#vehicle_missed {
+    position:absolute;
+	left:38%;
+	top:69px;
+}
+#vehicle_health {
+    position:absolute;
+	left:50%;
+	top:69px;
+}
+#vehicle_alert {
+    position:absolute;
+	left:62%;
+	top:69px;
+}
+#vehicle_history {
+    position:absolute;
+	left:74%;
+	top:69px;
+}
+.v1_container {
+    position:absolute;
+    left:20px;
+    top:98px;
+    width:835px;/*修改车辆列表标题长度liangjiajie0307*/
+    height:44px;
+    background-color:#f1f1f1;
+    border:1px solid #ddd;
+}
+/*20140307caoyandong#520*/
+.v1_container_1 {
+    position:absolute;
+    left:20px;
+    top:98px;
+    width:835px;/*liangjiajie26*/
+    height:44px;
+    background-color:#f1f1f1;
+    border:1px solid #ddd;
+    
+}
+    .v1_container table {/*liangjiajie26*/
+        width:835px;/*liangjiajie0310*/
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+    }
+    /*20140307caoyandong#520*/
+    .v1_container td {
+        font-family:'Microsoft YaHei';
+        font-size:10pt;
+        text-align:left;
+        font-weight:bolder;/*liangjiajie*/
+        height:44px;/*fengpan #552 20140304*/
+        padding:0px;/*fengpan #552 20140304*/
+        margin:0px;/*fengpan #552 20140304*/
+    }
+    .v1_container_1 td {
+        font-family:'Microsoft YaHei';
+        font-size:10pt;
+        text-align:left;
+        font-weight:bolder;/*liangjiajie*/
+        height:44px;/*fengpan #552 20140304*/
+        padding:0px;/*fengpan #552 20140304*/
+        margin:0px;/*fengpan #552 20140304*/
+    }
+.v2_container {
+    position:absolute;
+    left:2%;
+    top:98px;
+    width:96%;
+    /*height:387px;*/
+}
+
+.vehicle_list {
+    /*background-image: url('../images/landing_vehicle_list_normal.png');*/
+    background-color:#f1f1f1;
+    border-bottom:1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+
+}
+.name {
+    position:absolute;
+    left:56px;
+    top:92px;
+    width:140px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.miles {
+    position:absolute;
+    left:285px;
+    top:92px;
+    width:140px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.health {
+    position:absolute;
+    left:444px;
+    top:92px;
+    width:140px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.position {
+    position:absolute;
+    left:570px;
+    top:92px;
+    width:140px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+
+.v7_normal {
+    background-image: url('../images/Landing_flag_normal.png');
+}
+.v7_container {
+	position:absolute;
+	left:325px;
+	top:108px;
+	width:16px;
+	height:16px;
+}
+#v7_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.v8_normal {
+    background-image: url('../images/Landing_point_normal.png');
+}
+.v8_container {
+    position:absolute;
+    left:623px;
+    top:111px;
+    width:10px;
+    height:13px;
+}
+#v8_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:10px;
+    height:13px;
+}
+
+.vehicle_List_format {
+    width:833px;
+    height:55px;
+    border:1px solid #ddd;
+    /*background-color:#b6b3b3;*/
+}
+
+.vehicle_name_info {
+    float:left;
+    width:250px;
+    height:55px;
+}
+.vehicle_name_info_detial_img_normal {
+    background-image: url('../images/vehicle_landing_VehicleLogo.png');
+}
+
+.vehicle_name_info_detial_img_container {
+    float:left;
+    position:relative;
+    left:15px;
+    top:10px;
+    width:41px;
+    height:41px;
+}
+
+#vehicle_name_info_detial_img_img {
+    position:relative;
+    width:41px;
+    height:41px;
+}
+.vehicle_name_info_detial_year {
+    float:left;
+    position:relative;
+    left:20px;
+    top:-5px;
+    width:160px;
+    height:26px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+.vehicle_name_info_detial_name {
+    float:left;
+    position:relative;
+    left:20px;
+    top:-10px;
+    width:160px;
+    height:26px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_miles_info {
+    float:left;
+    width:160px;
+    height:55px;
+}
+.vehicle_miles_info_detial {
+    position:relative;
+    left:17px;
+    top:5px;
+    width:90px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_health_info {
+    float:left;
+    width:138px;
+    height:55px;
+}
+.vehicle_health_info_detial {
+    position:relative;
+    left:16px;
+    top:5px;
+    width:90px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_position_info {
+    float:left;
+    width:125px;
+    height:55px;
+    font-family:'Microsoft YaHei';
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    font-size:10pt;
+    color:#424242;
+    line-height:62px;
+}
+/*.vehicle_position_info_detial {
+    position:relative;
+    left:16px;
+    top:5px;
+    width:130px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}*/
+
+.vehicle_viewDetial {
+    float:left;
+    width:125px;
+    height:55px;
+}
+.vehicle_viewDetial_imgDetial_normal {
+    background-image: url('../images/vehicle_viewDetial_img.png');
+}
+
+.vehicle_viewDetial_imgDetial_container {
+    position:relative;
+    left:65px;
+    top:20px;
+    width:74px;
+    height:18px;
+}
+
+#vehicle_viewDetial_imgDetial_img {
+    position:relative;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:24px;
+}
+
+.vehicle_viewDetial_textDetial {
+    position:relative;
+    left:5px;
+    top:-41px;
+    width:70px;
+    height:14px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_line {
+    
+    width:836px;
+    height:5px;
+}
+.vehicle_line_detial_line {
+    background-image: url('../images/vehicle_line_detial_line.png');
+}
+
+.vehicle_line_detial_line {
+    position:relative;
+    left:0px;
+    top:0px;
+    width:836px;
+    height:3px;
+    z-index:1;
+}
+
+.vehicle_line_detial {
+    position:relative;
+    left:0px;
+    top:0px;
+    width:836px;
+    height:5px;
+    
+}
+
+
+
+
+#dialog_form_vihicle body { 
+    font-size: 62.5%; 
+}
+#dialog_form_vihicle input { 
+    display:block; 
+}
+label { 
+    display:block; 
+}
+input.text { 
+    margin-bottom:12px; 
+    width:80%; 
+    padding: .4em; 
+    background-color:#ffffff;
+}
+.ui-button-text-only .ui-button-text { 
+    padding: 0em 1em;
+}
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+    border:1px solid #000000;
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+.ui-button .ui-button-text {
+    line-height:1.7em;
+}
+.ui-dialog {
+    position:fixed;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+    background:#f3f3f3;
+    }
+
+.EmptyListImg{
+    background-image: url('../images/EmptyList.png');
+    position: absolute;
+    top: 220px;
+    height: 115px;
+    width: 100%;
+    display: none;
+    margin: 0 auto;
+    background-position: center;
+}
+.noVehicleList {
+    position:relative;
+    top:110px;
+    text-align:center;
+    font-family:'Microsoft YaHei';
+    color:#ddd;
+}

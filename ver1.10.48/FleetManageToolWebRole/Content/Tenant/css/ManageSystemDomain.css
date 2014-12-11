@@ -1,0 +1,445 @@
+﻿body {
+    margin: 0px;
+    background-color:#f1f1f1;
+}
+
+a {
+    text-decoration:none;
+    cursor:pointer;
+}
+
+a:link {
+    color: blue
+}
+
+a:visited{
+    color: blue
+}
+#version {
+    position:absolute;
+    top:2px;
+    /*mabiao for 20140304 #601*/
+    /*left:60px;*/
+    left:50px;
+    /*mabiao for 20140304 #601*/
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#868686;
+    width:auto;
+    height:auto;
+}
+.TenantManage_userButton_style {
+    position:relative;
+    float:left;
+    top:4px;
+    left:2px;
+    width:190px;
+    height:18px;
+    background-color:#FFFFFF;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:18px;
+    color:#424242;
+    margin:2px 2px 2px 2px;
+}
+
+.TenantManage_userButton_style_mousecover {
+    position:relative;
+    float:left;
+    top:-3px;
+    left:7px;
+    width:80px;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    text-align:center;
+    border-radius:5px;
+    vertical-align:middle;
+    margin:2px 5px 0px 2px;
+    border-color:#ddd;
+    border-width:1px;
+    border-style:solid;
+    cursor:pointer;
+}
+
+.tenantManage_usereset_style {
+    position:relative;
+    float:left;
+    color:blue;
+    width:70px;
+    height:18px;
+}
+
+.TenantManage_userNameTxt_style {
+    position:relative;
+    float:left;
+    width:100px;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+#dialog {
+    position:absolute;
+    background-image:url('../images/popup_bk.png');
+    width:465px;
+    height:329px;
+    z-index:11;
+    opacity:1;
+    filter:Alpha(Opacity="100");
+    top:250px;
+    margin-left:50%;
+    left:-250px;
+}
+
+#dialog_background {
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    background:#FFF;
+    opacity:0.7;
+    filter:Alpha(Opacity="70");
+    z-index:10;
+    height:100%;/*Redmine#677liangjiajie0310*/
+}
+
+.dialog_title {
+    position:absolute;
+    top:10px;
+    left:17px;/*liangjiajie*/
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+}
+
+.dialog_text {
+    position:absolute;
+    top:137px;
+    left:30px;
+    width:400px;
+    height:100px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+}
+
+.dialog_text_1 {
+    position:absolute;
+    top:107px;
+    left:20px;
+    width:430px;
+    height:100px;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+}
+
+#user_error,#user_back{
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:40px;
+    height:30px;
+}
+
+#user_sure {
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:140px;
+    height:30px;
+}
+
+#user_copy {
+    position:absolute;
+    width:90px;
+    bottom:15px;
+    right:140px;
+    height:30px;
+}
+
+
+.contentBody {
+    position:absolute;
+    margin:0px auto;
+    top:0px;
+    height:700px;
+    width:948px;
+    margin-left:50%;
+    left:-474px;
+}
+
+.title {
+    position:relative;
+    font-family:'Microsoft YaHei';
+    font-size:14pt;
+    top:15px;
+    text-align:right;
+    height:50px;
+}
+
+.table_div {
+    position:relative;
+    border-bottom:1px;
+    /*20140305caoyandong*/
+    /*background-image: url('../images/background.png');*/
+    background-color:#fff;
+    height:706px;
+    width:948px;
+}
+
+.cls_dialog_sure {
+    line-height:30px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    border-width:1px;
+    border-color:#ddd;
+    border-style:solid;
+    background-color:#FFF;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.manageTitle {
+    position:absolute;
+    font-family:'Microsoft YaHei';
+    font-size:14pt;
+    top:25px;
+    left:30px;
+    text-align:left;
+}
+
+.logout {
+    background-image:url('../images/RegistbtnBg.png');
+    position:absolute;
+    top:25px;
+    left:860px;
+    width:72px;
+    height:31px;    
+}
+.resetadminpsw {
+	position:absolute;
+	left:740px;
+	top:28px;
+	width:90px;
+    height:25px;
+    background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:7px;
+    border-color:#808080;
+    line-height:25px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+}
+.logoutText {
+    position:absolute;
+    text-align:center;
+    vertical-align:middle;
+    font-size:10pt;
+    top:6px;
+    width:73px;
+    color:black;
+    font-family:'Microsoft YaHei';
+}
+
+.divideLine1 {
+    position:absolute;
+    left:30px;
+    top:60px;
+    background-image: url('../images/divideLine.png');
+    height:1px;
+    width:310px;
+}
+
+
+
+
+
+
+
+.divideLine4 {
+    position:absolute;
+    left:30px;
+    top:600px;
+    background-image: url('../images/divideLine.png');
+    height:1px;
+    width:310px;
+}
+
+.friendLink {
+    position:relative;
+    top:680px;
+    text-align:center;
+}
+#dialog_form_user body { 
+    font-size: 62.5%; 
+}
+#dialog_form_admin input { 
+    display:block; 
+}
+label { 
+    display:block; 
+}
+input.text { 
+    margin-bottom:12px; 
+    width:80%; 
+    padding: .4em; 
+    background-color:#ffffff;
+}
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+    border:1px solid #000000;
+    border-radius: 4px; 
+}
+.validateTips { 
+    border: 1px solid transparent;
+    margin-top:0px; 
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+.ui-button .ui-button-text {
+    line-height:11px;
+}
+.ui-dialog {
+    position:fixed;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0em; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+        background:#f3f3f3;
+}
+.cls_must_fill {
+    position:relative;
+    top:-21px;
+    left:250px;
+    color:red;
+}
+.cls_input_right {
+    background-image:url("../images/Right.png");
+    position:relative;
+    left:260px;
+    top:-40px;
+    height:13px;
+    width:15px;
+}
+#loading_gif {
+    background:url("../images/Loading.gif");
+    position:absolute;
+    left:400px;
+    top:230px;
+    height:113px;
+    width:114px;
+}
+#loading_tip {
+    position:relative;
+    left:-30px;
+    top:140px;
+    width:300px;
+    text-align:left;
+}
+/* Add by li-xiaofei for domain Start*/
+
+
+.Domain_container {
+    position:absolute;
+    left:74px;
+    top:80px;
+    height:500px;
+    width:800px;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    /*background-color:#f1f1f1;
+    border:1px solid #ddd;*/
+}
+
+tr {
+    height:30px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+
+.Setting_container_obu_view {
+    position:relative;
+    top:0px;
+}
+
+
+
+
+
+
+
+ 
+
+
+
+  .td1 {  
+        height:30px;
+    border-bottom:solid 1px #ddd;
+    font-family:'Microsoft YaHei';
+    word-wrap:break-word;
+}
+
+.td2 {
+      height:30px;
+    border-bottom:solid 1px #ddd;
+    border-left:solid 1px #ddd;
+    border-right:solid 1px #ddd;
+    font-family:'Microsoft YaHei';
+}
+
+
+
+
+.delete_confirm_dialog_style {
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+    text-align:center;
+}
+
+/* Add by li-xiaofei End*/

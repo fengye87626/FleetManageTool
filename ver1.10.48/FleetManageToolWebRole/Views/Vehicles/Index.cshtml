@@ -1,0 +1,257 @@
+﻿@{
+    Resource.ResourceLoader.SetCurrentThreadCulture(Session);
+    ViewBag.Title = "Vehicles-Landing";
+
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/Common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_choose";
+    ViewBag.Left_GeoFence_Background = "cls_unchoose";
+    ViewBag.Left_Reports_Background = "cls_unchoose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+}
+
+<link href = "@Url.Content("~/Content/Vehicle/Landing/css/Vehicles_Landing.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script src = "@Url.Content("~/Content/Vehicle/Landing/js/Landing.js")?@Session["version"]" type="text/javascript"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_api.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/jquery.pager.js")?@Session["version"]"></script>
+<link href = "@Url.Content("~/Content/Common/css/Pager.css")?@Session["version"]" rel="stylesheet" type="text/css">
+
+<section>
+
+    @*20140308caoyandong-for-jquery*@
+        <div id="dialog_form_vihicle" style="display:none;">
+              <form>
+                <label for="OBU_dialog_ESN_div">@Resource.String.ihpleD_String_cn.common_ESN</label>
+                <input type="text"  maxlength="17" style="margin:8px 0px 3px 0px;" name="OBU_dialog_ESN_div" id="OBU_dialog_ESN_div" class="text ui-widget-content ui-corner-all">
+                <div id="ui-ESN" class="cls_must_fill">*</div>
+                <div id="ui-right_ESN" class ="cls_input_right"></div>
+                <p class="validateTips_ESN" style="margin:-13px 0px 8px 0px; color:gray;">请输入设备编码ESN或者IMEI码</p>
+                <label for="OBU_dialog_KEY_div">@Resource.String.ihpleD_String_cn.page_settings_accountSettings_vehicleDiagnosticManagement_registrationKeyLabel</label>
+                <input type="text"  maxlength="17" style="margin:8px 0px 3px 0px;"name="OBU_dialog_KEY_div" id="OBU_dialog_KEY_div" value="" class="text ui-widget-content ui-corner-all">
+                <div id="ui-KEY" class="cls_must_fill">*</div>
+                <div id="ui-right_KEY" class ="cls_input_right"></div>
+                <p class="validateTips_KEY" style="margin:-13px 0px 8px 0px; color:gray;">请输入注册密钥</p>
+                <div id="add_vehicle_failed" style="color:red; text-align:right; display:none;">@Resource.String.ihpleD_String_cn.error_addOBU</div>
+              </form>
+            </div>
+        @*20140308caoyandong-for-jquery*@
+
+
+
+    @*20140308caoyandong-jquery*@
+<div id="vehicle_add_vehicle" class="addVehilce" style="cursor: pointer;text-align:center;">@Resource.String.ihpleD_String_cn.page_vehicles_AddVehicle</div>
+
+
+
+    @if (0 == ViewBag.tabNum )
+     {    
+         <div id="vehicle_all" class="vehicle_img_bg_normal" data-label="tab" style="cursor:default">
+         @Resource.String.ihpleD_String_cn.common_AllVehicles
+         </div>
+      }else
+      {
+         <div id="vehicle_all" class="vehicle_img_bg_disable" data-label="tab" style="cursor:pointer">
+         @Resource.String.ihpleD_String_cn.common_AllVehicles
+         </div>
+      }
+
+
+
+      @if (1 == ViewBag.tabNum )
+      {    
+         <div id="vehicle_drive" class="vehicle_img_bg_normal" data-label="tab" style="cursor:default">
+         @Resource.String.ihpleD_String_cn.page_dashboard_VehicleRunning
+         </div>
+      }else
+      {
+         <div id="vehicle_drive" class="vehicle_img_bg_disable" data-label="tab" style="cursor:pointer">
+         @Resource.String.ihpleD_String_cn.page_dashboard_VehicleRunning
+         </div>
+      }
+
+
+
+     @if (2 == ViewBag.tabNum )
+      {    
+         <div id="vehicle_stop" class="vehicle_img_bg_normal" data-label="tab" style="cursor: default;">
+         @Resource.String.ihpleD_String_cn.page_dashboard_VehicleParking
+         </div>
+      }else
+      {
+         <div id="vehicle_stop" class="vehicle_img_bg_disable" data-label="tab" style="cursor: pointer;">
+        @Resource.String.ihpleD_String_cn.page_dashboard_VehicleParking
+         </div>
+      }
+
+
+    @if (4 == ViewBag.tabNum )
+      {  
+         <div id="vehicle_health" class="vehicle_img_bg_normal" data-label="tab" style="cursor: default;">
+         @Resource.String.ihpleD_String_cn.common_BrokenVehicles
+         </div>
+      }else
+      {
+         <div id="vehicle_health" class="vehicle_img_bg_disable" data-label="tab" style="cursor: pointer;">
+         @Resource.String.ihpleD_String_cn.common_BrokenVehicles
+         </div>
+      }
+
+
+
+    @if (5 == ViewBag.tabNum )
+      {    
+         <div id="vehicle_alert" class="vehicle_img_bg_normal" data-label="tab" style="cursor: default;">
+         @Resource.String.ihpleD_String_cn.common_AlertVehicles
+         </div>
+      }else
+      {
+         <div id="vehicle_alert" class="vehicle_img_bg_disable" data-label="tab" style="cursor: pointer;">
+        @Resource.String.ihpleD_String_cn.common_AlertVehicles
+         </div>
+      }
+
+
+
+    @if (3 == ViewBag.tabNum )
+      {    
+         <div id="vehicle_missed" class="vehicle_img_bg_normal" data-label="tab" style="cursor: default;">
+         @Resource.String.ihpleD_String_cn.page_dashboard_MissedTarget
+         </div>
+      }else
+      {
+         <div id="vehicle_missed" class="vehicle_img_bg_disable" data-label="tab" style="cursor: pointer;">
+         @Resource.String.ihpleD_String_cn.page_dashboard_MissedTarget
+         </div>
+      }
+    @if (6 == ViewBag.tabNum )
+      {    
+         <div id="vehicle_history" class="vehicle_img_bg_normal" data-label="tab" style="cursor: default;">
+         @Resource.String.ihpleD_String_cn.page_vehicle_HistoryVehicles
+         </div>
+      }else
+      {
+         <div id="vehicle_history" class="vehicle_img_bg_disable" data-label="tab" style="cursor: pointer;">
+         @Resource.String.ihpleD_String_cn.page_vehicle_HistoryVehicles
+         </div>
+      }
+      @*20140307caoyandong#520*@
+
+<div id="v2_all" class="v2_container">
+    <table style="text-align:left;table-layout:fixed; border-spacing:0px 0px;width:100%" id="tab_vehicleAll">
+        <tr>
+            <td style="width:12%; font-weight:bolder;  padding-left:3%;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_groupName</div></td>
+            <td style="width:10%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_pic</td>
+            <td style="width:18%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_vehicleName</div></td>
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_VehicleLicence</div></td>
+            @*#825列表风格统一，文言统一liangjiajie0319*@
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_HealthStatus</div></td>
+            <td style="width:26%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.page_dashboard_FleetLocation</div></td>
+            <td style="width:10%; font-weight:bolder;" ><div class="view_detail_button_title"></div></td>
+        </tr>
+    </table>
+    <div id="all_pageBar" style="text-align:center;left:-212px;margin-left:50%;position:relative;width:424px;"></div>
+</div>
+<div id="v2_drive" class="v2_container">
+    <table style="text-align:left; table-layout:fixed; border-spacing:0px 0px;width:100%" id="tab_vehicleDrive">
+        <tr>
+            <td style="width:12%; font-weight:bolder;  padding-left:3%;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_groupName</div></td>
+            <td style="width:10%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_pic</td>
+            <td style="width:18%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_vehicleName</div></td>
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_VehicleLicence</div></td>
+            @*#825列表风格统一，文言统一liangjiajie0319*@
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_HealthStatus</div></td>
+            <td style="width:26%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.page_dashboard_FleetLocation</div></td>
+            <td style="width:10%; font-weight:bolder;" ><div class="view_detail_button_title"></div></td>
+        </tr>
+    </table>
+    <div id="drive_pageBar" style="text-align:center;left:-212px;margin-left:50%;position:relative;width:424px;"></div>
+</div>
+<div id="v2_stop" class="v2_container">
+    <table style="text-align:left; table-layout:fixed; border-spacing:0px 0px;width:100%" id="tab_vehicleStop">
+        <tr>
+            <td style="width:12%; font-weight:bolder;  padding-left:3%;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_groupName</div></td>
+            <td style="width:10%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_pic</td>
+            <td style="width:18%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_vehicleName</div></td>
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_VehicleLicence</div></td>
+            @*#825列表风格统一，文言统一liangjiajie0319*@
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_HealthStatus</div></td>
+            <td style="width:26%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.page_dashboard_FleetLocation</div></td>
+            <td style="width:10%; font-weight:bolder;" ><div class="view_detail_button_title"></div></td>
+        </tr>
+    </table>
+    <div id="stop_pageBar" style="text-align:center;left:-212px;margin-left:50%;position:relative;width:424px;"></div>
+</div>
+<div id="v2_health" class="v2_container">
+    <table style="text-align:left; table-layout:fixed; border-spacing:0px 0px;width:100%" id="tab_vehicleHealth">
+        <tr>
+            <td style="width:12%; font-weight:bolder;  padding-left:3%;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_groupName</div></td>
+            <td style="width:10%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_pic</td>
+            <td style="width:18%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_vehicleName</div></td>
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_VehicleLicence</div></td>
+            @*#825列表风格统一，文言统一liangjiajie0319*@
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_HealthStatus</div></td>
+            <td style="width:26%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.page_dashboard_FleetLocation</div></td>
+            <td style="width:10%; font-weight:bolder;" ><div class="view_detail_button_title"></div></td>
+        </tr>
+    </table>
+    <div id="health_pageBar" style="text-align:center;left:-212px;margin-left:50%;position:relative;width:424px;"></div>
+</div>
+<div id="v2_alert" class="v2_container">
+    <table style="text-align:left; table-layout:fixed; border-spacing:0px 0px;width:100%" id="tab_vehicleAlert">
+        <tr>
+            <td style="width:12%; font-weight:bolder;  padding-left:3%;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_groupName</div></td>
+            <td style="width:10%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_pic</td>
+            <td style="width:18%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_vehicleName</div></td>
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_VehicleLicence</div></td>
+            @*#825列表风格统一，文言统一liangjiajie0319*@
+            <td style="width:12%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_HealthStatus</div></td>
+            <td style="width:26%; font-weight:bolder;"><div style="width:100%">@Resource.String.ihpleD_String_cn.page_dashboard_FleetLocation</div></td>
+            <td style="width:10%; font-weight:bolder;" ><div class="view_detail_button_title"></div></td>
+        </tr>
+    </table>
+    <div id="alert_pageBar" style="text-align:center;left:-212px;margin-left:50%;position:relative;width:424px;"></div>
+</div>
+    @*20140307caoyandong#520*@
+<div id="v2_history" class="v2_container">
+    <table style="text-align:left; table-layout:fixed; border-spacing:0px 0px;width:100%;" id="tab_vehicleHistory">
+        <tr>
+            <!--#826 历史车辆表格宽度调整fengpan 20140324-->
+            <td style="width:13%; font-weight:bolder;  padding-left:3%;">@Resource.String.ihpleD_String_cn.common_pic</td>
+            <td style="width:19%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_vehicleName</td>
+            @*#825调整表格liangjiajie0319*@
+            <td style="width:16%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_VehicleLicence</td>
+            <td style="width:19%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.page_vehicle_LastTime</td>
+            <td style="width:39%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.page_vehicle_LastLocation</td>
+        </tr>
+    </table>
+    <div id="history_pageBar" style="text-align:center;left:-212px;margin-left:50%;position:relative;width:424px;"></div>
+</div>
+<div id="v2_missed" class="v2_container">
+    <table style="text-align:left; table-layout:fixed; border-spacing:0px 0px;width:100%" id="tab_vehicleMissed">
+        <tr>
+            <td style="width:12%; font-weight:bolder; padding-left:3%;"><div style="width:100%">@Resource.String.ihpleD_String_cn.common_groupName</div></td>
+            <td style="width:10%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_pic</td>
+            <td style="width:14%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_vehicleName</td>
+            <td style="width:12%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_VehicleLicence</td>
+            @*#825列表风格统一，文言统一liangjiajie0319*@
+            <td style="width:8%; font-weight:bolder;">@Resource.String.ihpleD_String_cn.common_HealthStatus</td>
+            <td style="width:20%; font-weight:bolder;">最后地点</td>
+            <td style="width:16%; font-weight:bolder;">最后联系时间</td>
+            <td style="width:8%; font-weight:bolder;" ><div class="view_detail_button_title"></div></td>
+        </tr>
+    </table>
+    <div id="missed_pageBar" style="text-align:center;left:-212px;margin-left:50%;position:relative;width:424px;"></div>
+@*<div id="vehicle_list" class ="vehicle_list">
+</div>*@
+</div>
+    <div id="emptyListImg" class="EmptyListImg">
+        <div class="noVehicleList">
+            暂无车辆信息
+        </div>
+    </div>
+    <div id="loadingImg" style="position: absolute;left:2%; width:96%;top:65px;height: 730px; text-align:center;vertical-align:middle;z-index:-1;background-color: #fff;opacity:0.3;filter:alpha(opacity=30)">
+    </div>
+</section>

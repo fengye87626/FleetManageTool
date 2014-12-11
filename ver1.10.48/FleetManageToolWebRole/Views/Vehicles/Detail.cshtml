@@ -1,0 +1,551 @@
+﻿@{
+    ViewBag.Title = "Vehicles Page";
+
+    Resource.ResourceLoader.SetCurrentThreadCulture(Session);
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_choose";
+    ViewBag.Left_GeoFence_Background = "cls_unchoose";
+    ViewBag.Left_Reports_Background = "cls_unchoose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+}
+
+<!-- Yueqq -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_api.js")?@Session["version"]"></script>
+<link href = "@Url.Content("~/Content/Common/css/Pager.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="@Url.Content("~/Content/Common/js/jquery.pager.js")?@Session["version"]"></script>
+<!-- Yueqq -->
+
+<!--mabiao-->
+<!--[if lt IE 9]><script  type="text/javascript" src="@Url.Content("~/Content/Vehicle/js/excanvas.js")?@Session["version"]"></script><![endif]-->
+  
+  <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Vehicle/css/jquery.jqplot.css")?@Session["version"]" />
+  <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Vehicle/css/examples.css")?@Session["version"]" />
+  
+  <!-- BEGIN: load jquery -->
+  @*<script  type="text/javascript" src="@Url.Content("~/Content/Vehicle/js/jquery-1.4.4.min.js?ver=1.0")"></script>*@
+  <!-- END: load jquery -->
+  
+  <!-- BEGIN: load jqplot -->
+  <script  type="text/javascript" src="@Url.Content("~/Content/Vehicle/js/jquery.jqplot.js")?@Session["version"]"></script>
+  <script  type="text/javascript" src="@Url.Content("~/Content/Vehicle/js/jqplot.dateAxisRenderer.js")?@Session["version"]"></script>
+  <script  type="text/javascript" src="@Url.Content("~/Content/Vehicle/js/jqplot.highlighter.js")?@Session["version"]"></script>
+  <script  type="text/javascript" src="@Url.Content("~/Content/Vehicle/js/jqplot.cursor.js")?@Session["version"]"></script>
+<!--mabiao-->
+<!--chenyangwen 2014/3/1-->
+<!--chenyangwen 2014/3/1-->
+
+<!--fengpan 20140617 下拉框插件-->
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap-select.min.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap.min.js")?@Session["version"]"></script>
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap-select.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!--fengpan 20140617 下拉框插件-->
+
+<!-- chenyangwen -->
+<script src = "@Url.Content("~/Content/Vehicle/js/Trip_Log.js")?@Session["version"]" type = "text/javascript"> </script>
+<script src = "@Url.Content("~/Content/Vehicle/js/DTC.js")?@Session["version"]" type = "text/javascript"> </script>
+<!--<script src = "@Url.Content("~/Content/Vehicle/js/Chart.js")?@Session["version"]" type = "text/javascript"> </script>-->
+
+
+
+<link href = "@Url.Content("~/Content/Common/css/jquery.datetimepicker.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script src = "@Url.Content("~/Content/Common/js/jquery.datetimepicker.js")?@Session["version"]" type="text/javascript"></script>
+
+
+<link href="@Url.Content("~/Content/Vehicle/css/vehicle.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!-- fengpan -->
+<link href="@Url.Content("~/Content/Vehicle/css/ViewDetial.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!-- fengpan -->
+
+<section style="height:21px;">
+	<div id="datepickerTip" class="datepickerTip" style="display:none"></div>
+    <div class ="tripError" style="display:none;"></div>
+    <div style=" width: 73.64%; height: inherit;">
+        <div id="vehicle_detail_vehiclelogo" class="vehicle_detail_vehiclelogo_container">
+            @*<div id="vehicle_detail_vehiclelogo_img" style="background-image: url('@Url.Content(@ViewBag.VehicleLogo)');"></div>*@
+            <img style="height:103px;width:103px" src="@Url.Action("DrawImage", "Logo", new { vehicleID = @ViewBag.Vehicle_id, type = "vehicleLogo" })">
+        </div>
+
+        <div id="vehicle_detail_vehicleinfo" class="vehicle_detail_vehicleinfo">
+            <div id="vehicle_detail_vehicleinfo_rtf">
+                <!-- chenyangwen 2014/3/1 -->
+                <div class="vehicle_name_class" >
+                    @ViewBag.VehicleName
+                </div>
+                <div class="vehicle_info_class"">
+                    <div class ="vehicle_stype" style ="width:99px;">
+                        @Resource.String.ihpleD_String_cn.common_model
+                    </div>
+                    <div class ="vehicle_stype_detail" style ="width:70%;" title="@ViewBag.VehicleInfo">
+                    &nbsp;:&nbsp;@ViewBag.VehicleInfo
+                    </div>
+                </div>
+                <div class="vehicle_info_class" >
+                    <div class ="vehicle_stype" style ="width:99px;">
+                        @Resource.String.ihpleD_String_cn.common_vin
+                    </div>
+                    <div class ="vehicle_stype_detail" style ="width:70%;">
+                    &nbsp;:&nbsp;@ViewBag.VehicleVin
+                    </div>
+                </div>
+                <div class="vehicle_info_class">
+                    <div class ="vehicle_stype" style ="width:99px;">
+                        @Resource.String.ihpleD_String_cn.page_vehicledetail_DriverAndPhone
+                    </div>
+                    <div class ="vehicle_stype_detail" style ="width:70%;">
+                    &nbsp;:&nbsp;@ViewBag.drivername/@ViewBag.telephone
+                    </div>
+                </div>
+                <!-- chenyangwen 2014/3/1 -->
+            </div>
+        </div>
+
+        <div id="vehicle_detail_obuinfo" class="vehicle_detail_obuinfo" data-label="paragraph">
+            <div id="vehicle_detail_obuinfo_rtf">
+                <!-- chenyangwen 2014/3/1 -->
+                <div class="vehicle_info_class">
+                    <div class ="common_ESN" style ="width:53px;">
+                        @Resource.String.ihpleD_String_cn.common_ESN
+                    </div>
+                    <div class ="ESN_detail">
+                    &nbsp;:&nbsp;@ViewBag.ESN
+                    </div>
+                </div>
+
+                <div class="vehicle_info_class">
+                    <div class ="common_ESN" style ="width:53px;">
+                        @Resource.String.ihpleD_String_cn.page_settings_accountSettings_vehicleDiagnosticManagement_registrationKeyLabel
+                    </div>
+                    <div class ="ESN_detail">
+                    &nbsp;:&nbsp;@ViewBag.RegistrationKey
+                    </div>
+                </div>
+                <!-- chenyangwen 2014/3/1 -->
+            </div>
+        </div>
+        <div id="vehicle_detail_edit_bg" class="vehicle_detail_edit_bg_container" style="cursor: pointer;">
+            @Resource.String.ihpleD_String_cn.page_vehicle_EditVehicle
+        </div>
+    </div>
+    <input type="hidden" id="vehicleID" value="@ViewBag.Vehicle_id">
+    @*<a href="@Url.Action("Tenant", "Setting", new{ tabNum = 2,Vehicle_id = @ViewBag.Vehicle_id })" onclick="trans()">*@
+    
+    @*</a>*@
+
+    <div id="vehicle_detail_info_bg" class="vehicle_detail_info_bg_container">
+        <div id="vehicle_detail_info_bg_img" class="vehicle_detail_info_bg_normal detectCanvas"></div>
+        <div id="vehicle_detail_BMap" class="vehicle_detail_BMap_style" style="position:absolute;left:0;width:100%;height:200px;overflow:hidden;">
+        <!-- 放置地图 -->
+        </div>
+        <div  class="vehicle_detail_BMap_style_cover" style="position:absolute;z-index:1105;left:0;width:100%;">
+        </div>
+        <div id="vehicle_detail_info_location" class="vehicle_detail_info_location" data-label="paragraph">
+            <div id="vehicle_detail_info_location_rtf_up" title="@ViewBag.VehicleLocation">@ViewBag.VehicleLocation</div>
+            <div id="vehicle_detail_info_location_rtf_down" title="@ViewBag.VehicleLocation">@ViewBag.VehicleLocation</div>
+        </div>
+        <div id="vehicle_detail_info_location_text" class="vehicle_detail_info_location_text" data-label="paragraph">
+            <div id="vehicle_detail_info_location_text_rtf">
+                <span style="text-align:left;font-size:10pt;color:#424242;">@Resource.String.ihpleD_String_cn.common_location</span>
+            </div>
+        </div>
+        <div id="vehicle_detail_info_line1" class="vehicle_detail_info_line1">
+        </div>
+        <div id="vehicle_detail_info_odme" class="vehicle_detail_info_odme" data-label="paragraph">
+            <div id="vehicle_detail_info_odme_rtf" style="text-align:left;">
+                <!--fengpan 20140403 -->
+                @if (@ViewBag.VehicleOdometer == null)
+                {
+                    <span id="vehicleOdometer" style="text-align:left;font-size:19pt;color:#424242;">@Resource.String.ihpleD_String_cn.export_undefine</span>
+                }
+                else
+                {
+                    <span id="vehicleOdometer" style="text-align:left;font-size:19pt;color:#424242;">@ViewBag.VehicleOdometer@Resource.String.ihpleD_String_cn.unit_km</span>
+                }
+            </div>
+        </div>
+        <div id="vehicle_detail_info_odme_text" class="vehicle_detail_info_odme_text" data-label="paragraph">
+            <div id="vehicle_detail_info_odme_text_rtf">
+                <span style="text-align:left;font-size:10pt;color:#424242;">@Resource.String.ihpleD_String_cn.common_total_mileage</span>
+            </div>
+        </div>
+        <div id="vehicle_detail_info_line2" class="vehicle_detail_info_line2"></div>
+        <!--fengpan 20140415-->
+        <div style="position:relative;left:8%;top:392px;width:42%;">
+            @if (@ViewBag.VehicleSpeed == null)
+            {
+                <div id="vehicleSpeed" style="position:relative;float:left;font-family:'Microsoft YaHei';font-size:19pt;color:#424242;width:60%;text-align:left">@Resource.String.ihpleD_String_cn.export_undefine</div>
+            }
+            else if(@ViewBag.VehicleEngine == "OFF")
+            {
+                <div id="vehicleSpeed" style="position:relative;float:left;font-family:'Microsoft YaHei';font-size:19pt;color:#339900;width:60%;text-align:left">0</div>
+            }
+            else if (null == @ViewBag.VehicleSpeedThreshold)
+            {
+                <div id="vehicleSpeed" style="position:relative;float:left;font-family:'Microsoft YaHei';font-size:19pt;color:#339900;width:60%;text-align:left">@ViewBag.VehicleSpeed</div>
+            }
+            else if (@ViewBag.VehicleSpeed <= @ViewBag.VehicleSpeedThreshold)
+            {
+                <div id="vehicleSpeed" style="position:relative;float:left;font-family:'Microsoft YaHei';font-size:19pt;color:#339900;width:60%;text-align:left">@ViewBag.VehicleSpeed</div>
+            }
+            else if (@ViewBag.VehicleSpeed > @ViewBag.VehicleSpeedThreshold)
+            { 
+                <div id="vehicleSpeed" style="position:relative;float:left;font-family:'Microsoft YaHei';font-size:19pt;color:#cc0000;width:60%;text-align:left">@ViewBag.VehicleSpeed</div>
+            }
+            <div style="position:relative;font-family:'Microsoft YaHei';font-size:10pt;color:#424242;margin-left:60%;">@Resource.String.ihpleD_String_cn.unit_km<br/>/@Resource.String.ihpleD_String_cn.common_Hour</div>
+        </div>
+        <div style="position:relative;left:8%;top:392px;font-family:'Microsoft YaHei';font-size:10pt;color:#424242;width:42%;">@Resource.String.ihpleD_String_cn.page_vehicles_CurrentSpeed</div>
+        <div id="vehicle_detail_info_vline" class="vehicle_detail_info_vline">
+        </div>
+        <div id="vehicle_detail_info_engine" class="vehicle_detail_info_engine" data-label="paragraph">
+            <div id="vehicle_detail_info_engine_rtf">
+                <!--fengpan 20140403 -->
+                @if (@ViewBag.VehicleEngine == "ON")
+                {
+                    <span id="vehicleEngin" style="text-align:left;font-size:19pt;color:#339900;">@ViewBag.VehicleEngine</span>
+                }
+                else if (@ViewBag.VehicleEngine == "OFF")
+                {
+                    <span id="vehicleEngin" style="text-align:left;font-size:19pt;color:#424242;">@ViewBag.VehicleEngine</span>
+                }
+                else
+                {
+                    <span id="vehicleEngin" style="text-align:left;font-size:19pt;color:#424242;">@Resource.String.ihpleD_String_cn.export_undefine</span>
+                }
+            </div>
+        </div>
+        <div id="vehicle_detail_info_engine_text" class="vehicle_detail_info_engine_text" data-label="paragraph">
+            <div id="vehicle_detail_info_engine_text_rtf"><span style="text-align:left;font-size:10pt;color:#424242;">@Resource.String.ihpleD_String_cn.common_alertTypes_ENGINELIGHT_short</span></div>
+        </div>
+        <div id="vehicle_detail_info_line3" class="vehicle_detail_info_line3">
+        </div>
+        <div id="vehicle_detail_info_battery" class="vehicle_detail_info_battery" data-label="paragraph">
+            <div id="vehicle_detail_info_battery_rtf">
+                @if (@ViewBag.VehicleBattery == null)
+                {
+                    <span id="vehicleBattery" style="text-align:left;font-size:19pt;color:#424242;">@Resource.String.ihpleD_String_cn.export_undefine</span>
+                }
+                else
+                {
+                    <span id="vehicleBattery" style="text-align:left;font-size:19pt;color:#424242;">@ViewBag.VehicleBattery @Resource.String.ihpleD_String_cn.unit_fu</span>
+                }
+            </div>
+        </div>
+        <div id="vehicle_detail_info_battery_text" class="vehicle_detail_info_battery_text" data-label="paragraph">
+            <div id="vehicle_detail_info_battery_text_rtf"><span style="text-align:left;font-size:10pt;color:#424242;">@Resource.String.ihpleD_String_cn.common_battery</span></div>
+        </div>
+        <div class="vehicle_detail_info_vline" style="top:453px;"></div>
+        <div id="vehicle_detail_info_fuel" class="vehicle_detail_info_fuel" data-label="paragraph">
+            <div id="vehicle_detail_info_fuel_rtf">
+                <!--fengpan 20140403 -->
+                @if (@ViewBag.VehicleFuel >= 25 && @ViewBag.VehicleFuel <= 100)
+                {
+                    <span id="vehicleFuel" style="text-align:left;font-size:19pt;color:#339900;">@ViewBag.VehicleFuel%</span>
+                }
+                else if (@ViewBag.VehicleFuel >= 10)
+                {
+                    <span id="vehicleFuel" style="text-align:left;font-size:19pt;color:#CC9900;">@ViewBag.VehicleFuel%</span>
+                }
+                else if (@ViewBag.VehicleFuel >= 0)
+                { 
+                    <span id="vehicleFuel" style="text-align:left;font-size:19pt;color:#CC0000;">@ViewBag.VehicleFuel%</span>
+                }
+                else 
+                {
+                    <span id="vehicleFuel" style="text-align:left;font-size:19pt;color:#424242;">@Resource.String.ihpleD_String_cn.export_undefine</span>
+                }
+            </div>
+        </div>
+        <div id="vehicle_detail_info_fuel_text" class="vehicle_detail_info_fuel_text" data-label="paragraph">
+            <div id="vehicle_detail_info_fuel_text_rtf"><span style="text-align:left;font-size:10pt;color:#424242;">@Resource.String.ihpleD_String_cn.common_alertTypes_FUELLOW_short</span></div>
+        </div>
+        <div id="vehicle_detail_info_line4" class="vehicle_detail_info_line4">
+        </div>
+        <div id="vehicle_detail_info_health" class="vehicle_detail_info_health" data-label="paragraph">
+            <div id="vehicle_detail_info_health_rtf">
+                <!--fengpan 20140403 -->
+                @if (@ViewBag.VehicleHealth == "OK")
+                {
+                    <span style="text-align:left;font-size:19pt;color:#339900;">@Resource.String.ihpleD_String_cn.page_vehicles_Health<span style="position:relative;font-size:10pt;text-decoration:underline;color:#339900;left:10px;cursor:pointer;" id="vehicle_detail_DTC">@Resource.String.ihpleD_String_cn.common_GetDTC</span></span>
+                }
+                else if(@ViewBag.VehicleHealth == "Alert")
+                {
+                    <span  style="text-align:left;font-size:19pt;color:#cc0000;">@Resource.String.ihpleD_String_cn.common_EngineOn<span style="position:relative;font-size:10pt;text-decoration:underline;color:#cc0000;left:10px;cursor:pointer;" id="vehicle_detail_DTC">@Resource.String.ihpleD_String_cn.common_GetDTC</span></span>
+                }
+                else
+                {
+                    <span style="text-align:left;font-size:19pt;color:#424242;">@Resource.String.ihpleD_String_cn.export_undefine<span style="position:relative;font-size:10pt;text-decoration:underline;color:#424242;left:10px;cursor:pointer;" id="vehicle_detail_DTC">@Resource.String.ihpleD_String_cn.common_GetDTC</span></span>
+                }
+            </div>
+        </div>
+        <div id="vehicle_detail_info_health_text" class="vehicle_detail_info_health_text" data-label="paragraph">
+            <div id="vehicle_detail_info_health_text_rtf"><span style="text-align:left;font-size:10pt;color:#424242;">@Resource.String.ihpleD_String_cn.common_VehicleHealth</span></div>
+        </div>
+    </div>
+
+    <input type="hidden" id="VehicleLocationLongtitude" value="@ViewBag.VehicleLocationLongtitude" />
+    <input type="hidden" id="VehicleLocationLatitude" value="@ViewBag.VehicleLocationLatitude" />
+    <input type="hidden" id="VehicleAlert" value="@ViewBag.alertVehicle" />
+    <input type="hidden" id="VehicleEngine" value="@ViewBag.VehicleEngine" />
+    <input type="hidden" id="VehicleHealth" value="@ViewBag.VehicleHealth" />
+    <input type="hidden" id="VehicleMisState" value="@ViewBag.VehicleMisState" />
+    <input type="hidden" id="VehicleSpeedThreshold" value="@ViewBag.VehicleSpeedThreshold" />
+
+    <div id="vehicle_detail_DTC_popup" style="display:none">
+        <div id="vehicle_detail_DTC_popup_close"></div>
+        <div id="vehicle_detail_DTC_popup_up"></div>
+        <div id="vehicle_detail_DTC_popup_mid">
+            <div id="vehicle_detail_DTC_popup_line1"></div>
+            <div id="vehicle_detail_DTC_driverInfo">@Resource.String.ihpleD_String_cn.page_vehicleDetail_dtcDriverInfo</div>
+            <div id="vehicle_detail_DTC_driverName">@Resource.String.ihpleD_String_cn.page_vehicleDetail_dtcDriverName</div><div id="vehicle_detail_DTC_driverName_String">@ViewBag.driverName</div>
+            <div id="vehicle_detail_DTC_driverTelephone">@Resource.String.ihpleD_String_cn.page_vehicleDetail_dtcDriverTel</div><div id="vehicle_detail_DTC_driverTelephone_String">@ViewBag.telephone</div>
+            <div id="vehicle_detail_DTC_popup_line2"></div>
+        </div>
+        <div id="vehicle_detail_DTC_popup_down">
+            <table id="vehicle_detail_DTC_popup_down_table" style="left:10px;">
+                <tbody>
+                    <tr id="DiagnosticTitle_DTC" style="height:20px; line-height:20px;background-color:#e4e4e4">
+                        <td style="width:90px;text-align:center;">@Resource.String.ihpleD_String_cn.page_vehicleDetail_DTCCode</td>
+                        <td style="width:180px;text-align:center;">@Resource.String.ihpleD_String_cn.page_vehicleDetail_DTCInfo</td>
+                    </tr>
+
+                    <tr id="DiagnosticTitle_Wrong" style="height:20px; line-height:20px;background-color:#e4e4e4">
+                        <td style="width:90px;text-align:center;">@Resource.String.ihpleD_String_cn.page_vehicleDetail_DTC_Code_Wrong</td>
+                        <td style="width:180px;text-align:center;">@Resource.String.ihpleD_String_cn.page_vehicleDetail_DTC_Info_Wrong</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="loading_img_DTC" ><img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:45px;top:0px;"/></div>
+    </div>
+    <div id="vehicle_detail_DTC_warning" style="display:none">
+        <div id="vehicle_detail_DTC_warning_up">
+            <div id="vehicle_detail_DTC_warning_close"></div>
+            <div id="vehicle_detail_DTC_warning_title">@Resource.String.ihpleD_String_cn.page_vehicle_detail_DTC_warning</div>
+        </div>
+        <div id="vehicle_detail_DTC_warning_line1"></div>
+        <div id="vehicle_detail_DTC_warning_mid">
+            <div id="vehicle_detail_DTC_warning_picture">
+            </div>
+            <div id="vehicle_detail_DTC_warning_content">
+            </div>
+        </div>
+        <div id="vehicle_detail_DTC_warning_line2"></div>
+        <div id="vehicle_detail_DTC_warning_down">
+            <div id="vehicle_detail_DTC_warning_btn_continue">@Resource.String.ihpleD_String_cn.common_continue
+            </div>
+            <div id="vehicle_detail_DTC_warning_btn_cancel">@Resource.String.ihpleD_String_cn.common_cancel
+            </div>
+        </div>
+    </div>
+
+    <!-- mabiao -->
+    <div class="cls_Vehicles_detail_tab_upline"></div>
+<div class="cls_Vehicles_detail_tab">
+    <div id="Vehicles_detail_tab_trip_log" class="cls_Vehicles_detail_tab_choose">@Resource.String.ihpleD_String_cn.page_common_TripLog</div>
+    <div id="Vehicles_detail_tab_fuel_log" class="cls_Vehicles_detail_tab_unchoose">@Resource.String.ihpleD_String_cn.page_vehicle_FuelLog</div>
+    <div id="Vehicles_detail_tab_alert" class="cls_Vehicles_detail_tab_unchoose">@Resource.String.ihpleD_String_cn.common_alert</div>
+    <div id="Vehicles_detail_tab_geofence" class="cls_Vehicles_detail_tab_unchoose">@Resource.String.ihpleD_String_cn.common_geofence</div>
+</div>
+<div id="table_cover">
+<div id="Vehicles_detail_trip_log" style="width:100%">
+    <div id="select_date_for_trip">&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_report_startdate
+        <input id="date_timepicker_start" type="text" style="width:80px;left:3%;"/>&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_report_enddate
+        <input id="date_timepicker_end" type="text" style="width:80px;left:3%;"/>
+        <div id="date_time_ok">@Resource.String.ihpleD_String_cn.page_report_search</div>
+    </div>
+    <div id="Vehicles_trip_log_btn" class="cls_Vehicles_trip_log_btn">
+        <div id="Vehicles_trip_log_list_btn" class="cls_Vehicles_trip_log_list_btn" title="@Resource.String.ihpleD_String_cn.common_ListMode">
+            <div class="cls_Vehicles_trip_log_list_pic"></div>
+        </div>
+        <div id="Vehicles_trip_log_map_btn" class="cls_Vehicles_trip_log_map_btn" title="@Resource.String.ihpleD_String_cn.common_MapMode">
+            <div class="cls_Vehicles_trip_log_map_pic"></div>
+        </div>
+    </div>
+    
+<div id="Vehicles_show_trip_log" class="u2_container">
+    <div id="Vehicles_trip_log" class="cls_Vehicles_trip_log">
+    <div id="Vehicles_Trip_log_viewmore" class="cls_Vehicles_Trip_log_viewmore">
+        <div id="loading_img"><img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:35px;top:0px;"/></div>
+        <div id="loading_text"> @Resource.String.ihpleD_String_cn.page_vehicledetail_Loading</div>
+    </div>
+    </div>
+    <div id="Vehicles_trip_log_list" class="cls_Vehicles_trip_log_list" style="display:none">
+        <div class="cls_Vehicles_trip_log_list_title">
+            @*Redmine#612liangjiajie0306*@
+	        <div class="cls_Vehicles_trip_log_list_title_time">行程日期</div>
+            <div class="cls_Vehicles_trip_log_list_title_time" style="line-height:normal;top:6px;">出发时间<br/>到达时间</div>
+            <div class="cls_Vehicles_trip_log_list_title_location" style="line-height:normal;top:6px;width:31.61%">出发地点<br/>到达地点</div>
+            <div class="cls_Vehicles_trip_log_list_title_distance">@Resource.String.ihpleD_String_cn.common_MilesTravell</div>
+            <div class="cls_Vehicles_trip_log_list_title_alertinfo">@Resource.String.ihpleD_String_cn.common_vehicledetail_AlertInfo</div>
+        </div>
+        <div id="Vehicles_Trip_log_list_viewmore" class="cls_Vehicles_Trip_log_list_viewmore">
+            <div id="loading_img_list"><img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:35px;top:0px;"/></div>
+            <div id="loading_text_list"> @Resource.String.ihpleD_String_cn.page_vehicledetail_Loading</div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="Vehicles_detail_fuel_log" class="cls_Vehicles_detail_fuel_log" style="display:none">
+    <!--mabiao for 2014 #555-->
+    <!--
+    <div class="cls_Vehicles_detail_fuel_log_name">
+        @Resource.String.ihpleD_String_cn.page_vehicle_FuelLog
+    </div>
+    -->
+    <!--mabiao for 2014 #555-->
+    <div class="cls_Vehicles_detail_fuel_log_show">
+        <div class="cls_Vehicles_detail_fuel_log_show_qua">
+            <div class="cls_Vehicles_detail_fuel_log_show_cost">0</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_name">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_AvgLMile</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_units">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_AvgLMile_Unit</div>
+        </div>
+        <div class="cls_Vehicles_detail_fuel_log_show_qua">
+            <div class="cls_Vehicles_detail_fuel_log_show_cost">￥0</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_name">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_AvgMileCost</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_units">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_AvgMileCost_Unit</div>
+        </div>
+        <div class="cls_Vehicles_detail_fuel_log_show_qua">
+            <div class="cls_Vehicles_detail_fuel_log_show_cost">￥0</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_name">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_AvgPriceGallon</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_units">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_AvgPriceGallon_Unit</div>
+        </div>
+        <div class="cls_Vehicles_detail_fuel_log_show_qua">
+            <div class="cls_Vehicles_detail_fuel_log_show_cost">￥0</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_name">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_TotalCost</div>
+            <div class="cls_Vehicles_detail_fuel_log_show_units">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_TotalCost_Unit</div>
+        </div>
+    </div>
+    <div class="cls_Vehicles_detail_fuel_log_sheet">
+         <!--<canvas id="canvasline" height="208" width="604" align="center"></canvas>-->
+        <div id="chart1" class="plot" ></div>
+    </div>
+    
+    <div class ="cls_Vehicles_choose_div" style="left:60.5%;" >
+        @Resource.String.ihpleD_String_cn.page_common_View:
+    </div>
+    @*<select  id="Home_choose_vehicle" class="cls_Vehicles_choose">
+          <option>@DateTime.Now.Date.ToString("yyyy年MM月")</option>
+          <option>@DateTime.Now.AddMonths(-1).Date.ToString("yyyy年MM月")</option>
+          <option>@DateTime.Now.AddMonths(-2).Date.ToString("yyyy年MM月")</option>
+    </select>*@
+    <div id="u64_oil" class="u64_container" style="top:-5px; left:66.59%;" >
+                    <div style="float:left">
+                        <select  id="alert_choose_oil" class="cls_Home_choose_vehicle" style="width:75px;" data-width="75px" data-size="6">
+                            @for (var i = DateTime.Now.Year; i >= 2013;i-- )
+                            { 
+                                    <option>@i</option>
+                            }
+                        </select>
+                    </div >
+                    <div style="float:left;position:relative;top:8px;">&nbsp;年&nbsp;</div>
+                    <div style="float:left;">
+                        <select  id="alert_choose_oil_1" class="cls_Home_choose_vehicle" style="width:60px;" data-width="60px" data-size="6">
+                        
+                        </select>
+                    </div>
+                    <div style="position:relative;top:8px;float:left;">&nbsp;月</div>
+    </div>
+    <div id="Vehicles_fuel_log_list" class="cls_Vehicles_fuel_log_list">
+        <div class="cls_Vehicles_fuel_log_list_title">
+            <div class="cls_Vehicles_fuel_log_list_title_time">@Resource.String.ihpleD_String_cn.common_date</div>
+            <div class="cls_Vehicles_fuel_log_list_title_status">@Resource.String.ihpleD_String_cn.page_vehicles_Fuellog_FuelDataGridView_MilesSinceLastFillUp</div>
+            <div class="cls_Vehicles_fuel_log_list_title_galllon">@Resource.String.ihpleD_String_cn.common_Litre</div>
+            <div class="cls_Vehicles_fuel_log_list_title_EA">@Resource.String.ihpleD_String_cn.common_EstimatedAmount</div>
+            <div class="cls_Vehicles_fuel_log_list_title_CM">@Resource.String.ihpleD_String_cn.common_CostPerKilometer</div>
+        </div>
+        
+        <div id="Vehicles_fuel_log_list_viewmore" class="cls_Vehicles_fuel_log_list_viewmore">
+        @Resource.String.ihpleD_String_cn.page_common_ViewMore
+        </div>
+    </div>
+               
+</div>
+<!-- fengpan -->
+
+<div id="Vehicles_detail_alert" class="Vehicles_detail_alert" style="display:none">
+    <!--
+    <div id="vehicle_AlertDetial_title" class="vehicle_AlertDetial_title" data-label="paragraph">
+            @Resource.String.ihpleD_String_cn.common_alert
+    </div>
+    -->
+    
+    	@*fengpan 20140311 #606*@
+    <div id="u64_alert" class="u64_container" style="left:69%;top:25px;">
+                    <div style="float:left"><select  id="alert_choose_month" class="cls_Home_choose_vehicle" data-width="75px" data-size="6">
+                        @for (var i = DateTime.Now.Year; i >= 2013;i-- )
+                        { 
+                                <option>@i</option>
+                        }
+                    </select>
+                     </div>
+                    <div style="float:left;position:relative;top:8px;">&nbsp;年&nbsp;</div>
+                    <div style="float:left"><select  id="alert_choose_month_1" class="cls_Home_choose_vehicle" data-width="60px" data-size="6">
+                        
+                    </select>
+                    </div>
+                    <div style="position:relative;top:8px;float:left;">&nbsp;月&nbsp;</div>
+    </div>
+    <div id="v52" class="v52_container">
+        <table id="alertTable" style="text-align:left; border-spacing:0px 0px;width:100%">
+            <tr>
+                @*liangjiajie*@
+                <td style="width:33%;font-weight:bolder;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_time</td>
+                <td style="width:25%;font-weight:bolder;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.page_dashboard_alerts_alertTypeHeader</td>
+                <td style="width:42%;font-weight:bolder;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_DetailInfo</td>
+                @*liangjiajie*@
+            </tr>
+        </table>
+    </div>
+    @*<div id="alert_turnleft">@Resource.String.ihpleD_String_cn.common_PrePage</div>
+    <div id="alert_turnright">@Resource.String.ihpleD_String_cn.common_NextPage</div>*@
+    <div id="vehicle_alert_pageBar" style="width:100%;text-align:center;left:-212px;margin-left:50%;position:relative;top:50px;" alert-click="true"></div>
+</div>
+<div id="Vehicles_detail_geofence" class="Vehicles_detail_geofence" style="display:none">
+    <!--
+    <div id="vehicle_geofenceDetial_title" class="vehicle_geofenceDetial_title" data-label="paragraph">
+            @Resource.String.ihpleD_String_cn.common_geofence
+    </div>
+    -->
+    
+    	@*fengpan 20140311 #606*@
+    <div id="u64_geofence" class="u64_container" style="left:69%;top:25px;">
+                    <div style="float:left"><select  id="geofence_choose_month" class="cls_Home_choose_vehicle" data-width="75px" data-size="6">
+                        @for (var i = DateTime.Now.Year; i >= 2013;i-- )
+                        { 
+                                <option>@i</option>
+                        }
+                    </select>
+                    </div>
+                    <div style="float:left;position:relative;top:8px;">&nbsp;年&nbsp;</div>
+                    <div style="float:left"><select  id="geofence_choose_month_1" class="cls_Home_choose_vehicle" data-width="60px" data-size="6">
+                        
+                    </select>
+                    </div>
+                    <div style="position:relative;top:8px;float:left;">&nbsp;月&nbsp;</div>
+    </div>
+    <div id="v52_geofence" class="v52_geofence_container">
+        @*<div id="v52_geofence_img" class="v52_geofence_normal detectCanvas"></div>*@
+        <table id="geofenceTable" style="text-align:left;width:100%">
+            <tr>
+                @*liangjiajie*@
+                <td style="width:33%;font-weight:bolder;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_time</td>
+                <td style="width:40%;font-weight:bolder;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_geofence</td>
+                <td style="width:27%;font-weight:bolder;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_Info</td>
+                @*liangjiajie*@
+            </tr>
+            
+        </table>
+    </div>
+   @* <div id="turnleft">@Resource.String.ihpleD_String_cn.common_PrePage</div>
+    <div id="turnright">@Resource.String.ihpleD_String_cn.common_NextPage</div>*@
+    <div id="geofence_alert_pageBar" style="width:100%;text-align:center;left:-212px;margin-left:50%;position:relative;top:50px;" geo-click="true"></div>
+</div>
+    </div>
+<!-- fengpan -->
+<!-- mabiao -->
+</section>
+<!-- chenyangwen -->

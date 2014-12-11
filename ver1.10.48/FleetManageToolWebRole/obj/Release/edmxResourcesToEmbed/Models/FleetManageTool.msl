@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FleetManageToolStoreContainer" CdmEntityContainer="FleetManageToolDBContext">
+    <EntitySetMapping Name="Administrator">
+      <EntityTypeMapping TypeName="FleetManageTool.Administrator">
+        <MappingFragment StoreEntitySet="Administrator">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alert">
+      <EntityTypeMapping TypeName="FleetManageTool.Alert">
+        <MappingFragment StoreEntitySet="Alert">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="AlertType" ColumnName="AlertType" />
+          <ScalarProperty Name="TriggeredDateTime" ColumnName="TriggeredDateTime" />
+          <ScalarProperty Name="vehicleId" ColumnName="vehicleId" />
+          <ScalarProperty Name="EngineEndTime" ColumnName="EngineEndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertConfiguration">
+      <EntityTypeMapping TypeName="FleetManageTool.AlertConfiguration">
+        <MappingFragment StoreEntitySet="AlertConfiguration">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer">
+      <EntityTypeMapping TypeName="FleetManageTool.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+          <ScalarProperty Name="obuid" ColumnName="obuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diagnostic">
+      <EntityTypeMapping TypeName="FleetManageTool.Diagnostic">
+        <MappingFragment StoreEntitySet="Diagnostic">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="vehicleId" ColumnName="vehicleId" />
+          <ScalarProperty Name="lastReadDate" ColumnName="lastReadDate" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="message" ColumnName="message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DomainSetting">
+      <EntityTypeMapping TypeName="FleetManageTool.DomainSetting">
+        <MappingFragment StoreEntitySet="DomainSetting">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="domainurl" ColumnName="domainurl" />
+          <ScalarProperty Name="loginlogo" ColumnName="loginlogo" />
+          <ScalarProperty Name="dashboardlogo" ColumnName="dashboardlogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DTC">
+      <EntityTypeMapping TypeName="FleetManageTool.DTC">
+        <MappingFragment StoreEntitySet="DTC">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="DTCCodeId" ColumnName="DTCCodeId" />
+          <ScalarProperty Name="DTCCode" ColumnName="DTCCode" />
+          <ScalarProperty Name="Title_EN" ColumnName="Title_EN" />
+          <ScalarProperty Name="Title_ZH" ColumnName="Title_ZH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FleetUser">
+      <EntityTypeMapping TypeName="FleetManageTool.FleetUser">
+        <MappingFragment StoreEntitySet="FleetUser">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FleetUser_Role">
+      <EntityTypeMapping TypeName="FleetManageTool.FleetUser_Role">
+        <MappingFragment StoreEntitySet="FleetUser_Role">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Geofence">
+      <EntityTypeMapping TypeName="FleetManageTool.Geofence">
+        <MappingFragment StoreEntitySet="Geofence">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="radiu" ColumnName="radiu" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Baidulng" ColumnName="Baidulng" />
+          <ScalarProperty Name="Baidulat" ColumnName="Baidulat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Geofence_Vehicle">
+      <EntityTypeMapping TypeName="FleetManageTool.Geofence_Vehicle">
+        <MappingFragment StoreEntitySet="Geofence_Vehicle">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="geofenceid" ColumnName="geofenceid" />
+          <ScalarProperty Name="vehicleid" ColumnName="vehicleid" />
+          <ScalarProperty Name="ihpleDgeofenceid" ColumnName="ihpleDgeofenceid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HW_Model">
+      <EntityTypeMapping TypeName="FleetManageTool.HW_Model">
+        <MappingFragment StoreEntitySet="HW_Model">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ByteIDCheck" ColumnName="ByteIDCheck" />
+          <ScalarProperty Name="LabelIDCheck" ColumnName="LabelIDCheck" />
+          <ScalarProperty Name="IccIDCheck" ColumnName="IccIDCheck" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logo">
+      <EntityTypeMapping TypeName="FleetManageTool.Logo">
+        <MappingFragment StoreEntitySet="Logo">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MMY">
+      <EntityTypeMapping TypeName="FleetManageTool.MMY">
+        <MappingFragment StoreEntitySet="MMY">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="mmyMake" ColumnName="mmyMake" />
+          <ScalarProperty Name="mmyModel" ColumnName="mmyModel" />
+          <ScalarProperty Name="mmyYear" ColumnName="mmyYear" />
+          <ScalarProperty Name="mmyIndex" ColumnName="mmyIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notification">
+      <EntityTypeMapping TypeName="FleetManageTool.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="alertconfigurationID" ColumnName="alertconfigurationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Obu">
+      <EntityTypeMapping TypeName="FleetManageTool.Obu">
+        <MappingFragment StoreEntitySet="Obu">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idtype" ColumnName="idtype" />
+          <ScalarProperty Name="regkey" ColumnName="regkey" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="deviceType" ColumnName="deviceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Obu_Check">
+      <EntityTypeMapping TypeName="FleetManageTool.Obu_Check">
+        <MappingFragment StoreEntitySet="Obu_Check">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="byteid" ColumnName="byteid" />
+          <ScalarProperty Name="labelid" ColumnName="labelid" />
+          <ScalarProperty Name="mdakey" ColumnName="mdakey" />
+          <ScalarProperty Name="mdspc" ColumnName="mdspc" />
+          <ScalarProperty Name="mdots" ColumnName="mdots" />
+          <ScalarProperty Name="mdmsn" ColumnName="mdmsn" />
+          <ScalarProperty Name="mdtadm" ColumnName="mdtadm" />
+          <ScalarProperty Name="regkey" ColumnName="regkey" />
+          <ScalarProperty Name="authtoken" ColumnName="authtoken" />
+          <ScalarProperty Name="hwmodel" ColumnName="hwmodel" />
+          <ScalarProperty Name="iccid" ColumnName="iccid" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operate_Log">
+      <EntityTypeMapping TypeName="FleetManageTool.Operate_Log">
+        <MappingFragment StoreEntitySet="Operate_Log">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="explain" ColumnName="explain" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+          <ScalarProperty Name="logtime" ColumnName="logtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parameter">
+      <EntityTypeMapping TypeName="FleetManageTool.Parameter">
+        <MappingFragment StoreEntitySet="Parameter">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="ParameterType" ColumnName="ParameterType" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="alertconfigurationID" ColumnName="alertconfigurationID" />
+          <ScalarProperty Name="ParameterColumnName" ColumnName="ParameterColumnName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RevisionRecord">
+      <EntityTypeMapping TypeName="FleetManageTool.RevisionRecord">
+        <MappingFragment StoreEntitySet="RevisionRecord">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="versionNo" ColumnName="versionNo" />
+          <ScalarProperty Name="revisionInfo" ColumnName="revisionInfo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="FleetManageTool.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="role1" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemSetting">
+      <EntityTypeMapping TypeName="FleetManageTool.SystemSetting">
+        <MappingFragment StoreEntitySet="SystemSetting">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tenant">
+      <EntityTypeMapping TypeName="FleetManageTool.Tenant">
+        <MappingFragment StoreEntitySet="Tenant">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="companyname" ColumnName="companyname" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="introduction" ColumnName="introduction" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trip">
+      <EntityTypeMapping TypeName="FleetManageTool.Trip">
+        <MappingFragment StoreEntitySet="Trip">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="startlocationLng" ColumnName="startlocationLng" />
+          <ScalarProperty Name="startlocationLat" ColumnName="startlocationLat" />
+          <ScalarProperty Name="endlocationLng" ColumnName="endlocationLng" />
+          <ScalarProperty Name="endlocationLat" ColumnName="endlocationLat" />
+          <ScalarProperty Name="distance" ColumnName="distance" />
+          <ScalarProperty Name="vehicleId" ColumnName="vehicleId" />
+          <ScalarProperty Name="IdleTime" ColumnName="IdleTime" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="startlocation" ColumnName="startlocation" />
+          <ScalarProperty Name="endlocation" ColumnName="endlocation" />
+          <ScalarProperty Name="isFirstFlag" ColumnName="isFirstFlag" />
+          <ScalarProperty Name="isLastFlag" ColumnName="isLastFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicle">
+      <EntityTypeMapping TypeName="FleetManageTool.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicle">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+          <ScalarProperty Name="logoid" ColumnName="logoid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="vin" ColumnName="vin" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="info" ColumnName="info" />
+          <ScalarProperty Name="licence" ColumnName="licence" />
+          <ScalarProperty Name="drivername" ColumnName="drivername" />
+          <ScalarProperty Name="isVinEditable" ColumnName="isVinEditable" />
+          <ScalarProperty Name="isMMYEditable" ColumnName="isMMYEditable" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="make" ColumnName="make" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="mmyid" ColumnName="mmyid" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="lable" ColumnName="lable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicle_AlertConfiguration">
+      <EntityTypeMapping TypeName="FleetManageTool.Vehicle_AlertConfiguration">
+        <MappingFragment StoreEntitySet="Vehicle_AlertConfiguration">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="vehicleID" ColumnName="vehicleID" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="alertConfigurationGuID" ColumnName="alertConfigurationGuID" />
+          <ScalarProperty Name="alertTpe" ColumnName="alertTpe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicle_Obu">
+      <EntityTypeMapping TypeName="FleetManageTool.Vehicle_Obu">
+        <MappingFragment StoreEntitySet="Vehicle_Obu">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="obuid" ColumnName="obuid" />
+          <ScalarProperty Name="vehicleid" ColumnName="vehicleid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleGroup">
+      <EntityTypeMapping TypeName="FleetManageTool.VehicleGroup">
+        <MappingFragment StoreEntitySet="VehicleGroup">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="tenantid" ColumnName="tenantid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleGroup_Vehicle">
+      <EntityTypeMapping TypeName="FleetManageTool.VehicleGroup_Vehicle">
+        <MappingFragment StoreEntitySet="VehicleGroup_Vehicle">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="groupid" ColumnName="groupid" />
+          <ScalarProperty Name="vehicleid" ColumnName="vehicleid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

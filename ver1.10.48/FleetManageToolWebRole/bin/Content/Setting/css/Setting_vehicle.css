@@ -1,0 +1,81 @@
+﻿fieldset{
+	border-radius:5px;
+	font-family:'Microsoft YaHei';
+	font-size:10pt;
+	border:3px solid #ddd;
+    float:left;
+    height:110px;
+    padding:5px 0 0 10px;
+    margin:0;
+}
+
+fieldset table{
+	font-size:10pt;
+	table-layout:fixed;
+	border-spacing:0 0;
+    white-space:nowrap;
+    overflow:hidden;
+}
+fieldset table td{
+	vertical-align:top;
+}
+fieldset table td div{
+	width:100%;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+}
+fieldset table td input{
+	font-family:Microsoft YaHei;
+	width:95%;
+	height:13px;
+    margin: 0 0px 0 -2px;
+}
+.setting_button_cancle, .setting_button_save, .setting_button_edit{
+	font-size: 10pt;
+	text-align: center;
+	font-family: Microsoft YaHei;
+	cursor: pointer;
+	color:blue;
+}
+.setting-vehicle-normal, .setting-vehicle-normal-vin{
+	display:block;
+}
+.setting-vehicle-input, .setting-vehicle-input-vin{
+	display:none;
+}
+.setting-vehicle-button{
+}
+.setting-vehicle-button-img , .setting-vehicle-button-mmy{
+	width:45px;
+	cursor: pointer;
+	background-color: #FFF;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: #808080;
+	font-size: 9pt;
+	text-align: center;
+	font-family: Microsoft YaHei;
+	display:none;
+}
+
+.loading_background {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left:0px;
+    height: 121px;
+    text-align: center;
+    vertical-align: middle;
+    z-index: -1;
+    background-color: #fff;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    /*background-image: url("../../../Content/Common/images/loading.gif");*/
+    background-position: center;
+}
+
+.preview_fake{
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);     /* 该样式为必须的 */
+}

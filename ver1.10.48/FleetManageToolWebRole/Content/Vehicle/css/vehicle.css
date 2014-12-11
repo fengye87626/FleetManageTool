@@ -1,0 +1,2274 @@
+﻿div {
+    background-repeat: no-repeat;
+}
+
+a{
+	text-decoration:none;
+}
+
+select {
+    cursor:pointer;
+}
+
+#vehicle_detail_info_location_rtf_up {
+    text-align:left;
+    font-size:19pt;
+    color:#424242;
+    width:100%;
+    height:30px;
+    font-family:'Microsoft YaHei';
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+#vehicle_detail_info_location_rtf_down {
+    text-align:left;
+    font-size:19pt;
+    color:#424242;
+    width:100%;
+    height:30px;
+    font-family:'Microsoft YaHei';
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+/* chenyangwen 2014/3/1 */
+.vehicle_name_class {
+    text-align:left;
+    margin-bottom:0px;
+    margin-top:0px;
+    height:21px;
+    font-size:12pt;
+    font-weight:bold;
+    color:#424242;
+    width:100%;/*liangjiajie0328*/
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    word-wrap:normal;/*liangjiajie0328*/
+}
+
+.vehicle_info_class {
+    text-align:left;
+    margin-bottom:0px;
+    margin-top:0px;
+    height:16px;
+    font-size:10pt;
+    color:#424242;
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.vehicle_stype {
+    text-align:left;
+    height:16px;
+    font-size:10pt;
+    color:#424242;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    position:relative;
+    line-height:16px;
+    float:left;
+}
+.vehicle_stype_detail {
+    text-align:left;
+    height:16px;
+    font-size:10pt;
+    color:#424242;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    word-wrap:normal;/*liangjiajie0328*/
+    line-height:16px;
+}
+.common_ESN {
+    text-align:left;
+    height:16px;
+    font-size:10pt;
+    color:#424242;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    position:relative;
+    line-height:16px;
+    float:left;
+}
+.ESN_detail {
+    text-align:left;
+    height:16px;
+    font-size:10pt;
+    color:#424242;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    /*position:relative;
+    top:-17px;
+    left:52px;*/
+    word-wrap:normal;/*liangjiajie0328*/
+    line-height:16px;
+}
+/* chenyangwen 2014/3/1 */
+
+span {
+    font-family:'Microsoft YaHei';
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+#table_cover {
+    position:absolute;
+    top:210px;/*位置调整liangjiajie0308*/
+    width: 73.64%;
+}
+.vehicle_detail_BMap_style{
+    background-color:rgb(243,241,236);
+    position:absolute;
+    left:640px;
+    top:0px;
+    width:229px;
+    height:200px;
+    overflow:hidden;
+}
+
+.vehicle_detail_BMap_style_cover {
+    position:absolute;
+    left:640px;
+    top:0px;
+    width:229px;
+    height:200px;
+    z-index:1105;
+}
+
+.vehicle_detail_vehiclelogo_normal {
+    background-image: url('../images/vehicle_detail_vehiclelogo.png');
+}
+
+.vehicle_detail_vehiclelogo_container {
+    position:absolute;
+    left:3%;
+    top:21px;
+    width:12%;
+    height:103px;
+}
+
+#vehicle_detail_vehiclelogo_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:109px;
+    height:109px;
+}
+
+.vehicle_detail_vehicleinfo {
+    position:absolute;
+    left:17%;
+    top:16px;
+    width:40%;
+    height:54px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_obuinfo {
+    position:absolute;
+    left:17%;
+    top:95px;/*liangjiajie0329*/
+    width:40%;
+    height:32px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_edit_bg_normal {
+    background-image: url('../images/vehicle_detail_edit_bg.png');
+}
+
+.vehicle_detail_edit_bg_container {
+    position:absolute;
+    left:60%;
+    top:21px;
+    width:12%;
+    height:25px;
+    font-size:10pt;
+    line-height:25px;
+    text-align:center;
+
+    background-color: #FFF;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #808080;
+    text-align: center;
+    font-family: Microsoft YaHei;
+    cursor: pointer;
+}
+
+#vehicle_detail_edit_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:126px;
+    height:31px;
+}
+
+.vehicle_detail_edit_text {
+    position:absolute;
+    left:2px;
+    top:1px;
+    width:109px;
+    height:16px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_info_bg_normal {
+    /*background-image: url('../images/vehicle_detail_info_bg.png');*/
+    background-color:#e4e4e4;
+}
+
+.vehicle_detail_info_bg_container {
+    position:absolute;
+    left:73.64%;
+    top:0px;
+    width:26.36%;
+    /*height:1025px;*/
+}
+
+#vehicle_detail_info_bg_img {
+    position:absolute;
+    /*left:-3px;*/
+    /*top:-3px;*/
+    width:100%;
+    height:1031px;
+}
+
+.u58_container {
+    position:absolute;
+    left:821px;
+    top:69px;
+    width:229px;
+    height:200px;
+}
+
+.vehicle_detail_info_location {
+    position:absolute;
+    left:8%;
+    top:205px;
+    width:92%;
+    height:60px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    /*word-wrap:break-word;*/
+}
+
+.vehicle_detail_info_location_text {
+    position:absolute;
+    left:8%;
+    top:270px;
+    width:92%;
+    height:inherit;
+    font-family:Microsoft YaHei;
+    text-align:left;
+}
+
+.vehicle_detail_info_location_bg_normal {
+    background-image: url('../images/vehicle_detail_info_location_bg.png');
+}
+
+.vehicle_detail_info_location_bg_container {
+    position:absolute;
+    float:right;
+    left:688px;
+    top:254px;
+    width:12px;
+    height:16px;
+}
+
+#vehicle_detail_info_location_bg_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:12px;
+    height:16px;
+}
+
+.vehicle_detail_info_odme {
+    position:absolute;
+    left:8%;
+    top:310px;
+    width:92%;
+    height:31px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_info_odme_text {
+    position:absolute;
+    left:8%;
+    top:344px;
+    width:92%;
+    height:inherit;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_info_odme_bg_normal {
+    background-image: url('../images/vehicle_detail_info_odme_bg.png');
+}
+
+.vehicle_detail_info_odme_bg_container {
+    position:absolute;
+    left:705px;
+    top:344px;
+    width:16px;
+    height:16px;
+}
+
+#vehicle_detail_info_odme_bg_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+
+
+.vehicle_detail_info_line1 {
+    position:absolute;
+    left:0;
+    top:295px;
+    width:100%;
+    height:1px;
+    background-color:#d3d3d3;
+    
+}
+
+
+.vehicle_detail_info_line2 {
+    position:absolute;
+    left:0;
+    top:370px;
+    width:100%;
+    height:1px;
+    background-color:#d3d3d3;
+    
+}
+
+.vehicle_detail_info_fuel {
+    position:absolute;
+    left:58%;
+    top:469px;
+    width:42%;
+    height:31px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+    /*float:left;*/
+}
+
+.vehicle_detail_info_fuel_text {
+    position:absolute;
+    left:58%;
+    top:505px;
+    width:42%;
+    height:inherit;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+
+
+.vehicle_detail_info_vline {
+    position: absolute;
+    left: 50%;
+    top: 371px;
+    width: 1px;
+    height: 84px;
+    background-color: #d3d3d3;
+}
+
+.vehicle_detail_info_fuel_bg_normal {
+    background-image: url('../images/vehicle_detail_info_fuel_bg.png');
+}
+
+.vehicle_detail_info_fuel_bg_container {
+    position:relative;
+    left:730px;
+    top:400px;
+    width:16px;
+    height:16px;
+}
+
+#vehicle_detail_info_fuel_bg_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.vehicle_detail_info_engine {
+    position:absolute;
+    left:58%;
+    top:392px;
+    width:42%;
+    height:31px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_info_engine_text {
+    position:absolute;
+    left:58%;
+    top:428px;
+    width:42%;
+    height:inherit;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+
+
+.vehicle_detail_info_line3 {
+    position:absolute;
+    left:0;
+    top:453px;
+    width:100%;
+    height:1px;
+    background-color:#d3d3d3;
+}
+
+.vehicle_detail_info_health {
+    position:absolute;
+    left:8%;
+    top:556px;
+    width:92%;
+    height:31px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_info_health_text {
+	position:absolute;
+	left:8%;
+	top:591px;
+	width:92%;
+	height:inherit;
+	font-family:Microsoft YaHei;
+	text-align:left;
+	word-wrap:break-word;
+}
+
+
+.vehicle_detail_info_line4 {
+    position:absolute;
+    left:0;
+    top:537px;
+    width:100%;
+    height:1px;
+    background-color:#d3d3d3;
+}
+
+.vehicle_detail_info_battery {
+    position:absolute;
+    left:8%;
+    top:469px;
+    width:42%;
+    height:31px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_info_battery_text {
+    position:absolute;
+    left:8%;
+    top:505px;
+    width:42%;
+    height:inherit;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.vehicle_detail_info_line5_line,.vehicle_detail_info_line6_line {
+    /*background-image: url('../images/vehicle_detail_info_line.png');*/
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:229px;
+    height:3px;
+    border: dashed;
+    border-width: 0px 0px 1px 0px;
+    border-color:#d7d7d7;
+}
+
+.vehicle_detail_info_line5 {
+    position:absolute;
+    left:640px;
+    top:618px;
+    width:229px;
+    height:10px;
+}
+
+.vehicle_detail_info_line6 {
+    position:absolute;
+    left:640px;
+    top:698px;
+    width:229px;
+    height:10px;
+}
+.u2_normal {
+    background-image: url('../images/u2_normal.png');
+}
+
+.u2_container {
+    position:absolute;
+    left:18.75%;
+    width:60.94%;
+    top:40px;
+}
+
+#u2_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:235px;
+    height:830px;
+}
+
+.u3 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:225px;
+    height:16px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+.u63 {
+    position:absolute;
+    left:18px;
+    top:10px;
+    width:140px;
+    height:14px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u64_normal {
+    background-image: url('../images/u64_normal.png');
+}
+
+.u64_container {
+    position:absolute;
+    left:90px;
+    top:22px;
+    width:180px;
+    height:25px;
+}
+
+#u64_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:133px;
+    height:31px;
+}
+
+.u65 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:123px;
+    height:16px;
+    font-family:Microsoft YaHei;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66_normal {
+    background-image: url('../images/u61_normal.png');
+}
+
+.u66_container {
+    position:absolute;
+    left:190px;
+    top:29px;
+    width:14px;
+    height:14px;
+}
+
+#u66_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:14px;
+    height:14px;
+}
+.cls_Vehicles_detail_tab_upline {
+    position:absolute;
+    top:140px;
+    left:1.5%;
+    width:71%;
+    height:1px;
+    background-color:#d4d3d3;
+}
+
+.cls_show_trip_log {
+    position:absolute;
+    cursor:pointer;
+    background:url('../images/Hide.png');
+    left:-11px;
+    height:48px;
+    width:11px;
+}
+
+.cls_Vehicles_hide_trip_log {
+    position:absolute;
+    left:858px;
+    top:0px;
+    width:30px;
+    height:824px;
+}
+
+.cls_hide_trip_log {
+    position:absolute;
+    cursor:pointer;
+    background:url('../images/Show.png');
+    left:-11px;
+    height:48px;
+    width:11px;
+}
+
+.cls_trip_log_bar {
+    position:absolute;
+    background:url('../images/Show&Hide_bar.png');
+    left:0px;
+    height:824px;
+    width:11px;
+}
+
+.cls_Vehicles_show_vehicles {
+    position:absolute;
+    background-color:#FFFFFF;
+    left:90px;
+    top:48px;
+    width:127px;
+    height:100px;
+    border-style:solid ;
+    border-width:1px;
+    border-color:#808080;
+    border-radius:6px;
+}
+
+.cls_Vehicles_choose_vehicle {
+    width:123px; 
+    border-radius:5px;
+    height:25px;
+    -webkit-appearance: none;
+    background-repeat:no-repeat;
+    background-image:url('../images/u61_normal.png');
+    background-position:103px;
+}
+/**右侧选车 triplog**/
+.cls_Vehicles_trip_log {
+    position:relative;
+    left:-5.13%;
+    width:114.10%;
+}
+.cls_Vehicles_trip_log_detail {
+    position:relative;
+    width:100%;
+    height:60px;
+}
+.cls_Vehicles_trip_log_detail_left_icon {
+    position:relative;
+    top:5px;
+    float:left;
+    width:44.94%;
+    height:inherit;
+
+}
+.cls_Vehicles_trip_log_detail_right_icon {
+    position:relative;
+    left:5px;
+    top:10px;
+    float:left;
+    width:150px;
+    height:inherit;
+
+}
+.cls_Vehicles_trip_log_detail_left ,.cls_Vehicles_trip_log_detail_One_left{
+    position:relative;
+    float:right;
+    background-repeat:no-repeat;
+    /*background-position:120px 5px;*/
+    background-image:url('../images/u46_normal.png');
+    /*change2013-01-24*/
+    /*width:150px;*/
+    width:20px;
+    height:30px;
+}
+.cls_Vehicles_trip_log_alert_One_left {
+    position:relative;
+    float:right;
+    background-repeat:no-repeat;
+    /*background-position:120px 5px;*/
+    background-image:url('../images/u64_normal.png');
+    /*change2013-01-24*/
+    /*width:150px;*/
+    width:20px;
+    height:30px;
+}
+.cls_Vehicles_trip_log_engnie_One_left {
+    position:relative;
+    float:right;
+    background-repeat:no-repeat;
+    /*background-position:120px 5px;*/
+    background-image:url('../images/u126_normal.png');
+    /*change2013-01-24*/
+    /*width:150px;*/
+    width:20px;
+    height:30px;
+}
+.cls_Vehicles_trip_log_detail_middle , .cls_Vehicles_trip_log_alert_middle{
+    position:relative;
+    float:left;
+    height:inherit;
+    width:5.39%;
+}
+.cls_Vehicles_trip_log_detail_circle , .cls_Vehicles_trip_log_alert_circle{
+    position:relative;
+    top:4px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u68_normal_2.png');
+    width:100%;
+    height:26px;
+}
+.cls_Vehicles_trip_log_detail_circle_red{
+    position:relative;
+    top:4px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u68_normal_2-1.png');
+    width:100%;
+    height:26px;
+}
+.cls_Vehicles_trip_log_detail_circle_final {
+    position:relative;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u68_normal.png');
+    width:100%;
+    height:26px;
+}
+.cls_Vehicles_trip_log_detail_line {
+    position:relative;
+    /*background-repeat:no-repeat;cls_Vehicles_trip_log_detail_circle
+    background-position:center;
+    background-image:url('../images/u102_line.png');
+    width:inherit;
+    height:107px;*/
+    width:4.17%;
+    height:30px;
+    background-color:#BCBCBC;
+    left:50%;
+}
+.cls_Vehicles_trip_log_detail_line_arrow {
+    position:relative;
+    background-repeat:no-repeat;
+    background-image:url('../images/arrows-3_70.png');
+    width:inherit;
+    height:70px;
+    width:9px;
+    left:38.962%;
+}
+.cls_Vehicles_trip_log_detail_line_arrow10 {
+    position:relative;
+    background-repeat:no-repeat;
+    background-image:url('../images/arrows-2_10.png');
+    width:inherit;
+    height:10px;
+    width:6%;
+    left:2%;
+    clear:both;
+    margin:2px 0px 2px 0px;
+    top:1px;
+}
+
+.cls_Vehicles_trip_log_detail_right , .cls_Vehicles_trip_log_alert_right,.cls_Vehicles_trip_log_detail_One_right,.cls_Vehicles_trip_log_detail_Two_left,.cls_Vehicles_trip_log_alert_One_right,.cls_Vehicles_trip_log_alert_Two_left{
+    position:relative;
+    float:left;
+    width:33.71%;
+    height:inherit;
+}
+.cls_Vehicles_trip_log_detail_time , .cls_Vehicles_trip_log_alert_time,.cls_Vehicles_trip_log_detail_One_time,.cls_Vehicles_trip_log_alert_One_time{
+    position:relative;
+    top:5px;
+    left:10%;
+    width:100%;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.cls_Vehicles_trip_log_detail_info {
+    position:relative;
+    left:10%;
+    width:100%;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+.cls_Vehicles_trip_log_detail_One_info {
+    position:relative;
+    width:100%;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+    /*mabiao for 20140304 #Demand for change*/
+    text-align:right;
+    right:5%;
+
+}
+
+.cls_Vehicles_trip_log_alert {
+    position:relative;
+    width:inherit;
+    height:95px;
+}
+.cls_Vehicles_trip_log_alert_line {
+    position:relative;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u79_line.png');
+    width:inherit;
+    height:65px;
+}
+.cls_Vehicles_trip_log_alert_status ,.cls_Vehicles_trip_log_alert_One_status{
+    position:relative;
+    top:10px;
+    left:15px;
+    width:inherit;
+    height:16px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#FF0000;
+}
+.cls_Vehicles_trip_log_alert_Two_status {
+    position:relative;
+    top:5px;
+    left:-5%;
+    width:100%;
+    height:18px;
+    text-align:right;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#FF0000;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+.cls_Vehicles_trip_log_alert_info,.cls_Vehicles_trip_log_alert_One_info {
+    position:relative;
+    top:10px;
+    left:15px;
+    width:inherit;
+    height:16px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+.cls_Vehicles_trip_log_alert_Two_info {
+    position:relative;
+    top:10px;
+    left:-15px;
+    width:inherit;
+    height:16px;
+    text-align:right;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.cls_Vehicles_trip_log_day {
+    position:relative;
+    left:0px;
+    width:100%;
+    height:55px;
+}
+.cls_Vehicles_trip_log_day_date {
+    position:relative;
+    width:100%;
+    height:20px;
+    left:-2.25%;
+    top:5px;
+    line-height:20px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_trip_log_day_line {
+    position:relative;
+    background-repeat:no-repeat;
+    left:47.42%;
+    top:7px;
+    background-image:url('../images/u93_line.png');
+    width:10%;
+    height:45px;
+}
+
+.cls_Vehicles_Trip_log_viewmore {
+    cursor: default;
+    position:relative;
+    left:23.875%;
+    width:46.74%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    margin-top:20px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    color:#333333;
+    cursor:pointer;
+    background-color: rgb(242,242,242);
+    border-color: rgb(133,133,133);
+    border-width: 1px;
+    border-style: solid;
+    border-radius:7px;
+}
+
+.cls_Vehicles_trip_log_detail_Two_time ,.cls_Vehicles_trip_log_alert_Two_time, .cls_Vehicles_trip_log_alert_time_left{
+    position:relative;
+    top:5px;
+    left:-15px;
+    width:inherit;
+    text-align:right;
+    height:16px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.cls_Vehicles_trip_log_detail_Two_info {
+    position:relative;
+    top:5px;
+    left:-5%;
+    width:100%;
+    text-align:right;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.cls_Vehicles_trip_log_detail_Two_right {
+    position:relative;
+    float:left;
+    background-repeat:no-repeat;
+    /*background-position:15px 5px;*/
+    background-image:url('../images/u46_normal.png');
+    /*width:150px;*/
+    width:20px;
+    height:30px;
+}
+.cls_Vehicles_trip_log_alert_Two_right {
+    position:relative;
+    float:left;
+    background-repeat:no-repeat;
+    /*background-position:15px 5px;*/
+    background-image:url('../images/u64_normal.png');
+    /*width:150px;*/
+    width:20px;
+    height:30px;
+}
+.cls_Vehicles_trip_log_engnie_Two_right {
+    position:relative;
+    float:left;
+    background-repeat:no-repeat;
+    /*background-position:15px 5px;*/
+    background-image:url('../images/u126_normal.png');
+    /*width:150px;*/
+    width:20px;
+    height:30px;
+}
+
+.cls_Vehicles_trip_log_alert_Two_moreinfo, .cls_Vehicles_trip_log_detail_Two_moreinfo {
+    position:relative;
+    top:10px;
+    left:-15px;
+    width:inherit;
+    text-align:right;
+    height:16px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#0000FF;
+    cursor:pointer;
+}
+
+.cls_Vehicles_trip_log_alert_One_moreinfo, .cls_Vehicles_trip_log_detail_One_moreinfo {
+    position:relative;
+    left:10%;
+    width:100%;
+    text-align:left;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#0000FF;
+    cursor:pointer;
+}
+/*****trip log btn******/
+.cls_Vehicles_trip_log_btn {
+    position:absolute;
+    left:84.06%;/*位置调整liangjiajie0308*/
+    /*top:260px;*/
+    width:15.625%;
+    float:left;
+}
+.cls_Vehicles_trip_log_list_btn {
+    position:relative;
+    background-image:url('../images/u153_normal.png');
+    float:left;
+    width:39%;
+    height:31px;
+    cursor:pointer;
+}
+.cls_Vehicles_trip_log_map_btn {
+    position:relative;
+    background-image:url('../images/u152_normal.png');
+    float:left;
+    width:39%;
+    height:31px;
+}
+.cls_Vehicles_trip_log_list_pic {
+    position:relative;
+    background-image:url('../images/u154_normal.png');
+    background-repeat:no-repeat;
+    background-position:11px;
+    width:100%;
+    height:inherit;
+}
+.cls_Vehicles_trip_log_map_pic {
+    position:relative;
+    background-image:url('../images/u155_normal.png');
+    background-repeat:no-repeat;
+    background-position:13px;
+    width:100%;
+    height:inherit;
+}
+
+.cls_Vehicles_trip_log_list {
+    position:relative;
+    width:153.85%;
+    left:-26.92%;
+}
+.cls_Vehicles_trip_log_list_title {
+    position:relative;
+    width:99.67%;
+    height:50px;
+    border-style:solid;
+    border-color:#ddd;
+    border-width:1px;
+    background-color:#f1f1f1;
+}
+.cls_Vehicles_trip_log_list_title_alertinfo{
+    position:relative;
+    width:16.56%;
+    line-height:50px;
+    float:left;
+    /*text-align:center;*//*fengpan 20140324 #832*/
+    left: 2.51%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_trip_log_list_title_time,.cls_Vehicles_trip_log_list_title_location{
+    position:relative;
+    width:15.05%;
+    line-height:50px;
+    float:left;
+    /*text-align:center;*//*fengpan 20140324 #832*/
+    left: 2.51%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_trip_log_list_title_distance {
+    position:relative;
+    width:11.71%;
+    line-height:50px;
+    float:left;
+    /*text-align:center;*//*fengpan 20140324 #832*/
+    left: 2.51%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+
+}
+
+.cls_Vehicles_trip_log_list_text {
+    position:relative;
+    width:99.67%;
+    height:50px;
+    border-style:solid;
+    border-color:#ddd;
+    border-width:0px 1px 1px 1px;
+    background-color:#f1f1f1;
+}
+.cls_Vehicles_trip_log_list_text_time{
+    position:relative;
+    width:15.05%;
+    top:6px;
+    float:left;
+    /*text-align:center;*//*fengpan 20140324 #832*/
+    left: 2.51%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space: pre-wrap;
+}
+.cls_Vehicles_trip_log_list_text_location {
+    position:relative;
+    width:31.61%;
+    line-height:50px;
+    float:left;
+    /*text-align:center;*//*fengpan 20140324 #832*/
+    left: 2.51%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.cls_Vehicles_trip_log_list_text_distance {
+    position:relative;
+    width:11.71%;
+    line-height:50px;
+    float:left;
+    /*text-align:center;*//*fengpan 20140324 #832*/
+    left: 2.51%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+.cls_Vehicles_trip_log_list_text_alertinfo {
+    position:relative;
+    width:16.56%;
+    line-height:50px;
+    float:left;
+    /*text-align:center;*//*fengpan 20140324 #832*/
+    left: 2.51%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+.cls_trip_log_list_alertinfo_alert {
+    position:relative;
+    width:100%;
+    line-height:17px;
+    float:left;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+    color:#FF0000;
+}
+.cls_trip_log_list_alertinfo_geo {
+    position:relative;
+    width:75px;
+    line-height:16px;
+    float:left;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+    color:#FF0000;
+}
+.cls_trip_log_list_alertinfo_alert_img {
+    position:relative;
+    background:url('../images/u144_normal_down.png');
+    width:12px;
+    height:12px;
+    float:left;
+    margin:3px 3px 0px 3px;
+    cursor:pointer;
+}
+.cls_trip_log_list_alertinfo_alert_img_hide {
+    position:relative;
+    background:url('../images/u144_normal.png');
+    width:12px;
+    height:12px;
+    float:left;
+    margin:3px;
+    cursor:pointer;
+}
+.cls_Vehicles_trip_log_list_text_alertinfo_detail {
+    position:relative;
+    width:48.33%;
+    line-height:17px;
+    left:2.51%;
+    float:left;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+    color:#000000;
+}
+.cls_Vehicles_Trip_log_list_viewmore {
+    position:relative;
+    /*background-image:url("../images/u97_normal.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    left:180px;
+    width:208px;*/
+    left:30%;
+    width:34.67%;
+    height:50px;
+    line-height:50px;
+    margin-top:20px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    color:#333333;
+    /*mabiao 20140301*/
+    cursor:pointer;
+    background-color: rgb(242,242,242);
+    border-color: rgb(133,133,133);
+    border-width: 1px;
+    border-style: solid;
+    border-radius:7px;
+}
+
+.cls_Vehicles_detail_tab {
+    position:absolute;
+    left:1.5%;
+    top:150px;
+    width:72.14%;
+}
+.cls_Vehicles_detail_tab_choose {
+    background-color:#d0d0d0;
+    float:left;
+    width:20%;
+    height:46px;
+    line-height:46px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    cursor:default;
+    margin-left:1%;
+    border:1px solid #ddd;
+}
+
+.cls_Vehicles_detail_tab_unchoose {
+    background-color:#f1f1f1;
+    float:left;
+    width:20%;
+    height:46px;
+    line-height:46px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    cursor:pointer;
+    margin-left:1%;
+    border:1px solid #ddd;
+}
+.cls_Vehicles_detail_trip_log_name {
+    position:absolute;
+    top:0px;/*调整title上下位置liangjiajie0308*/
+    left:3%;
+    width:10.94%;
+    height:20px;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    font-weight:bolder;
+}
+
+.cls_Vehicles_trip_log_detail_moreinfo {
+    position:relative;
+    /*left:-90px;*/
+    left:-20.22%;
+    /*width:620px;*/
+    width:139.33%;
+    height:450px;
+}
+.cls_Vehicles_trip_log_detail_map {
+    position:relative;
+    width:100%;
+    height:400px;
+}
+
+.cls_Vehicles_trip_log_detail_map_close {
+    position:absolute;
+    background-image:url('../images/u139_normal.png');
+    width:18px;
+    height:18px;
+    z-index:999;
+    left:96.77%;
+    cursor:pointer;
+
+}
+.cls_Vehicles_trip_log_detail_line_map {
+    position:relative;
+    left:-1.29%;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u71_line.png');
+    width:100%;
+    height:45px;
+}
+.cls_Vehicles_trip_log_detail_map_info_open {
+    position: absolute;
+    width: 40.32%;
+    height: 25px;
+    z-index: 999;
+    left: 0.81%;
+    top: 5px;
+    line-height: 25px;
+    border-color: #b9b2b2;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    font-family: Microsoft YaHei;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    color: #424242;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-weight: bolder;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+.cls_Vehicles_trip_log_detail_map_info_open_img {
+    position:absolute;
+    left:80%;
+    top:8px;
+    background-image:url('../images/u144_normal_down.png');
+    width:16px;
+    height:16px;
+}
+.cls_Vehicles_trip_log_detail_map_info_open_text {
+    position:relative;
+    left:8%;
+    top:2px;
+    width:40%;
+    height:inherit;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    font-weight:bolder;
+}
+
+.cls_Vehicles_trip_log_detail_map_info_close {
+    position:absolute;
+    width:40.32%;
+    height:200px;
+    z-index:999;
+    left:0.81%;
+    top:5px;
+    line-height:25px;
+    border-color:#b9b2b2;
+    border-width:1px;
+    border-style:solid;
+    cursor:pointer;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    background-color:#FFFFFF;
+    border-radius:5px;
+    font-weight:bolder;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+
+.cls_Vehicles_trip_log_detail_map_info_close_text {
+    position:relative;
+    left:8%;
+    top:2px;
+    width:40%;
+    height:inherit;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    font-weight:bolder;
+
+}
+.cls_Vehicles_trip_log_detail_map_info_close_img {
+    position:absolute;
+    left:80%;
+    top:8px;
+    background-image:url('../images/u144_normal.png');
+    width:16px;
+    height:16px;
+}
+.cls_Vehicles_trip_log_detail_map_info_close_detail {
+    position:absolute;
+    left:6%;
+    top:50px;
+    width:88%;
+    height:150px;
+    font-family:Microsoft YaHei;
+
+}
+.cls_Vehicles_trip_log_detail_map_info_close_detail_distance, .cls_Vehicles_trip_log_detail_map_info_close_detail_time, .cls_Vehicles_trip_log_detail_map_info_close_detail_starttime, .cls_Vehicles_trip_log_detail_map_info_close_detail_startlocation, .cls_Vehicles_trip_log_detail_map_info_close_detail_endtime, .cls_Vehicles_trip_log_detail_map_info_close_detail_endlocation, .cls_Vehicles_trip_log_detail_map_info_close_detail_slowspeed {
+    position:relative;
+    width:100%;
+    height:20px;
+    line-height:20px;
+    float:left;
+    text-align:left;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    font-family: Microsoft YaHei;
+}
+
+.cls_Vehicles_trip_log_detail_Left_Start {
+    position:relative;
+    float:left;
+    background-image:url('../images/Clock_Start1.png');
+    background-repeat:no-repeat;
+    height:18px;
+    width:46.67%;
+    /*mabiao 20140301*/
+    cursor:default;
+    /*mabiao for 20140304 Demand for change*/
+    clear:both;
+}
+.cls_Vehicles_trip_log_detail_Left_End {
+    position:relative;
+    float:left;
+    background-image:url('../images/Clock_Leave.png');
+    background-repeat:no-repeat;
+    height:18px;
+    width:46.67%;
+    /*mabiao 20140301*/
+    cursor:default;
+    /*mabiao for 20140304 Demand for change*/
+    clear:both;
+}
+
+
+/***********************************************************/
+/***********************************************************/
+/********************Fuel Log*****************************/
+/***********************************************************/
+/***********************************************************/
+/***********************************************************/
+.cls_Vehicles_detail_fuel_log {
+    position:relative;
+    left:2%;
+    top:37px;/*位置调整liangjiajie0308*/
+    width: 98%;
+    height:300px;
+}
+.cls_Vehicles_detail_fuel_log_show {
+    position:relative;
+    width:97%;
+    height:131px;
+    /*background-image:url('../images/u136_normal.png');
+    background-repeat:no-repeat;*/
+    background-color: rgb(249,249,249);
+    border-color: rgb(228,228,228);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.cls_Vehicles_detail_fuel_log_show_qua {
+    position:relative;
+    top:30px;
+    float:left;
+    width:24.53%;
+    height:inherit;
+}
+.cls_Vehicles_detail_fuel_log_show_cost {
+    position:relative;
+    width:100%;
+    height:40px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:36px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#333333;
+}
+.cls_Vehicles_detail_fuel_log_show_name {
+    position:relative;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.cls_Vehicles_detail_fuel_log_show_units {
+    position:relative;
+    width:100%;
+    height:30px;
+    line-height:2px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:11px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_detail_fuel_log_sheet {
+    position:relative;
+    width:inherit;
+    height:218px;
+}
+.cls_Vehicles_detail_fuel_log_name {
+    position:absolute;
+    top:-37px;
+    left: 3%;/*位置调整liangjiajie0308*/
+    width:10.93%;
+    height:20px;
+    /*mabiao for 20140304 #555*/
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    /*mabiao for 20140304 #555*/
+    /*font-weight:normal;*/
+    font-weight:bolder;
+    /*mabiao for 20140304 #555*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_choose_div{
+    position:relative;
+    left:447px;
+    /*mabiao for 20140304 #555*/
+    /*top:48px;*/
+    top:28px;
+    /*mabiao for 20140304 #555*/
+    width:6.25%; 
+    height:25px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_choose {
+    position:relative;
+    left:486px;
+    /*mabiao for 20140304 #555*/
+    /*top:20px;*/
+    /*mabiao for 20140304 #555*/
+    width:123px; 
+    border-radius:5px;
+    height:25px;
+    /*chenyangwen 2014/3/1*/
+    /*-webkit-appearance: none;
+    background-repeat:no-repeat;
+    background-image:url('../images/u61_normal.png');
+    background-position:103px;*/
+}
+
+.cls_Vehicles_fuel_log_list {
+    position:relative;
+    width:93.75%;
+    /*mabiao for 20140304 #555*/
+    /*height:400px;
+    top:30px;*/
+    top:10px;
+    /*mabiao for 20140304 #555*/
+    left:1.56%;
+}
+.cls_Vehicles_fuel_log_list_title {
+    position:relative;
+    width:99.67%;
+    height:50px;
+    border-style:solid;
+    border-color:#ddd;
+    border-width:1px;
+    background-color:#f1f1f1;
+}
+.cls_Vehicles_fuel_log_list_title_time {
+    position:relative;
+    width:19.9%;
+    line-height:50px;
+    float:left;
+    text-align:left;
+    left:6.02%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.cls_Vehicles_fuel_log_list_title_galllon {
+    position:relative;
+    width:5.02%;
+    line-height:50px;
+    float:left;
+    left:16.72%;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.cls_Vehicles_fuel_log_list_title_CM {
+    position:relative;
+    width:19.9%;
+    line-height:50px;
+    float:left;
+    left:25.08%;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_fuel_log_list_title_EA {
+    position:relative;
+    width:19.9%;
+    line-height:50px;
+    float:left;
+    text-align:left;
+    left:27.6%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_fuel_log_list_title_status{
+    position:relative;
+    width:11.71%;
+    line-height:25px;
+    float:left;
+    left:10.87%;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bolder;/*liangjiajie*/
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Vehicles_fuel_log_list_text {
+    position:relative;
+    width:99.67%;
+    height:50px;
+    border-style:solid;
+    border-color:#ddd;
+    border-width:0px 1px 1px 1px;
+    background-color:#f1f1f1;
+}
+
+.cls_Vehicles_fuel_log_list_text_time {
+    position:relative;
+    width:25.08%;
+    line-height:50px;
+    float:left;
+    left:5.85%;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.cls_Vehicles_fuel_log_list_text_status,.cls_Vehicles_fuel_log_list_text_galllon,.cls_Vehicles_fuel_log_list_text_EA,.cls_Vehicles_fuel_log_list_text_CM{
+    position:relative;
+    width:16.72%;
+    line-height:50px;
+    float:left;
+    left:5.85%;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    
+}
+.cls_Vehicles_fuel_log_list_viewmore {
+    position:relative;
+    /*background-image:url("../images/u97_normal.png");
+    background-position:center;
+    background-repeat:no-repeat;*/
+    left:33.125%;
+    width:32.5%;
+    height:50px;
+    margin-top: 20px;
+    line-height:50px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    color:#333333;
+    /*mabiao for 20140304 #498*/
+    cursor:pointer;
+    background-color: rgb(242,242,242);
+    border-color: rgb(133,133,133);
+    border-width: 1px;
+    border-style: solid;
+    border-radius:7px;
+}
+
+
+#loading_img {
+    position:absolute;
+    /*mabiao for 20140304 #419*/
+    top:7px;
+    /*mabiao for 20140304 #419*/
+    left:19.23%;
+    width:15.38%;
+    height:32px;
+    /*background-image:url('../../Common/images/loading.gif');*/
+}
+
+#loading_img_list {
+    position:absolute;
+    /*mabiao for 20140304 #419*/
+    top:10px;
+    /*mabiao for 20140304 #419*/
+    left:19.23%;
+    width:15.38%;
+    height:32px;
+    /*background-image:url('../../Common/images/loading.gif');*/
+}
+
+#loading_img_DTC {
+    position:absolute;
+    top:80px;
+    left:135px;
+    width:32px;
+    height:32px;
+    /*background-image:url('../../Common/images/loading.gif');*/
+}
+
+#loading_text {
+    position:absolute;
+    left:100px;
+}
+
+#loading_text_list {
+    position:absolute;
+    left:100px;
+}
+
+#chart1 {
+    width:95.31%;
+    height:208px;
+    float:left;
+    padding-right:20px;
+}
+.cls_input_right {
+    background-image:url("../images/Right.png");
+    position:relative;
+    left:270px;
+    top:-40px;
+    height:13px;
+    width:15px;
+}
+
+
+/*mabiao DTC 20140409*/
+
+.GreenDynamic {
+    background:url('../images/GreenDynamic.gif');
+}
+.RedDynamic {
+    background:url('../images/RedDynamic.gif');
+}
+.YellowDynamic {
+    background:url('../images/YellowDynamic.gif');
+}
+.GreenStatic {
+    background:url('../images/GreenStatic.gif');
+}
+.RedStatic {
+    background:url('../images/RedStatic.gif');
+}
+.YellowStatic {
+    background:url('../images/YellowStatic.gif');
+}
+#vehicle_detail_DTC_popup {
+    position: absolute;
+    width: 300px;
+    height: 262px;
+    top: 615px;
+    right:1%;
+    border:solid 2px  #808080; 
+    background-color:#FFFFFF; 
+    z-index:1001;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#vehicle_detail_DTC_warning{
+    position: absolute;
+    width: 333px;
+    height: 160px;
+    top: 678px;
+    right:3%;
+    border:solid 1px  #808080; 
+    background-color:#FFFFFF; 
+    z-index:1002;
+}
+
+#vehicle_detail_DTC_warning_up {
+    position:relative;
+    width:333px;
+    height:25px;
+}
+
+#vehicle_detail_DTC_warning_title {
+    position: absolute;
+    top:2px;
+    width: 80px;
+    font-size: 10pt;
+    font-family: 'Microsoft YaHei';
+    left: 155px;
+}
+
+#vehicle_detail_DTC_warning_close {
+    position:absolute;
+    width:15px;
+    height:15px;
+    right: 5px;
+    top: 3px;
+    cursor:pointer;
+    z-index:10;
+    background-image:url('../../Common/images/InfoClose.png');
+}
+
+#vehicle_detail_DTC_warning_line1 {
+    height: 1px;
+    background-color: #ddd;
+    top: 25px;
+    left: 20px;
+    width: 295px;
+    position: absolute;
+}
+
+#vehicle_detail_DTC_warning_mid {
+    position:relative;
+    width:333px;
+    height:98px;
+}
+
+#vehicle_detail_DTC_warning_line2 {
+    height: 1px;
+    background-color: #ddd;
+    top: 122px;
+    left: 20px;
+    width: 295px;
+    position: absolute;
+}
+
+#vehicle_detail_DTC_warning_down {
+    position:relative;
+    width:333px;
+    height:25px;
+}
+
+#vehicle_detail_DTC_warning_btn_continue {
+    position:absolute;
+    top:5px;
+    left:58px;
+    width:75px;
+    height:25px;
+    border:solid 1px #808080;
+    border-radius:7px;
+    background-color:#FFFFFF;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    line-height:25px;
+    text-align:center;
+    cursor:pointer;
+}
+
+#vehicle_detail_DTC_warning_btn_cancel {
+    position:absolute;
+    top:5px;
+    right:58px;
+    width:75px;
+    height:25px;
+    border:solid 1px #808080;
+    border-radius:7px;
+    background-color:#FFFFFF;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    line-height:25px;
+    text-align:center;
+    cursor:pointer;
+}
+
+#vehicle_detail_DTC_warning_content {
+    position: absolute;
+    top:6px;
+    width: 246px;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    left: 78px;
+    overflow-x: hidden;
+}
+
+#vehicle_detail_DTC_warning_picture {
+    position:absolute;
+    width:50px;
+    height:55px;
+    left: 12px;
+    top: 19px;
+    background-image:url('../../Common/images/warning.png');
+}
+
+#DTCText {
+    position: absolute;
+    top:7px;
+    width: 165px;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    left: 95px;
+}
+
+.DTCBtn {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:75px;
+    height:25px;
+    border:solid 1px #808080;
+    border-radius:7px;
+    background-color:#FFFFFF;
+    font-size: 10pt;
+    font-family: 'Microsoft YaHei';
+    line-height:25px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.DTCBtnClear01 {
+    position:absolute;
+    top:48px;
+    left:10px;
+    width:115px;
+    height:25px;
+    border:solid 1px #808080;
+    border-radius:7px;
+    background-color:#FFFFFF;
+    font-size: 10pt;
+    font-family: 'Microsoft YaHei';
+    line-height:25px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.DTCBtnClear02 {
+    position:absolute;
+    top:48px;
+    left:135px;
+    width:115px;
+    height:25px;
+    border:solid 1px #808080;
+    border-radius:7px;
+    background-color:#FFFFFF;
+    font-size: 10pt;
+    font-family: 'Microsoft YaHei';
+    line-height:25px;
+    text-align:center;
+    cursor:pointer;
+}
+
+#vehicle_detail_DTC_popup_up {
+    position:relative;
+    height:85px;
+}
+
+#vehicle_detail_DTC_popup_mid {
+    position:relative;
+    width:290px;
+    height:75px;
+}
+
+#vehicle_detail_DTC_driverInfo {
+    position: absolute;
+    top:7px;
+    width: 170px;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    left: 13px;
+}
+
+#vehicle_detail_DTC_driverName {
+    position: absolute;
+    top:24px;
+    width: 80px;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    left: 13px;
+}
+
+#vehicle_detail_DTC_driverName_String {
+    position: absolute;
+    top:24px;
+    width: 100px;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    left: 76px;
+}
+
+#vehicle_detail_DTC_driverTelephone {
+    position: absolute;
+    top:40px;
+    width: 80px;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    left: 13px;
+}
+
+#vehicle_detail_DTC_driverTelephone_String {
+    position: absolute;
+    top:40px;
+    width: 100px;
+    font-size: 9pt;
+    font-family: 'Microsoft YaHei';
+    left: 76px;
+}
+
+#vehicle_detail_DTC_popup_down {
+    position:relative;
+    font-family: 'Microsoft YaHei';
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-size:10pt;
+    padding-left: 10px;
+}
+
+#vehicle_detail_DTC_popup_close {
+    position:absolute;
+    width:15px;
+    height:15px;
+    left: 266px;
+    top: 3px;
+    cursor:pointer;
+    z-index:10;
+    background-image:url('../../Common/images/InfoClose.png');
+}
+
+#vehicle_detail_DTC_popup_line1 {
+    height: 1px;
+    background-color: #ddd;
+    top: 0px;
+    left: 5px;
+    width: 290px;
+    position: absolute;
+}
+
+#vehicle_detail_DTC_popup_line2 {
+    height: 1px;
+    background-color: #ddd;
+    bottom: 11px;
+    left: 5px;
+    width: 290px;
+    position: absolute;
+}
+
+#date_time_ok {
+    cursor:pointer;
+    position:absolute;
+    left:320px;
+    width:83px;
+    height:21px;
+    font-size:10pt;
+    border-radius:5px;
+    border-style:solid;
+    border-color:#808080;
+    border-width:1px;
+    float:left;
+    text-align:center;
+    top:1px;
+}
+
+#select_date_for_trip {
+    position:absolute;
+    font-family:'Microsoft YaHei';
+    font-size:10pt; 
+    width:333px;
+    float:left;
+    left:18px;
+}

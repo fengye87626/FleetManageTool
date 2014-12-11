@@ -1,0 +1,62 @@
+﻿<!-- //[DELETE-Start] ABCSoft-yueqq 2014-03-06:GeoFence需求变更删除SetLocation画面
+    @{
+    ViewBag.Title = "SetLocation";
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/Common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_choose";
+    ViewBag.Left_Reports_Background = "cls_unchoose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+
+    //ViewBag.DashboardPoint = "default";
+    //ViewBag.VehiclePoint = "pointer";
+    //ViewBag.GeoFencePoint = "pointer";
+    //ViewBag.ReportsPoint = "pointer";
+    //ViewBag.SettingPoint = "pointer";
+}
+
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMapLib_InfoBox.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_api.js")?@Session["version"]"></script>
+
+
+<link href="@Url.Content("~/Content/Geofence/css/geofence.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/Geofence/css/geo_name_vehicle_popup.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script src = "@Url.Content("~/Content/Geofence/js/SetLocation.js")?@Session["version"]" type = "text/javascript"> </script>
+<script src = "@Url.Content("~/Content/Geofence/js/geo_name_vehicle_popup.js")?@Session["version"]" type = "text/javascript"> </script>
+<script>
+    $(document).ready(function () {
+        ChangeLocationTime();
+        ChangeLeft("common_geofence_cover");
+    });
+</script>
+<input id="hiddenCompanyID" type="hidden" value="ABCSoft"/>
+<section>
+    @*liangjiajie*@
+@*    <div id="geofence_title" class="geofence_title" data-label="paragraph">
+        <p style="text-align:left;">
+            <span style="font-size:18px;color:#424242;">电子围栏</span>
+        </p>
+    </div>*@
+    @*liangjiajie*@
+
+    <div id="geofenceSetLocation_BMap" class="geofence_BMap_style">
+	    @*--插入地图--*@
+    </div>
+    <div  id="geofenceSetLocation_Top" class="geofenceSetLocation_Top_style">
+        <div id="geofenceSetLocation_Tips" class="geofenceSetLocation_Tips_style"> 在地图上拖动直到十字准线落在需要的位置或者使用搜索工具 </div>
+        <div id="geofenceSetLocation_SetLocation" class="geofenceSetLocation_SetLocation_style" style =" cursor:pointer">设定地点</div>
+        <div id="geofenceSetLocation_Cancel" class="geofenceSetLocation_Cancel_style" style =" cursor:pointer">取消</div>
+    </div>
+    <div id ="CoverCircle" class ="CoverCircle_style">
+        <div id ="Cross_HorizontalLine" class ="Cross_HorizontalLine_style"></div>
+        <div id ="Cross_VerticalLine" class ="Cross_VerticalLine_style"></div>
+    </div>
+    @*20140308caoyandong-jquery*@
+    <div class ="user_error" style="display:none;"></div>
+    <div class ="OBU_error" style="display:none;"></div>
+</section>
+    
+//[DELETE-End] ABCSoft-yueqq 2014-03-06:GeoFence需求变更删除SetLocation画面-->

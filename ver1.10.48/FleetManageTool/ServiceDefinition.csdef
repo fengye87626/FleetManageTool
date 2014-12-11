@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="FleetManageTool" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+  <WebRole name="FleetManageToolWebRole" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="HttpsIn" endpointName="HttpsIn" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" localPort="80" />
+      <InputEndpoint name="HttpsIn" protocol="https" port="443" certificate="MySSLCert" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="Caching" />
+    </Imports>
+    <LocalResources>
+      <LocalStorage name="Log4Net" sizeInMB="2048" cleanOnRoleRecycle="false" />
+      <LocalStorage name="CrashLogs" cleanOnRoleRecycle="false" sizeInMB="2048" />
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+      <LocalStorage name="WCFServiceDataTransfer.svclog" sizeInMB="1000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <Startup priority="-2">
+      <Task commandLine="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe install" executionContext="elevated" taskType="simple" />
+    </Startup>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" />
+      <Setting name="EndPoint" />
+      <Setting name="grant_type" />
+      <Setting name="username" />
+      <Setting name="password" />
+      <Setting name="InitToken" />
+      <Setting name="DataConnectionString" />
+      <Setting name="ContainerName" />
+      <Setting name="TokenTimeoutRangeMinValue" />
+      <Setting name="TokenTimeoutRangeMaxValue" />
+      <Setting name="RetryStrategyTime" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="MySSLCert" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+  <WorkerRole name="FleetManageToolWorker" vmsize="Small">
+    <Imports>
+      <Import moduleName="Caching" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <LocalResources>
+      <LocalStorage name="Log4Net" sizeInMB="2048" cleanOnRoleRecycle="false" />
+      <LocalStorage name="CrashLogs" cleanOnRoleRecycle="false" sizeInMB="2048" />
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+      <LocalStorage name="WCFServiceDataTransfer.svclog" sizeInMB="1000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <Startup priority="-2">
+      <Task commandLine="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe install" executionContext="elevated" taskType="simple" />
+    </Startup>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" />
+      <Setting name="EndPoint" />
+      <Setting name="grant_type" />
+      <Setting name="username" />
+      <Setting name="password" />
+      <Setting name="InitToken" />
+      <Setting name="SynThreadNumber" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="8080" localPort="80" />
+    </Endpoints>
+  </WorkerRole>
+</ServiceDefinition>

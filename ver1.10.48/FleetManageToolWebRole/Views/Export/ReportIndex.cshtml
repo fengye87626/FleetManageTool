@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "ReportIndex";
+    
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_unchoose";
+    ViewBag.Left_Reports_Background = "cls_choose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+
+    //ViewBag.DashboardPoint = "default";
+    //ViewBag.VehiclePoint = "pointer";
+    //ViewBag.GeoFencePoint = "pointer";
+    //ViewBag.ReportsPoint = "pointer";
+    //ViewBag.SettingPoint = "pointer";
+}
+
+<link href = "@Url.Content("~/Content/Export/css/ReportIndex.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script>
+    $(document).ready(function () {
+        $("#Report_index_vehicle").click(function () {
+            var timezone = new Date().getTimezoneOffset() / 60 * -1;
+            var homeurl = "/@Session["companyID"]/Export/HealthReportView?timezone=" + timezone;
+            //var homeurl = "/ABCSoft/Export/HealthReport";
+            location.href = homeurl;
+        });
+        $("#Report_index_oil").click(function () {
+            var timezone = new Date().getTimezoneOffset() / 60 * -1;
+            var homeurl = "/@Session["companyID"]/Export/FuelReportView?timezone=" + timezone;
+            location.href = homeurl;
+        });
+        $("#Report_index_trip").click(function () {
+            var timezone = new Date().getTimezoneOffset() / 60 * -1;
+            var homeurl = "/@Session["companyID"]/Export/TripReportView?timezone=" + timezone;
+            location.href = homeurl;
+        });
+        $("#Report_index_util").click(function () {
+            var timezone = new Date().getTimezoneOffset() / 60 * -1;
+            var homeurl = "/@Session["companyID"]/Export/UtilizationReportView?timezone=" + timezone;
+            location.href = homeurl;
+        });
+        $("#Report_index_history").click(function () {
+            var timezone = new Date().getTimezoneOffset() / 60 * -1;
+            var homeurl = "/@Session["companyID"]/Export/HistoryReportView?timezone=" + timezone;
+            location.href = homeurl;
+        });
+        ChangeLeft("common_report_cover");
+        ChangeLocationTime();
+    });
+
+</script>
+
+
+@*<div class="Report_index">
+    <div id="title" class="title" data-label="paragraph">@Resource.String.ihpleD_String_cn.Report</div>*@
+    <div class="report_line_1">
+        <div id="Report_index_trip" class="Report_index_trip">
+            <div id="Report_index_trip_img" class="Report_index_trip_img"></div>
+            <p style="text-align:center;"><span style="font-size:16px;font-weight:bold;color:#434343;">@Resource.String.ihpleD_String_cn.page_report_TripLogReport</span></p>
+            <p style="text-align:center;"><span style="font-size:13px;font-weight:normal;color:#868686;">@Resource.String.ihpleD_String_cn.page_report_title_TripLogIntro</span></p>
+        </div>
+        
+        
+            <div id="Report_index_util" class="Report_index_util">
+                <div id="Report_index_util_img" class="Report_index_util_img"></div>
+                <p style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #434343;">@Resource.String.ihpleD_String_cn.page_report_UtilizationReport</span></p>
+                <p style="text-align: center;"><span style="font-size: 13px; font-weight: normal; color: #868686;">@Resource.String.ihpleD_String_cn.page_report_title_UtilizationIntro</span></p>
+            </div>
+    </div>    
+        
+
+    <div class="report_line_2">
+        <div id="Report_index_vehicle" class="Report_index_vehicle">
+            <div id="Report_index_vehicle_img" class="Report_index_vehicle_img"></div>
+            <p style="text-align:center;"><span style="font-size:16px;font-weight:bold;color:#434343;">@Resource.String.ihpleD_String_cn.page_report_HealthReport</span></p>
+            <p style="text-align:center;"><span style="font-size:13px;font-weight:normal;color:#868686;">@Resource.String.ihpleD_String_cn.page_report_title_HealthIntro</span></p>
+        </div>
+        
+        
+        <div id="Report_index_oil" class="Report_index_oil">
+            <div id="Report_index_oil_img" class="Report_index_oil_img"></div>
+            <p style="text-align:center;"><span style="font-size:16px;font-weight:bold;color:#434343;">@Resource.String.ihpleD_String_cn.page_report_FuelReport</span></p>
+            <p style="text-align:center;"><span style="font-size:13px;font-weight:normal;color:#868686;">@Resource.String.ihpleD_String_cn.page_report_title_FuelLogIntro</span></p>
+        </div>
+        
+    </div>
+    <div class="report_line_3">
+        <div id="Report_index_history" class="Report_index_history">
+                <div id="Report_index_history_img" class="Report_index_history_img"></div>
+                <p style="text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #434343;">@Resource.String.ihpleD_String_cn.page_report_HistoryVehiclesReport</span></p>
+                <p style="text-align: center;"><span style="font-size: 13px; font-weight: normal; color: #868686;">@Resource.String.ihpleD_String_cn.page_report_title_HistoryIntro</span></p>
+            </div>
+        
+    </div>
+@*</div>*@

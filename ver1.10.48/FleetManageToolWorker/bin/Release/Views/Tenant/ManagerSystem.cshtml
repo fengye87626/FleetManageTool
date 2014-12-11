@@ -1,0 +1,224 @@
+﻿@{
+    //公司注册的界面后台管理系统
+    Layout = null;
+    ViewBag.Title = @Resource.String.ihpleD_String_cn.common_FleetManagerTool;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.js")?@Session["version"]" type = "text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.24.js")?@Session["version"]" type = "text/javascript"></script>
+    <script src="@Url.Content("~/Content/Common/js/ajaxupload.3.6.js")?@Session["version"]" type = "text/javascript"></script>
+    <script src="@Url.Content("~/Content/Common/js/jquery.pager.js")?@Session["version"]" type = "text/javascript"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/md5.js?ver=1.0")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Tenant/js/ManagerSystem.js?ver=1.0")"></script>
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.core.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.resizable.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.selectable.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.accordion.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.autocomplete.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.button.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.dialog.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.slider.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.tabs.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.datepicker.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.progressbar.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.theme.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/Common/css/Pager.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/Common/css/common.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/Tenant/css/ManageSystem.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <title>@ViewBag.Title</title>
+    <script>
+        var language_string = "@ViewBag.Language".replace(/&quot;/g, "'");
+        if(language_string != ""){
+				LanguageScript = eval(language_string)[0].Shared;
+        }
+        $(document).ready(function () {
+            //console.log("Version : " + "@Session["version"]");
+        });
+    </script>
+</head>
+<body>
+<section>
+        <div class ="setting_user_reset" style="display:none; "><p style="font-family:'Microsoft YaHei';font-size:13pt; text-align:center;">@Resource.String.ihpleD_String_cn.page_tenant_DiaTenReset</p></div>
+        <div class ="setting_user_reset2" style="display:none;text-align:center;"></div>
+        <div class ="copy_password" style="display:none;font-family:'Microsoft YaHei';font-size:13pt; text-align:center;"><p>@Resource.String.ihpleD_String_cn.common_CopySuccess</p></div>
+        <div class ="copy_failed" style="display:none;font-family:'Microsoft YaHei';font-size:13pt;text-align:center;"><p>@Resource.String.ihpleD_String_cn.common_CopyFail</p></div>
+    <div id="contentBody" class="contentBody"> 
+        <div id ="adminlogo" class="adminlogo">
+            <img style="width:100%;height:22px;" src="@Url.Content("~/Content/Tenant/images/Logo.png")" id="RegistFormBtn"/>
+        </div>
+        <div id="title" class="title">
+            @Resource.String.ihpleD_String_cn.page_tenant_ManagerSystem
+        </div>
+        <div id="table_div" class="table_div">
+            @*<div class="manageTitle">
+                @Resource.String.ihpleD_String_cn.page_tenant_CompanyList
+            </div>*@
+
+            <a href="@Url.Action("AdminLogout", "Tenant")">
+            <div class="logout" style="cursor:pointer;">
+                <div id="logoutText" class="logoutText">@Resource.String.ihpleD_String_cn.page_shared_headerUserArea_logOut</div>
+            </div></a>
+
+            @*<div class="upload-csv" style="cursor:pointer;">
+                <div id="file-uploader" class="resetadminpswText">@Resource.String.ihpleD_String_cn.page_admin_upload</div>
+            </div>*@
+
+            <div class="resetadminpsw" style="cursor:pointer;">
+                <div id="resetadminpswText" class="resetadminpswText" onclick ="funcresetadminpsw()">@Resource.String.ihpleD_String_cn.page_shared_headerUserArea_resetadminpsw</div>
+            </div>
+            <div id="dialog_form_admin" class="dialog_jq_ui" style="display:none;overflow:hidden;">
+              <form>
+                <label for="oldpassword">原密码</label>
+                <input type="password" maxlength="20" style="margin:8px 0px 3px 0px;" name="oldpassword" id="oldpassword" class="text ui-widget-content ui-corner-all" />
+                <div id="ui-oldpassword" class="cls_must_fill">* </div>
+                <div id="ui-right_oldpassword" class ="cls_input_right"></div>
+                <p class="validateTips_oldpassword"style="margin:-13px 0px 8px 0px; color:gray;">@Resource.String.ihpleD_String_cn.page_setting_EnterOldPassWord</p>
+                <label for="newpassword">新密码</label>
+                <input type="password" style="margin:8px 0px 3px 0px;"name="newpassword" id="newpassword" value="" class="text ui-widget-content ui-corner-all" maxlength="50">
+                <div id="ui-newpassword" class="cls_must_fill">*</div>
+                <div id="ui-right_newpassword" class ="cls_input_right"></div>
+                <p class="validateTips_newpassword"style="margin:-13px 0px 8px 0px; color:gray;">@Resource.String.ihpleD_String_cn.common_PasswordPrompt</p>
+                <label for="confirmpassword">确认密码</label>
+                <input type="password"  maxlength="20" style="margin:8px 0px 3px 0px;"name="confirmpassword" id="confirmpassword" value="" class="text ui-widget-content ui-corner-all">
+                <div id="ui-confirmpassword" class="cls_must_fill">*</div>
+                <div id="ui-right_confirmpassword" class ="cls_input_right"></div>
+                <p class="validateTips_confirmpassword"style="margin:-13px 0px 8px 0px; color:gray;">@Resource.String.ihpleD_String_cn.common_PasswordConfirmInput</p>
+              </form>
+            </div>
+            @*<div class="divideLine1"></div>*@
+            <!-- fengpan 20140527 start -->
+            <!-- 4个tab button -->
+            <div id="tabButton">
+                <div class="selected" click-label="false" tab_id="1">
+                    @Resource.String.ihpleD_String_cn.page_tenant_CompanyList
+                </div>
+                <div class="normal" click-label="true" tab_id="2">
+                    OBU管理
+                </div>
+                <div class="normal" click-label="true" tab_id="3">
+                    车型管理
+                </div>
+                @*<div class="normal" click-label="true">
+                    车型管理
+                </div>*@
+            </div>
+            <div id="tabContent">
+                <!-- 租户管理 -->
+                <div class="TenantTableDiv" id ="TenantTableDivId">
+                    <table style="border-collapse:collapse;width:100%;table-layout:fixed;" id="tenantTable">
+                    
+                    </table>
+                </div>
+                <!-- obu管理 -->
+                <div class="OBUTableDiv" id ="OBUTableDivId" style="display:none;">
+                    <table style="border-collapse:collapse;width:100%;table-layout:fixed; border-left:1px solid #ddd; border-right:1px solid #ddd;" id="obuTable">
+                        <tr style="border-bottom:1px solid #ddd; background-color:#f1f1f1; font-family: 'Microsoft YaHei';">
+                            <td  style="font-size:10pt;font-weight:bolder; width:19.62%">BYTE_ID</td>
+                            <td  style="font-size:10pt;font-weight:bolder; width:19.62%">LABEL_ID</td>
+                            <td  style="font-size:10pt;font-weight:bolder; width:19.62%">REG_KEY</td>
+                            <td  style="font-size:10pt;font-weight:bolder; width:21.5%">上传日期</td>
+                            <td  style="font-size:10pt;font-weight:bolder; width:10.25%">是否使用</td>
+                            <td  style="font-size:10pt;font-weight:bolder; width:7.12%">&nbsp;</td>
+                        </tr>
+                    </table>
+                    <table style="height:30px; width:100%; background-color:#f1f1f1;border-bottom:1px solid #ddd; border-left:1px solid #ddd; border-right:1px solid #ddd;">
+                        <tr>
+                            <td style="width:100%">
+                                <div id="paperBar" data-click="false" style="height:32px; display: none">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="height:50px; width:100%; ">
+                        <tr>
+                            <td style="width:70%">
+                                <div class="upload-csv" style="cursor:pointer; margin-right:10px; float:right; position:absolute; top:-32px; left:85%; width:110px;">
+                                    <div id="file-uploader" class="resetadminpswText">@Resource.String.ihpleD_String_cn.page_admin_upload</div>
+                                </div>
+                            </td>
+                            <td style="width:30%;padding-top:4px">
+                                <div style="height: 30px;margin-left:3px; width:95.83%">
+                                    <div id="tile_seach" class="obu_cls_tile_seach" style="position:absolute; top:-32px; left:63.25%; width:21%;">
+                                        <img src="/Content/Common/images/title_seach.png" style=" position: absolute; right: 0; width: 100%; height: 27px; ">
+                                        <div>
+                                            <div id="tile_seach_input" class="obu_cls_tile_seach_input">
+                                                <input id="searchOBU" placeholder="请输入设备编号或注册密钥" type="text" style="padding-left:0px; height:20px; width:100%; border:none; background:none; outline:none; font-family:'Microsoft YaHei';background-color:#fff;" value="" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="tile_seach_icon" class="obu_cls_tile_seach_icon">
+                                        <div id="tile_seach_icon_img" class="cls_tile_seach_icon_img detectCanvas"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 多域名管理 -->
+                @*<div class="TenantTableDiv" id ="" style="display:none;">
+                
+                </div>*@
+                <!-- MMY管理 -->
+                <div class="MMYTableDiv" id ="MMYTableDivId" style="display:none;">
+                    <!--fengpan 20140527 上传MMY-->
+                    <table style="border-collapse:collapse;width:100%;table-layout:fixed;height:465px;" id="mmyTable">
+                    </table>
+                    <table style="height:36px; width:100%; background-color:#f1f1f1;border-top:1px solid #ddd;">
+                        <tr>
+                            <td style="width:13.75%">
+                                <div class="uploadMMY" style="cursor:pointer;">
+                                    <div id="file-uploader-MMY">@Resource.String.ihpleD_String_cn.page_admin_uploadMMY</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- fengpan 20140527 end -->
+            <div id="loading" style=" display:none; top:0px; left:0px">
+            </div>
+            <div id ="loading_gif" style="position:fixed;display:none;">
+                <img src="/Content//Common/images/loading_style.gif" style="width:75px;height:75px;">
+                <div id ="loading_tip"style="font-family:'Microsoft YaHei';font-size:13pt;">@Resource.String.ihpleD_String_cn.page_loading_readdata_wait</div>
+            </div>
+            <div class="divideLine4" id ="divideLine4"></div>
+            <div class="friendLink"  id ="friendLink">
+                <div id="version">@Resource.String.ihpleD_String_cn.common_Version:@Session["version"].ToString().Substring(0, @Session["version"].ToString().LastIndexOf('.'))</div>
+                @*<a href="#" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.common_privacyPolicy</a>&nbsp;&nbsp;|&nbsp;&nbsp;*@
+                <a href="../../Content/Term_of_use_April_2014_cn_.html" target="_blank" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.page_settings_about_termsOfUseButton</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.common_AboutFleetManager</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="../../Content/Help_AdminHost.html" target="_blank" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.page_footer_helpcenter</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div id="error-csv-data" class="dialog_jq_ui" style="display:none;overflow:hidden;">
+        <div id ="errorCSVDIV" style="overflow-y:auto; width:817px; height:331px; margin:0 auto">
+            <table id="errorCSVDataTable" style="border-collapse:collapse;width:800px;margin:0 auto">
+                <tr style="background-color:#f1f1f1;border-top:solid 1px #ddd;border-bottom: solid 1px #ddd;">
+                    <td class="csv_error_dialog_td_first" style="font-size:10pt;font-weight:bolder; width:50px">行号</td>
+                    <td class="csv_error_dialog_td_middle" style="font-size:10pt;font-weight:bolder; width:200px">BYTE_ID</td>
+                    <td class="csv_error_dialog_td_middle" style="font-size:10pt;font-weight:bolder; width:200px">LABEL_ID</td>
+                    <td class="csv_error_dialog_td_middle" style="font-size:10pt;font-weight:bolder; width:120px">REG_KEY</td>
+                    <td class="csv_error_dialog_td_middle" style="font-size:10pt;font-weight:bolder; width:120px">HW MODEL</td>
+                    <td class="csv_error_dialog_td_end" style="font-size:10pt;font-weight:bolder; width:110px">Status</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="errorTip" class="errorTip" style="display:none;"></div>
+    <div id="informationDialog" style="display:none; ">
+        <p id="informationDialog-text" style="font-family:Microsoft YaHei;font-size:11pt;text-align:center;"></p>
+    </div>
+    <div id="deleteOBUConfirmDialog" style="display:none; ">
+        <p id="deleteOBUConfirmDialog-text" style="font-family:Microsoft YaHei;font-size:11pt;text-align:center;">@Resource.String.ihpleD_String_cn.page_admin_deleteOBU</p>
+    </div>
+    <div id="uploadCSVFormatDialog" style="display:none; ">
+        <p id="uploadCSVFormatDialog-text" style="font-family:Microsoft YaHei;font-size:11pt;text-align:center;">@Resource.String.ihpleD_String_cn.error_upload_csvFile</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,2085 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="page_geofence_addOrDeleteVehicle" xml:space="preserve">
+    <value>增删车辆</value>
+    <comment>page.geofence.addOrDeleteVehicle</comment>
+  </data>
+  <data name="common_alert" xml:space="preserve">
+    <value>报警</value>
+    <comment>common.alert</comment>
+  </data>
+  <data name="page_dashboard_alerts_alertTypeHeader" xml:space="preserve">
+    <value>报警类型</value>
+    <comment>page.dashboard.alerts.alertTypeHeader</comment>
+  </data>
+  <data name="common_AlertVehicles" xml:space="preserve">
+    <value>报警车辆</value>
+    <comment>common.AlertVehicles</comment>
+  </data>
+  <data name="common_AllVehicles" xml:space="preserve">
+    <value>所有车辆</value>
+    <comment>common.AllVehicles</comment>
+  </data>
+  <data name="common_dashboard" xml:space="preserve">
+    <value>主界面</value>
+    <comment>common.dashboard</comment>
+  </data>
+  <data name="common_date" xml:space="preserve">
+    <value>日期</value>
+    <comment>common.date</comment>
+  </data>
+  <data name="page_dashboard_VehicleRunning" xml:space="preserve">
+    <value>行驶车辆</value>
+    <comment>page.dashboard.VehicleRunning</comment>
+  </data>
+  <data name="page_Dasboard_FleetLocation_EntireFleet" xml:space="preserve">
+    <value>整个车队</value>
+    <comment>page.Dasboard.FleetLocation.EntireFleet</comment>
+  </data>
+  <data name="page_dashboard_FleetLocation" xml:space="preserve">
+    <value>当前位置</value>
+    <comment>page.dashboard.FleetLocation</comment>
+  </data>
+  <data name="common_alertTypes_FUELLOW_short" xml:space="preserve">
+    <value>油量</value>
+    <comment>common.alertTypes.FUELLOW.short</comment>
+  </data>
+  <data name="common_geofence" xml:space="preserve">
+    <value>电子围栏</value>
+    <comment>common.geofence</comment>
+  </data>
+  <data name="page_footer_helpcenter" xml:space="preserve">
+    <value>帮助中心</value>
+    <comment>page.footer.helpcenter</comment>
+  </data>
+  <data name="common_Litre" xml:space="preserve">
+    <value>升</value>
+    <comment>common.Litre</comment>
+  </data>
+  <data name="page_location_lastUpdatedLabel" xml:space="preserve">
+    <value>上次更新时间:</value>
+    <comment>page.location.lastUpdatedLabel</comment>
+  </data>
+  <data name="common_location" xml:space="preserve">
+    <value>地点</value>
+    <comment>common.location</comment>
+  </data>
+  <data name="page_shared_headerUserArea_logOut" xml:space="preserve">
+    <value>登出</value>
+    <comment>page.shared.headerUserArea.logOut</comment>
+  </data>
+  <data name="unit_km" xml:space="preserve">
+    <value>公里</value>
+    <comment>unit.km</comment>
+  </data>
+  <data name="page_dashboard_MissedTarget" xml:space="preserve">
+    <value>无联系车辆</value>
+    <comment>page.dashboard.MissedTarget</comment>
+  </data>
+  <data name="page_dashboard_MyDashboard" xml:space="preserve">
+    <value>车队概览</value>
+    <comment>page.dashboard.MyDashboard</comment>
+  </data>
+  <data name="page_dashboard_VehicleParking" xml:space="preserve">
+    <value>停驶车辆</value>
+    <comment>page.dashboard.VehicleParking</comment>
+  </data>
+  <data name="common_privacyPolicy" xml:space="preserve">
+    <value>隐私政策</value>
+    <comment>common.privacyPolicy</comment>
+  </data>
+  <data name="page_settings_accountSettings_vehicleDiagnosticManagement_registrationKeyLabel" xml:space="preserve">
+    <value>注册密钥</value>
+    <comment>page.settings.accountSettings.vehicleDiagnosticManagement.registrationKeyLabel</comment>
+  </data>
+  <data name="common_set" xml:space="preserve">
+    <value>设置</value>
+    <comment>common.set</comment>
+  </data>
+  <data name="page_settings_about_termsOfUseButton" xml:space="preserve">
+    <value>服务条款</value>
+    <comment>page.settings.about.termsOfUseButton</comment>
+  </data>
+  <data name="common_time" xml:space="preserve">
+    <value>时间</value>
+    <comment>common.time</comment>
+  </data>
+  <data name="page_common_TripLog" xml:space="preserve">
+    <value>行程记录</value>
+    <comment>page.common.TripLog</comment>
+  </data>
+  <data name="page_common_View" xml:space="preserve">
+    <value>查看</value>
+    <comment>page.common.View</comment>
+  </data>
+  <data name="page_dashboard_ViewCompleteLog" xml:space="preserve">
+    <value>查看全部记录</value>
+    <comment>page.dashboard.ViewCompleteLog——查看当前车辆全部记录</comment>
+  </data>
+  <data name="page_Dasboard_FleetLocation_ViewDetails" xml:space="preserve">
+    <value>详情</value>
+    <comment>page.Dasboard.FleetLocation.ViewDetails</comment>
+  </data>
+  <data name="page_common_ViewMore" xml:space="preserve">
+    <value>查看更多</value>
+    <comment>page.common.ViewMore</comment>
+  </data>
+  <data name="common_CostPerKilometer" xml:space="preserve">
+    <value>每公里费用</value>
+    <comment>common.CostPerKilometer</comment>
+  </data>
+  <data name="common_EstimatedAmount" xml:space="preserve">
+    <value>估算金额</value>
+    <comment>common.EstimatedAmount</comment>
+  </data>
+  <data name="page_vehicles_Fuellog_FuelDataGridView_MilesSinceLastFillUp" xml:space="preserve">
+    <value>上次加满油后行驶里程</value>
+    <comment>page.vehicles.Fuellog.FuelDataGridView.MilesSinceLastFillUp</comment>
+  </data>
+  <data name="common_vehicleName" xml:space="preserve">
+    <value>车辆名称</value>
+    <comment>common.vehicleName</comment>
+  </data>
+  <data name="page_setting_Group" xml:space="preserve">
+    <value>分组</value>
+    <comment>page.setting.Group</comment>
+  </data>
+  <data name="common_Company" xml:space="preserve">
+    <value>公司</value>
+    <comment>common.Company</comment>
+  </data>
+  <data name="common_user" xml:space="preserve">
+    <value>用户</value>
+    <comment>common.user</comment>
+  </data>
+  <data name="common_NotSearchContent" xml:space="preserve">
+    <value>未搜索到匹配内容</value>
+    <comment>common.NotSearchContent</comment>
+  </data>
+  <data name="page_report_UtilizationReport" xml:space="preserve">
+    <value>使用率报告</value>
+    <comment>page.report.UtilizationReport</comment>
+  </data>
+  <data name="common_vehicledetail_AlertInfo" xml:space="preserve">
+    <value>报警信息</value>
+    <comment>common.vehicledetail.AlertInfo</comment>
+  </data>
+  <data name="common_ArriveAt" xml:space="preserve">
+    <value>到达时间</value>
+    <comment>common.ArriveAt</comment>
+  </data>
+  <data name="common_active" xml:space="preserve">
+    <value>激活</value>
+    <comment>common.active</comment>
+  </data>
+  <data name="page_dashboard_AddGeofence" xml:space="preserve">
+    <value>添加电子围栏</value>
+    <comment>page.dashboard.AddGeofence</comment>
+  </data>
+  <data name="page_geofence_Address" xml:space="preserve">
+    <value>地址</value>
+    <comment>page.geofence.Address</comment>
+  </data>
+  <data name="page_setting_AddVehiclesToGroup" xml:space="preserve">
+    <value>&lt;-添加</value>
+    <comment>page.setting.AddVehiclesToGroup</comment>
+  </data>
+  <data name="page_geofence_VehicleTrack" xml:space="preserve">
+    <value>围栏圈定的车辆</value>
+    <comment>page.geofence.VehicleTrack</comment>
+  </data>
+  <data name="common_cancel" xml:space="preserve">
+    <value>取消</value>
+    <comment>common.cancel</comment>
+  </data>
+  <data name="common_confirm" xml:space="preserve">
+    <value>确认</value>
+    <comment>common.confirm</comment>
+  </data>
+  <data name="common_delete" xml:space="preserve">
+    <value>删除</value>
+    <comment>common.delete</comment>
+  </data>
+  <data name="common_Deactivate" xml:space="preserve">
+    <value>停用</value>
+    <comment>common.Deactivate</comment>
+  </data>
+  <data name="common_edit" xml:space="preserve">
+    <value>编辑</value>
+    <comment>common.edit</comment>
+  </data>
+  <data name="page_geofence_editGeofenceHeading" xml:space="preserve">
+    <value>当前围栏中心点地址</value>
+    <comment>page.geofence.editGeofenceHeading</comment>
+  </data>
+  <data name="page_Dashboard_EngineOnTime_hitInfo" xml:space="preserve">
+    <value>车辆连续行驶时间</value>
+    <comment>page.Dashboard.EngineOnTime.hitInfo</comment>
+  </data>
+  <data name="page_login_loginButton" xml:space="preserve">
+    <value>登录</value>
+    <comment>page.login.loginButton</comment>
+  </data>
+  <data name="common_password" xml:space="preserve">
+    <value>密码</value>
+    <comment>common.password</comment>
+  </data>
+  <data name="common_NameAndAssignGeofence" xml:space="preserve">
+    <value>编辑电子围栏</value>
+    <comment>common.NameAndAssignGeofence</comment>
+  </data>
+  <data name="common_resetPassword" xml:space="preserve">
+    <value>重置密码</value>
+    <comment>common.resetPassword</comment>
+  </data>
+  <data name="page_geofence_list_saveButton" xml:space="preserve">
+    <value>保存电子围栏</value>
+    <comment>page.geofence.list.saveButton</comment>
+  </data>
+  <data name="page_vehicles_SpeedAlert" xml:space="preserve">
+    <value>速度报警</value>
+    <comment>page.vehicles.SpeedAlert</comment>
+  </data>
+  <data name="page_admin_userDetails_role_tenantAdmin" xml:space="preserve">
+    <value>管理员</value>
+    <comment>page.admin.userDetails.role.tenantAdmin</comment>
+  </data>
+  <data name="common_username" xml:space="preserve">
+    <value>用户名</value>
+    <comment>common.username</comment>
+  </data>
+  <data name="common_role" xml:space="preserve">
+    <value>角色</value>
+    <comment>common.role</comment>
+  </data>
+  <data name="page_report_title_HealthIntro" xml:space="preserve">
+    <value>车辆报警信息汇总报告查询及导出</value>
+    <comment>page.report.title.HealthIntro</comment>
+  </data>
+  <data name="common_model" xml:space="preserve">
+    <value>车型</value>
+    <comment>common.model</comment>
+  </data>
+  <data name="page_report_title_FuelLogIntro" xml:space="preserve">
+    <value>车队车辆油耗和费用汇总报告查询及导出</value>
+    <comment>page.report.title.FuelLogIntro</comment>
+  </data>
+  <data name="page_report_title_TripLogIntro" xml:space="preserve">
+    <value>车队车辆行程记录汇总报告查询及导出</value>
+    <comment>page.report.title.TripLogIntro</comment>
+  </data>
+  <data name="page_report_title_UtilizationIntro" xml:space="preserve">
+    <value>车队车辆使用率汇总报告查询</value>
+    <comment>page.report.title.UtilizationIntro</comment>
+  </data>
+  <data name="common_vin" xml:space="preserve">
+    <value>车辆识别号(VIN)</value>
+    <comment>common.vin</comment>
+  </data>
+  <data name="common_AboutFleetManager" xml:space="preserve">
+    <value>关于小型车队管理系统</value>
+    <comment>common.AboutFleetManager</comment>
+  </data>
+  <data name="common_Add" xml:space="preserve">
+    <value>添加</value>
+    <comment>common.Add</comment>
+  </data>
+  <data name="common_battery" xml:space="preserve">
+    <value>蓄电池电压</value>
+    <comment>common.battery</comment>
+  </data>
+  <data name="common_BrokenVehicles" xml:space="preserve">
+    <value>故障车辆</value>
+    <comment>common.BrokenVehicles</comment>
+  </data>
+  <data name="common_CompanyID" xml:space="preserve">
+    <value>公司英文名(拼音)</value>
+    <comment>common.CompanyIDshort</comment>
+  </data>
+  <data name="common_CompanyIDRule" xml:space="preserve">
+    <value>支持1-20个半角字符的英文、数字、下划线、中横线</value>
+    <comment>common.CompanyIDRule</comment>
+  </data>
+  <data name="common_CompanyInfo" xml:space="preserve">
+    <value>公司简介</value>
+    <comment>common.CompanyInfo</comment>
+  </data>
+  <data name="common_CompanyName" xml:space="preserve">
+    <value>公司名称</value>
+    <comment>common.CompanyName</comment>
+  </data>
+  <data name="common_CompanyNameRule" xml:space="preserve">
+    <value>支持1-40个中文、半角字符的英文、数字、下划线、英文标点的,与.</value>
+    <comment>common.CompanyNameRule</comment>
+  </data>
+  <data name="common_CopyFail" xml:space="preserve">
+    <value>请选中密码，使用 Ctrl+C 复制！</value>
+    <comment>common.CopyFail</comment>
+  </data>
+  <data name="common_CopyPassword" xml:space="preserve">
+    <value>复制密码</value>
+    <comment>common.CopyPassword</comment>
+  </data>
+  <data name="common_CopySuccess" xml:space="preserve">
+    <value>复制成功！</value>
+    <comment>common.CopySuccess</comment>
+  </data>
+  <data name="common_CorrectFormatMail" xml:space="preserve">
+    <value>请输入格式正确的邮箱</value>
+    <comment>common.CorrectFormatMail</comment>
+  </data>
+  <data name="common_CorrectFormatTel" xml:space="preserve">
+    <value>请输入格式正确的电话号码</value>
+    <comment>common.CorrectFormatTel</comment>
+  </data>
+  <data name="common_DetailInfo" xml:space="preserve">
+    <value>详细信息</value>
+    <comment>common.DetailInfo</comment>
+  </data>
+  <data name="common_DiaConEdit" xml:space="preserve">
+    <value>是否放弃编辑？</value>
+    <comment>common.DiaConEdit</comment>
+  </data>
+  <data name="common_Distance" xml:space="preserve">
+    <value>距离</value>
+    <comment>common.Distance</comment>
+  </data>
+  <data name="common_EngineOn" xml:space="preserve">
+    <value>有故障</value>
+    <comment>common.EngineOn</comment>
+  </data>
+  <data name="common_EnterCompanyName" xml:space="preserve">
+    <value>请输入公司名称</value>
+    <comment>common.EnterCompanyName</comment>
+  </data>
+  <data name="common_EnterMail" xml:space="preserve">
+    <value>请输入邮箱地址</value>
+    <comment>common.EnterMail</comment>
+  </data>
+  <data name="common_ESN" xml:space="preserve">
+    <value>设备编号</value>
+    <comment>common.ESN</comment>
+  </data>
+  <data name="common_FleetManagerTool" xml:space="preserve">
+    <value>小型车队管理系统</value>
+    <comment>common.FleetManagerTool</comment>
+  </data>
+  <data name="common_HealthStatus" xml:space="preserve">
+    <value>健康状况</value>
+    <comment>common.HealthStatus</comment>
+  </data>
+  <data name="common_Hour" xml:space="preserve">
+    <value>小时</value>
+    <comment>common.Hour</comment>
+  </data>
+  <data name="common_Info" xml:space="preserve">
+    <value>信息</value>
+    <comment>common.Info</comment>
+  </data>
+  <data name="common_LeaveAt" xml:space="preserve">
+    <value>离开时间</value>
+    <comment>common.LeaveAt</comment>
+  </data>
+  <data name="common_ListMode" xml:space="preserve">
+    <value>列表模式</value>
+    <comment>common.ListMode</comment>
+  </data>
+  <data name="common_LoadingWait" xml:space="preserve">
+    <value>正在进入，请等待...</value>
+    <comment>common.LoadingWait</comment>
+  </data>
+  <data name="common_LocationAlert" xml:space="preserve">
+    <value>所在地点</value>
+    <comment>common.LocationAlert</comment>
+  </data>
+  <data name="common_Mail" xml:space="preserve">
+    <value>电子邮箱</value>
+    <comment>common.Mail</comment>
+  </data>
+  <data name="common_MapMode" xml:space="preserve">
+    <value>地图模式</value>
+    <comment>common.MapMode</comment>
+  </data>
+  <data name="common_Minute" xml:space="preserve">
+    <value>分</value>
+    <comment>common.Minute</comment>
+  </data>
+  <data name="common_NextPage" xml:space="preserve">
+    <value>下一页</value>
+    <comment>common.NextPage</comment>
+  </data>
+  <data name="common_NoMailInput" xml:space="preserve">
+    <value>请输入格式正确的邮箱</value>
+    <comment>common.NoMailInput</comment>
+  </data>
+  <data name="common_NoPhoneInput" xml:space="preserve">
+    <value>请输入常用7-8位电话号码(可带区号，中间需加横线)或11位手机号码</value>
+    <comment>common.NoPhoneInput</comment>
+  </data>
+  <data name="common_NoPic" xml:space="preserve">
+    <value>无图片</value>
+    <comment>common.NoPic</comment>
+  </data>
+  <data name="common_NoticeMail" xml:space="preserve">
+    <value>报警通知邮箱</value>
+    <comment>common.NoticeMail</comment>
+  </data>
+  <data name="common_NoticeMailPrompt" xml:space="preserve">
+    <value>可以输入多个格式正确的邮箱用于接受警告提醒，邮箱与邮箱之间用分号分割</value>
+    <comment>common.NoticeMailPrompt</comment>
+  </data>
+  <data name="common_NoVehicleorLocationInput" xml:space="preserve">
+    <value>请输入车辆名称或地点</value>
+    <comment>common.NoVehicleorLocationInput</comment>
+  </data>
+  <data name="common_Odometer" xml:space="preserve">
+    <value>里程数</value>
+    <comment>common.Odometer</comment>
+  </data>
+  <data name="common_Operating" xml:space="preserve">
+    <value>操作</value>
+    <comment>common.Operating</comment>
+  </data>
+  <data name="common_PasswordConfirm" xml:space="preserve">
+    <value>确认密码</value>
+    <comment>common.PasswordConfirm</comment>
+  </data>
+  <data name="common_PasswordConfirmInput" xml:space="preserve">
+    <value>请再次输入密码</value>
+    <comment>common.PasswordConfirmInput</comment>
+  </data>
+  <data name="common_PasswordPrompt" xml:space="preserve">
+    <value>请输入6-20位字符（字母、数字、下划线、特殊字符~!@#$%^&amp;*()_-+=,.）至少包含1位数字</value>
+    <comment>common.PasswordPrompt</comment>
+  </data>
+  <data name="common_Phone" xml:space="preserve">
+    <value>电话号码</value>
+    <comment>common.Phone</comment>
+  </data>
+  <data name="common_pic" xml:space="preserve">
+    <value>车辆图片</value>
+    <comment>common.pic</comment>
+  </data>
+  <data name="common_PrePage" xml:space="preserve">
+    <value>上一页</value>
+    <comment>common.PrePage</comment>
+  </data>
+  <data name="common_Second" xml:space="preserve">
+    <value>秒</value>
+    <comment>common.Second</comment>
+  </data>
+  <data name="common_Trailer" xml:space="preserve">
+    <value>发生拖车</value>
+    <comment>common.Trailer</comment>
+  </data>
+  <data name="common_VehicleAlerts" xml:space="preserve">
+    <value>车辆报警</value>
+    <comment>common.VehicleAlerts</comment>
+  </data>
+  <data name="common_VehicleHealth" xml:space="preserve">
+    <value>车辆健康</value>
+    <comment>common.VehicleHealth</comment>
+  </data>
+  <data name="common_VehicleLicence" xml:space="preserve">
+    <value>车辆牌照</value>
+    <comment>common.VehicleLicence</comment>
+  </data>
+  <data name="common_Version" xml:space="preserve">
+    <value>当前版本</value>
+    <comment>common.Version</comment>
+  </data>
+  <data name="error_e01258" xml:space="preserve">
+    <value>输入的内容为0-1000个字符</value>
+    <comment>error.e01258</comment>
+  </data>
+  <data name="error_e01224" xml:space="preserve">
+    <value>确认密码与输入密码不一致</value>
+    <comment>error.e01224</comment>
+  </data>
+  <data name="error_e01225" xml:space="preserve">
+    <value>电话号码输入有误，请重新输入！</value>
+    <comment>error.e01225</comment>
+  </data>
+  <data name="error_e01226" xml:space="preserve">
+    <value>无法定位地图，请重新输入</value>
+    <comment>error.e01226</comment>
+  </data>
+  <data name="error_e01227" xml:space="preserve">
+    <value>用户名只支持字母数字下划线，请重新输入！</value>
+    <comment>error.e01227</comment>
+  </data>
+  <data name="error_e00217" xml:space="preserve">
+    <value>该用户名已存在</value>
+    <comment>error.e00217</comment>
+  </data>
+  <data name="error_e01229" xml:space="preserve">
+    <value>连接错误，请稍后再查询。</value>
+    <comment>error.e01229</comment>
+  </data>
+  <data name="error_e01230" xml:space="preserve">
+    <value>输入的分组名称不能为空</value>
+    <comment>error.e01230</comment>
+  </data>
+  <data name="error_e01231" xml:space="preserve">
+    <value>用户名、角色、邮箱为必填项</value>
+    <comment>error.e01231</comment>
+  </data>
+  <data name="error_e01233" xml:space="preserve">
+    <value>分组名称为必填项</value>
+    <comment>error.e01233</comment>
+  </data>
+  <data name="error_e01234" xml:space="preserve">
+    <value>注册失败，请确认填写的信息！</value>
+    <comment>error.e01234</comment>
+  </data>
+  <data name="error_e01235" xml:space="preserve">
+    <value>密码不符合要求，请重新输入</value>
+    <comment>error.e01235</comment>
+  </data>
+  <data name="error_e01236" xml:space="preserve">
+    <value>密码不能为空</value>
+    <comment>error.e01236</comment>
+  </data>
+  <data name="error_e01237" xml:space="preserve">
+    <value>确认密码不能为空</value>
+    <comment>error.e01237</comment>
+  </data>
+  <data name="error_e01238" xml:space="preserve">
+    <value>验证码输入错误，如不清楚可点击图片更新</value>
+    <comment>error.e01238</comment>
+  </data>
+  <data name="error_e01239" xml:space="preserve">
+    <value>您添加的围栏已存在!</value>
+    <comment>error.e01239</comment>
+  </data>
+  <data name="error_e01240" xml:space="preserve">
+    <value>未搜索到匹配内容，请调整搜索条件。</value>
+    <comment>error.e01240</comment>
+  </data>
+  <data name="error_e01241" xml:space="preserve">
+    <value>该车辆的围栏数已达上限值（6个）,无法增加新的围栏！</value>
+    <comment>error.e01241</comment>
+  </data>
+  <data name="error_e01242" xml:space="preserve">
+    <value>您输入的公司英文名(拼音)已经存在</value>
+    <comment>error.e01242</comment>
+  </data>
+  <data name="error_e01243" xml:space="preserve">
+    <value>公司英文名(拼音)只能输入半角的英文数字下划线字符</value>
+    <comment>error.e01243</comment>
+  </data>
+  <data name="error_e01245" xml:space="preserve">
+    <value>公司英文名(拼音)只能输入半角英文、数字、下划线、中横线</value>
+    <comment>error.e01245</comment>
+  </data>
+  <data name="error_e01246" xml:space="preserve">
+    <value>邮箱长度过长，邮箱长度在50个字符以内</value>
+    <comment>error.e01246</comment>
+  </data>
+  <data name="error_e01247" xml:space="preserve">
+    <value>重复输入，请删除重复邮箱</value>
+    <comment>error.e01247</comment>
+  </data>
+  <data name="error_e01248" xml:space="preserve">
+    <value>格式错误，请输入格式正确的邮箱</value>
+    <comment>error.e01248</comment>
+  </data>
+  <data name="error_e01249" xml:space="preserve">
+    <value>公司名称只能是中文、半角字符的英文、数字、下划线、英文标点的,与.</value>
+    <comment>error.e01249</comment>
+  </data>
+  <data name="error_e01250" xml:space="preserve">
+    <value>公司名称输入字符只能在1-40个字符之间</value>
+    <comment>error.e01250</comment>
+  </data>
+  <data name="error_e01251" xml:space="preserve">
+    <value>您输入的公司名称已经存在</value>
+    <comment>error.e01251</comment>
+  </data>
+  <data name="error_e01252" xml:space="preserve">
+    <value>设备编号不能为空，请重新输入</value>
+    <comment>error.e01252</comment>
+  </data>
+  <data name="error_e01253" xml:space="preserve">
+    <value>注册密钥不能为空，请重新输入</value>
+    <comment>error.e01253</comment>
+  </data>
+  <data name="error_e01254" xml:space="preserve">
+    <value>输入的信息不能为空！</value>
+    <comment>error.e01254</comment>
+  </data>
+  <data name="error_e01255" xml:space="preserve">
+    <value>输入的信息有误！</value>
+    <comment>error.e01255</comment>
+  </data>
+  <data name="error_e01256" xml:space="preserve">
+    <value>不能为空</value>
+    <comment>error.e01256</comment>
+  </data>
+  <data name="error_e01259" xml:space="preserve">
+    <value>设备编号、注册密钥为必填项</value>
+    <comment>error.e01259</comment>
+  </data>
+  <data name="error_e01260" xml:space="preserve">
+    <value>无效或已被注册</value>
+    <comment>error.e01260</comment>
+  </data>
+  <data name="error_e01261" xml:space="preserve">
+    <value>支持1-9个中文、半角的英文、数字</value>
+    <comment>error.e01261</comment>
+  </data>
+  <data name="error_e01262" xml:space="preserve">
+    <value>车辆名称只能是中文、半角的英文、数字、下划线</value>
+    <comment>error.e01262</comment>
+  </data>
+  <data name="error_e01265" xml:space="preserve">
+    <value>上传的图片格式不正确。</value>
+    <comment>error.e01265</comment>
+  </data>
+  <data name="error_e01266" xml:space="preserve">
+    <value>用户名不能为空</value>
+    <comment>error.e01266</comment>
+  </data>
+  <data name="error_e01267" xml:space="preserve">
+    <value>用户名格式错误</value>
+    <comment>error.e01267</comment>
+  </data>
+  <data name="error_e01268" xml:space="preserve">
+    <value>电子邮箱地址格式错误</value>
+    <comment>error.e01268</comment>
+  </data>
+  <data name="error_e01269" xml:space="preserve">
+    <value>电子邮箱地址不能为空</value>
+    <comment>error.e01269</comment>
+  </data>
+  <data name="error_e01270" xml:space="preserve">
+    <value>电话号码格式错误</value>
+    <comment>error.e01270</comment>
+  </data>
+  <data name="error_e01274" xml:space="preserve">
+    <value>分组名称只能是半角的中英文、数字、下划线</value>
+    <comment>error.e01274</comment>
+  </data>
+  <data name="page_404_BackToPrevious" xml:space="preserve">
+    <value>返回上一页</value>
+    <comment>page.404.BackToPrevious</comment>
+  </data>
+  <data name="page_404_ClosePage" xml:space="preserve">
+    <value>关闭本页</value>
+    <comment>page.404.ClosePage</comment>
+  </data>
+  <data name="page_404_PageMistake" xml:space="preserve">
+    <value>你所访问的页面出错了!</value>
+    <comment>page.404.PageMistake</comment>
+  </data>
+  <data name="page_404_PageNotExist" xml:space="preserve">
+    <value>你访问的页面不存在或被删除!</value>
+    <comment>page.404.PageNotExist</comment>
+  </data>
+  <data name="Page_404_YouCould" xml:space="preserve">
+    <value>你可以</value>
+    <comment>Page.404.YouCould</comment>
+  </data>
+  <data name="page_dashboard_EngnieStatus" xml:space="preserve">
+    <value>发动机状况</value>
+    <comment>page.dashboard.EngnieStatus</comment>
+  </data>
+  <data name="page_dashboard_LocatedGroup" xml:space="preserve">
+    <value>所在分组</value>
+    <comment>page.dashboard.LocatedGroup</comment>
+  </data>
+  <data name="page_geofence_AssignVehicle" xml:space="preserve">
+    <value>设置围栏圈定的车辆</value>
+    <comment>page.geofence.AssignVehicle</comment>
+  </data>
+  <data name="page_geofence_CenterLocation" xml:space="preserve">
+    <value>围栏中心位置</value>
+    <comment>page.geofence.CenterLocation</comment>
+  </data>
+  <data name="page_geofence_DiaDelGeo" xml:space="preserve">
+    <value>您确认要删除电子围栏</value>
+    <comment>page.geofence.DiaDelGeo</comment>
+  </data>
+  <data name="page_geofence_DiaInActiveGeo" xml:space="preserve">
+    <value>您确认要停用电子围栏</value>
+    <comment>page.geofence.DiaInActiveGeo</comment>
+  </data>
+  <data name="page_geofence_GeofenceName" xml:space="preserve">
+    <value>电子围栏名称</value>
+    <comment>page.geofence.GeofenceName</comment>
+  </data>
+  <data name="page_geofence_GeoTrack" xml:space="preserve">
+    <value>电子围栏追踪</value>
+    <comment>page.geofence.GeoTrack</comment>
+  </data>
+  <data name="page_geofence_InActive" xml:space="preserve">
+    <value>(未激活)</value>
+    <comment>page.geofence.InActive</comment>
+  </data>
+  <data name="page_geofence_NoGeoOrLocationInput" xml:space="preserve">
+    <value>请输入电子围栏或地点</value>
+    <comment>page.geofence.NoGeoOrLocationInput</comment>
+  </data>
+  <data name="page_geofence_NoSearchLocationInput" xml:space="preserve">
+    <value>请输入围栏中心点地址</value>
+    <comment>page.geofence.NoSearchLocationInput</comment>
+  </data>
+  <data name="page_login_NoPasswordInput" xml:space="preserve">
+    <value>请输入您的账户密码</value>
+    <comment>page.login.NoPasswordInput</comment>
+  </data>
+  <data name="page_login_NoUsernameInput" xml:space="preserve">
+    <value>请输入您的账户名称</value>
+    <comment>page.login.NoUsernameInput</comment>
+  </data>
+  <data name="page_register_Authcode" xml:space="preserve">
+    <value>验证码</value>
+    <comment>page.register.Authcode</comment>
+  </data>
+  <data name="page_register_AuthcodereFlash" xml:space="preserve">
+    <value>点击更新验证码</value>
+    <comment>page.register.AuthcodereFlash</comment>
+  </data>
+  <data name="page_register_Register" xml:space="preserve">
+    <value>注册</value>
+    <comment>page.register.Register</comment>
+  </data>
+  <data name="page_register_RegisterTitle" xml:space="preserve">
+    <value>欢迎您注册小型车队管理系统</value>
+    <comment>page.register.RegisterTitle</comment>
+  </data>
+  <data name="page_register_Reset" xml:space="preserve">
+    <value>重置</value>
+    <comment>page.register.Reset</comment>
+  </data>
+  <data name="page_report_ExportReport" xml:space="preserve">
+    <value>导出明细</value>
+    <comment>page.report.ExportReport</comment>
+  </data>
+  <data name="page_report_Fuel" xml:space="preserve">
+    <value>油耗统计</value>
+    <comment>page.report.Fuel</comment>
+  </data>
+  <data name="page_report_FuelReport" xml:space="preserve">
+    <value>油耗报告</value>
+    <comment>page.report.FuelReport</comment>
+  </data>
+  <data name="page_report_HealthReport" xml:space="preserve">
+    <value>车辆报警信息报告</value>
+    <comment>page.report.HealthReport</comment>
+  </data>
+  <data name="page_report_Report" xml:space="preserve">
+    <value>报告</value>
+    <comment>page.report.Report</comment>
+  </data>
+  <data name="page_report_TripLogReport" xml:space="preserve">
+    <value>行程记录报告</value>
+    <comment>page.report.TripLogReport</comment>
+  </data>
+  <data name="page_report_Utilization" xml:space="preserve">
+    <value>使用率</value>
+    <comment>page.report.Utilization</comment>
+  </data>
+  <data name="page_setting_AddedVehicles" xml:space="preserve">
+    <value>已有车辆</value>
+    <comment>page.setting.AddedVehicles</comment>
+  </data>
+  <data name="page_setting_AlertThreshold" xml:space="preserve">
+    <value>报警设置</value>
+    <comment>page.setting.AlertThreshold</comment>
+  </data>
+  <data name="page_setting_AllGroup" xml:space="preserve">
+    <value>分组一览</value>
+    <comment>page.setting.AllGroup</comment>
+  </data>
+  <data name="page_setting_ChangePic" xml:space="preserve">
+    <value>更换图片</value>
+    <comment>page.setting.ChangePic</comment>
+  </data>
+  <data name="page_setting_DelVehiclesFromGroup" xml:space="preserve">
+    <value>移除-&gt;</value>
+    <comment>page.setting.DelVehiclesFromGroup</comment>
+  </data>
+  <data name="page_setting_DiaDelGroup" xml:space="preserve">
+    <value>确定删除该分组吗？</value>
+    <comment>page.setting.DiaDelGroup</comment>
+  </data>
+  <data name="page_setting_DiaDelUser" xml:space="preserve">
+    <value>确定删除该用户吗？</value>
+    <comment>page.setting.DiaDelUser</comment>
+  </data>
+  <data name="page_setting_EditAccount" xml:space="preserve">
+    <value>编辑账户信息</value>
+    <comment>page.setting.EditAccount</comment>
+  </data>
+  <data name="page_setting_Enter" xml:space="preserve">
+    <value>请输入分组名称</value>
+    <comment>page.setting.Enter</comment>
+  </data>
+  <data name="page_setting_EnterModels" xml:space="preserve">
+    <value>请输入车型</value>
+    <comment>page.setting.EnterModels</comment>
+  </data>
+  <data name="page_setting_EnterOldPassWord" xml:space="preserve">
+    <value>请输入原密码</value>
+    <comment>page.setting.EnterOldPassWord</comment>
+  </data>
+  <data name="page_setting_EnterUserMail" xml:space="preserve">
+    <value>请输入格式正确的电子邮箱地址</value>
+    <comment>page.setting.EnterUserMail</comment>
+  </data>
+  <data name="page_setting_EnterVehicleLicence" xml:space="preserve">
+    <value>请输入车辆牌照</value>
+    <comment>page.setting.EnterVehicleLicence</comment>
+  </data>
+  <data name="page_setting_EnterVehicleName" xml:space="preserve">
+    <value>请输入车辆名称</value>
+    <comment>page.setting.EnterVehicleName</comment>
+  </data>
+  <data name="page_setting_GroupName" xml:space="preserve">
+    <value>分组名称</value>
+    <comment>page.setting.GroupName</comment>
+  </data>
+  <data name="page_setting_GroupNameExist" xml:space="preserve">
+    <value>分组名已存在</value>
+    <comment>page.setting.GroupNameExist</comment>
+  </data>
+  <data name="page_setting_GroupNameRule" xml:space="preserve">
+    <value>请输入1-20位半角中英文，数字或下划线作为分组名</value>
+    <comment>page.setting.GroupNameRule</comment>
+  </data>
+  <data name="page_setting_MotionAlertThre" xml:space="preserve">
+    <value>车辆震动报警阀值</value>
+    <comment>page.setting.MotionAlertThre</comment>
+  </data>
+  <data name="page_setting_NewPassWord" xml:space="preserve">
+    <value>新密码</value>
+    <comment>page.setting.NewPassWord</comment>
+  </data>
+  <data name="page_setting_NoAddedVehicles" xml:space="preserve">
+    <value>可添加车辆</value>
+    <comment>page.setting.NoAddedVehicles</comment>
+  </data>
+  <data name="page_setting_OldPassWord" xml:space="preserve">
+    <value>原密码</value>
+    <comment>page.setting.OldPassWord</comment>
+  </data>
+  <data name="page_setting_ResetedPassword" xml:space="preserve">
+    <value>密码已重置为</value>
+    <comment>page.setting.ResetedPassword</comment>
+  </data>
+  <data name="page_setting_RPMAlertThreshold" xml:space="preserve">
+    <value>发动机转速报警阀值</value>
+    <comment>page.setting.RPMAlertThreshold</comment>
+  </data>
+  <data name="page_setting_SpeedAlertThr" xml:space="preserve">
+    <value>车速报警阀值</value>
+    <comment>page.setting.SpeedAlertThr</comment>
+  </data>
+  <data name="page_setting_UserAccount" xml:space="preserve">
+    <value>用户账户</value>
+    <comment>page.setting.UserAccount</comment>
+  </data>
+  <data name="page_setting_UserNameRule" xml:space="preserve">
+    <value>请输入1-20个半角字母、数字、中横线或者下划线作为用户名</value>
+    <comment>page.setting.UserNameRule</comment>
+  </data>
+  <data name="page_setting_UserResetedPassword" xml:space="preserve">
+    <value>用户密码已重置为</value>
+    <comment>page.setting.UserResetedPassword</comment>
+  </data>
+  <data name="page_setting_VehiclesAndOBU" xml:space="preserve">
+    <value>车辆/终端</value>
+    <comment>page.setting.VehiclesAndOBU</comment>
+  </data>
+  <data name="page_tenant_AdminID" xml:space="preserve">
+    <value>登录用户名</value>
+    <comment>page.tenant.AdminID</comment>
+  </data>
+  <data name="page_tenant_AdminMail" xml:space="preserve">
+    <value>管理员邮箱</value>
+    <comment>page.tenant.AdminMail</comment>
+  </data>
+  <data name="page_tenant_AuthcodeInput" xml:space="preserve">
+    <value>请输入图片中的数字</value>
+    <comment>page.tenant.AuthcodeInput</comment>
+  </data>
+  <data name="page_tenant_CompanyAdminID" xml:space="preserve">
+    <value>公司管理员用户名</value>
+    <comment>page.tenant.CompanyAdminID</comment>
+  </data>
+  <data name="page_tenant_CompanyList" xml:space="preserve">
+    <value>公司列表</value>
+    <comment>page.tenant.CompanyList</comment>
+  </data>
+  <data name="page_tenant_CompanyName" xml:space="preserve">
+    <value>公司名</value>
+    <comment>page.tenant.CompanyName</comment>
+  </data>
+  <data name="page_tenant_DiaTenReset" xml:space="preserve">
+    <value>您确定重置密码吗？</value>
+    <comment>page.tenant.DiaTenReset</comment>
+  </data>
+  <data name="page_tenant_EnterCompanyID" xml:space="preserve">
+    <value>请输入公司英文名称（或用拼音替代）</value>
+    <comment>page.tenant.EnterCompanyID</comment>
+  </data>
+  <data name="page_tenant_EnterNoticeMail" xml:space="preserve">
+    <value>请输入提醒邮箱地址</value>
+    <comment>page.tenant.EnterNoticeMail</comment>
+  </data>
+  <data name="page_tenant_ManagerSystem" xml:space="preserve">
+    <value>后台管理系统</value>
+    <comment>page.tenant.ManagerSystem</comment>
+  </data>
+  <data name="page_tenant_ResetComplete" xml:space="preserve">
+    <value>重置完成</value>
+    <comment>page.tenant.ResetComplete</comment>
+  </data>
+  <data name="page_vehicledetail_EndLocation" xml:space="preserve">
+    <value>到达地点</value>
+    <comment>page.vehicledetail.EndLocation</comment>
+  </data>
+  <data name="page_vehicledetail_EndTime" xml:space="preserve">
+    <value>到达时间</value>
+    <comment>page.vehicledetail.EndTime</comment>
+  </data>
+  <data name="page_vehicledetail_EngineIdle" xml:space="preserve">
+    <value>发动机怠速</value>
+    <comment>page.vehicledetail.EngineIdle</comment>
+  </data>
+  <data name="page_vehicledetail_FuelLog" xml:space="preserve">
+    <value>油耗记录</value>
+    <comment>page.vehicledetail.FuelLog</comment>
+  </data>
+  <data name="page_vehicledetail_GeofenceAlert" xml:space="preserve">
+    <value>电子围栏报警</value>
+    <comment>page.vehicledetail.GeofenceAlert</comment>
+  </data>
+  <data name="page_vehicledetail_Loading" xml:space="preserve">
+    <value>加载中...</value>
+    <comment>page.vehicledetail.Loading</comment>
+  </data>
+  <data name="page_vehicledetail_StartLocation" xml:space="preserve">
+    <value>出发地点</value>
+    <comment>page.vehicledetail.StartLocation</comment>
+  </data>
+  <data name="page_vehicledetail_StartTime" xml:space="preserve">
+    <value>出发时间</value>
+    <comment>page.vehicledetail.StartTime</comment>
+  </data>
+  <data name="page_vehicledetail_TotalTime" xml:space="preserve">
+    <value>总时间</value>
+    <comment>page.vehicledetail.TotalTime</comment>
+  </data>
+  <data name="page_vehicledetail_ViewRoute" xml:space="preserve">
+    <value>显示路线</value>
+    <comment>page.vehicledetail.ViewRoute</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_AvgLMile" xml:space="preserve">
+    <value>平均油耗</value>
+    <comment>page.vehicles.FuelLog.AvgLMile</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_AvgMileCost" xml:space="preserve">
+    <value>平均费用</value>
+    <comment>page.vehicles.FuelLog.AvgMileCost</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_AvgPriceGallon" xml:space="preserve">
+    <value>油价</value>
+    <comment>page.vehicles.FuelLog.AvgPriceGallon</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_TotalCost" xml:space="preserve">
+    <value>总费用</value>
+    <comment>page.vehicles.FuelLog.TotalCost</comment>
+  </data>
+  <data name="page_vehicles_Health" xml:space="preserve">
+    <value>健康</value>
+    <comment>page.vehicles.Health</comment>
+  </data>
+  <data name="page_vehicles_TravelTime" xml:space="preserve">
+    <value>行驶时间</value>
+    <comment>page.vehicles.TravelTime</comment>
+  </data>
+  <data name="page_vehicles_TripDetail" xml:space="preserve">
+    <value>行程详情</value>
+    <comment>page.vehicles.TripDetail</comment>
+  </data>
+  <data name="page_vehicles_VehiclesContinuous" xml:space="preserve">
+    <value>车辆连续</value>
+    <comment>page.vehicles.VehiclesContinuous</comment>
+  </data>
+  <data name="page_vehicle_Driver" xml:space="preserve">
+    <value>驾驶司机</value>
+    <comment>page.vehicle.Driver</comment>
+  </data>
+  <data name="page_vehicle_EditVehicle" xml:space="preserve">
+    <value>编辑车辆</value>
+    <comment>page.vehicle.EditVehicle</comment>
+  </data>
+  <data name="page_vehicle_FuelLog" xml:space="preserve">
+    <value>油表记录</value>
+    <comment>page.vehicle.FuelLog</comment>
+  </data>
+  <data name="page_vehicle_HistoryVehicles" xml:space="preserve">
+    <value>历史车辆</value>
+    <comment>page.vehicle.HistoryVehicles</comment>
+  </data>
+  <data name="page_vehicle_index" xml:space="preserve">
+    <value>车辆</value>
+    <comment>page.vehicle.index（还未确认）</comment>
+  </data>
+  <data name="page_vehicle_LastLocation" xml:space="preserve">
+    <value>最后定位地点</value>
+    <comment>page.vehicle.LastLocation</comment>
+  </data>
+  <data name="page_vehicle_LastTime" xml:space="preserve">
+    <value>最后定位时间</value>
+    <comment>page.vehicle.LastTime</comment>
+  </data>
+  <data name="common_Activate" xml:space="preserve">
+    <value>启用</value>
+    <comment>common.Activate</comment>
+  </data>
+  <data name="common_alertTypes_EngineLightOn" xml:space="preserve">
+    <value>引擎故障灯亮</value>
+    <comment>common.alertTypes.EngineLightOn</comment>
+  </data>
+  <data name="common_alertTypes_ENGINELIGHT_short" xml:space="preserve">
+    <value>发动机</value>
+    <comment>common.alertTypes.ENGINELIGHT.short</comment>
+  </data>
+  <data name="common_alertTypes_EngineRPM" xml:space="preserve">
+    <value>引擎转速高</value>
+    <comment>common.alertTypes.EngineRPM</comment>
+  </data>
+  <data name="common_alertTypes_MOTION" xml:space="preserve">
+    <value>震动</value>
+    <comment>common.alertTypes.MOTION</comment>
+  </data>
+  <data name="common_alertTypes_SPEED" xml:space="preserve">
+    <value>超速</value>
+    <comment>common.alertTypes.SPEED</comment>
+  </data>
+  <data name="common_alertTypes_SpeedAlert" xml:space="preserve">
+    <value>超速报警</value>
+    <comment>common.alertTypes.SpeedAlert</comment>
+  </data>
+  <data name="common_MilesTravell" xml:space="preserve">
+    <value>行驶里程</value>
+    <comment>common.MilesTravell</comment>
+  </data>
+  <data name="common_save" xml:space="preserve">
+    <value>保存</value>
+    <comment>common.save</comment>
+  </data>
+  <data name="page_dashboard_EngnieOnTime" xml:space="preserve">
+    <value>发动机运行时间</value>
+    <comment>page.dashboard.EngnieOnTime</comment>
+  </data>
+  <data name="page_report_DailyTripNumber" xml:space="preserve">
+    <value>行程段数</value>
+    <comment>page.report.DailyTripNumber</comment>
+  </data>
+  <data name="page_report_HistoryVehiclesReport" xml:space="preserve">
+    <value>历史车辆报告</value>
+    <comment>page.report.HistoryVehiclesReport</comment>
+  </data>
+  <data name="page_report_IdleTime" xml:space="preserve">
+    <value>怠速时间</value>
+    <comment>page.report.IdleTime</comment>
+  </data>
+  <data name="page_report_IdleTimeRatio" xml:space="preserve">
+    <value>怠速时间比</value>
+    <comment>page.report.IdleTimeRatio</comment>
+  </data>
+  <data name="page_report_MotionAlert" xml:space="preserve">
+    <value>震动报警</value>
+    <comment>page.report.MotionAlert</comment>
+  </data>
+  <data name="page_report_RPMAlert" xml:space="preserve">
+    <value>超转速报警</value>
+    <comment>page.report.RPMAlert</comment>
+  </data>
+  <data name="page_setting_AddNewUserPassword" xml:space="preserve">
+    <value>新添加用户的密码为</value>
+    <comment>page.setting.AddNewUserPassword</comment>
+  </data>
+  <data name="page_vehicles_AddVehicle" xml:space="preserve">
+    <value>添加车辆</value>
+    <comment>page.vehicles.AddVehicle</comment>
+  </data>
+  <data name="common_VehiclesNameRule" xml:space="preserve">
+    <value>支持1-10个中文、半角的英文、数字、下划线</value>
+    <comment>common.VehiclesNameRule</comment>
+  </data>
+  <data name="error_e01275" xml:space="preserve">
+    <value>车型只能是中文、半角的英文、数字、下划线</value>
+    <comment>error.e01275</comment>
+  </data>
+  <data name="error_e01276" xml:space="preserve">
+    <value>车辆牌照只能是中文、半角的英文、数字</value>
+    <comment>error.e01276</comment>
+  </data>
+  <data name="page_report_title_HistoryIntro" xml:space="preserve">
+    <value>查询车队历史车辆汇总报告</value>
+    <comment>page.report.title.HistoryIntro</comment>
+  </data>
+  <data name="error_e01277" xml:space="preserve">
+    <value>设备编号不能为空，请重新输入</value>
+    <comment>error.e01277</comment>
+  </data>
+  <data name="error_e01278" xml:space="preserve">
+    <value>请输入设备编号</value>
+    <comment>error.e01278</comment>
+  </data>
+  <data name="page_report_EngnieAlert" xml:space="preserve">
+    <value>引擎报警</value>
+    <comment>page.report.EngnieAlert</comment>
+  </data>
+  <data name="page_register_ESN_NoEmpty" xml:space="preserve">
+    <value>设备编号不能为空，请重新输入</value>
+  </data>
+  <data name="page_register_ESN_Validate" xml:space="preserve">
+    <value>请输入有效的设备编号</value>
+  </data>
+  <data name="page_register_Registerkey_Intro" xml:space="preserve">
+    <value>请输入注册密钥</value>
+  </data>
+  <data name="page_register_Register_NoEmpty" xml:space="preserve">
+    <value>注册密钥不能为空，请重新输入</value>
+  </data>
+  <data name="page_register_Register_Validate" xml:space="preserve">
+    <value>请输入有效的注册密钥</value>
+  </data>
+  <data name="common_KmPerHour" xml:space="preserve">
+    <value>公里/小时</value>
+    <comment>common.KmPerHour</comment>
+  </data>
+  <data name="error_e01279" xml:space="preserve">
+    <value>速度阀值范围为5-255的整数，请重新输入</value>
+    <comment>error.e01279</comment>
+  </data>
+  <data name="error_e01280" xml:space="preserve">
+    <value>转速阀值范围为0-65534的整数，请重新输入</value>
+    <comment>error.e01280</comment>
+  </data>
+  <data name="error_e01281" xml:space="preserve">
+    <value>转速持续时间阀值范围为0-100的整数，请重新输入</value>
+    <comment>error.e01281</comment>
+  </data>
+  <data name="error_e01282" xml:space="preserve">
+    <value>震动阀值范围为0-3.98565的整数或小数，请重新输入</value>
+    <comment>error.e01282</comment>
+  </data>
+  <data name="page_setting_MotionAlertThresholdRule" xml:space="preserve">
+    <value>震动阀值范围为0-3.98565的整数或小数</value>
+    <comment>page.setting.MotionAlertThresholdRule</comment>
+  </data>
+  <data name="page_setting_RpmAlertThresholdRule" xml:space="preserve">
+    <value>转速阀值范围为0-65534的整数</value>
+    <comment>page.setting.RpmAlertThresholdRule</comment>
+  </data>
+  <data name="page_setting_RPMTimeAlertThreshold" xml:space="preserve">
+    <value>超转速持续时间阀值</value>
+    <comment>page.setting.RPMTimeAlertThreshold</comment>
+  </data>
+  <data name="page_setting_RpmTimeAlertThresholdRule" xml:space="preserve">
+    <value>转速持续时间阀值范围为0-100的整数</value>
+    <comment>page.setting.RpmTimeAlertThresholdRule</comment>
+  </data>
+  <data name="page_setting_SpeedAlertThresholdRule" xml:space="preserve">
+    <value>速度阀值范围为5-255的整数</value>
+    <comment>page.setting.SpeedAlertThresholdRule</comment>
+  </data>
+  <data name="common_VehiclesDriverRule" xml:space="preserve">
+    <value>支持1-40个中文、半角的英文</value>
+    <comment>common.VehiclesDriverRule</comment>
+  </data>
+  <data name="common_VehiclesModelRule" xml:space="preserve">
+    <value>支持1-40个中文、半角的英文、数字、下划线</value>
+    <comment>common.VehiclesModelRule</comment>
+  </data>
+  <data name="common_groupName" xml:space="preserve">
+    <value>所属分组</value>
+    <comment>common.groupName</comment>
+  </data>
+  <data name="common_editOdometer" xml:space="preserve">
+    <value>设置里程</value>
+    <comment>common.editOdometer</comment>
+  </data>
+  <data name="common_NoticeOdometer" xml:space="preserve">
+    <value>请输入当前车辆所行驶的总里程数(公里)</value>
+    <comment>common.NoticeOdometer</comment>
+  </data>
+  <data name="common_setOdometer" xml:space="preserve">
+    <value>车辆里程设置</value>
+    <comment>common.setOdometer</comment>
+  </data>
+  <data name="error_e01283" xml:space="preserve">
+    <value>请输入正确的里程数</value>
+    <comment>error.e01283</comment>
+  </data>
+  <data name="common_Min" xml:space="preserve">
+    <value>分钟</value>
+    <comment>common.Min</comment>
+  </data>
+  <data name="common_Sec" xml:space="preserve">
+    <value>秒</value>
+    <comment>common.Sec</comment>
+  </data>
+  <data name="export_alerttime" xml:space="preserve">
+    <value>报警时间</value>
+    <comment>export.alerttime</comment>
+  </data>
+  <data name="export_arrivallocation" xml:space="preserve">
+    <value>到达地点</value>
+    <comment>export.arrivallocation</comment>
+  </data>
+  <data name="export_arrivaltime" xml:space="preserve">
+    <value>到达时间</value>
+    <comment>export.arrivaltime</comment>
+  </data>
+  <data name="export_avespeed" xml:space="preserve">
+    <value>平均速度(公里/小时)</value>
+    <comment>export.avespeed</comment>
+  </data>
+  <data name="export_distance" xml:space="preserve">
+    <value>行驶里程(公里)</value>
+    <comment>export.distance</comment>
+  </data>
+  <data name="export_drivingtime" xml:space="preserve">
+    <value>行驶时间(小时)</value>
+    <comment>export.drivingtime</comment>
+  </data>
+  <data name="export_Enginealertdetail" xml:space="preserve">
+    <value>引擎灯亮</value>
+    <comment>export.Enginealertdetail</comment>
+  </data>
+  <data name="export_engineontime" xml:space="preserve">
+    <value>当日发动机运行时间(小时)</value>
+    <comment>export.engineontime</comment>
+  </data>
+  <data name="export_gallonpermiles" xml:space="preserve">
+    <value>平均油耗(升/百公里)</value>
+    <comment>export.gallonpermiles</comment>
+  </data>
+  <data name="export_gallons" xml:space="preserve">
+    <value>油耗统计(升)</value>
+    <comment>export.gallons</comment>
+  </data>
+  <data name="export_idletime" xml:space="preserve">
+    <value>当日发动机怠速时间(小时)</value>
+    <comment>export.idletime</comment>
+  </data>
+  <data name="export_leavelocation" xml:space="preserve">
+    <value>出发地点</value>
+    <comment>export.leavelocation</comment>
+  </data>
+  <data name="common_total_mileage" xml:space="preserve">
+    <value>总里程</value>
+    <comment>common.total.mileage</comment>
+  </data>
+  <data name="export_leavetime" xml:space="preserve">
+    <value>出发时间</value>
+    <comment>export.leavetime</comment>
+  </data>
+  <data name="export_motionalertdetail" xml:space="preserve">
+    <value>震动等级</value>
+    <comment>export.motionalertdetail</comment>
+  </data>
+  <data name="export_nogroup" xml:space="preserve">
+    <value>未分组</value>
+    <comment>export.nogroup</comment>
+  </data>
+  <data name="export_RPMalertdetail" xml:space="preserve">
+    <value>转速超过</value>
+    <comment>export.RPMalertdetail</comment>
+  </data>
+  <data name="export_speedalertdetail" xml:space="preserve">
+    <value>时速报警:</value>
+    <comment>export.speedalertdetail</comment>
+  </data>
+  <data name="export_sum" xml:space="preserve">
+    <value>小计</value>
+    <comment>export.sum</comment>
+  </data>
+  <data name="export_tripdistance" xml:space="preserve">
+    <value>距离(公里)</value>
+    <comment>export.tripdistance</comment>
+  </data>
+  <data name="export_tripidlerate" xml:space="preserve">
+    <value>怠速时间比(%)</value>
+    <comment>export.tripidlerate</comment>
+  </data>
+  <data name="export_tripidletime" xml:space="preserve">
+    <value>发动机怠速时间(分钟)</value>
+    <comment>export.tripidletime</comment>
+  </data>
+  <data name="export_triptime" xml:space="preserve">
+    <value>行程时间(分钟)</value>
+    <comment>export.triptime</comment>
+  </data>
+  <data name="export_undefine" xml:space="preserve">
+    <value>未知</value>
+    <comment>page.report.undefine</comment>
+  </data>
+  <data name="export_utilization" xml:space="preserve">
+    <value>使用率(%)</value>
+    <comment>export.utilization</comment>
+  </data>
+  <data name="common_VehiclesVINRule" xml:space="preserve">
+    <value>请输入车辆VIN码(17位)</value>
+    <comment>common.VehiclesVINRule</comment>
+  </data>
+  <data name="error_e01286" xml:space="preserve">
+    <value>请输入正确的VIN码</value>
+    <comment>error.e01286</comment>
+  </data>
+  <data name="page_setting_ChangeVehicleLogo" xml:space="preserve">
+    <value>修改</value>
+    <comment>page.setting.ChangeVehicleLogo</comment>
+  </data>
+  <data name="error_e01284" xml:space="preserve">
+    <value>驾驶司机信息只能是中文、半角的英文</value>
+    <comment>error.e01284</comment>
+  </data>
+  <data name="error_e01285" xml:space="preserve">
+    <value>车辆分组数据已变更，请刷新页面</value>
+    <comment>error.e01285</comment>
+  </data>
+  <data name="page_setting_VehicleNameExist" xml:space="preserve">
+    <value>车辆名称已存在</value>
+    <comment>page.setting.VehicleNameExist</comment>
+  </data>
+  <data name="page_Setting_deleteUser_warning" xml:space="preserve">
+    <value>该用户为最后一位管理员，无法删除</value>
+  </data>
+  <data name="page_Setting_updateUser_warning" xml:space="preserve">
+    <value>此用户为最后一位管理员，无法修改权限</value>
+  </data>
+  <data name="page_dashboard_speed" xml:space="preserve">
+    <value>车速</value>
+    <comment>page.dashboard.speed</comment>
+  </data>
+  <data name="page_vehicles_CurrentSpeed" xml:space="preserve">
+    <value>当前时速</value>
+    <comment>page.vehicles.CurrentSpeed</comment>
+  </data>
+  <data name="page_setting_EditMMY" xml:space="preserve">
+    <value>点击进行设置</value>
+    <comment>page.setting.EditMMY</comment>
+  </data>
+  <data name="common_make" xml:space="preserve">
+    <value>品牌</value>
+    <comment>common.make</comment>
+  </data>
+  <data name="common_year" xml:space="preserve">
+    <value>年份</value>
+    <comment>common.year</comment>
+  </data>
+  <data name="common_confirmMake" xml:space="preserve">
+    <value>请选择正确的品牌</value>
+    <comment>common.confirmMake</comment>
+  </data>
+  <data name="common_confirmModel" xml:space="preserve">
+    <value>请选择正确的车型</value>
+    <comment>common.confirmModel</comment>
+  </data>
+  <data name="common_confirmYear" xml:space="preserve">
+    <value>请选择正确的年份</value>
+    <comment>common.confirmYear</comment>
+  </data>
+  <data name="error_e01290" xml:space="preserve">
+    <value>品牌不能为空</value>
+    <comment>error.e01290</comment>
+  </data>
+  <data name="error_e01291" xml:space="preserve">
+    <value>车型不能为空</value>
+    <comment>error.e01291</comment>
+  </data>
+  <data name="error_e01292" xml:space="preserve">
+    <value>年份不能为空</value>
+    <comment>error.e01292</comment>
+  </data>
+  <data name="page_shared_headerUserArea_resetadminpsw" xml:space="preserve">
+    <value>修改密码</value>
+    <comment>page.shared.headerUserArea.resetadminpsw</comment>
+  </data>
+  <data name="page_common_Role_Change" xml:space="preserve">
+    <value>用户权限已被修改，请重新登录</value>
+    <comment>page_common_Role_Change</comment>
+  </data>
+  <data name="page_common_tenant_inactive" xml:space="preserve">
+    <value>您的账户已被停用</value>
+    <comment>page_common_tenant_inactive</comment>
+  </data>
+  <data name="error_01300" xml:space="preserve">
+    <value>操作失败，请联系管理员！</value>
+    <comment>error.01300</comment>
+  </data>
+  <data name="common_alertTypes_EngnieAlert" xml:space="preserve">
+    <value>引擎报警</value>
+    <comment>common.alertTypes.EngnieAlert</comment>
+  </data>
+  <data name="common_alertTypes_MotionAlert" xml:space="preserve">
+    <value>震动报警</value>
+    <comment>common.alertTypes.MotionAlert</comment>
+  </data>
+  <data name="common_alertTypes_RPMAlert" xml:space="preserve">
+    <value>超转速报警</value>
+    <comment>common.alertTypes.RPMAlert</comment>
+  </data>
+  <data name="page_common_tenant_deleted" xml:space="preserve">
+    <value>您的账户已被删除</value>
+    <comment>page.common.tenant.deleted</comment>
+  </data>
+  <data name="page_geofence_Radius" xml:space="preserve">
+    <value>围栏半径</value>
+    <comment>page.geofence.Radius</comment>
+  </data>
+  <data name="page_geofence_mi" xml:space="preserve">
+    <value>米</value>
+    <comment>page.geofence.mi</comment>
+  </data>
+  <data name="common_GetDTC" xml:space="preserve">
+    <value>获取故障码</value>
+    <comment>common.GetDTC</comment>
+  </data>
+  <data name="page_vehicleDetail_tripRouteError" xml:space="preserve">
+    <value>行程地理信息不可用</value>
+    <comment>page.vehicleDetail.tripRouteError</comment>
+  </data>
+  <data name="page_update_Vehicle_error_500014" xml:space="preserve">
+    <value>更新车辆信息出错，请重试</value>
+  </data>
+  <data name="page_update_Vehicle_error_else" xml:space="preserve">
+    <value>更新错误，请稍后重试</value>
+    <comment>page.update.Vehicle.error.else</comment>
+  </data>
+  <data name="page_setting_setThresholdFiled" xml:space="preserve">
+    <value>设置阀值失败！</value>
+    <comment>page.setting.setThresholdFiled</comment>
+  </data>
+  <data name="error_addOBU" xml:space="preserve">
+    <value>该设备不合法</value>
+    <comment>error.addOBU</comment>
+  </data>
+  <data name="error_addOBU_registed" xml:space="preserve">
+    <value>该设备已存在</value>
+    <comment>error.addOBU.registed</comment>
+  </data>
+  <data name="page_admin_upload" xml:space="preserve">
+    <value>上传EDI文件</value>
+    <comment>page.admin.upload</comment>
+  </data>
+  <data name="error_regist" xml:space="preserve">
+    <value>注册失败，请确认填写的信息！</value>
+    <comment>error.regist</comment>
+  </data>
+  <data name="success_regist" xml:space="preserve">
+    <value>注册成功</value>
+    <comment>success.regist</comment>
+  </data>
+  <data name="page_export_health_alertcounts" xml:space="preserve">
+    <value>次</value>
+    <comment>page.export.health.alertcounts</comment>
+  </data>
+  <data name="page_report_drivingtime" xml:space="preserve">
+    <value>行驶时间</value>
+    <comment>page.report.drivingtime</comment>
+  </data>
+  <data name="page_report_totalmiles" xml:space="preserve">
+    <value>行驶里程</value>
+    <comment>page.report.totalmiles</comment>
+  </data>
+  <data name="page_report_address" xml:space="preserve">
+    <value>导出数据正在生成中，请不要切换到其他页面</value>
+    <comment>page.report.address</comment>
+  </data>
+  <data name="page_report_distancetip" xml:space="preserve">
+    <value>(公里)</value>
+    <comment>page.report.distancetip</comment>
+  </data>
+  <data name="page_report_timetip" xml:space="preserve">
+    <value>(时:分:秒)</value>
+    <comment>page.report.timetip</comment>
+  </data>
+  <data name="page_report_tripcounts" xml:space="preserve">
+    <value>段</value>
+    <comment>page.report.tripcounts</comment>
+  </data>
+  <data name="page_report_fuelcost" xml:space="preserve">
+    <value>升/百公里</value>
+    <comment>page.report.fuelcost</comment>
+  </data>
+  <data name="error_e01293" xml:space="preserve">
+    <value>车辆位置未知</value>
+    <comment>error.e01293</comment>
+  </data>
+  <data name="page_register_admintip" xml:space="preserve">
+    <value>默认管理员登录账号</value>
+    <comment>page.register.admintip</comment>
+  </data>
+  <data name="page_vehicles_duration" xml:space="preserve">
+    <value>持续时间</value>
+    <comment>page.vehicles.duration</comment>
+  </data>
+  <data name="page_vehicle_MotionIntensity" xml:space="preserve">
+    <value>震动强度</value>
+    <comment>page.vehicle.MotionIntensity</comment>
+  </data>
+  <data name="page_vehicles_Entered" xml:space="preserve">
+    <value>进入</value>
+    <comment>page.vehicles.Entered</comment>
+  </data>
+  <data name="page_vehicles_Exited" xml:space="preserve">
+    <value>离开</value>
+    <comment>page.vehicles.Exited</comment>
+  </data>
+  <data name="page_vehicleDetail_dtcProgress" xml:space="preserve">
+    <value>故障码获取中请耐心等待...</value>
+  </data>
+  <data name="page_vehicleDetail_dtcScan" xml:space="preserve">
+    <value>在点击获取或清除按钮前，请确认车辆正处于待检状态。</value>
+  </data>
+  <data name="page_vehicleDetail_dtcTimeOut" xml:space="preserve">
+    <value>请求超时，请重新请求。</value>
+  </data>
+  <data name="common_day" xml:space="preserve">
+    <value>日</value>
+    <comment>common.day</comment>
+  </data>
+  <data name="common_driving" xml:space="preserve">
+    <value>行驶中</value>
+    <comment>common.driving</comment>
+  </data>
+  <data name="common_month" xml:space="preserve">
+    <value>月</value>
+    <comment>common.month</comment>
+  </data>
+  <data name="common_yesterday" xml:space="preserve">
+    <value>昨天</value>
+    <comment>common.yesterday</comment>
+  </data>
+  <data name="page_vehicleDetail_dtcClear01" xml:space="preserve">
+    <value>清除车辆故障码</value>
+    <comment>page.vehicleDetail.dtcClear01</comment>
+  </data>
+  <data name="page_vehicleDetail_dtcClear02" xml:space="preserve">
+    <value>清除故障码显示</value>
+    <comment>page.vehicleDetail.dtcClear02</comment>
+  </data>
+  <data name="page_vehicleDetail_dtcDriverInfo" xml:space="preserve">
+    <value>车辆司机相关信息</value>
+    <comment>page.vehicleDetail.dtcDriverInfo</comment>
+  </data>
+  <data name="page_vehicleDetail_dtcDriverName" xml:space="preserve">
+    <value>司机姓名：</value>
+    <comment>page.vehicleDetail.dtcDriverName</comment>
+  </data>
+  <data name="page_vehicleDetail_dtcDriverTel" xml:space="preserve">
+    <value>电话号码：</value>
+    <comment>page.vehicleDetail.dtcDriverTel</comment>
+  </data>
+  <data name="page_vehicleDetail_dtcClear03" xml:space="preserve">
+    <value>故障码清除中，请耐心等待...</value>
+    <comment>page.vehicleDetail.dtcClear03</comment>
+  </data>
+  <data name="page_vehicleDetail_DTCCode" xml:space="preserve">
+    <value>故障码</value>
+    <comment>page.vehicleDetail.DTCCode</comment>
+  </data>
+  <data name="page_vehicleDetail_DTCInfo" xml:space="preserve">
+    <value>故障信息</value>
+    <comment>page.vehicleDetail.DTCInfo</comment>
+  </data>
+  <data name="page_vehicleDetail_ShowAll" xml:space="preserve">
+    <value>已显示全部</value>
+    <comment>page.vehicleDetail.ShowAll</comment>
+  </data>
+  <data name="page_vehicledetail_DriverAndPhone" xml:space="preserve">
+    <value>驾驶司机/电话</value>
+    <comment>page.vehicledetail.DriverAndPhone</comment>
+  </data>
+  <data name="page_admin_uploadMMY" xml:space="preserve">
+    <value>上传MMY文件</value>
+    <comment>page.admin.uploadMMY</comment>
+  </data>
+  <data name="jquery_paper_Count" xml:space="preserve">
+    <value>您输入的页面超过总页数</value>
+    <comment>jquery.paper.Count</comment>
+  </data>
+  <data name="jquery_paper_notZero" xml:space="preserve">
+    <value>请输入非零的正整数！</value>
+    <comment>jquery.paper.notZero</comment>
+  </data>
+  <data name="obu_delete_option" xml:space="preserve">
+    <value>删除</value>
+    <comment>obu.delete.option</comment>
+  </data>
+  <data name="obu_delete_success" xml:space="preserve">
+    <value>删除成功</value>
+    <comment>obu.delete.success</comment>
+  </data>
+  <data name="obu_not_found" xml:space="preserve">
+    <value>没有符合条件的OBU</value>
+    <comment>obu.not.found</comment>
+  </data>
+  <data name="obu_status_unused" xml:space="preserve">
+    <value>未使用</value>
+    <comment>obu.status.unused</comment>
+  </data>
+  <data name="obu_status_used" xml:space="preserve">
+    <value>已使用</value>
+    <comment>obu.status.used</comment>
+  </data>
+  <data name="obu_update_response_error" xml:space="preserve">
+    <value>不符合规则</value>
+    <comment>obu.update.response.error</comment>
+  </data>
+  <data name="obu_update_response_less" xml:space="preserve">
+    <value>信息不全</value>
+    <comment>obu.update.response.less</comment>
+  </data>
+  <data name="obu_update_response_more" xml:space="preserve">
+    <value>信息多余</value>
+    <comment>obu.update.response.more</comment>
+  </data>
+  <data name="obu_update_response_regist" xml:space="preserve">
+    <value>已注册</value>
+    <comment>obu.update.response.regist</comment>
+  </data>
+  <data name="obu_upload_empty" xml:space="preserve">
+    <value>文件为空</value>
+    <comment>obu.upload.empty</comment>
+  </data>
+  <data name="obu_upload_success_end" xml:space="preserve">
+    <value>条数据</value>
+    <comment>obu.upload.success.end</comment>
+  </data>
+  <data name="obu_upload_success_first" xml:space="preserve">
+    <value>成功导入</value>
+    <comment>obu.upload.success.first</comment>
+  </data>
+  <data name="page_loading_wait" xml:space="preserve">
+    <value>数据验证中,请等待...</value>
+    <comment>page.loading.wait</comment>
+  </data>
+  <data name="page_loading_readdata_wait" xml:space="preserve">
+    <value>后台数据读取中,请等待...</value>
+    <comment>page.loading.readdata.wait</comment>
+  </data>
+  <data name="obu_delete_failed" xml:space="preserve">
+    <value>删除失败</value>
+    <comment>obu.delete.failed</comment>
+  </data>
+  <data name="mmytip_cndataexist" xml:space="preserve">
+    <value>行数据中文车型数据已存在</value>
+    <comment>mmytip.cndataexist</comment>
+  </data>
+  <data name="mmytip_emptycolumn" xml:space="preserve">
+    <value>行数据存在空列</value>
+    <comment>mmytip.emptycolumn</comment>
+  </data>
+  <data name="mmytip_endataexist" xml:space="preserve">
+    <value>行数据英文车型数据已存在</value>
+    <comment>mmytip.endataexist</comment>
+  </data>
+  <data name="mmytip_sixcolumns" xml:space="preserve">
+    <value>行数据格式不正确，每行数据须为6列</value>
+    <comment>mmytip.sixcolumns</comment>
+  </data>
+  <data name="mmytip_year" xml:space="preserve">
+    <value>行数据中文车型与英文车型年份不一致</value>
+    <comment>mmytip.year</comment>
+  </data>
+  <data name="rowNo" xml:space="preserve">
+    <value>第</value>
+    <comment>rowNo</comment>
+  </data>
+  <data name="mmy_uploaderror" xml:space="preserve">
+    <value>导入失败</value>
+    <comment>mmy.uploaderror</comment>
+  </data>
+  <data name="page_manager_companyactivate" xml:space="preserve">
+    <value>你确定要启用该公司吗？</value>
+    <comment>page.manager.companyactivate</comment>
+  </data>
+  <data name="page_manager_companydeactivate" xml:space="preserve">
+    <value>你确定要停用该公司吗？</value>
+    <comment>page.manager.companydeactivate</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_AvgLMile_Unit" xml:space="preserve">
+    <value>（升/百公里）</value>
+    <comment>page.vehicles.FuelLog.AvgLMile.Unit</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_AvgMileCost_Unit" xml:space="preserve">
+    <value>（元/公里）</value>
+    <comment>page.vehicles.FuelLog.AvgMileCost.Unit</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_AvgPriceGallon_Unit" xml:space="preserve">
+    <value>（元/升）</value>
+    <comment>page.vehicles.FuelLog.AvgPriceGallon.Unit</comment>
+  </data>
+  <data name="page_vehicles_FuelLog_TotalCost_Unit" xml:space="preserve">
+    <value>（元）</value>
+    <comment>page.vehicles.FuelLog.TotalCost.Unit</comment>
+  </data>
+  <data name="page_admin_deleteOBU" xml:space="preserve">
+    <value>您确认要删除该设备</value>
+    <comment>page.admin.deleteOBU</comment>
+  </data>
+  <data name="page_update_Vehicle_error_400001" xml:space="preserve">
+    <value>请求错误，请重试</value>
+  </data>
+  <data name="page_update_Vehicle_error_400015" xml:space="preserve">
+    <value>车辆型号信息错误</value>
+  </data>
+  <data name="page_update_Vehicle_error_400037" xml:space="preserve">
+    <value>VIN信息无效，请重新填写</value>
+  </data>
+  <data name="page_update_Vehicle_error_400038" xml:space="preserve">
+    <value>VIN不可编辑</value>
+  </data>
+  <data name="page_update_Vehicle_error_400039" xml:space="preserve">
+    <value>车型不可编辑</value>
+  </data>
+  <data name="page_update_Vehicle_error_400041" xml:space="preserve">
+    <value>车型信息错误，请检查选择的车型信息</value>
+  </data>
+  <data name="common_continue" xml:space="preserve">
+    <value>继续</value>
+    <comment>common.continue</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_warning" xml:space="preserve">
+    <value>警告</value>
+    <comment>page.vehicle.detail.DTC.warning</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_warning_content_1" xml:space="preserve">
+    <value>继续操作，您将进行获取或清除车辆故障码。车辆需停止运行并关闭发动机，将点火开关置于“ON”位置，不要启动发动机。若开始清空故障代码，请至少2分钟后方可重启发动机。</value>
+    <comment>page.vehicle.detail.DTC.warning.content_1</comment>
+  </data>
+  <data name="page_manger_mmyupdateok" xml:space="preserve">
+    <value>数据成功导入</value>
+    <comment>page.manger.mmyupdateok</comment>
+  </data>
+  <data name="page_report_eachday" xml:space="preserve">
+    <value>(每日)</value>
+  </data>
+  <data name="error_addobu_exception" xml:space="preserve">
+    <value>添加OBU失败</value>
+    <comment>error.addobu.exception</comment>
+  </data>
+  <data name="page_report_enddate" xml:space="preserve">
+    <value>结束日期 :</value>
+  </data>
+  <data name="page_report_search" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="page_report_startdate" xml:space="preserve">
+    <value>开始日期 :</value>
+  </data>
+  <data name="page_report_unknownaddress" xml:space="preserve">
+    <value>*未知</value>
+  </data>
+  <data name="export_arrivallocation_city" xml:space="preserve">
+    <value>到达地点(市)</value>
+  </data>
+  <data name="export_arrivallocation_district" xml:space="preserve">
+    <value>到达地点(区)</value>
+  </data>
+  <data name="export_arrivallocation_street" xml:space="preserve">
+    <value>到达地点(街道及街道号)</value>
+  </data>
+  <data name="export_lastestlocation_city" xml:space="preserve">
+    <value>最后定位地点(市)</value>
+  </data>
+  <data name="export_lastestlocation_district" xml:space="preserve">
+    <value>最后定位地点(区)</value>
+  </data>
+  <data name="export_lastestlocation_province" xml:space="preserve">
+    <value>最后定位地点(省)</value>
+  </data>
+  <data name="export_lastestlocation_street" xml:space="preserve">
+    <value>最后定位地点(街道及街道号)</value>
+  </data>
+  <data name="export_leavelocation_city" xml:space="preserve">
+    <value>出发地点(市)</value>
+  </data>
+  <data name="export_leavelocation_district" xml:space="preserve">
+    <value>出发地点(区)</value>
+  </data>
+  <data name="export_leavelocation_street" xml:space="preserve">
+    <value>出发地点(街道及街道号)</value>
+  </data>
+  <data name="page_report_enddate" xml:space="preserve">
+    <value>结束日期 :</value>
+  </data>
+  <data name="page_report_search" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="page_report_startdate" xml:space="preserve">
+    <value>开始日期 :</value>
+  </data>
+  <data name="export_arrivallocation_province" xml:space="preserve">
+    <value>到达地点(省)</value>
+    <comment>export.arrivallocation_province</comment>
+  </data>
+  <data name="export_leavelocation_province" xml:space="preserve">
+    <value>出发地点(省)</value>
+    <comment>export.leavelocation.province</comment>
+  </data>
+  <data name="page_setting_vehicleDriver" xml:space="preserve">
+    <value>驾驶人姓名</value>
+    <comment>page.setting.vehicleDriver</comment>
+  </data>
+  <data name="page_setting_vehicleDriverTel" xml:space="preserve">
+    <value>驾驶人电话</value>
+    <comment>page.setting.vehicleDriverTel</comment>
+  </data>
+  <data name="page_setting_vehicleLable" xml:space="preserve">
+    <value>标签</value>
+    <comment>page.setting.vehicleLable</comment>
+  </data>
+  <data name="page_setting_vehicleLicense" xml:space="preserve">
+    <value>车辆型号</value>
+    <comment>page.setting.vehicleLicense</comment>
+  </data>
+  <data name="page_setting_vehicleLableError" xml:space="preserve">
+    <value>输入的内容大于1000个字符</value>
+    <comment>page.setting.vehicleLableError</comment>
+  </data>
+  <data name="page_report_Initwaitting" xml:space="preserve">
+    <value>数据读取中...</value>
+  </data>
+  <data name="datepickerTip" xml:space="preserve">
+    <value>日期格式不正确，请重新选择或输入</value>
+  </data>
+  <data name="common_select_search_notFound" xml:space="preserve">
+    <value>未找到匹配项</value>
+    <comment>common.select.search.notFound</comment>
+  </data>
+  <data name="page_vehicleDetail_DTC_Code_Wrong" xml:space="preserve">
+    <value>错误码</value>
+    <comment>page.vehicle.Detail.DTC.Code.Wrong</comment>
+  </data>
+  <data name="page_vehicleDetail_DTC_Info_Wrong" xml:space="preserve">
+    <value>错误信息</value>
+    <comment>page.vehicle.Detail.DTC.Info.Wrong</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_warning_content_2" xml:space="preserve">
+    <value>您确认清除故障码显示吗？它将只清除显示而不会清除车辆中的故障码。</value>
+    <comment>page.vehicle.detail.DTC.warning.content_1</comment>
+  </data>
+  <data name="page_update_Geo_error_400010" xml:space="preserve">
+    <value>围栏类型错误</value>
+  </data>
+  <data name="page_update_Geo_error_400011" xml:space="preserve">
+    <value>围栏未设置半径</value>
+  </data>
+  <data name="page_update_Geo_error_400012" xml:space="preserve">
+    <value>围栏半径无效</value>
+  </data>
+  <data name="page_update_Geo_error_400013" xml:space="preserve">
+    <value>围栏未设置中心点坐标</value>
+  </data>
+  <data name="page_update_Geo_error_400014" xml:space="preserve">
+    <value>围栏坐标参数多于10个</value>
+  </data>
+  <data name="page_update_Geo_error_400016" xml:space="preserve">
+    <value>围栏名称已存在</value>
+  </data>
+  <data name="page_update_Geo_error_404010" xml:space="preserve">
+    <value>围栏不存在</value>
+  </data>
+  <data name="page_update_Geo_error_409002" xml:space="preserve">
+    <value>一辆车最多绑定6个围栏</value>
+  </data>
+  <data name="page_update_Geo_error_500015" xml:space="preserve">
+    <value>添加围栏出错</value>
+  </data>
+  <data name="page_update_Geo_error_500016" xml:space="preserve">
+    <value>更新围栏出错</value>
+  </data>
+  <data name="page_update_Geo_error_othererror" xml:space="preserve">
+    <value>操作失败，请联系管理员！</value>
+  </data>
+  <data name="page_report_datepickererror1" xml:space="preserve">
+    <value>开始日期不能大于结束日期</value>
+  </data>
+  <data name="page_report_datepickererror2" xml:space="preserve">
+    <value>结束日期不能晚于今天</value>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20200" xml:space="preserve">
+    <value>设备无法处理DTC查询请求，汽车发动机正在运转。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20200</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20201" xml:space="preserve">
+    <value>设备无法处理DTC查询请求，原因未知。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20201</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20202" xml:space="preserve">
+    <value>设备没有插入到DTC查询请求的车辆。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20202</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20203" xml:space="preserve">
+    <value>设备没有插入到车辆，不能记录DTC的结果。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20203</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20204" xml:space="preserve">
+    <value>设备没有插入到车辆，不能清除DTC的结果。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20204</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20205" xml:space="preserve">
+    <value>设备无法处理DTC清除请求，汽车发动机正在运转。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20205</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20206" xml:space="preserve">
+    <value>设备无法处理DTC清除请求，原因未知。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20206</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20207" xml:space="preserve">
+    <value>设备没有插入到DTC清除请求的车辆。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20207</comment>
+  </data>
+  <data name="unit_fu" xml:space="preserve">
+    <value>伏</value>
+    <comment>unit.fu</comment>
+  </data>
+  <data name="error_upload_csvFile" xml:space="preserve">
+    <value>只能上传CSV格式的文件</value>
+    <comment>error.upload.csvFile</comment>
+  </data>
+  <data name="baiduconnecterror" xml:space="preserve">
+    <value>无法获取地址信息，请刷新页面并重试</value>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_E20214" xml:space="preserve">
+    <value>无法连接到设备，请求超时。</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.E20214</comment>
+  </data>
+  <data name="page_vehicle_detail_DTC_Error_Code_Error" xml:space="preserve">
+    <value>错误</value>
+    <comment>page.vehicle.detail.DTC.Error.Code.Error</comment>
+  </data>
+  <data name="common_NoVehicleorInput_pageDetail" xml:space="preserve">
+    <value>请输入车辆名称</value>
+    <comment>common.NoVehicleorInput.pageDetail</comment>
+  </data>
+</root>

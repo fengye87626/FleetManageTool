@@ -1,0 +1,263 @@
+﻿@{
+    Resource.ResourceLoader.SetCurrentThreadCulture(Session);
+    ViewBag.Title = "Home";
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/Common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_choose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_unchoose";
+    ViewBag.Left_Reports_Background = "cls_unchoose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+}
+
+<!--fengpan 20140617 下拉框插件-->
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap-select.min.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap.min.js")?@Session["version"]"></script>
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap-select.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!--fengpan 20140617 下拉框插件-->
+
+<!-- chenyangwen -->
+<link href="@Url.Content("~/Content/Home/css/dashboard.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!-- chenyangwen -->
+<!-- mabiao -->
+<script src = "@Url.Content("~/Content/Home/js/Dashboard_home.js")?@Session["version"]" type = "text/javascript"> </script>
+<!-- mabiao -->
+
+<link href = "@Url.Content("~/Content/Common/css/Pager.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="@Url.Content("~/Content/Common/js/jquery.pager.js")?@Session["version"]"></script>
+
+<section style="width:100%;height:100%">
+    <input id="showPopUpForSearch" type="button" value="-1" style="display:none" />
+    <input id="hiddenCompanyID" type="hidden" value="ABCSoft"/>
+    <!-- chenyangwen -->
+    <input id="Latitude" name="Latitude" type="hidden" value="@ViewBag.lat" />
+    <input id="Longitude" name="Longitude" type="hidden" value="@ViewBag.lng" />
+    <input id="zoomForSearch" name="zoom" type="hidden" value="@ViewBag.zoom" />
+    <input id="showTypeForSearch" name="showType" type="hidden" value="@ViewBag.showType" />
+    <input id="strSelectForSearch" name="strSelect" type="hidden" value="@ViewBag.strSelect" />
+    <input id="popup_lng" type="hidden" value=0 />
+    <input id="popup_lat" type="hidden" value=0 />
+    <input id="CountPerShortPage" type="hidden" value="@ViewBag.CountPerShortPage"/>
+    <input id="CountPerTallPage" type="hidden" value="@ViewBag.CountPerTallPage"/>
+
+    <div id="map_popup_address" style="display:none">
+    </div>
+
+    <div id="dashboard_title" class="dashboard_title" data-label="paragraph">
+        <p class="dashboard_p_left">
+            <span class="dashboard_span5">
+                @Resource.String.ihpleD_String_cn.page_dashboard_MyDashboard
+            </span>
+        </p>
+    </div>
+
+    @*<div id="dashboard_now_status" class="dashboard_now_status" data-label="paragraph">
+        <p class="dashboard_p_left">
+        </p>
+    </div>*@
+    <!--fengpan 20140408-->
+    <div id="dashboard_button_hide_line_up" class="dashboard_button_hide_line_up" >
+    </div>
+    <div id="dashboard_button_hide_button_up" class="dashboard_button_hide_button_up">
+    </div>
+    <div id="dashboard_button_hide_line_down" class="dashboard_button_hide_line_down" >
+    </div>
+    <div id="dashboard_button_hide_button_down" class="dashboard_button_hide_button_down">
+    </div>
+    <div id="dashboard_status_button" style=" position: relative; width:100%; height:auto; top: 38px; ">
+    <div id="dashboard_show" style=" position: relative; width:100%; height:auto;">
+        <div id="dashboard_status_bar" class="dashboard_status_bar_container">
+        <div id="dashboard_status_bar_img" class="dashboard_status_bar_normal detectCanvas">
+        <div id="dashaboard_short_lf">
+        <a href="@Url.Action("Index", "Vehicles", new { tabNum = 1})" onclick="trans()">
+        @*20140301caoyandong*@
+        <div id="dashboard_drivevehicle_num" class="dashboard_drivevehicle_num" data-label="paragraph" style="cursor: pointer;">
+            <p class="dashboard_p_center">
+                <span class="dashboard_span4" id="dashboard_span4_driving">
+                </span>
+                <span class="dashboard_span4_0">
+                    @Resource.String.ihpleD_String_cn.page_dashboard_VehicleRunning
+                </span>
+            </p>
+            <div style="z-index:10;display:none;" id="dashboard_span4_driving_load" class="dashboard_num_load">
+                <img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:35px;top:0px;border:none;"/>
+            </div>
+        </div>
+        </a>
+        <a href="@Url.Action("Index", "Vehicles", new { tabNum = 2})" onclick="trans()">
+        <div id="dashboard_stopvehicle_num" class="dashboard_drivevehicle_num" data-label="paragraph" style="cursor: pointer;">
+            <p class="dashboard_p_center">
+                <span class="dashboard_span4" id="dashboard_span4_parking">
+                </span>
+                <span class="dashboard_span4_0">
+                    @Resource.String.ihpleD_String_cn.page_dashboard_VehicleParking
+                </span>
+            </p>
+            <div style="z-index:10;display:none;" id="dashboard_span4_parking_load" class="dashboard_num_load">
+                <img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:35px;top:0px;border:none;"/>
+            </div>
+        </div>
+        </a>
+        <a href="@Url.Action("Index", "Vehicles", new { tabNum = 3})" onclick="trans()">
+        <div id="dashboard_breakvehicle_num" class="dashboard_drivevehicle_num" data-label="paragraph" style="cursor: pointer;">
+            <p class="dashboard_p_center">
+                <span class="dashboard_span4" id="dashboard_span4_miss">
+                </span>
+                <span class="dashboard_span4_0">
+                    @Resource.String.ihpleD_String_cn.page_dashboard_MissedTarget
+                </span>
+            </p>
+            <div style="z-index:10;display:none;" id="dashboard_span4_miss_load" class="dashboard_num_load">
+                <img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:35px;top:0px;border:none;"/>
+            </div>
+        </div>
+        </a>
+        </div>
+        <div id="dashaboard_short_rg">
+        <a href="@Url.Action("Index", "Vehicles", new { tabNum = 5})" onclick="trans()">
+        <div id="dashboard_missvehicle_num" class="dashboard_breakvehicle_num" data-label="paragraph" style="cursor: pointer;">
+            <p class="dashboard_p_center">
+                <span class="dashboard_span4" id="dashboard_span4_alert">
+                </span>
+                <span class="dashboard_span4_0">
+                    @Resource.String.ihpleD_String_cn.common_AlertVehicles
+                </span>
+            </p>
+            <div style="z-index:10;display:none;" id="dashboard_span4_alert_load" class="dashboard_num_load">
+                <img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:35px;top:0px;border:none;"/>
+            </div>
+        </div>
+        </a>
+        <a href="@Url.Action("Index", "Vehicles", new { tabNum = 4})" onclick="trans()">
+        <div id="dashboard_alertvehicle_num" class="dashboard_breakvehicle_num" data-label="paragraph" style="cursor: pointer;">
+            <p class="dashboard_p_center">
+                <span class="dashboard_span4" id="dashboard_span4_break">
+                </span>
+                <span class="dashboard_span4_0">
+                    @Resource.String.ihpleD_String_cn.common_BrokenVehicles
+                </span>
+            </p>
+            <div style="z-index:10;display:none;" id="dashboard_span4_break_load" class="dashboard_num_load">
+                <img src="../../../Content/Common/images/loading_style.gif"  style="position:relative;width:35px;top:0px;border:none;"/>
+            </div>
+        </div>
+        </a>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!--fengpan 20140408-->
+    <div id="dashboard_title_lable" class="dashboard_title_lable">
+        <div id="dashboard_nowlocation" class="dashboard_nowlocation" data-label="paragraph">
+            <p class="dashboard_p_left">
+                @*<span class="dashboard_span1">
+                    @Resource.String.ihpleD_String_cn.page_dashboard_FleetLocation
+                </span>*@
+                <span id="map_model" class="dashboard_span1">
+                    <!--fengpan 20140324 #867-->
+                    @Resource.String.ihpleD_String_cn.common_MapMode
+                </span>
+                <span id="list_model" class="dashboard_span1" style="display:none">
+                    <!--fengpan 20140324 #867-->
+                    @Resource.String.ihpleD_String_cn.common_ListMode
+                </span>
+            </p>
+        </div>
+
+        <div id="dashboard_viewgroup_text" class="dashboard_viewgroup_text" data-label="paragraph">
+            <p class="dashboard_p_left">
+                <span class="dashboard_span1">
+                    @Resource.String.ihpleD_String_cn.page_common_View:
+                </span>
+            </p>
+        </div>
+
+        <div id="dashboard_choosed_bg" class="dashboard_choosed_bg_container" flag="short">
+            <div id="dashboard_choosed_bg_img" class="dashboard_choosed_bg_normal detectCanvas"  title="@Resource.String.ihpleD_String_cn.common_MapMode"></div>
+            <div id="dashboard_showmap_bg_img" class="dashboard_showmap_bg_normal detectCanvas"  title="@Resource.String.ihpleD_String_cn.common_MapMode"></div>
+        </div>
+
+        <div id="dashboard_unchoosed_bg" class="dashboard_unchoosed_bg_container cursor_style" flag="short">
+            <div id="dashboard_unchoosed_bg_img" class="dashboard_unchoosed_bg_normal detectCanvas"  title="@Resource.String.ihpleD_String_cn.common_ListMode"></div>
+            <div id="dashboard_showlist_bg_img" class="dashboard_showlist_bg_normal detectCanvas" title="@Resource.String.ihpleD_String_cn.common_ListMode"></div>
+        </div>
+        <div id="dashboard_selectgroup" class="dashboard_selectgroup">
+            <select id="select_group" class="select_group cursor_style" style="font-family:Microsoft YaHei;" onmouseover="showtitle(this)" data-width="100%" data-size="10">
+                <option value="-1">@Resource.String.ihpleD_String_cn.page_Dasboard_FleetLocation_EntireFleet</option>
+            </select>
+        </div>
+    </div>
+    <div id="dashboard_BMap_mother" class="dashboard_BMap_mother">
+        <div id="dashboard_vehicleslist" class="dashboard_vehicleslist" style="display: none; overflow: hidden;">@*liangjiajie26*@
+            <table id ="vehicle_list_table" style="display:table; width:100%;">@*liangjiajie0312*@
+            </table>
+            <div id="pageBarshort" style="width:100%;text-align:center;margin-left:15%;position:relative;"></div>
+        </div>
+        <div id="dashboard_vehicleslist_long" class="dashboard_vehicleslist_long" style="display:none; overflow: hidden;">
+            <table id="vehicle_list_long_table" style="display:table; width:100%; ">@*liangjiajie0312*@
+            </table>
+            <div id="pageBarlong" style="width:100%;text-align:center;margin-left:15%;position:relative;"></div>
+        </div>
+	    
+        <div id="dashboard_BMap" class ="dashboard_BMap_style">
+               <!-- 放置地图 -->
+        </div>
+    </div>
+    
+    <!-- chenyangwen -->
+
+    <!-- mabiao-->
+    <div id="Home_show_trip_log" class="cls_Home_show_trip_log">
+        <div id="show_trip_log" class="cls_show_trip_log">
+        </div>
+        <div id="show_trip_log_img" class="cls_show_trip_log_img detectCanvas">
+            <div id="show_trip_log_text" class="cls_show_trip_log_text" >
+                <div id="show_trip_log_text_text" class="cls_show_trip_log_text_text" data-label="paragraph">
+                    <div id="u63_rtf">
+                        <p class="dashboard_p_left">
+                            <span class="dashboard_span3">
+                                &nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_common_TripLog
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div id="show_trip_log_text_select" class="cls_show_trip_log_text_select" >
+                    <select  id="Home_choose_vehicle" class="cls_Home_choose_vehicle cursor_style" onmouseover="showtitle(this)" data-size="10" data-width="100%" title="" data-live-search="true">
+                        
+                    </select>
+                </div>
+            </div>
+        </div>
+    <div id="Home_trip_log" class="cls_Home_trip_log">
+
+    </div>
+    @*<a href="@Url.Action("Detail","Vehicles", new { VehicleID = 0})">*@
+    <div id="dashboard_viewalltriplog" class="dashboard_viewalltriplog_container" style="cursor: pointer;">
+    @*liangjiajie#283bug*@
+        <div id="dashboard_viewalltriplog_text" class="dashboard_viewalltriplog_text">
+            <p class="dashboard_p_center">
+                <span class="dashboard_span2">
+                    @Resource.String.ihpleD_String_cn.page_dashboard_ViewCompleteLog
+                </span>
+            </p>
+        </div>
+    </div>
+    @*</a>*@
+</div>
+
+<div id="Home_hide_trip_log" class="cls_Home_hide_trip_log">
+    <div id="hide_trip_log" class="cls_hide_trip_log">
+    </div>
+    <div class="cls_trip_log_bar">
+    </div>
+</div>
+    <!-- mabiao -->
+</section>
+<!-- Yueqq -->
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMapLib_InfoBox.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_api.js")?@Session["version"]"></script>
+<!-- Yueqq -->

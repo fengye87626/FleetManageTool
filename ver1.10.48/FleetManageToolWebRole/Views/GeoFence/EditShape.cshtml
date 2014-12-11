@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "EditShapes";
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/Common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_choose";
+    ViewBag.Left_Reports_Background = "cls_unchoose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+}
+
+<!-- Yueqq -->
+<!------------百度地图------------------->
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_GeoFence.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMapLib_InfoBox.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_api.js")?@Session["version"]"></script>
+<!---------autocomplete控件-------------->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+
+<link href="@Url.Content("~/Content/Geofence/css/geofence.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/Geofence/css/geo_name_vehicle_popup.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script src = "@Url.Content("~/Content/Geofence/js/EditShape.js")?@Session["version"]" type = "text/javascript"> </script>
+<script src = "@Url.Content("~/Content/Geofence/js/geo_name_vehicle_popup.js")?@Session["version"]" type = "text/javascript"> </script>
+<script>
+    $(document).ready(function () {
+        ihpleDSaveGeofenceFlag = true;
+        ChangeLocationTime();
+        ChangeLeft("common_geofence_cover");
+    });
+</script>
+<input id="hiddenCompanyID" type="hidden" value="ABCSoft"/>
+<section>
+    <div id="title_edit_geofence" class="title_edit_geofence">@Resource.String.ihpleD_String_cn.common_NameAndAssignGeofence</div>
+    <div id="geofenceEditShapes_BMap" class="geofence_BMap_style">
+	    <!--插入地图-->
+    </div>
+    <div  id="geofenceEditShapes_Top" class="geofenceEditShapes_Top_style">
+        <div id="location_seach" class="location_seach_style">
+            <div id="location_seach_img" class="location_seach_img_style">
+                <img src="../../../Content/Common/images/title_seach.png" style="width:100%; height:27px"/>
+                <div id="location_seach_input" class="location_seach_input_style">
+                    <input id="searched_input_drug" class="location_seach_input_drug_style" placeholder ="@Resource.String.ihpleD_String_cn.page_geofence_NoSearchLocationInput" type="text" />
+                </div>
+            </div>
+            <div id="location_seach_input_icon" class="location_seach_input_icon_style"></div>
+        </div>
+        <div>
+            <input id="location_search_warning" class="location_search_warning_style" value="" type="text" style="border-radius: 5px;" disabled="disabled"/>
+        </div>
+        <div id="geofenceEditShapes_Tips" class="geofenceEditShapes_Tips_style">
+            <div id="geofenceEditShapes_Address" class="geofenceEditShapes_Address_style">@Resource.String.ihpleD_String_cn.page_geofence_Address:</div>
+            <div id="geofenceEditShapes_Location" class="geofenceEditShapes_Location_style"></div>
+            <div id="geofenceEditShapes_EditShape" class="geofenceEditShapes_EditShape_style">@Resource.String.ihpleD_String_cn.page_geofence_editGeofenceHeading</div>
+        </div>
+        <div id="geofenceEditShapes_SaveShape" class="geofenceEditShapes_SaveShape_style" style =" cursor:pointer">@Resource.String.ihpleD_String_cn.page_geofence_list_saveButton</div>
+    </div>
+    <div class ="user_error" style="display:none;"></div>
+</section>

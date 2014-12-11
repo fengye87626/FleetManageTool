@@ -1,0 +1,437 @@
+﻿@{
+    ViewBag.Title = "Tenant";
+
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_unchoose";
+    ViewBag.Left_Reports_Background = "cls_unchoose";
+    ViewBag.Left_Settings_Background = "cls_choose";
+}
+
+<script src="@Url.Content("~/Scripts/jquery-1.8.2.js")?@Session["version"]" type = "text/javascript"></script>
+
+<!--mabiao for bug 20140219-->
+<script src = "@Url.Content("~/Content/Common/js/ajaxupload.3.6.js")?@Session["version"]" type="text/javascript"></script>
+<script src = "@Url.Content("~/Content/Setting/js/Setting.js")?@Session["version"]" type="text/javascript"></script>
+<script src = "@Url.Content("~/Content/Setting/js/Setting_vehicle.js")?@Session["version"]" type="text/javascript"></script>
+
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/jquery.pager.js")?@Session["version"]"></script>
+<link href = "@Url.Content("~/Content/Common/css/Pager.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!--mabiao for bug 20140219-->
+<script src = "@Url.Content("~/Scripts/md5.js")?@Session["version"]" type="text/javascript"></script>
+<link href = "@Url.Content("~/Content/Setting/css/Setting.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href = "@Url.Content("~/Content/Setting/css/Setting_vehicle.css")?@Session["version"]" rel="stylesheet" type="text/css">
+
+<!--fengpan 20140617 下拉框插件-->
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap-select.min.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap.min.js")?@Session["version"]"></script>
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap-select.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!--fengpan 20140617 下拉框插件-->
+<script src="@Url.Content("~/Scripts/jquery-ui-1.8.24.js")?@Session["version"]" type = "text/javascript"></script>
+
+@*fengpan #508 20140304*@
+<input type="hidden" value="@Session["setting_tabNum"]" id="tabNum">
+<input type="hidden" value="@Session["setting_vehicleID"]" id="VehicleID">
+@*liangjiajie*@
+<div id="Accunt_div" class="Accunt_div">
+    <div id="accunt_info">
+        <div id="accunt_owner" class="accunt_owner">
+            @Resource.String.ihpleD_String_cn.page_setting_UserAccount
+        </div>
+
+         @*modified by caoyandong************************@
+        <div id="accunt_name_tip" class="accunt_name_tip">&nbsp;&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.common_username&nbsp;:&nbsp;</div>
+        <div id="accunt_name" class="accunt_name">
+            
+        </div>
+            <div id="accunt_mail_tip" class="accunt_mail_tip">@Resource.String.ihpleD_String_cn.common_Mail&nbsp;:&nbsp;</div>
+        <div id="accunt_mail" class="accunt_mail">
+            
+        </div>
+        <div id="accunt_tel_tip" class="accunt_tel_tip">@Resource.String.ihpleD_String_cn.common_Phone&nbsp;:&nbsp;</div>
+        <div id="accunt_tel" class="accunt_tel">
+        @*modified by caoyandong************************@
+
+        </div>
+        <!--fengpan 20140313-->
+        <div id="" class="accunt_old_edit_tip">&nbsp;&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_setting_OldPassWord&nbsp;:&nbsp;</div>
+        <div id="" class="accunt_edit_old_Password" style="width:23.7%"><input id="" disabled='disabled' maxlength="20" style ="width:100%;height:19px;" type="password" placeholder="@Resource.String.ihpleD_String_cn.page_setting_OldPassWord"></div>
+        <div id="" class="accunt_new_edit_tip">&nbsp;&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_setting_NewPassWord&nbsp;:&nbsp;</div>
+        <div id="" class="accunt_edit_new_Password" style="width:23.7%"><input id="" disabled='disabled'  maxlength="20" type="password"style ="height:19px;" placeholder="@Resource.String.ihpleD_String_cn.page_setting_NewPassWord"></div>
+        <div id="" class="accunt_confirm_edit_tip">@Resource.String.ihpleD_String_cn.common_PasswordConfirm&nbsp;:&nbsp;</div>
+        <div id="" class="accunt_edit_confirm_Password" style="width:23.7%"><input id="" disabled='disabled'  maxlength="20" type="password"style ="height:19px;" placeholder="@Resource.String.ihpleD_String_cn.common_PasswordConfirm"></div>
+        <!--fengpan 20140313-->
+        <div id="Edit_accunt_button" class="Edit_accunt_button" style="cursor:pointer">
+            <p style="text-align:center;padding:0px;margin:0px">
+            @Resource.String.ihpleD_String_cn.page_setting_EditAccount</p>
+        </div>
+    </div>
+
+    <div id="accunt_edit" style="display:none;">
+        <div id="accunt_edit_inputs">
+
+        </div>
+        @*<div id="email_input_info_left" class ="input_info_left"></div>
+        <div id="tel_input_info_left" class ="input_info_left"></div>
+        <div id="old_input_info_right" class ="input_info_right"></div>
+        <div id="new_input_info_right" class ="input_info_right"></div>
+        <div id="confirm_input_info_right" class ="input_info_right"></div>*@
+        <div id="accunt_edit_confirm" class="accunt_edit_confirm" style="cursor:pointer">@Resource.String.ihpleD_String_cn.common_save
+        </div>
+        <div id="accunt_edit_return" class="accunt_edit_return" style="cursor:pointer">@Resource.String.ihpleD_String_cn.common_cancel
+        </div>
+
+    </div>
+</div>
+
+<div id="Setting_line" class="Setting_line">
+</div>
+<div id="Setting_tab" class="Setting_tab">
+<div id="Setting_tenant" class="setting_img_bg_normal" data-label="tab">
+    @Resource.String.ihpleD_String_cn.common_Company
+</div>
+<div id="Setting_user" class="setting_img_bg_disable" data-label="tab">
+    @Resource.String.ihpleD_String_cn.common_user
+</div>
+<div id="Setting_OBU" class="setting_img_bg_disable" data-label="tab">
+    @Resource.String.ihpleD_String_cn.page_setting_VehiclesAndOBU
+</div>
+<div id="Setting_Group" class="setting_img_bg_disable" data-label="tab">
+    @Resource.String.ihpleD_String_cn.page_setting_Group
+</div>
+<div id="Setting_Alert" class="setting_img_bg_disable" data-label="tab">
+    @Resource.String.ihpleD_String_cn.page_setting_AlertThreshold
+</div>
+</div>
+
+<div id="Setting_container" class="Setting_container">
+    <div id="Setting_container_tenant" class="Setting_container_tenant">
+        <div id="Setting_tenant_view" class="Setting_tenant_view" style="width:98%">
+            <table  style="position:absolute;left:0px;top:5px;text-align:left;float:left;width:89.6%;display:table;table-layout:fixed;">@*liangjiajie28*@
+        	@*修改公司Tab显示15liangjiajie0308*@
+                <tr style="height:35px; width: 100%">
+                    <td style="width:17.1%;text-align:right;">@Resource.String.ihpleD_String_cn.common_CompanyName&nbsp;:&nbsp;</td>
+                    <td style="width:79.4%; white-space:nowrap;" id="tenant_name"></td>@*名字过长liangjiajie0313*@
+                </tr>
+                <tr style="height:35px; width: 100%">
+                    <td style="width:17.1%;text-align:right;">@Resource.String.ihpleD_String_cn.common_CompanyID&nbsp;:&nbsp;</td>
+                    <td style="width:79.4%;" id="tenant_id"></td>
+                </tr>
+                
+                <tr style="height:35px; width: 100%">
+                    <td style="width:17.1%;text-align:right;">@Resource.String.ihpleD_String_cn.common_Phone&nbsp;:&nbsp;</td>
+                    <td style="width:79.4%;" id="tenant_tel"></td>
+                </tr>
+        	@*修改公司Tab显示15liangjiajie0308*@
+                <tr style="height:100px; width: 100%">
+                    <td style="width:17.1%;text-align:right;">@Resource.String.ihpleD_String_cn.common_CompanyInfo&nbsp;:&nbsp;</td>
+                    <td style="width:20%;">
+                        <!-- #919 lianigjiajie 20140408-->
+                        <textarea id="tenant_summary" cols="20" rows="2" style="width:43.2%;height:105px;line-height:15px;
+                             resize:none;float:left;font-size:10pt;margin-left:-2px;" disabled="disabled"></textarea>
+                        @*//<div class="tenant_summary"><pre id="tenant_summary"></pre></div>
+                         </td>@*//li块改div liangjiajie*@
+                </tr>
+            </table>
+            <input type="hidden" id="hideRemindEmail" value="" />
+            
+            <div id="Setting_container_tenant_btn_edit" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_edit</div>
+        </div>
+        <div id="Setting_tenant_Edit" class="Setting_tenant_Edit" style="display:none; width:98%">
+            <div id="tenant_edit_inputs" style="width:100%">
+            <form action="@Url.Action("EditTenant_info", "Setting")" method="post" name="editTenant" enctype="multipart/form-data" style="margin:0px;width:100%">
+            <table  style="position:absolute;left:0px;top:5px;text-align:left;float:left;width:89.6%;display:table;table-layout:fixed;">
+         	@*修改公司Tab显示15liangjiajie0308*@
+                <tr style="height:35px;width:100%">
+                    <td style="width:17.8%;text-align:right;">@Resource.String.ihpleD_String_cn.common_CompanyName&nbsp;:&nbsp;</td>
+                    <td style="width:37%;">
+                        <div id="tenant_edit_name_td"  style="width:100%;">
+                            <input maxlength="40" id="tenant_edit_name" type="text" style="float:left;width:89.3%;font-family:'Microsoft YaHei';height:19px;margin-left:-2px;margin-top:-3px;" name="companyName"/>
+                            @*Redmine#增加最大输入长度限制liangjiajie0306*@
+                        </div>
+                        <div id="tenant_edit_name_red"style="color:red;position:absolute;left:52%;top:8px;float:left; width:5.4%">*</div>
+                    </td>
+                    <td id="tenant_name_response" style="position:relative; left:0px;top:2px;color:#818181; white-space:nowrap; padding-left:5px;"></td>
+                </tr>
+                <tr style="height:35px;width:100%">
+                    <td style="width:17.8%;text-align:right;">@Resource.String.ihpleD_String_cn.common_CompanyID&nbsp;:&nbsp;</td>
+                    <td style="width:42.9%;" id="tenant_companyID"></td>
+                    <td id="tenant_id_response" style="position:relative; left:0px; white-space:nowrap;"></td>
+                </tr>
+
+                
+                <tr style="height:35px;width:100%">
+                    <td style="width:17.8%;text-align:right;">@Resource.String.ihpleD_String_cn.common_Phone&nbsp;:&nbsp;</td>
+                    <td style="width:37%;">
+                        <div id="tenant_edit_tel_td" style="width:100%;">
+                            <input id="Setting_tenant_edit_tel" maxlength="15" type="text" style="float:left;width:90%;font-family:'Microsoft YaHei';height:13px;margin-left:-2px;" name="companyTel"/>
+                            @*修改最大输入长度15liangjiajie*@
+                        </div>
+                    </td>
+                    <td id="tenant_phone_response"  style="position:relative; left:0px;top:2px;white-space:nowrap;"></td>
+                </tr>
+                <tr style="height:35px;width:100%">
+                    <td style="width:17.8%;text-align:right;">@Resource.String.ihpleD_String_cn.common_CompanyInfo&nbsp;:&nbsp;</td>
+                    <td style="width:37%;">
+                        <div id="tenant_edit_summary_td" style="width:100%;">
+                                @*Redmine#440统一采用maxlength控制输入长度1000 liangjiajie0306*@
+                            <!-- #919 lianigjiajie 20140408-->
+                            <textarea maxlength="1000" id="tenant_edit_summary" cols="20" rows="2" style="width:89.3%;height:105px;line-height:15px;
+                             resize:none;float:left;font-size:10pt;margin-left:-2px;" name="companyIntro"></textarea>
+                        </div>                    
+        	@*修改公司Tab显示15liangjiajie0308*@
+                   </td>
+                   <td id="tenant_summary_response" style="position:relative; left:0px;top:2px;color:#818181; white-space:nowrap;"></td>@*liangjiajie*@
+                </tr>
+            </table>
+                </form>
+            </div>
+            <div id="Setting_container_tenant_btn_confirm" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_save</div>
+            <div id="Setting_container_tenant_btn_return" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_cancel</div>
+        </div>
+    </div>
+    <!--/********Ma Biao Start****************************/-->
+    <div id="Setting_container_user" style="width :100%;display:none;">
+        <div id="Setting_container_user_title" class="Setting_container_user_title" style="width:100%;">@*调整宽度liangjiajie0313*@
+            <table style="width:75%">
+               <tr style="width:100%">
+                    <td style="width:25%;text-align:left; padding-left:30px">@Resource.String.ihpleD_String_cn.common_username</td>
+                    <td style="width:17%;text-align:left;">@Resource.String.ihpleD_String_cn.common_role</td>
+                    <td style="width:33.4%;text-align:left;">@Resource.String.ihpleD_String_cn.common_Mail</td>
+                    <td style="width:25%;text-align:left;">@Resource.String.ihpleD_String_cn.common_Phone</td>
+                </tr>
+            </table>
+        </div>
+        <div class ="setting_user_del" style="display:none;"><p style="font-family:'Microsoft YaHei';font-size:13pt; text-align:center;">@Resource.String.ihpleD_String_cn.page_setting_DiaDelUser</p></div>
+        <div class ="setting_group_del" style="display:none;"><p style="font-family:'Microsoft YaHei';font-size:13pt; text-align:center;">@Resource.String.ihpleD_String_cn.page_setting_DiaDelGroup</p></div>
+        <div class ="setting_user_reset" style="display:none;"><p style="font-family:'Microsoft YaHei';font-size:13pt; text-align:center;">@Resource.String.ihpleD_String_cn.page_tenant_DiaTenReset</p></div>
+        <div class ="setting_user_reset2" style="display:none;"></div>
+        <div class ="copy_password" style="display:none;font-family:'Microsoft YaHei';font-size:13pt; text-align:center;"><p>@Resource.String.ihpleD_String_cn.common_CopySuccess</p></div>
+        <div class ="copy_failed" style="display:none;font-family:'Microsoft YaHei';font-size:13pt; text-align:center;"><p>@Resource.String.ihpleD_String_cn.common_CopyFail</p></div>
+        <div class ="user_error" style="display:none;"></div>
+        <div class ="OBU_error" style="display:none;"></div>
+        @*20140306caoyandong-for-jquery*@
+             <div id="dialog_form_user" class="dialog_jq_ui" style="display:none;overflow:hidden;">
+              <form>
+                <label for="name">@Resource.String.ihpleD_String_cn.common_username</label>
+                <input type="text" maxlength="20" style="margin:8px 0px 3px 0px;" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+                <div id="ui-username" class="cls_must_fill">* </div>
+                <div id="ui-right_name" class ="cls_input_right"></div>
+                <p class="validateTips_Username"style="margin:-13px 0px 8px 0px; color:gray;">请输入1-20个半角字母、数字、中横线或者下划线作为用户名</p>
+                <label for="role">@Resource.String.ihpleD_String_cn.common_role</label>
+                <div>
+                <select data-container="body" data-size="10" title="" data-width="250px" style="width:23.6%;margin:8px 64px 3px 0px;border-radius:3px;font-size:10pt;height:23px;background-color:#ffffff;" id="role">
+                    <option selected="selected" value="2">@Resource.String.ihpleD_String_cn.common_user</option>
+                    <option value="1">@Resource.String.ihpleD_String_cn.page_admin_userDetails_role_tenantAdmin</option>
+                </select>
+                </div>
+                <label for="email">@Resource.String.ihpleD_String_cn.common_Mail</label>
+                <input type="text" style="margin:8px 0px 3px 0px;"name="email" id="email" value="" class="text ui-widget-content ui-corner-all" maxlength="50">
+                <div id="ui-useremail" class="cls_must_fill">*</div>
+                <div id="ui-right_email" class ="cls_input_right"></div>
+                <p class="validateTips_email"style="margin:-13px 0px 8px 0px; color:gray;">请输入格式正确的电子邮箱地址</p>
+                <label for="phone">@Resource.String.ihpleD_String_cn.common_Phone</label>
+                <input type="text"  maxlength="20" style="margin:8px 0px 3px 0px;"name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all">
+                <div id="ui-right_tel" class ="cls_input_right_tel" style="left:88.5%"></div>
+                <p class="validateTips_tel"style="margin:4px 0px 8px 0px; color:gray;">请输入常用7-8位电话号码(可带区号，中间需加横线)或11位手机号码</p>
+              </form>
+            </div>
+        @*20140306caoyandong-for-jquery*@
+
+        @*20140308caoyandong-for-jquery*@
+        <div id="dialog_form_OBU" style="display:none;">
+              <form>
+                <label for="OBU_dialog_ESN_div">@Resource.String.ihpleD_String_cn.common_ESN</label>
+                <input type="text"  maxlength="17" style="margin:8px 0px 3px 0px;" name="OBU_dialog_ESN_div" id="OBU_dialog_ESN_div" class="text ui-widget-content ui-corner-all">
+                <div id="ui-ESN" class="cls_must_fill">*</div>
+                <div id="ui-right_ESN" class ="cls_input_right"></div>
+                <p class="validateTips_ESN" style="margin:-13px 0px 8px 0px; color:gray;">请输入设备编码ESN或者IMEI码</p>
+                <label for="OBU_dialog_KEY_div">@Resource.String.ihpleD_String_cn.page_settings_accountSettings_vehicleDiagnosticManagement_registrationKeyLabel</label>
+                <input type="text"  maxlength="17" style="margin:8px 0px 3px 0px;"name="OBU_dialog_KEY_div" id="OBU_dialog_KEY_div" value="" class="text ui-widget-content ui-corner-all">
+                <div id="ui-KEY" class="cls_must_fill">*</div>
+                <div id="ui-right_KEY" class ="cls_input_right"></div>
+                <p class="validateTips_KEY" style="margin:-13px 0px 8px 0px; color:gray;">请输入注册密钥</p>
+                <div id="add_vehicle_failed" style="color:red; text-align:right; display:none;">@Resource.String.ihpleD_String_cn.error_addOBU</div>
+
+              </form>
+            </div>
+        @*20140308caoyandong-for-jquery*@
+        @*20140416gaoqingbo-for-jquery edit mmy dialog*@
+             <div id="dialog_form_mmy" class="dialog_jq_ui" style="display:none;overflow:hidden;">
+              <form>
+                <label for="make-list">@Resource.String.ihpleD_String_cn.common_make</label>
+                <div><select id="make-list" name="make" data-container="body" data-size="7" title="" data-width="250px" style="width:250px;margin:8px 0px 3px 0px;border-radius:3px;font-size:10pt;height:23px;background-color:#ffffff;" ><option value=""></option></select></div>
+                <div id="ui-make" class="cls_must_fill">*</div>
+                <div id="ui-right_make" class ="cls_input_right"></div>
+                <p class="validateTips_make" style="margin:-27px 0px 8px 0px; color:gray;">@Resource.String.ihpleD_String_cn.common_confirmMake</p>
+                <label for="model-list">@Resource.String.ihpleD_String_cn.common_model</label>
+                <div><select id="model-list" name="Model" data-dropup-auto="false" data-container="body" data-size="7" title="" data-width="250px" style="width:250px;margin:8px 0px 3px 0px;border-radius:3px;font-size:10pt;height:23px;background-color:#ffffff;" ><option value=""></option></select></div>
+                <div id="ui-model" class="cls_must_fill">*</div>
+                <div id="ui-right_model" class ="cls_input_right"></div>
+                <p class="validateTips_model" style="margin:-27px 0px 8px 0px; color:gray;">@Resource.String.ihpleD_String_cn.common_confirmModel</p>
+                <label for="year-list">@Resource.String.ihpleD_String_cn.common_year</label>
+                <div><select id="year-list" name="Year" data-dropup-auto="false" data-container="body" data-size="6" title="" data-width="250px" style="width:250px;margin:8px 0px 3px 0px;border-radius:3px;font-size:10pt;height:23px;background-color:#ffffff;"><option value=""></option></select></div>
+                <div id="ui-year" class="cls_must_fill">*</div>
+                <div id="ui-right_year" class ="cls_input_right"></div>
+                <p class="validateTips_year" style="margin:-27px 0px 8px 0px; color:gray;">@Resource.String.ihpleD_String_cn.common_confirmYear</p>
+              </form>
+            </div>
+        @*20140416gaoqingbo-for-jquery*@
+        @*20140402gaoqingbo-for-jquery*@
+        <div id="dialog_form_OBU_updateOdometer" style="display:none;">
+            <form>
+                <label for="OBU_dialog_Odometer_div">@Resource.String.ihpleD_String_cn.common_setOdometer</label>
+                <input type="text" style="margin:8px 0px 3px 0px;" name="OBU_dialog_Odometer_div" id="OBU_dialog_Odometer_div" class="text ui-widget-content ui-corner-all">
+                <div id="ui-Odometer" class="cls_must_fill" style="width:85.1%">*</div>
+                <div id="ui-right_Odometer" class ="cls_input_right"></div>
+                <p class="validateTips_Odometer" style="margin:-13px 0px 8px 0px; color:gray;">@Resource.String.ihpleD_String_cn.common_NoticeOdometer</p>
+                <input type="hidden" value="" id="selectVehicleID">
+            </form>
+        </div>
+        @*20140402gaoqingbo-for-jquery*@
+
+        @*20140308caoyandong-for-jquery*@
+        <div id="dialog_form_group" style="display:none;">
+              <form>
+                <label for="group_name">@Resource.String.ihpleD_String_cn.page_setting_GroupName</label>
+                <input type="text" maxlength="20"; style="margin:8px 0px 3px 0px;" name="group_name" id="group_name" class="text ui-widget-content ui-corner-all">
+                <div id="ui-group" class="cls_must_fill" style="left:85.1%">*</div>
+                <div id="ui-right_groupadd" class ="cls_input_right"></div>
+                <p class="validateTips_group" style="margin:-13px 0px 8px 0px; color:gray;">请输入1-20位半角中英文，数字或下划线作为分组名</p>
+                <input type="text" maxlength="20"; style="margin:8px 0px 3px 0px;display:none;" name="group_name_hidden_add" id="group_name_hidden_add" class="text ui-widget-content ui-corner-all" >
+              </form>
+            </div>
+        <div id="dialog_form_group_edit" style="display:none;">
+              <form>
+                <label for="group_name">@Resource.String.ihpleD_String_cn.page_setting_GroupName</label>
+                <input type="text" maxlength="20"; style="margin:8px 0px 3px 0px;" name="group_name" id="group_name_edit" class="text ui-widget-content ui-corner-all">
+                <div id="ui-group_edit" class="cls_must_fill">*</div>
+                <div id="ui-right_groupedit" class ="cls_input_right"></div>
+                <p class="validateTips_group" style="margin:-13px 0px 8px 0px; color:gray;">请输入1-20位半角中英文，数字或下划线作为分组名</p>
+                <input type="text" maxlength="20"; style="margin:8px 0px 3px 0px;display:none;" name="group_name_hidden_edit" id="group_name_hidden_edit" class="text ui-widget-content ui-corner-all" >
+              </form>
+            </div>
+        @*liangjiajie0310*@
+        @*20140308caoyandong-for-jquery*@
+
+
+        <div id="Setting_container_user_list" style="width:100%"></div>
+                <div class ="Setting_container_user_btn" style="width:100%;">@*调整宽度liangjiajie0313*@
+                    @*20140307caoyandong-jquery*@
+            <div id="Setting_container_user_btn_add" class="cls_Setting_container_user_btn" style="height:25px;">@Resource.String.ihpleD_String_cn.common_Add</div>
+        </div>
+        <div id="pageBar" style="width:76.42%;text-align:center;margin-left:23.58%;"successflag =" true"></div>
+    </div>
+     <!--*******************Ma Biao End**********************/-->
+    <!--*******************fengpan start**********************/-->
+    <div id="Setting_container_obu" class="Setting_container_obu" style="display:none;">
+        <form action="@Url.Action("EditOBU_Vehicles", "Setting")" method="post" name="editOBU" enctype="multipart/form-data">
+        <div id="Setting_container_obu_view" class="Setting_container_obu_view" style="width:100%">
+            <input type="hidden" value="" id="OBU_input_new">
+            <input type="hidden" value="" id="OBU_input_back">
+            <input type="hidden" value="" id="OBU_input_mmyid_new">
+            <input type="hidden" value="" id="OBU_input_mmyid_back">
+        <table style="width:100%;background-color:#f1f1f1;border: 1px solid #ddd;border-width: 1px 1px 0px 1px;" id="Setting_OBU_table">@*调整宽度liangjiajie0313*@
+            
+        </table>
+        <!--<table style="left:20px; border-collapse:collapse;width:100%;background-color:#f1f1f1;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ddd; table-layout:fixed" id="Setting_OBU_table">@*调整宽度liangjiajie0313*@
+        </table>-->
+        </div>
+        </form>
+         <table id="OBU_bottom_button" style=" border-collapse:collapse;width:100%;background-color:#f1f1f1;border-width:1px 1px 1px 1px;border-style:solid;border-color:#ddd">
+            <tr style="height:46px;">
+                <td style="width:11.25%">
+                    <div id="Setting_container_OBU_btn_add" class="cls_Setting_container_user_btn" style="margin-left:7px;height:25px;"clicked="false">@Resource.String.ihpleD_String_cn.common_Add</div>
+                </td>
+                @*<td style="width:58.75%">
+                    <div id="Setting_container_OBU_btn_edit" class="cls_Setting_container_user_btn" style="display:none">@Resource.String.ihpleD_String_cn.common_edit</div>
+                </td>
+                <td style="width:11.25%">
+                    <div id="Setting_container_OBU_btn_confirm" class="cls_Setting_container_user_btn" style="display:none;">@Resource.String.ihpleD_String_cn.common_save</div>
+                </td>
+                <td>
+                    <div id="Setting_container_OBU_btn_return" class="cls_Setting_container_user_btn" style="display:none;">@Resource.String.ihpleD_String_cn.common_cancel</div>
+                </td>*@
+            </tr>
+               
+        </table>
+
+       <div id="all_pageBar_Setting" style="text-align:center;margin-left:26.5%;position:relative;"></div>
+    </div>
+    <!--*******************fengpan start**********************/-->
+    <!--/*******************Ma Biao Start************************/-->
+    <div id="Setting_container_group" style="display:none;">
+        <div id="group_left">
+            <div class="group_tile">@Resource.String.ihpleD_String_cn.page_setting_AllGroup&nbsp;:&nbsp;</div>
+            <div id="group_group" class="group_input"></div>
+        </div>
+        <div id="group_middle">
+            <div class="group_tile">@Resource.String.ihpleD_String_cn.page_setting_AddedVehicles&nbsp;:&nbsp;</div>
+            <div id="group_added" class="group_input"></div>
+        </div>
+        <div id="group_right">
+            <div class="group_tile">@Resource.String.ihpleD_String_cn.page_setting_NoAddedVehicles&nbsp;:&nbsp;</div>
+            <div id="group_notadded" class="group_input"></div>
+        </div>
+        <div id="group_add_vehicle" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.page_setting_AddVehiclesToGroup</div>
+        <div id="group_del_vehicle" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.page_setting_DelVehiclesFromGroup</div>
+        <div id="group_edit_group" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_edit</div>
+        <div id="group_add_group" class="cls_Setting_container_user_btn" style="height:25px;">@Resource.String.ihpleD_String_cn.common_Add</div>
+        <div id="group_del_group" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_delete</div>
+    </div>
+    <!--/******************Ma Biao End****************************/-->
+    <div id="Setting_container_alert" style="display:none;width:100%;" class="Setting_container_alert">@*调整宽度liangjiajie0313*@
+        <input type="hidden" id="alertEmailsBackInfo" value=""> 
+        <div style="position:relative; left:3.75%;top:30px;width:96.25%;">
+            <table style="width:100%">
+                <tr>
+                    <!--fengpan 20140324 #886-->
+                    <td style="width: 17.53%;text-align:right;">@Resource.String.ihpleD_String_cn.page_setting_SpeedAlertThr&nbsp;:</td>
+                    <td id="speed_threshold" style="width: 19%;"><div id="speed_threshold_value" style="float:left"></div>&nbsp;@Resource.String.ihpleD_String_cn.common_KmPerHour</td>
+                    <td style="width: 19%;"><div id="speed_threshold_edit" style="display:none"><input id="speed_threshold_input" maxlength="3" style="width:46.15%;float:left" type="text" />&nbsp;@Resource.String.ihpleD_String_cn.common_KmPerHour</div></td>
+                    <td style="color:#818181;"><div id="speed_info" style="display:none">@Resource.String.ihpleD_String_cn.page_setting_SpeedAlertThresholdRule</div><div id="speed_error_info" style="display:none; color:red;">@Resource.String.ihpleD_String_cn.error_e01279</div></td>
+                </tr>
+                <tr>
+                    <!--fengpan 20140324 #886-->
+                    <td style="text-align:right;">@Resource.String.ihpleD_String_cn.page_setting_RPMAlertThreshold&nbsp;:</td>
+                    <td id="prm_threshold"><div id="prm_threshold_value" style="float:left"></div>&nbsp;RPM</td>
+                    <td style="width: 19%;"><div id="prm_threshold_edit" style="display:none"><input id="prm_threshold_input" maxlength="5" type="text" style="width:46.15%;" />&nbsp;RPM</div></td>
+                    <td style="color:#818181;"><div id="prm_info" style="display:none">@Resource.String.ihpleD_String_cn.page_setting_RpmAlertThresholdRule</div><div id="prm_error_info" style="display:none; color:red;">@Resource.String.ihpleD_String_cn.error_e01280</div></td>
+                </tr>
+                <tr>
+                    <!--fengpan 20140324 #886-->
+                    <td style="text-align:right;">@Resource.String.ihpleD_String_cn.page_setting_RPMTimeAlertThreshold&nbsp;:</td>
+                    <td id="prm_threshold_time"><div id="prm_threshold_value_time" style="float:left"></div>&nbsp;@Resource.String.ihpleD_String_cn.common_Second</td>
+                    <td style="width: 19%;"><div id="prm_threshold_edit_time" style="display:none"><input id="prm_threshold_input_time" maxlength="3" type="text" style="width:46.15%;"/>&nbsp;@Resource.String.ihpleD_String_cn.common_Second</div></td>
+                    <td style="color:#818181;"><div id="prm_info_time" style="display:none">@Resource.String.ihpleD_String_cn.page_setting_RpmTimeAlertThresholdRule</div><div id="prm_error_info_time" style="display:none; color:red;">@Resource.String.ihpleD_String_cn.error_e01281</div></td>
+                </tr>
+                <tr>
+                    <!--fengpan 20140324 #886-->
+                    <td style="text-align:right;">@Resource.String.ihpleD_String_cn.page_setting_MotionAlertThre&nbsp;:</td>
+                    <td id="motion_threshold"><div id="motion_threshold_value" style="float:left"></div>&nbsp;G</td>
+                    <td style="width: 19%;"><div id="motion_threshold_edit" style="display:none"><input id="motion_threshold_input" maxlength="7" type="text"style="width:46.15%;" />&nbsp;G</div></td>
+                    <td style="color:#818181;"><div id="motion_info" style="display:none">@Resource.String.ihpleD_String_cn.page_setting_MotionAlertThresholdRule</div><div id="motion_error_info" style="display:none;color:red;">@Resource.String.ihpleD_String_cn.error_e01282</div></td>
+                </tr>
+                <tr style="height:100px;">
+                    <td style="text-align:right;">@Resource.String.ihpleD_String_cn.common_NoticeMail&nbsp;:&nbsp;</td>
+                    <td id="tenant_mail_edit"><textarea id="tenant_mail" cols="20" rows="2" style="width:100%;height:90px;line-height:15px;resize:none;float:left;font-size:10pt;margin-left:-2px;" disabled="disabled"></textarea></td>
+                    <td style="width:19%;"><textarea id="Setting_tenant_edit_mail" cols="20" rows="2" style="width:100%;height:90px;line-height:15px;resize:none;float:left;font-size:10pt;margin-left:-2px;display:none;" name="companyEmail" maxlength="1000"></textarea>
+                    <td >
+                        <div id="tenant_edit_mail_red" style="color:red;float:left; width:50px;position:relative;left:15px;height:90px;display:none;">*</div>
+                        <div id="tenant_mail_response" style="position:relative;left:0px;top:2px;width:300px;word-break:break-all; padding-left:5px;display:none;"></div>
+                    </td>
+                </tr>
+            </table>
+            <div id="Setting_container_alert_btn_edit" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_edit</div>
+            <div id="Setting_container_alert_btn_confirm" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_save</div>
+            <div id="Setting_container_alert_btn_cancle" class="cls_Setting_container_user_btn">@Resource.String.ihpleD_String_cn.common_cancel</div>
+        </div>
+    </div>
+    <div id="loadingImg" style="position: relative;width: 100%;top: -349px;height: 349px; text-align:center;vertical-align:middle;z-index:-1;background-color: #fff;opacity:0.3;filter:alpha(opacity=30)">
+    </div>
+</div>

@@ -1,0 +1,124 @@
+﻿@{
+    //登陆后台管理系统和用户注册界面
+    Layout = null;
+    //modified by caoyandong
+    ViewBag.Title = @Resource.String.ihpleD_String_cn.common_FleetManagerTool;//liangjiajie
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.js?ver=1.10")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/md5.js?ver=1.10")"></script>
+    <script>
+        function scroll() {
+            var width = 0;
+            if (window.innerWidth)
+                width = window.innerWidth;
+            else if ((document.body) && (document.body.clientWidth))
+                width = document.body.clientWidth;
+            //$("#form_div").css("margin-left", 0);
+           // $("#form_div").css("left", width / 2 - 200 + "px");
+        }
+        window.onload = function () {
+        
+
+            //$(".title_normal").css("background-image", "url('/hck-fleetadmin/DrawImageDomain')");
+
+                
+           
+            $("#token").val(Math.round(Math.random() * 1000000));
+            scroll();
+        }
+        window.onresize = function () {
+            scroll();
+        }
+        function unicode(s) {
+            var len = s.length;
+            var rs = "";
+            for (var i = 0; i < len; i++) {
+                var k = s.substring(i, i + 1);
+                rs += (i == 0 ? "" : "%") + s.charCodeAt(i);
+            }
+            return rs;
+        }
+        //modified by caoyandong
+        $(document).ready(function () {
+            $("#LoginFormBtn").click(function () {
+                var managerName =$.trim( $("#ManagerName").val());
+                var password = $.trim($("#inputManagerPassword").val());
+
+                var str = managerName.toLocaleLowerCase() + "&" + password;
+                document.getElementById("ManagerPassword").value = hex_md5(str);
+                document.getElementById("hiddenName").value = unicode(managerName);
+                document.forms['login'].submit();
+            });
+            $("#login_text").click(function () {
+                var managerName = $.trim($("#ManagerName").val());
+                var password = $.trim($("#inputManagerPassword").val());
+
+                var str = managerName.toLocaleLowerCase() + "&" + password;
+                document.getElementById("ManagerPassword").value = hex_md5(str);
+                document.getElementById("hiddenName").value = unicode(managerName);
+                document.forms['login'].submit();
+            });
+        });
+        //modified by caoyandong
+        //chenyangwen 2014/03/04
+        function getRandom() {
+            return Math.round(Math.random() * 1000000);
+        }
+        //chenyangwen 2014/03/04
+    </script>
+    <link href="@Url.Content("~/Content/Tenant/css/TenantLogin.css")" rel="stylesheet" type="text/css">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+<section id="loginForm">
+    <div> 
+        <div id="bg_bar" class="bg_bar_container">
+        </div>
+
+        <div id="form_div" class="form_div">
+
+            <div id="title" class="title_container">
+                <img id="title_img"  src="@Url.Content("~/Content/Tenant/images/Logo.png")" class="title_normal detectCanvas"/>
+             </div>
+
+             <div id="welcome" class="welcome_container">
+                <div id="welcome_img" >欢迎使用</div>
+             </div>
+            @if (null != @ViewBag.Error)
+            {
+                <div id="error" class="error_container_wrong">
+                     @ViewBag.Error
+                </div>
+            }
+            <form method="post" action="@Url.Action("ManagerLogin","Tenant")" name="login">
+                <div id="managerName_div" class="managerName">
+    			    <div id="managerName_rtf">
+            		    <input  type="text" placeholder="@Resource.String.ihpleD_String_cn.page_login_NoUsernameInput" style="width:80%;height:40px;line-height:40px;font-size:18px;font-family:'Microsoft YaHei';color:#a3a3a3;" name="inputManagerName" id="ManagerName" maxlength="20">
+                    </div>
+  			    </div>  
+                <div id="managerPwd_div" class="managerPwd">
+    			    <div id="managerPwd_rtf">
+                        <input type="password" size="2" placeholder="@Resource.String.ihpleD_String_cn.page_login_NoPasswordInput" style="width:80%;height:40px;line-height:40px;font-size:18px;font-family:'Microsoft YaHei';color:#a3a3a3;" name="inputManagerPassword" id="inputManagerPassword" maxlength="20">
+                    </div>
+  			    </div>
+                    <input type="hidden" name="ManagerPassword" id="ManagerPassword">
+                    <!-- chenyangwen 2014/03/04-->
+                    <input id="token" type="hidden" value="" name="token">
+                    <!-- chenyangwen 2014/03/04-->
+                    <input type="hidden" name="ManagerName" id="hiddenName">
+                
+                <div id="loginBtn" class="loginBtn">
+    			    <div id="loginBtn_rtf">
+                    <div id="login_text" class="login_text" style="cursor:pointer">@Resource.String.ihpleD_String_cn.page_login_loginButton</div>
+            	    <input type="image" style="width:39%;height:36px;" src="@Url.Content("~/Content/Tenant/images/BtnBg.png")" id="LoginFormBtn">
+                    </div>
+  			    </div>
+            </form>
+           </div>
+        </div>
+    </section>
+</body>
+</html>

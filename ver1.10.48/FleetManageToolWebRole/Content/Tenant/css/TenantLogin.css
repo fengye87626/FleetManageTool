@@ -1,0 +1,162 @@
+body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration:none;
+}
+
+img {
+    border:none;
+}
+
+.bg_bar_container {
+    position:absolute;
+    background-color:#ececec;
+    right:0px;
+    left:0px;
+    top:260px;
+    width:auto;
+    height:240px;
+}
+
+.form_div {
+    position:absolute;
+    margin:0px auto;
+    text-align:center;
+    width:32%;
+    height:500px;
+    margin-left:50%;
+    left:-16%;
+}
+
+.title_normal {
+   /* background-image: url('../images/Logo.png');*/
+}
+
+.title_container {
+    position:relative;
+    text-align:center;
+    /*mabiao for 20140304 #366*/
+    /*top:20px;*/
+    top:100px;
+    /*mabiao for 20140304 #366*/
+    /*left:56px;*/
+    width:100%;
+    height:33px;
+    margin:0 auto;
+}
+
+#title_img {
+    position:relative;
+	width:72%;
+    height:33px;
+}
+
+.error_container_wrong {
+    position:absolute;
+    top:270px;
+    left:0;
+    height:33px;
+	font-family:'Microsoft YaHei';
+    color:red;
+    text-align:center;
+    width:100%;
+}
+
+.welcome_normal {
+    background-image: url('../images/welcome.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.welcome_container {
+    position:relative;
+    /*left:123px;*/
+    top:180px;
+    width:100%;
+    height:35px;
+    text-align:center;
+}
+
+#welcome_img {
+    position:relative;
+	width:100%;
+    height:35px;
+    font-family:'Microsoft YaHei';
+    font-size:27pt;
+    color:#b3b3b3;
+    line-height:35px;
+}
+
+
+.managerName {
+    position:absolute;
+    /*left:40px;*/
+    top:300px;
+    width:100%;
+}
+
+.managerPwd {
+    position:absolute;
+    /*left:40px;*/
+    top:375px;
+    width:100%;
+}
+
+/*chenyangwen 2014/3/6*/
+/*.loginBtn {
+    position:absolute;
+    top:450px;
+    left:40px;
+    z-index:1;
+}*/
+.loginBtn {
+    position:absolute;
+    top:450px;
+    /*left:121px;*/
+    z-index:1;
+    width:100%;
+}
+/*chenyangwen 2014/3/6*/
+
+.RegistBtn {
+    position:absolute;
+    top:450px;
+    left:206px;
+    z-index:1;
+}
+
+.login_text {
+    position:absolute;
+    top:-2px;
+    /*left:50px;*/
+    font-family:'Microsoft YaHei';
+    height:33px;
+    font-size:28px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    color:#b3b3b3;
+    z-index:2;
+    width: 39%;
+    margin-left: 50%;
+    left: -19.5%;
+}
+
+.regist_text {
+    position:absolute;
+    top:448px;
+    left:255px;
+    font-family:'Microsoft YaHei';
+    height:33px;
+    font-size:28px;
+    text-align:center;
+    color:#b3b3b3;
+    z-index:2;
+}

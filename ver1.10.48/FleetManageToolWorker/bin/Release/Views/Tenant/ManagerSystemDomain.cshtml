@@ -1,0 +1,133 @@
+﻿@{
+    //公司注册的界面后台管理系统
+    Layout = null;
+    ViewBag.Title = @Resource.String.ihpleD_String_cn.common_FleetManagerTool; ;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.js")?@Session["version"]" type = "text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.24.js")?@Session["version"]" type = "text/javascript"></script>
+    <script src="@Url.Content("~/Content/Common/js/ajaxupload.3.6.js")?@Session["version"]" type = "text/javascript"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/md5.js?ver=1.0")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Tenant/js/ManagerSystemDomain.js?ver=1.0")"></script>
+     <link href = "@Url.Content("~/Content/themes/base/jquery.ui.core.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.resizable.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.selectable.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.accordion.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.autocomplete.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.button.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.dialog.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.slider.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.tabs.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.datepicker.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.progressbar.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/themes/base/jquery.ui.theme.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <link href = "@Url.Content("~/Content/Tenant/css/ManageSystemDomain.css?ver=1.0")" rel="stylesheet" type="text/css">
+    <title>@ViewBag.Title</title>
+    <script>
+        var language_string = "@ViewBag.Language".replace(/&quot;/g, "'");
+        if(language_string != ""){
+				LanguageScript = eval(language_string)[0].Shared;
+        }
+        $(document).ready(function () {
+            //console.log("Version : " + "@Session["version"]");
+        });
+    </script>
+</head>
+<body>
+<section>
+        <div class ="setting_user_reset" style="display:none; "><p style="font-family:'Microsoft YaHei';font-size:13pt; text-align:center;">@Resource.String.ihpleD_String_cn.page_tenant_DiaTenReset</p></div>
+        <div class ="setting_user_reset2" style="display:none;text-align:center;"></div>
+        <div class ="copy_password" style="display:none;font-family:'Microsoft YaHei';font-size:13pt; text-align:center;"><p>@Resource.String.ihpleD_String_cn.common_CopySuccess</p></div>
+        <div class ="copy_failed" style="display:none;font-family:'Microsoft YaHei';font-size:13pt;text-align:center;"><p>@Resource.String.ihpleD_String_cn.common_CopyFail</p></div>
+    <div id="contentBody" class="contentBody"> 
+        <div id="title" class="title">
+            @Resource.String.ihpleD_String_cn.page_tenant_ManagerSystem
+        </div>
+
+           <div id ="DeleteConfig_dialog" style="display:none;">
+            <p class = "delete_confirm_dialog_style" style="font-family:Microsoft YaHei;font-size:11pt;text-align:center;">您确认要删除域名吗?</p>
+            <input type="hidden" id ="deletkey">
+        </div>
+
+            <div id="dialog_form_Domain" style="display:none;">
+             
+                <label for="OBU_dialog_ESN_div">@Resource.String.ihpleD_String_cn.page_domain_DomainName</label>
+                <input type="text"  maxlength="100" style="margin:8px 0px 3px 0px;" name="Domain_dialog_Name_div" id="Domain_dialog_Name_div" class="text ui-widget-content ui-corner-all">
+                <div id="ui-ESN" class="cls_must_fill">*</div>
+                <div id="ui-right_ESN" class ="cls_input_right"></div>
+                <p class="validateTips_ESN" style="margin:-13px 0px 8px 0px; color:gray;">请输入域名</p>
+                <label for="Domain_dialog_login_div">@Resource.String.ihpleD_String_cn.page_domain_LoginLogo</label>
+              <div style="height:56px;overflow:hidden;margin-top:10px" id="previewLogin" title="更换图片">
+                  <div style="height:56px;width:56px;" > 
+                      <img alt="无图片" id="Domian_login_logo" src="DrawImageDomain"; style="height:56px;width:56px;"  /> </div>
+                  <div id="changeLogin" style="position: relative; top: -20px; left: 0px; background: black; width: 55px; height: 20px; font-size: 10pt;color:black;text-align:center;">
+                      <span>
+                          <img id="change_domain_login_logo_img" class="change_vehicl_logo" src="/Content/Setting/Images/modify_vehiclogo_image.png">
+                      </span>
+                      <span style="color:white;font-size: 9pt;vertical-align:top; ">&nbsp;修改</span>
+
+                  </div>
+                  <input type="file" name="domain_login_Logo" id="domain_login_Logo" onblur="checkLogo(this);" style="position:relative;top:-85px;left:0px;height:60px;width:60px;filter:alpha(opacity:0);opacity: 0;cursor:pointer;" onchange="previewLoginImage(this);" class=" ">
+
+              </div>
+
+              <input type="hidden" id ="unikey">
+             
+           </div>
+        <div id="table_div" class="table_div">
+            <div class="manageTitle">
+                @Resource.String.ihpleD_String_cn.page_tenant_DomainList
+            </div>
+
+            <a href="@Url.Action("AdminLogout", "Tenant")">
+            <div class="logout" style="cursor:pointer;">
+                <div id="logoutText" class="logoutText">@Resource.String.ihpleD_String_cn.page_shared_headerUserArea_logOut</div>
+            </div></a>         
+            <div class="resetadminpsw" style="cursor:pointer;">
+                <div id="Domain_container_btn_add" class="resetadminpswText">@Resource.String.ihpleD_String_cn.common_Add</div>
+            </div>
+
+            <div class="divideLine1"></div>
+    
+         <div id="Domian_container" class="Domain_container">
+        <div id="Domian_container_view" class="Domain_container_view">
+        <table style="border-collapse:collapse;width:800px;table-layout:fixed;" id="Domain_table_title">@*调整宽度liangjiajie0313*@
+            <tr class="tr"  style="background-color:#f1f1f1;">
+                 <td style="width:40%; font-weight:bolder;font-size:10pt" class="td1">@Resource.String.ihpleD_String_cn.page_domain_DomainName</td>
+                            <td style="width:30%; font-weight:bolder ;font-size:10pt" class="td2">@Resource.String.ihpleD_String_cn.page_domain_LoginLogo</td>                                
+
+                            <td style="width:30%; font-weight:bolder;font-size:10pt" class="td1">@Resource.String.ihpleD_String_cn.common_Operating</td>
+                            
+            </tr>
+        </table>
+        <table style="left:20px; border-collapse:collapse;width:800px;background-color:#f1f1f1;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ddd" id="Setting_OBU_table">@*调整宽度liangjiajie0313*@
+        </table>
+        </div>
+  
+       
+
+       <div id="all_pageBar_Setting" style="text-align:center;margin-left:212px;position:relative;"></div>
+    </div>
+            
+             <div id ="loading_gif">
+                <div id ="loading_tip">后台数据读取中,请等待...</div>
+            </div>
+            <div class="divideLine4" id ="divideLine4"></div>
+            <div class="friendLink"  id ="friendLink">
+                <div id="version">@Resource.String.ihpleD_String_cn.common_Version:@Session["version"].ToString().Substring(0, @Session["version"].ToString().LastIndexOf('.'))</div>
+                @*<a href="#" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.common_privacyPolicy</a>&nbsp;&nbsp;|&nbsp;&nbsp;*@
+                <a href="../../Content/Term_of_use_April_2014_cn_.html" target="_blank" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.page_settings_about_termsOfUseButton</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.common_AboutFleetManager</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#" style="color:#888;font-family:'Microsoft YaHei';font-size:10pt;">@Resource.String.ihpleD_String_cn.page_footer_helpcenter</a>
+            </div>
+        </div>
+    </div>
+
+     
+</section>
+
+ 
+</body>
+</html>

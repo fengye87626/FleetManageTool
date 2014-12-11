@@ -1,0 +1,502 @@
+﻿body {
+    margin: 0px;
+    background-color:#f1f1f1;
+}
+
+a {
+    text-decoration:none;
+    cursor:pointer;
+}
+
+#version {
+    position:absolute;
+    top:0px;
+    left:5%;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#868686;
+    width:auto;
+    height:auto;
+}
+
+.contentBody {
+    position:absolute;
+    margin:0px auto;
+    top:0px;
+    height:700px;
+    margin-left:50%;
+    width:80%;
+    left:-39%;
+}
+
+.title {
+    position:relative;
+    font-family:'Microsoft YaHei';
+    font-size:14pt;
+    top:15px;
+    text-align:center;
+    height:50px;
+}
+
+.form_div {
+    position:relative;
+    border-bottom:1px;
+    /*background-image: url('../images/background.png');*/
+    background-color:#fff;
+    height:706px;
+    width:100%;
+}
+
+.registTitle {
+    position:relative;
+    font-family:'Microsoft YaHei';
+    font-size:14pt;
+    top:25px;
+    font-family:'Microsoft YaHei';
+    font-size:14pt;
+    left:14%;
+}
+
+.divideLine1 {
+    position:absolute;
+    left:18%;
+    top:60px;
+    background-image: url('../images/SeperateLine.png');
+    height:1px;
+    width:90%;
+    background-size:100% 1px;
+}
+
+.company_input {
+    position:absolute;
+    left:107.14%;
+    top:-2px;
+    width:178.59%;
+}
+
+.companyID_input {
+    position:absolute;
+    left:105.26%;
+    top:-2px;
+    width:131.58%;
+}
+
+.company_input_alert {
+    position:absolute;
+    left:107.14%;
+    top:2px;
+    width:177.14%;
+}
+
+.company_input_user {
+    position:absolute;
+    left:107.14%;
+    background-color:#ccc;
+    text-align:left;
+    width:178.57%;
+    height:25px;
+    top:-2px;
+}
+
+.companyName {
+    position:absolute;
+    left:6%;
+    top:70px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+.InputIntro_companyname {
+    position:absolute;
+    left:300%;
+    top:2px;
+    width:185.71%;
+    color:#aaa;
+    font-family:'Microsoft YaHei';
+    text-align:left;
+    font-size:8pt;
+}
+.InputIntro {
+    position:absolute;
+    left:300%;
+    top:2px;
+    width:185.71%;
+    color:#aaa;
+    font-family:'Microsoft YaHei';
+    text-align:left;
+    font-size:8pt;
+}
+
+.CompanyIDInputIntro {
+    position:absolute;
+    left:247.37%;
+    top:2px;
+    width:136.84%;
+    color:#aaa;
+    font-family:'Microsoft YaHei';
+    text-align:left;
+    font-size:8pt;
+}
+.InputIntro_alert_companyname {
+    position:absolute;
+    left:300%;
+    top:2px;
+    width:178.57%;
+    color:#aaa;
+    font-family:'Microsoft YaHei';
+    text-align:left;
+    font-size:8pt;
+}
+.InputIntro_alert {
+    position:absolute;
+    left:300%;
+    top:2px;
+    width:178.57%;
+    color:#aaa;
+    font-family:'Microsoft YaHei';
+    text-align:left;
+    font-size:8pt;
+}
+
+.companyID {
+    position:absolute;
+    left:-4%;
+    top:115px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+.show_Info_companyname {
+    position:absolute;
+    left:300%;
+    width:185.71%;
+    top:0px;
+    font-size:10pt;
+    color:red;
+    text-align:left;
+}
+.show_Info {
+    position:absolute;
+    left:300%;
+    width:185.71%;
+    top:0px;
+    font-size:10pt;
+    color:red;
+    text-align:left;
+}
+.show_Info_alert_companyname {
+    position:absolute;
+    left:300%;
+    width:178.57%;
+    height:50px;
+    top:0px;
+    font-size:10pt;
+    color:red;
+    text-align:left;
+}
+.show_Info_alert {
+    position:absolute;
+    left:300%;
+    width:178.57%;
+    height:50px;
+    top:0px;
+    font-size:10pt;
+    color:red;
+    text-align:left;
+}
+
+.show_IDInfo {
+    position:absolute;
+    left:247.37%;
+    width:131.58%;
+    top:0px;
+    font-size:10pt;
+    text-align:left;
+    color:red;
+    word-break:break-all;
+}
+
+.show_pwdInfo1_Inner {
+    position:absolute;
+    left:35.71%;
+    width:357.14%;
+    top:0px;
+    color:red;
+}
+
+.show_LogoInfo {
+    position:absolute;
+    left:80%;
+    width:40%;
+    top:0px;
+    text-align:left;
+    font-size:10pt;
+    color:#aaa;
+}
+
+.show_IntroInfo {
+    position:absolute;
+    left:92%;
+    width:40%;
+    top:0px;
+    font-size:10pt;
+    text-align:left;
+    color:#aaa;
+}
+
+.show_IntroErrorInfo {
+    position:absolute;
+    left:86%;
+    width:44%;
+    top:0px;
+    font-size:10pt;
+    color:#aaa;
+    color:red;
+    word-break:break-all;
+    display:none;
+}
+
+.companyEmail {
+    position:absolute;
+    left:6%;
+    top:160px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.companyTel {
+    position:absolute;
+    left:6%;
+    top:240px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.companyLogo {
+    position:absolute;
+    left:6%;
+    top:240px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.companyIntro {
+    position:absolute;
+    left:6%;
+    top:230px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.companyIntro_input {
+    position:absolute;
+    left:30%;
+    top:0px;
+}
+
+.divideLine2 {
+    position:absolute;
+    left:14%;
+    top:280px;
+    background-image: url('../images/SeperateLine.png');
+    height:1px;
+    width:90%;
+    background-size:100% 1px;
+}
+
+.adminID {
+    position:absolute;
+    left:6%;
+    top:300px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.adminEmail {
+    position:absolute;
+    left:6%;
+    top:345px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.companyPwd {
+    position:absolute;
+    left:6%;
+    top:390px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.confirmPassword {
+    position:absolute;
+    left:6%;
+    top:430px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.validateCode {
+    position:absolute;
+    left:6%;
+    top:470px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.validateCode_input {
+    position:absolute;
+    left:107.14%;
+    top:0px;
+    width:107.14%;
+}
+
+.validateCode_image {
+    position:absolute;
+    left:246.43%;
+    top:2px;
+}
+
+.divideLine3 {
+    position:absolute;
+    left:14%;
+    top:505px;
+    background-image: url('../images/SeperateLine.png');
+    height:1px;
+    width:90%;
+    background-size:100% 1px;
+}
+
+.OBUESNCode {
+    position:absolute;
+    left:6%;
+    top:520px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.RegisterKey {
+    position:absolute;
+    left:6%;
+    top:560px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+}
+
+.divideLine4 {
+    position:absolute;
+    left:14%;
+    top:600px;
+    background-image: url('../images/SeperateLine.png');
+    height:1px;
+    width:90%;
+    background-size:100% 1px;
+}
+
+.registBtn {
+    position:absolute;
+    left:29%;
+    top:610px;
+    width:40%;
+}
+
+.registText {
+    position:absolute;
+    left:33%;
+    top:5px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+    width:35%;
+    height:20px;
+    text-align:center;
+    border:#ccc solid 1px;
+    border-radius:5px;
+    z-index:2;
+    line-height:20px;/*liangjiajie27*/
+}
+
+.resetText {
+    position:absolute;
+    left:89%;
+    top:5px;
+    font-family:'Microsoft YaHei';
+    font-size:12pt;
+    width:35%;
+    height:20px;
+    text-align:center;
+    border:#ccc solid 1px;
+    border-radius:5px;
+    z-index:2;
+    line-height:20px;/*liangjiajie27*/
+}
+
+.friendLink {
+    position:relative;
+    top:655px;
+    text-align:center;
+}
+
+.ui-button-text-only .ui-button-text { 
+    padding: 0em 1em;
+}
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+    border:1px solid #000000;
+    border-radius: 4px; 
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+.ui-button .ui-button-text {
+    line-height:1.9em;
+}
+.ui-dialog {
+    position:fixed;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0em; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+    background:#f3f3f3;
+    }
+
+#company_Admin_tip {
+    position:relative;
+    top:-23px;
+    left:297%;
+}
+
+ #loading_gif {
+    /*background:url("~Common/images/loading_style.gif");*/
+    position:absolute;
+    left:400px;
+    top:230px;
+    height:113px;
+    width:114px;
+}
+#loading_tip {
+    position:relative;
+    left:-40px;
+    top:10px;
+    width:300px;
+    text-align:left;
+}

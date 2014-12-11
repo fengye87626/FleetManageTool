@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html lang="zh">
+    <head>
+        @*liangjiajei #250bug*@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@Resource.String.ihpleD_String_cn.page_404_PageMistake</title>
+        <link href = "@Url.Content("~/Content/Error/css/error.css?ver=1.0")" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            function shut() {
+                window.opener = null;
+                window.open('', '_self');
+                window.close();
+            }
+        </script>
+</head>
+<body style="text-align:center;background-color:#f1f1f1">
+        <!-- <div class="errorImage">
+            <div class="errorText">
+                <strong><br>@Resource.String.ihpleD_String_cn.page_404_PageNotExist<br></strong>
+                <div>@Resource.String.ihpleD_String_cn.Page_404_YouCould<a onClick="javascript :history.back(-1);" style="color:red; cursor:pointer " >@Resource.String.ihpleD_String_cn.page_404_BackToPrevious</a>
+            或<a onclick="shut();" style="color:red; cursor:pointer " >@Resource.String.ihpleD_String_cn.page_404_ClosePage</a></div>
+            </div>
+        </div>-->
+    <div class="body_center">
+        <div class="info_div">
+            <div class="code_div">
+                <span class="error_code">404</span>
+            </div>
+
+            <div class="text_div">
+                <div class="error_text_div">
+                    <span class="error_text">"该页面不存在"</span>
+                </div>
+                <div class="error_text_div">
+                    <span class="error_text">您所访问的页面不存在或被删除！</span>
+                </div>
+                <div class="error_text_div">
+                <span class="error_text">@Resource.String.ihpleD_String_cn.Page_404_YouCould &nbsp;<a onClick="javascript :history.back(-1);" style="color:#005fca; cursor:pointer " >@Resource.String.ihpleD_String_cn.page_404_BackToPrevious</a>&nbsp;&nbsp;或&nbsp;&nbsp;<a onclick="shut();" style="color:#005fca; cursor:pointer " >@Resource.String.ihpleD_String_cn.page_404_ClosePage</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

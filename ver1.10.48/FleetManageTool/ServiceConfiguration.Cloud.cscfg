@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="FleetManageTool" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="FleetManageToolWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="FleetToolTest" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEGuDJA4Ie/CKRkzfJJjfM94wDQYJKoZIhvcNAQEBBQAEggEADJWmbakDdpPcJ38DWpvLPFZKd9NIyozYZhlTFCBe0RGp3UcGL60rNeMNpdREJ/Rbuqmd71u474acLqUAnwDOytrwQW4QQ2E4XgzfuZtIC0DnfWRhgr8bDWS2sA15Sj86R9WND0pt2XkeJGUefz50I6FjIb3EBxrEUCaNy/ipwGxyDRvr06B/BTE/GAOXApaDfU79vSJFaRUKJ2K6MK8rlLqM8bQMPdu5ncWW4LYSmX5JpOkxlpsnkHlPjh6FIA4iVHcaeAcsYSTYnNWLGR3eEbF3VSY6X8MpLHF4wYwtVXxhw/kjdmWHuIQQWkF0gkwYPRkkesehdrrCLbuaeBRlGzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECNeIf/96YliSgBBRh5C+t9LhJmShWE7SiKaq" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-04-30T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hckfleet;AccountKey=X7Fkwe3Rs4LAgWtlcH4ORL5Ww0yplcQY3YRcpppRmd7N57GNTqcfZo1t77cmi9BEcUcV6gIPMhJQUxvzG4x5qg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value="{&quot;caches&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:10,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0}]}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="DefaultEndpointsProtocol=https;AccountName=portalvhdsll0sjmrw3b67f;AccountKey=dKMNyeR2IiG11+iK7BWRNyb92u/8tyVopjI+uu3197lktm0Ewc4wDv2iDAXI5SFryrSE+HT/fAtymjkZ+QqC2Q==" />
+      <Setting name="EndPoint" value="https://hk-prod-sharedapi.ihpleDconnect.com" />
+      <Setting name="grant_type" value="grant_type=password" />
+      <Setting name="username" value="username=heicolink_user1" />
+      <Setting name="password" value="password=S2t0G0h6I4j7N5f" />
+      <Setting name="InitToken" value="D6127D83-B567-4601-AFD5-5E6E583EE881" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hckfleet;AccountKey=X7Fkwe3Rs4LAgWtlcH4ORL5Ww0yplcQY3YRcpppRmd7N57GNTqcfZo1t77cmi9BEcUcV6gIPMhJQUxvzG4x5qg==" />
+      <Setting name="ContainerName" value="uploadcsv" />
+      <Setting name="TokenTimeoutRangeMinValue" value="40" />
+      <Setting name="TokenTimeoutRangeMaxValue" value="50" />
+      <Setting name="RetryStrategyTime" value="5" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="0875B261F1679733FBF85556F412423F8AAC4953" thumbprintAlgorithm="sha1" />
+      <Certificate name="MySSLCert" thumbprint="4D7A0FF316B1D709CA1E9E6AC17032515F201DEB" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="FleetManageToolWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value="{&quot;caches&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:10,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0}]}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="DefaultEndpointsProtocol=https;AccountName=fleettoolstorage;AccountKey=XpCF5aP+JrCtXMJO19w8sVpt8Usi8aXWnFK97QSVyajFfmaFkLHCpoyBt6+hadBGtNhiqps4wlhalSeEKQvHKQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="FleetToolTest" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEGuDJA4Ie/CKRkzfJJjfM94wDQYJKoZIhvcNAQEBBQAEggEADJWmbakDdpPcJ38DWpvLPFZKd9NIyozYZhlTFCBe0RGp3UcGL60rNeMNpdREJ/Rbuqmd71u474acLqUAnwDOytrwQW4QQ2E4XgzfuZtIC0DnfWRhgr8bDWS2sA15Sj86R9WND0pt2XkeJGUefz50I6FjIb3EBxrEUCaNy/ipwGxyDRvr06B/BTE/GAOXApaDfU79vSJFaRUKJ2K6MK8rlLqM8bQMPdu5ncWW4LYSmX5JpOkxlpsnkHlPjh6FIA4iVHcaeAcsYSTYnNWLGR3eEbF3VSY6X8MpLHF4wYwtVXxhw/kjdmWHuIQQWkF0gkwYPRkkesehdrrCLbuaeBRlGzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECNeIf/96YliSgBBRh5C+t9LhJmShWE7SiKaq" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-04-30T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ctfleet;AccountKey=iXWRdxOs+Fx/FxND3XD73jM1d5wLUxR7n6RgxWD14GM1A7PZaEN20zJBgRmmbIyHj7jYr6h//REoT8pPW6L/Mg==" />
+      <Setting name="EndPoint" value="https://hk-prod-sharedapi.ihpleDconnect.com" />
+      <Setting name="grant_type" value="grant_type=password" />
+      <Setting name="username" value="username=heicolink_user1" />
+      <Setting name="password" value="password=S2t0G0h6I4j7N5f" />
+      <Setting name="InitToken" value="D6127D83-B567-4601-AFD5-5E6E583EE881" />
+      <Setting name="SynThreadNumber" value="10" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="0875B261F1679733FBF85556F412423F8AAC4953" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FleetManageTool.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="FleetManageToolStoreContainer">
+    <EntitySet Name="Administrator" EntityType="FleetManageTool.Store.Administrator" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Alert" EntityType="FleetManageTool.Store.Alert" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlertConfiguration" EntityType="FleetManageTool.Store.AlertConfiguration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer" EntityType="FleetManageTool.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Diagnostic" EntityType="FleetManageTool.Store.Diagnostic" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DomainSetting" EntityType="FleetManageTool.Store.DomainSetting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DTC" EntityType="FleetManageTool.Store.DTC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FleetUser" EntityType="FleetManageTool.Store.FleetUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FleetUser_Role" EntityType="FleetManageTool.Store.FleetUser_Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Geofence" EntityType="FleetManageTool.Store.Geofence" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Geofence_Vehicle" EntityType="FleetManageTool.Store.Geofence_Vehicle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HW_Model" EntityType="FleetManageTool.Store.HW_Model" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Logo" EntityType="FleetManageTool.Store.Logo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MMY" EntityType="FleetManageTool.Store.MMY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notification" EntityType="FleetManageTool.Store.Notification" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Obu" EntityType="FleetManageTool.Store.Obu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Obu_Check" EntityType="FleetManageTool.Store.Obu_Check" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Operate_Log" EntityType="FleetManageTool.Store.Operate_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parameter" EntityType="FleetManageTool.Store.Parameter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RevisionRecord" EntityType="FleetManageTool.Store.RevisionRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Role" EntityType="FleetManageTool.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SystemSetting" EntityType="FleetManageTool.Store.SystemSetting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tenant" EntityType="FleetManageTool.Store.Tenant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Trip" EntityType="FleetManageTool.Store.Trip" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vehicle" EntityType="FleetManageTool.Store.Vehicle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vehicle_AlertConfiguration" EntityType="FleetManageTool.Store.Vehicle_AlertConfiguration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vehicle_Obu" EntityType="FleetManageTool.Store.Vehicle_Obu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VehicleGroup" EntityType="FleetManageTool.Store.VehicleGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VehicleGroup_Vehicle" EntityType="FleetManageTool.Store.VehicleGroup_Vehicle" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Alert_0" Association="FleetManageTool.Store.FK_Alert_0">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Alert" EntitySet="Alert" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertConfiguration_0" Association="FleetManageTool.Store.FK_AlertConfiguration_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="AlertConfiguration" EntitySet="AlertConfiguration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Obu_0" Association="FleetManageTool.Store.FK_Customer_Obu_0">
+      <End Role="Obu" EntitySet="Obu" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Tenant_0" Association="FleetManageTool.Store.FK_Customer_Tenant_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_geofence_0" Association="FleetManageTool.Store.FK_geofence_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="Geofence" EntitySet="Geofence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Geofence_Vehicle_0" Association="FleetManageTool.Store.FK_Geofence_Vehicle_0">
+      <End Role="Geofence" EntitySet="Geofence" />
+      <End Role="Geofence_Vehicle" EntitySet="Geofence_Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Geofence_Vehicle_1" Association="FleetManageTool.Store.FK_Geofence_Vehicle_1">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Geofence_Vehicle" EntitySet="Geofence_Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notification_0" Association="FleetManageTool.Store.FK_Notification_0">
+      <End Role="AlertConfiguration" EntitySet="AlertConfiguration" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_obu_0" Association="FleetManageTool.Store.FK_obu_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="Obu" EntitySet="Obu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operate_Log_0" Association="FleetManageTool.Store.FK_Operate_Log_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="Operate_Log" EntitySet="Operate_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Parameter_0" Association="FleetManageTool.Store.FK_Parameter_0">
+      <End Role="AlertConfiguration" EntitySet="AlertConfiguration" />
+      <End Role="Parameter" EntitySet="Parameter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_systemsetting_0" Association="FleetManageTool.Store.FK_systemsetting_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="SystemSetting" EntitySet="SystemSetting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trip_0" Association="FleetManageTool.Store.FK_Trip_0">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Trip" EntitySet="Trip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_0" Association="FleetManageTool.Store.FK_user_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="FleetUser" EntitySet="FleetUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_role_0" Association="FleetManageTool.Store.FK_user_role_0">
+      <End Role="FleetUser" EntitySet="FleetUser" />
+      <End Role="FleetUser_Role" EntitySet="FleetUser_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_role_1" Association="FleetManageTool.Store.FK_user_role_1">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="FleetUser_Role" EntitySet="FleetUser_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehicle_0" Association="FleetManageTool.Store.FK_vehicle_0">
+      <End Role="Logo" EntitySet="Logo" />
+      <End Role="Vehicle" EntitySet="Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehicle_1" Association="FleetManageTool.Store.FK_vehicle_1">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="Vehicle" EntitySet="Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_AlertConfiguration_0" Association="FleetManageTool.Store.FK_Vehicle_AlertConfiguration_0">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Vehicle_AlertConfiguration" EntitySet="Vehicle_AlertConfiguration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehicle_Customer_0" Association="FleetManageTool.Store.FK_Vehicle_Customer_0">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Vehicle" EntitySet="Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehicle_obu_0" Association="FleetManageTool.Store.FK_vehicle_obu_0">
+      <End Role="Obu" EntitySet="Obu" />
+      <End Role="Vehicle_Obu" EntitySet="Vehicle_Obu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehicle_obu_1" Association="FleetManageTool.Store.FK_vehicle_obu_1">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Vehicle_Obu" EntitySet="Vehicle_Obu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehiclegroup_0" Association="FleetManageTool.Store.FK_vehiclegroup_0">
+      <End Role="Tenant" EntitySet="Tenant" />
+      <End Role="VehicleGroup" EntitySet="VehicleGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehiclegroup_vehicle_0" Association="FleetManageTool.Store.FK_vehiclegroup_vehicle_0">
+      <End Role="VehicleGroup" EntitySet="VehicleGroup" />
+      <End Role="VehicleGroup_Vehicle" EntitySet="VehicleGroup_Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehiclegroup_vehicle_1" Association="FleetManageTool.Store.FK_vehiclegroup_vehicle_1">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="VehicleGroup_Vehicle" EntitySet="VehicleGroup_Vehicle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Administrator">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Alert">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="varchar" MaxLength="50" />
+    <Property Name="Value" Type="nvarchar" MaxLength="265" />
+    <Property Name="AlertType" Type="nvarchar" MaxLength="50" />
+    <Property Name="TriggeredDateTime" Type="datetime" />
+    <Property Name="vehicleId" Type="bigint" Nullable="false" />
+    <Property Name="EngineEndTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AlertConfiguration">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="category" Type="varchar" MaxLength="50" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+    <Property Name="obuid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Diagnostic">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="vehicleId" Type="bigint" Nullable="false" />
+    <Property Name="lastReadDate" Type="datetime" Nullable="false" />
+    <Property Name="code" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="message" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="DomainSetting">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="domainurl" Type="varchar" MaxLength="100" />
+    <Property Name="loginlogo" Type="varbinary(max)" />
+    <Property Name="dashboardlogo" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="DTC">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DTCCodeId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DTCCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Title_EN" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Title_ZH" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="FleetUser">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="telephone" Type="varchar" MaxLength="256" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="FleetUser_Role">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="bigint" Nullable="false" />
+    <Property Name="roleid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Geofence">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+    <Property Name="location" Type="nchar" Nullable="false" MaxLength="1000" />
+    <Property Name="radiu" Type="float" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Baidulng" Type="float" Nullable="false" />
+    <Property Name="Baidulat" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Geofence_Vehicle">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="geofenceid" Type="bigint" Nullable="false" />
+    <Property Name="vehicleid" Type="bigint" Nullable="false" />
+    <Property Name="ihpleDgeofenceid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HW_Model">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ByteIDCheck" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LabelIDCheck" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IccIDCheck" Type="nvarchar" Nullable="false" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Logo">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="data" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MMY">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="language" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="mmyMake" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="mmyModel" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mmyYear" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="mmyIndex" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="value" Type="varchar" MaxLength="50" />
+    <Property Name="alertconfigurationID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Obu">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="idtype" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="regkey" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="guid" Type="varchar" MaxLength="50" />
+    <Property Name="deviceType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Obu_Check">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="byteid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="labelid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mdakey" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mdspc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mdots" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mdmsn" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mdtadm" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="regkey" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="authtoken" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="hwmodel" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="iccid" Type="nvarchar" MaxLength="50" />
+    <Property Name="createdate" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Operate_Log">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="bigint" Nullable="false" />
+    <Property Name="explain" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+    <Property Name="logtime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parameter">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParameterType" Type="varchar" MaxLength="50" />
+    <Property Name="value" Type="varchar" MaxLength="50" />
+    <Property Name="alertconfigurationID" Type="bigint" Nullable="false" />
+    <Property Name="ParameterColumnName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RevisionRecord">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="versionNo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="revisionInfo" Type="nvarchar" Nullable="false" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="role" Type="varchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="SystemSetting">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tag" Type="varchar" MaxLength="256" />
+    <Property Name="value" Type="bigint" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tenant">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyname" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="companyid" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="email" Type="varchar(max)" Nullable="false" />
+    <Property Name="telephone" Type="varchar" MaxLength="256" />
+    <Property Name="introduction" Type="nvarchar" MaxLength="2000" />
+    <Property Name="status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="guid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="startTime" Type="datetime" />
+    <Property Name="endtime" Type="datetime" />
+    <Property Name="startlocationLng" Type="float" />
+    <Property Name="startlocationLat" Type="float" />
+    <Property Name="endlocationLng" Type="float" />
+    <Property Name="endlocationLat" Type="float" />
+    <Property Name="distance" Type="float" />
+    <Property Name="vehicleId" Type="bigint" Nullable="false" />
+    <Property Name="IdleTime" Type="float" />
+    <Property Name="guid" Type="varchar" MaxLength="50" />
+    <Property Name="startlocation" Type="nvarchar" MaxLength="256" />
+    <Property Name="endlocation" Type="nvarchar" MaxLength="256" />
+    <Property Name="isFirstFlag" Type="int" />
+    <Property Name="isLastFlag" Type="int" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+    <Property Name="logoid" Type="bigint" />
+    <Property Name="id" Type="varchar" MaxLength="50" />
+    <Property Name="vin" Type="varchar" MaxLength="256" />
+    <Property Name="name" Type="nvarchar" MaxLength="265" />
+    <Property Name="info" Type="nvarchar" MaxLength="1000" />
+    <Property Name="licence" Type="nvarchar" MaxLength="256" />
+    <Property Name="drivername" Type="nvarchar" MaxLength="256" />
+    <Property Name="isVinEditable" Type="int" />
+    <Property Name="isMMYEditable" Type="int" />
+    <Property Name="year" Type="varchar" MaxLength="100" />
+    <Property Name="make" Type="varchar" MaxLength="100" />
+    <Property Name="model" Type="varchar" MaxLength="100" />
+    <Property Name="customerid" Type="bigint" />
+    <Property Name="mmyid" Type="bigint" />
+    <Property Name="telephone" Type="varchar" MaxLength="256" />
+    <Property Name="lable" Type="nvarchar" MaxLength="3000" />
+  </EntityType>
+  <EntityType Name="Vehicle_AlertConfiguration">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="vehicleID" Type="bigint" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="50" />
+    <Property Name="alertConfigurationGuID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="alertTpe" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Vehicle_Obu">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="obuid" Type="bigint" Nullable="false" />
+    <Property Name="vehicleid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VehicleGroup">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tenantid" Type="bigint" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="VehicleGroup_Vehicle">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="groupid" Type="bigint" Nullable="false" />
+    <Property Name="vehicleid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Alert_0">
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="1" />
+    <End Role="Alert" Type="FleetManageTool.Store.Alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Alert">
+        <PropertyRef Name="vehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertConfiguration_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="AlertConfiguration" Type="FleetManageTool.Store.AlertConfiguration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="AlertConfiguration">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Obu_0">
+    <End Role="Obu" Type="FleetManageTool.Store.Obu" Multiplicity="1" />
+    <End Role="Customer" Type="FleetManageTool.Store.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obu">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="obuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Tenant_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="Customer" Type="FleetManageTool.Store.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_geofence_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="Geofence" Type="FleetManageTool.Store.Geofence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Geofence">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Geofence_Vehicle_0">
+    <End Role="Geofence" Type="FleetManageTool.Store.Geofence" Multiplicity="1" />
+    <End Role="Geofence_Vehicle" Type="FleetManageTool.Store.Geofence_Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Geofence">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Geofence_Vehicle">
+        <PropertyRef Name="geofenceid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Geofence_Vehicle_1">
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="1" />
+    <End Role="Geofence_Vehicle" Type="FleetManageTool.Store.Geofence_Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Geofence_Vehicle">
+        <PropertyRef Name="vehicleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notification_0">
+    <End Role="AlertConfiguration" Type="FleetManageTool.Store.AlertConfiguration" Multiplicity="1" />
+    <End Role="Notification" Type="FleetManageTool.Store.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlertConfiguration">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="alertconfigurationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_obu_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="Obu" Type="FleetManageTool.Store.Obu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Obu">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operate_Log_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="Operate_Log" Type="FleetManageTool.Store.Operate_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Operate_Log">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Parameter_0">
+    <End Role="AlertConfiguration" Type="FleetManageTool.Store.AlertConfiguration" Multiplicity="1" />
+    <End Role="Parameter" Type="FleetManageTool.Store.Parameter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlertConfiguration">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Parameter">
+        <PropertyRef Name="alertconfigurationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_systemsetting_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="SystemSetting" Type="FleetManageTool.Store.SystemSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="SystemSetting">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trip_0">
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="1" />
+    <End Role="Trip" Type="FleetManageTool.Store.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="vehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="FleetUser" Type="FleetManageTool.Store.FleetUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="FleetUser">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_role_0">
+    <End Role="FleetUser" Type="FleetManageTool.Store.FleetUser" Multiplicity="1" />
+    <End Role="FleetUser_Role" Type="FleetManageTool.Store.FleetUser_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FleetUser">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="FleetUser_Role">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_role_1">
+    <End Role="Role" Type="FleetManageTool.Store.Role" Multiplicity="1" />
+    <End Role="FleetUser_Role" Type="FleetManageTool.Store.FleetUser_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="FleetUser_Role">
+        <PropertyRef Name="roleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehicle_0">
+    <End Role="Logo" Type="FleetManageTool.Store.Logo" Multiplicity="0..1" />
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Logo">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="logoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehicle_1">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_AlertConfiguration_0">
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="1" />
+    <End Role="Vehicle_AlertConfiguration" Type="FleetManageTool.Store.Vehicle_AlertConfiguration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Vehicle_AlertConfiguration">
+        <PropertyRef Name="vehicleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehicle_Customer_0">
+    <End Role="Customer" Type="FleetManageTool.Store.Customer" Multiplicity="0..1" />
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehicle_obu_0">
+    <End Role="Obu" Type="FleetManageTool.Store.Obu" Multiplicity="1" />
+    <End Role="Vehicle_Obu" Type="FleetManageTool.Store.Vehicle_Obu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obu">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Vehicle_Obu">
+        <PropertyRef Name="obuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehicle_obu_1">
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="1" />
+    <End Role="Vehicle_Obu" Type="FleetManageTool.Store.Vehicle_Obu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="Vehicle_Obu">
+        <PropertyRef Name="vehicleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehiclegroup_0">
+    <End Role="Tenant" Type="FleetManageTool.Store.Tenant" Multiplicity="1" />
+    <End Role="VehicleGroup" Type="FleetManageTool.Store.VehicleGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tenant">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="VehicleGroup">
+        <PropertyRef Name="tenantid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehiclegroup_vehicle_0">
+    <End Role="VehicleGroup" Type="FleetManageTool.Store.VehicleGroup" Multiplicity="1" />
+    <End Role="VehicleGroup_Vehicle" Type="FleetManageTool.Store.VehicleGroup_Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleGroup">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="VehicleGroup_Vehicle">
+        <PropertyRef Name="groupid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehiclegroup_vehicle_1">
+    <End Role="Vehicle" Type="FleetManageTool.Store.Vehicle" Multiplicity="1" />
+    <End Role="VehicleGroup_Vehicle" Type="FleetManageTool.Store.VehicleGroup_Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="pkid" />
+      </Principal>
+      <Dependent Role="VehicleGroup_Vehicle">
+        <PropertyRef Name="vehicleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,190 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = @Resource.String.ihpleD_String_cn.page_login_loginButton;
+    System.Web.HttpCookie cookie = Request.Cookies.Get("InActiveInfo");
+    if (null != cookie && "" != cookie.Value)
+        @ViewBag.LoginAlert = System.Web.HttpUtility.UrlDecode(cookie.Value);
+    if (null != cookie)
+        cookie.Value = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--每次有大的版本变动时，需要变更引用脚本的ver=x.xx -->
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.js?ver=1.10")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/md5.js?ver=1.10")"></script>
+    <script>
+        $.ajaxSetup({
+            statusCode: {
+                499: function (data) {
+                    window.location.reload();
+                },
+                599: function (data) {
+                    alert(LanguageScript.page_common_Role_Change);
+                    window.location.href = "/";
+                }
+                , 699: function (data) {
+                    alert(LanguageScript.page_common_tenant_inactive);
+                    window.location.href = "/";
+                },
+                799: function (data) {
+                    alert(LanguageScript.page_common_tenant_deleted);
+                    window.location.href = "/";
+                }
+            }
+        });
+        $(document).ready(scroll());
+        function scroll() {
+            var width = 0;
+            if (window.innerWidth)
+                width = window.innerWidth;
+            else if ((document.body) && (document.body.clientWidth))
+                width = document.body.clientWidth;
+            //$("#form_div").css("margin-left",0);
+            //$("#form_div").css("left", width / 2 - 200 + "px");
+        }
+        window.onload = function () {
+   
+
+          //  $(".u4_normal").css("background-image", "url('/hck-fleetadmin/DrawImageDomain')");
+
+            //chenyangwen 2014/03/06 488
+            $("#token").val(Math.round(Math.random() * 1000000));
+            scroll();
+        }
+        window.onresize = function () {
+            scroll();
+        }
+        //chenyangwen 2014/03/04
+        function getRandom(){
+            return Math.round(Math.random() * 1000000);
+        }
+        //chenyangwen 2014/03/04
+        function unicode(s) {
+            var len = s.length;
+            var rs = "";
+            for (var i = 0; i < len; i++) {
+                var k = s.substring(i, i + 1);
+                rs += (i == 0 ? "" : "%") + s.charCodeAt(i);
+            }
+            return rs;
+        }
+    </script>
+    <link href="@Url.Content("~/Content/Login/css/Login.css?ver=1.10")" rel="stylesheet" type="text/css">
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+
+    <section id="loginForm">
+        <div>
+            <div id="u2" class="u2_container">
+            </div>
+
+            <div id="form_div" class="form_div">
+
+                <div id="u4" class="u4_container">
+                    <img id="u4_img"  src="@Url.Content("~/Content/Tenant/images/Logo.png")" class="u4_normal detectCanvas"/>
+                  
+                    
+                </div>
+
+                <div id="u6" class="u6_container">
+                    <div id="u6_img" >欢迎使用</div>
+                </div>
+
+                @if (null != @ViewBag.Error)
+                {
+                    if (@ViewBag.Error == "您的账户已被停用")
+                    {
+                            <div id="inActive" class="error_container_inActive">
+                                @ViewBag.Error
+                            </div>
+                    }else
+                    {
+                            <div id="error" class="error_container_wrong">
+                                @ViewBag.Error
+                            </div>
+                    }
+                }
+                @if (null != @ViewBag.LoginAlert && "" != @ViewBag.LoginAlert)
+                {
+                    Response.Cookies["InActiveInfo"].HttpOnly = true;
+                    Response.Cookies["InActiveInfo"].Expires = DateTime.Now.AddYears(-1);
+                    <script>
+                        alert("@ViewBag.LoginAlert");
+                    </script>
+                }
+            <form method="post" action="@Url.Action("Login","Account")" name="login">
+            <div id="u8" class="u8">
+    			<div id="u8_rtf">
+            		<input type="text" placeholder="@Resource.String.ihpleD_String_cn.page_login_NoUsernameInput" style="width:80%;height:40px;line-height:40px;font-size:18px;font-family:'Microsoft YaHei';color:#a3a3a3;" name="inputName" id="UserName" maxlength="20">
+                </div>
+  			</div>  
+            <div id="u9" class="u9">
+    			<div id="u9_rtf">
+                    <input type="password" size="2" placeholder="@Resource.String.ihpleD_String_cn.page_login_NoPasswordInput" style="width:80%;height:40px;line-height:40px;font-size:18px;font-family:'Microsoft YaHei';color:#a3a3a3;" name="inputPassword" id="inputPassword" maxlength="20">
+                </div>
+  			</div>
+                <input type="hidden" name="Password" id="Password">
+                <!-- chenyangwen 2014/03/04-->
+                <input id="token" type="hidden" value="" name="token">
+                <!-- chenyangwen 2014/03/04-->
+                <!-- chenyangwen 2014/03/22-->
+                <input id="hiddenName" type="hidden" value="" name="UserName">
+                <!-- chenyangwen 2014/03/22-->
+    
+            
+    
+            <div id="u10" class="u10">
+    			<div id="u10_rtf">
+                    <div id="login_text" class="login_text" style="cursor:pointer">@Resource.String.ihpleD_String_cn.page_login_loginButton</div>
+            	    <input type="image" style="width:100%;height:36px;" src="@Url.Content("~/Content/Login/images/u1_normal.png")" id="formBtn">
+                </div>
+  			</div>
+           </form>
+            <!--chenyangwen 2013/3/6-->
+            <!-- <a href="@Url.Action("Register", "Account")" style="text-decoration:none;">-->
+                <div id="regist" style="border:none;">
+                    
+                    <div id="registBtn" class="RegistBtn" style="cursor:pointer;border:none;" >
+            	        <div id="regist_text" class="regist_text" style="cursor:pointer" >@Resource.String.ihpleD_String_cn.page_register_Register</div>
+                        <img style="width:100%;height:36px;" src="@Url.Content("~/Content/Tenant/images/BtnBg.png")" id="RegistFormBtn"/>
+  			        </div>
+                </div>
+           <!--</a>-->
+            <!--chenyangwen 2013/3/6-->
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#formBtn").click(function () {
+                //modified by caoyandong
+                var password = $.trim(document.getElementById("inputPassword").value);
+                var username = $.trim(document.getElementById("UserName").value);
+                var str = username.toLocaleLowerCase() + "&" + password;
+                document.getElementById("Password").value = hex_md5(str);
+                document.getElementById("hiddenName").value = unicode(username);
+                document.forms['login'].submit();
+            });
+            $("#login_text").click(function () {
+                //modified by caoyandong
+                var password = $.trim(document.getElementById("inputPassword").value);
+                var username = $.trim(document.getElementById("UserName").value);
+                var str = username.toLocaleLowerCase() + "&" + password;
+                document.getElementById("Password").value = hex_md5(str);
+                document.getElementById("hiddenName").value = unicode(username);
+                document.forms['login'].submit();
+            });
+            $("#regist_text").click(function () {
+                location.href = "/Register";
+            });
+            $("#registBtn").click(function () {
+                location.href = "/Register";
+            });
+        });
+    </script>
+            </div>
+        </div>
+</section>
+</body>
+</html>

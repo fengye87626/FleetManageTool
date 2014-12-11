@@ -1,0 +1,480 @@
+﻿@{
+    Resource.ResourceLoader.SetCurrentThreadCulture(Session);
+    ViewBag.Title = "History";
+
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/Common/images/title_logo.png";
+
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_unchoose";
+    ViewBag.Left_Reports_Background = "cls_choose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+
+}
+
+<script src = "@Url.Content("~/Content/Common/js/common.js")?@Session["version"]" type="text/javascript"></script>
+<script src = "@Url.Content("~/Content/Common/js/BMap_api.js")?@Session["version"]" type="text/javascript"></script>
+<link href = "@Url.Content("~/Content/Common/css/Pager.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href = "@Url.Content("~/Content/Common/css/jquery.datetimepicker.css")?@Session["version"]" rel="stylesheet" type="text/css">
+@*<script src = "@Url.Content("~/Content/Common/js/jquery.js")?@Session["version"]" type="text/javascript"></script>*@
+<script src = "@Url.Content("~/Content/Common/js/jquery.datetimepicker.js")?@Session["version"]" type="text/javascript"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/Common/js/jquery.pager.js")?@Session["version"]"></script>
+<link href = "@Url.Content("~/Content/Export/css/export.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script>
+    $(document).ready(function () {
+        pageFlag = 0;
+        winHeight = 0;
+        winWidth = 0;
+        $(window).resize(function () {
+            winHeight = (document.documentElement.clientHeight - 134) / 2;
+            winWidth = (document.documentElement.clientWidth - 414) / 2;
+            $("#waiting_picture").css("left", winWidth + 27);
+            $("#waiting_picture").css("top", winHeight + 15);
+            $("#idwaitingtip").css("left", winWidth - 125);
+            $("#idwaitingtip").css("top", winHeight + 100);
+
+            $("#waiting_pictureforInit").css("left", winWidth + 200);
+            $("#waiting_pictureforInit").css("top", winHeight + 70);
+            $("#idwaitingtipforInit").css("left", winWidth + 190);;
+            $("#idwaitingtipforInit").css("top", winHeight + 150);
+        });
+
+        document.getElementById("u_left").style.height = 999 + "px";
+        document.getElementById("u_right").style.height = 999 + "px";
+        $("#idwaitingfordata").hide();
+        $("#idwaitingtip").hide();
+        $("#backcover").hide();
+        //mabiao 
+        holdjson = '';
+        timecount = 0;
+        importdatadone = 0;
+        tipflag = 0;
+        //
+        var today = new Date();
+        var endday = new Date();
+        var tempmonth = "";
+        var tempday = "";
+        if ((today.getMonth() + 1) < 10) {
+            tempmonth = "/0" + (today.getMonth() + 1);
+        } else {
+            tempmonth = "/" + (today.getMonth() + 1);
+        }
+        if (endday.getDate() < 10) {
+            tempday = "/0" + endday.getDate();
+        } else {
+            tempday = "/" + endday.getDate();
+        }
+        document.getElementById('date_timepicker_start').value = today.getFullYear() + tempmonth + "/0" + 1;
+        document.getElementById('date_timepicker_end').value = endday.getFullYear() + tempmonth + tempday;
+        $(function () {
+            $("#date_timepicker_start").datetimepicker({
+                lang: 'ch',
+                format: 'Y/m/d',
+                minDate: '2013/01/01',
+                yearStart: 2013,
+                onShow: function (ct) {
+                    this.setOptions({
+                        maxDate: $("#date_timepicker_end").val() ? $('#date_timepicker_end').val() : false
+                    })
+                },
+                timepicker: false
+            });
+            $("#date_timepicker_end").datetimepicker({
+                lang: 'ch',
+                format: 'Y/m/d',
+                minDate: '2013/01/01',
+				maxDate:0,
+                yearStart: 2013,
+                onShow: function (ct) {
+                    this.setOptions({
+                        minDate: $("#date_timepicker_start").val() ? $('#date_timepicker_start').val() : false
+                    })
+                },
+                timepicker: false
+            });
+        });
+        // gaoqingbo modify 20140408 start
+        // 初始化显示第一页
+        init(1);
+        pageFlag = 1;
+        // gaoqingbo modify 20140408 End
+        InsertTripInfoToDB();
+        //var historyStr = $("#tablelist").val();
+        //var historyJson = $.parseJSON(historyStr);
+        //addNew(historyJson);
+
+
+        $("#searchData").click(function () {
+            var startTime = $("#date_timepicker_start").val();
+            var endTime = $("#date_timepicker_end").val();
+            if (CheckDatepicker(startTime) != true || CheckDatepicker(endTime) != true) {
+                datepickerforTip(LanguageScript.datepickerTip);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 0) {
+                datepickerforTip(LanguageScript.page_report_datepickererror1);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 1) {
+                datepickerforTip(LanguageScript.page_report_datepickererror2);
+                $("#datepickerTip").dialog("open");
+            } else {
+                importdatadone = 0;
+                countlist = 0;
+                pageFlag = 0;
+                init(1);
+                pageFlag = 1;
+                InsertTripInfoToDB();
+                timecount = 0;
+            }
+        });
+        $("#exportReport").click(function () {
+            var startTime = $("#date_timepicker_start").val();
+            var endTime = $("#date_timepicker_end").val();
+            if (CheckDatepicker(startTime) != true || CheckDatepicker(endTime) != true) {
+                datepickerforTip(LanguageScript.datepickerTip);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 0) {
+                datepickerforTip(LanguageScript.page_report_datepickererror1);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 1) {
+                datepickerforTip(LanguageScript.page_report_datepickererror2);
+                $("#datepickerTip").dialog("open");
+            } else {
+	            if (importdatadone != 1) {
+					$("#waiting_pictureforInit").hide();
+					$("#idwaitingtipforInit").hide();
+	                winHeight = (document.documentElement.clientHeight - 134) / 2;
+	                winWidth = (document.documentElement.clientWidth - 414) / 2;
+	                $("#waiting_picture").css("left", winWidth + 27);
+	                $("#waiting_picture").css("top", winHeight + 15);
+	                $("#idwaitingtip").css("left", winWidth - 125);
+	                $("#idwaitingtip").css("top", winHeight + 100);
+	                $("#idwaitingfordata").show();
+	                $("#idwaitingtip").show();
+	                $("#backcover").show();
+	            }
+	            else {
+	                TripExport();
+                	}
+            }
+        })
+        ChangeLeft("common_report_cover");
+        ChangeLocationTime();
+    });
+    // gaoqingbo add 20140407 start
+    //默认加载  
+    function init(pagenumber) {
+        //向服务器发送请求，查询满足条件的记录  
+        //$.getJSON('',{},function(data){
+        //data 为返回json 对象 并包括(pagecount)的key-value值;  
+        if (pageFlag == 0) {
+            winHeight = (document.documentElement.clientHeight - 114) / 2;
+            winWidth = (document.documentElement.clientWidth - 414) / 2;
+            $("#waiting_pictureforInit").css("left", winWidth + 200);
+            $("#waiting_pictureforInit").css("top", winHeight + 70);
+            $("#idwaitingtipforInit").css("left", winWidth + 190);;
+            $("#idwaitingtipforInit").css("top", winHeight + 150);
+            $("#waiting_pictureforInit").show();
+            $("#idwaitingtipforInit").show();
+        }
+        var searchurl = "/@Session["companyID"]/Export/HistoryMonthReport";
+        var startTime = $("#date_timepicker_start").val();
+        var endTime = $("#date_timepicker_end").val();
+        var timezone = new Date().getTimezoneOffset() / 60 * -1;
+        var PageCount = "";
+        $("#pageBar").attr("successflag", "false");
+        $.ajax({
+            type: "POST",
+            url: searchurl,
+            dataType: "json",
+            data: {
+                startTime: startTime,
+                endTime: endTime,
+                intkey: pagenumber,
+                timezone: timezone
+            },
+            success: function (dic) {
+                $("#waiting_pictureforInit").hide();
+                $("#idwaitingtipforInit").hide();
+                addNew(dic.dataList);
+                PageCount = dic.pagecount;
+                if (PageCount == 0) {
+                    PageCount = 1;
+                    $("#pageBar").hide();
+                } else {
+                    var data = { 'pagecount': PageCount };
+                    $("#pageBar").pager({ pagenumber: pagenumber, pagecount: data.pagecount, buttonClickCallback: PageClick });
+                    $("#pageBar").attr("successflag", "true");
+                    $("#pageBar").show();
+                }
+            },
+            failure: function () {
+                //alert("@Resource.String.ihpleD_String_cn.error_e01229");
+            }
+        });
+    }
+    //回调函数  
+    PageClick = function (pageclickednumber) {
+        if ($("#pageBar").attr("successflag") == "true") {
+            //alert(pageclickednumber);
+            init(pageclickednumber);
+            pageFlag = 1;
+            $("#result").html("Clicked Page " + pageclickednumber);
+        }
+    }
+
+    // gaoqingbo add 20140407 end
+    function InsertTripInfoToDB() {
+        var searchurl = "/@Session["companyID"]/Export/getHistoryInfoInMonth_DB";
+        var startTime = $("#date_timepicker_start").val();
+        var endTime = $("#date_timepicker_end").val();
+        var itimezone = new Date().getTimezoneOffset() / 60 * -1;
+        exportflag = 0;
+        $.ajax({
+            type: "POST",
+            url: searchurl,
+            dataType: "json",
+            data: {
+                startTime: startTime,
+                endTime: endTime,
+                timezone: itimezone
+            },
+            success: function (datatoDB) {
+                if (datatoDB.length == 0) {
+                    importdatadone = 1;
+                    if ($("#idwaitingfordata")[0].style.display == "") {
+                        $("#idwaitingfordata").hide();
+                        $("#idwaitingtip").hide();
+                        $("#backcover").hide();
+                        TripExport();
+                    }
+                }
+                var retrytimes = 0;
+                var currentlengthofarrStart = 0;
+                var currentlengthofarrEnd = 0;
+                var arrStart = new Array();
+                var arrEnd = new Array();
+                var sizeStart = 0;
+                var sizeEnd = 0;
+                for (var m = 0; m < datatoDB.length; ++m) {
+                    if (datatoDB[m].leavelocation_province == "") { sizeStart++; }
+                    if (datatoDB[m].arrivallocation_province == "") { sizeEnd++; }
+                }
+                if (sizeStart != 0 || sizeEnd != 0) {
+                    var Monitor = window.setInterval(function () {
+                        ++retrytimes;
+                        if ((arrStart.length - currentlengthofarrStart != 0)
+                            || (arrEnd.length - currentlengthofarrEnd != 0)
+                    ) {
+                            retrytimes = 0;
+                            currentlengthofarrStart = arrStart.length;
+                            currentlengthofarrEnd = arrEnd.length;
+                        }
+                        else if ((arrStart.length > ((sizeStart * 9) / 10) && arrEnd.length > ((sizeStart * 9) / 10)) || retrytimes >= 5) {
+                            window.clearInterval(Monitor);
+                            if (arrStart.length == 0 && arrEnd.length == 0) {
+                                if (tipflag == 0 && $("#idwaitingfordata")[0].style.display == "") {
+                                    datepickerforTip(LanguageScript.baiduconnecterror);
+                                    $("#datepickerTip").dialog("open");
+                                }
+                                $("#idwaitingfordata").hide();
+                                $("#idwaitingtip").hide();
+                                $("#backcover").hide();
+                                tipflag = 1;
+                            } else {
+                                LocationWriteToDBforExport(arrStart, arrEnd);
+                            }
+                            //console.log("~~~~~~~~~~~~~~~~~~~~" + temp + "~~~~~~~~~~~~~~~~");
+                            arrStart = [];
+                            arrEnd = [];
+                            sizeStart = 0;
+                            sizeEnd = 0;
+                            
+                        }
+                    }, 1 * 1000 * 2);
+                    for (var k = 0; k < datatoDB.length; ++k) {
+                        if (datatoDB[k].leavelocation_province == "") {
+                            tripcoderLocation(datatoDB[k].startlocctionlng, datatoDB[k].startlocctionlat, 0, datatoDB[k].guid, 0, datatoDB[k].isFirstFlag,
+                                            function (adr, id, flag, ElementID) {
+                                                arrStart.push(id + "|" + adr);
+                                                if (arrStart.length == sizeStart && arrEnd.length == sizeEnd) {
+                                                    window.clearInterval(Monitor);
+                                                    LocationWriteToDBforExport(arrStart, arrEnd);
+                                                    arrStart = [];
+                                                    arrEnd = [];
+                                                    sizeStart = 0;
+                                                    sizeEnd = 0;
+                                                }
+                                            });
+                        }
+
+                        if (datatoDB[k].arrivallocation_province == "") {
+                            tripcoderLocation(datatoDB[k].endlocctionlng, datatoDB[k].endlocctionlat, datatoDB[k].guid, datatoDB[k].guid, 1, datatoDB[k].isLastFlag,
+                                            function (adr, id, flag, ElementID) {
+                                                arrEnd.push(id + "|" + adr);
+                                                if (arrStart.length == sizeStart && arrEnd.length == sizeEnd) {
+                                                    window.clearInterval(Monitor);
+                                                    LocationWriteToDBforExport(arrStart, arrEnd);
+                                                    arrStart = [];
+                                                    arrEnd = [];
+                                                    sizeStart = 0;
+                                                    sizeEnd = 0;
+                                                }
+                                            });
+                        }
+                    }
+                } else {
+                    LocationWriteToDBforExport(arrStart, arrEnd);
+                }
+            },
+            failure: function () {
+                //alert("@Resource.String.ihpleD_String_cn.error_e01229");
+            }
+        });
+    }
+    //Export地点写入数据库
+    function LocationWriteToDBforExport(arrStart, arrEnd) {
+        // gaoqingbo start
+        if (arrStart.length == 0 && arrEnd.length == 0) {
+            ++timecount;
+            if (timecount == 1) {
+                importdatadone = 1;
+                if ($("#idwaitingfordata")[0].style.display == "") {
+                    $("#idwaitingfordata").hide();
+                    $("#idwaitingtip").hide();
+                    $("#backcover").hide();
+                    TripExport();
+                }
+            }
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "/" + GetCompanyID() + "/Export/WriteLocationToDB",
+                data: { start: arrStart.join("+"), end: arrEnd.join("+") },
+                contentType: "application/x-www-form-urlencoded",
+                dataType: "json",
+                success: function (msg) {
+                    ++timecount;
+                    if (timecount == 1) {
+                        importdatadone = 1;
+                        if ($("#idwaitingfordata")[0].style.display == "") {
+                            $("#idwaitingfordata").hide();
+                            $("#idwaitingtip").hide();
+                            $("#backcover").hide();
+                            TripExport();
+                        }
+                    }
+                },
+                error: function () {
+                    ++timecount;
+                    if (timecount == 1) {
+                        importdatadone = 1;
+                        if ($("#idwaitingfordata")[0].style.display == "") {
+                            $("#idwaitingfordata").hide();
+                            $("#idwaitingtip").hide();
+                            $("#backcover").hide();
+                            TripExport();
+                        }
+                    }
+                }
+            });
+        }
+        // gaoqingbo end
+    }
+    function TripExport() {
+        var startTime = $("#date_timepicker_start").val();
+        var endTime = $("#date_timepicker_end").val();
+        var timezone = new Date().getTimezoneOffset() / 60 * -1;
+        var dateStr = new Date().format('yyyyMMddHHmmss');
+        var exporturl = "/@Session["companyID"]/Export/ExportHistoryReport?startTime=" + startTime + "&endTime=" + endTime + "&date=" + dateStr + "&timezone=" + timezone;
+        location.href = exporturl;
+    }
+</script>
+<script>
+    function addNew(jsonstr) {
+        $("#historytable tr:not(:first)").remove();
+        holdjson = jsonstr;
+        if (holdjson == undefined || holdjson.length == 0) {
+            return;
+        }
+        var table = $('#historytable');
+        var firstTr = table.find('tbody>tr:first');
+        var i = 0;
+        var length = holdjson.length;
+        var CompanyID = GetCompanyID();
+        for (; i < length; i++) {
+            var row = $("<tr style ='background-color:#e6e6e6;'></tr>");
+            var td1 = $("<td></td>");
+            var td2 = $("<td></td>");
+            var td3 = $("<td></td>");
+            var td4 = $("<td></td>");
+
+            td1.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'>" + holdjson[i].name + "</div>"));
+            row.append(td1);
+            td2.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'>" + holdjson[i].licence + "</div>"));
+            row.append(td2);
+            td3.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'>" + holdjson[i].time + "</div>"));
+            row.append(td3);
+            if (CompanyID == "ABCSoft" || CompanyID == "ihpleD") {
+                td4.append($("<div class = '" + holdjson[i].guid + "' style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].location + "'>" + holdjson[i].location + "</div>"));
+            }
+            else {
+                td4.append($("<div class = '" + holdjson[i].guid + "' style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + "" + "'>" + "" + "</div>"));
+            }
+            row.append(td4);
+            table.append(row);
+        }
+        for (var it = 0; it < length; ++it) {
+            geocoderLocationForVehicleList(holdjson[it].locationlng, holdjson[it].locationlat, holdjson[it].guid);
+        }
+        //SetLeftBarHeight();
+    }
+</script>
+<section>
+    <input type="hidden" id="selectdate" value="@ViewBag.initDate" />
+    <input type="hidden" id="tablelist" value="@ViewBag.historyList" />
+    <div id="history_title" class="vehicle_title" data-label="paragraph">
+        <div id="history_rtf">
+            <p style="text-align:left;">
+                <span style="font-size:18px;">@Resource.String.ihpleD_String_cn.page_report_HistoryVehiclesReport</span>
+            </p>
+        </div>
+    </div>
+    <div id="datepickerTip" class="datepickerTip" style="display:none"></div>
+    <div id="Setting_container_obu_view" class="Setting_container_obu_view">
+        <table id="selectContainer" class="Export_container_select">
+            <tr>
+                <td>
+                    <div style="font-family:'Microsoft YaHei';font-size:10pt;">
+                        <p>@Resource.String.ihpleD_String_cn.page_report_startdate&nbsp;<input id="date_timepicker_start" type="text" style="width:80px;">&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_report_enddate&nbsp;<input id="date_timepicker_end" type="text"style="width:80px;"></p>
+                    </div>
+                </td>
+                <td>
+                    <div id="searchData" style="position: absolute;left: 330px;top: 14px;">@Resource.String.ihpleD_String_cn.page_report_search</div>
+                </td>
+            </tr>
+        </table>
+        <table id="historytable"  style="left:50px;table-layout:fixed">
+            <tr style="height:50px; line-height:50px;">
+                <td style="width:25%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_vehicleName</div></td>
+                <td style="width:25%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_VehicleLicence</div></td>
+                <td style="width:25%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.page_vehicle_LastTime</div></td>
+                <td style="width:25%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.page_vehicle_LastLocation</div></td>
+
+            </tr>
+        </table>
+        <div id="pageBar" style="width:466px;text-align:center;margin-left:49%;position:relative;left:-233px;display:none;"successflag =" true"></div>
+            <div id="exportReport" class="Export_button" style="position: absolute;left: 90.7%;top: -46px;">@Resource.String.ihpleD_String_cn.page_report_ExportReport</div>
+    </div>
+    <div id="backcover" style="background-color:#f1f1f1;width:100%;height:999px;display:none;"></div>
+    <div id="idwaitingfordata" style="width:100%;height:999px;display:none;">
+        <div id="idwaitingtip"style="font-family:'Microsoft YaHei';font-size:13pt;">@Resource.String.ihpleD_String_cn.page_report_address</div>
+        <div id ="waiting_picture">
+            <img src="/Content//Common/images/loading_style.gif" style="width:75px;height:75px;">
+        </div>
+    </div>
+    <div id="idwaitingtipforInit"style="font-family:'Microsoft YaHei';font-size:13pt;left:-500px;display:none;">@Resource.String.ihpleD_String_cn.page_report_Initwaitting</div>
+    <div id ="waiting_pictureforInit" style="left:-500px;display:none;">
+        <img src="/Content//Common/images/loading_style.gif" style="width:75px;height:75px;">
+    </div>
+</section>

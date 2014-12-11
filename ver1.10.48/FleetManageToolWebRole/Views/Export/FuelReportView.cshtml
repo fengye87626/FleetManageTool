@@ -1,0 +1,295 @@
+﻿@{
+    Resource.ResourceLoader.SetCurrentThreadCulture(Session);
+    ViewBag.Title = "Reports - Health";
+
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/Common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_unchoose";
+    ViewBag.Left_Reports_Background = "cls_choose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+
+}
+
+
+<script src = "@Url.Content("~/Content/Common/js/common.js")?@Session["version"]" type="text/javascript"></script>
+<link href = "@Url.Content("~/Content/Common/css/Pager.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href = "@Url.Content("~/Content/Common/css/jquery.datetimepicker.css")?@Session["version"]" rel="stylesheet" type="text/css">
+@*<script src = "@Url.Content("~/Content/Common/js/jquery.js")?@Session["version"]" type="text/javascript"></script>*@
+<script src = "@Url.Content("~/Content/Common/js/jquery.datetimepicker.js")?@Session["version"]" type="text/javascript"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/Common/js/jquery.pager.js")?@Session["version"]"></script>
+<link href = "@Url.Content("~/Content/Export/css/export.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script>
+    $(document).ready(function () {
+        holdjson = '';
+        //chenyangwen 20140712 #2088
+        document.getElementById("u_left").style.height = 999 + "px";
+        document.getElementById("u_right").style.height = 999 + "px";
+        pageFlag = 0;
+        //var pageFlag = 0;
+        var today = new Date();
+        var endday = new Date();
+        var tempmonth = "";
+        var tempday = "";
+        if ((today.getMonth() + 1) < 10) {
+            tempmonth = "/0" + (today.getMonth() + 1);
+        } else {
+            tempmonth = "/" + (today.getMonth() + 1);
+        }
+        if (endday.getDate() < 10) {
+            tempday = "/0" + endday.getDate();
+        } else {
+            tempday = "/" + endday.getDate();
+        }
+        document.getElementById('date_timepicker_start').value = today.getFullYear() + tempmonth + "/0" + 1;
+        document.getElementById('date_timepicker_end').value = endday.getFullYear() + tempmonth + tempday;
+        $(function () {
+            $("#date_timepicker_start").datetimepicker({
+                lang: 'ch',
+                format: 'Y/m/d',
+                minDate: '2013/01/01',
+                yearStart: 2013,
+                onShow: function (ct) {
+                    this.setOptions({
+                        maxDate: $("#date_timepicker_end").val() ? $('#date_timepicker_end').val() : false
+                    })
+                },
+                timepicker: false
+            });
+            $("#date_timepicker_end").datetimepicker({
+                lang: 'ch',
+                format: 'Y/m/d',
+                minDate: '2013/01/01',
+				maxDate:0,
+                yearStart: 2013,
+                onShow: function (ct) {
+                    this.setOptions({
+                        minDate: $("#date_timepicker_start").val() ? $('#date_timepicker_start').val() : false
+                    })
+                },
+                timepicker: false
+            });
+        });
+        winHeight = 0;
+        winWidth = 0;
+        $(window).resize(function () {
+			winHeight = (document.documentElement.clientHeight - 134) / 2;
+	        winWidth = (document.documentElement.clientWidth - 414) / 2;
+	        $("#waiting_pictureforInit").css("left", winWidth + 200);
+	        $("#waiting_pictureforInit").css("top", winHeight + 70);
+	        $("#idwaitingtipforInit").css("left", winWidth + 190);;
+	        $("#idwaitingtipforInit").css("top", winHeight + 150);
+        });
+        // gaoqingbo modify 20140408 start
+        // 初始化显示第一页
+        init(1);
+        pageFlag = 1;
+        // gaoqingbo modify 20140408 End
+        //var healthStr = $("#tablelist").val();
+        //var healthJson = $.parseJSON(healthStr);
+        //addNew(healthJson);
+
+        $("#searchData").click(function () {
+            var startTime = $("#date_timepicker_start").val();
+            var endTime = $("#date_timepicker_end").val();
+            if (CheckDatepicker(startTime) != true || CheckDatepicker(endTime) != true) {
+                datepickerforTip(LanguageScript.datepickerTip);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 0) {
+                datepickerforTip(LanguageScript.page_report_datepickererror1);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 1) {
+                datepickerforTip(LanguageScript.page_report_datepickererror2);
+                $("#datepickerTip").dialog("open");
+            } else {
+                pageFlag = 0;
+                init(1);
+                pageFlag = 1;
+            }
+        });
+
+        $("#exportReport").click(function () {
+            var startTime = $("#date_timepicker_start").val();
+            var endTime = $("#date_timepicker_end").val();
+            if (CheckDatepicker(startTime) != true || CheckDatepicker(endTime) != true) {
+                datepickerforTip(LanguageScript.datepickerTip);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 0) {
+                datepickerforTip(LanguageScript.page_report_datepickererror1);
+                $("#datepickerTip").dialog("open");
+            } else if (StartDateCheck(startTime, endTime) == 1) {
+                datepickerforTip(LanguageScript.page_report_datepickererror2);
+                $("#datepickerTip").dialog("open");
+            } else {
+                var dateStr = new Date().format('yyyyMMddHHmmss');
+                var timezone = new Date().getTimezoneOffset() / 60 * -1;
+                var exporturl = "/@Session["companyID"]/Export/ExportFuelReport?startTime=" + startTime + "&endTime=" + endTime + "&date=" + dateStr + "&timezone=" + timezone;
+                location.href = exporturl;
+            }
+        });
+
+        ChangeLeft("common_report_cover");
+        ChangeLocationTime();
+    });
+    // gaoqingbo add 20140407 start
+    //默认加载  
+    function init(pagenumber) {
+        //向服务器发送请求，查询满足条件的记录  
+        //$.getJSON('',{},function(data){
+        //data 为返回json 对象 并包括(pagecount)的key-value值;  
+        if (pageFlag == 0) {
+            winHeight = (document.documentElement.clientHeight - 134) / 2;
+            winWidth = (document.documentElement.clientWidth - 414) / 2;
+            $("#waiting_pictureforInit").css("left", winWidth + 200);
+            $("#waiting_pictureforInit").css("top", winHeight + 70);
+            $("#idwaitingtipforInit").css("left", winWidth + 190);;
+            $("#idwaitingtipforInit").css("top", winHeight + 150);
+            $("#waiting_pictureforInit").show();
+            $("#idwaitingtipforInit").show();
+            $("#pageBar").attr("successflag", "false");
+        }
+        var searchurl = "/@Session["companyID"]/Export/FuelMonthReport";
+        var startTime = $("#date_timepicker_start").val();
+        var endTime = $("#date_timepicker_end").val();
+        var PageCount = "";
+        $.ajax({
+            type: "POST",
+            url: searchurl,
+            dataType: "json",
+            data: {
+                startTime: startTime,
+                endTime: endTime,
+                intkey: pagenumber,
+            },
+            success: function (dic) {
+                $("#waiting_pictureforInit").hide();
+                $("#idwaitingtipforInit").hide();
+                addNew(dic.dataList);
+                PageCount = dic.pagecount;
+                if (dic.dataList.length == 0) {
+                    PageCount = 1;
+                    $("#pageBar").hide();
+                } else {
+                    var data = { 'pagecount': PageCount };
+                    $("#pageBar").pager({ pagenumber: pagenumber, pagecount: data.pagecount, buttonClickCallback: PageClick });
+                    $("#pageBar").attr("successflag", "true");
+                    $("#pageBar").show();
+                }
+            },
+            failure: function () {
+                alert("@Resource.String.ihpleD_String_cn.error_e01229");
+            }
+        });
+
+    }
+
+    //回调函数  
+    PageClick = function (pageclickednumber) {
+        if ($("#pageBar").attr("successflag") == "true") {
+            //alert(pageclickednumber);
+            init(pageclickednumber);
+            pageFlag = 1;
+            $("#result").html("Clicked Page " + pageclickednumber);
+        }
+    }
+
+    // gaoqingbo add 20140407 end
+</script>
+<script>
+    function addNew(jsonstr) {
+        $("#healthtable tr:not(:first)").remove();
+        holdjson = jsonstr;
+        var table = $('#healthtable');
+        var firstTr = table.find('tbody>tr:first');
+        var i = 0;
+        var length = holdjson.length;
+        for (; i < length; i++) {
+            if (i == 0 || i == 1 || i == 2 || i == 3 || i == 7 || i == 8) {
+                var row = $("<tr style ='background:#e6e6e6'></tr>");
+            } else {
+                var row = $("<tr></tr>");
+            }
+            var td1 = $("<td class = 'vehicles_groupName' id = 'fuelreportview_" + i + "'></td>");
+            var td2 = $("<td></td>");
+            var td3 = $("<td></td>");
+            var td4 = $("<td></td>");
+            var td5 = $("<td></td>");
+            var td6 = $("<td></td>");
+            var td7 = $("<td></td>");
+            var td8 = $("<td></td>");
+            td1.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].group + "'>" + holdjson[i].group + "</div>"));
+            row.append(td1);
+            td2.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].name + "'>" + holdjson[i].name + "</div>"));
+            row.append(td2);
+            td3.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'>" + holdjson[i].date + "</div>"));
+            row.append(td3);
+            td4.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].licence + "'>" + holdjson[i].licence + "</div>"));
+            row.append(td4);
+            td5.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].driveTime + "'>" + holdjson[i].driveTime + "&nbsp;&nbsp;&nbsp;</div>"));
+            row.append(td5);
+            td6.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].miles + "'>" + holdjson[i].miles + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>"));
+            row.append(td6);
+            td7.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].gallonsPerMile + "'>" + holdjson[i].gallonsPerMile + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>"));
+            row.append(td7);
+            td8.append($("<div style = 'white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:100%;font-size:13px;font-family:Microsoft YaHei;'title = '" + holdjson[i].gallonsAll + "'>" + holdjson[i].gallonsAll + "&nbsp;&nbsp;&nbsp;&nbsp;</div>"));
+            row.append(td8);
+            table.append(row);
+        }
+        if (length != 0) {
+            mergeGroupforReport();
+        }
+    }
+</script>
+<section>
+    <input type="hidden" id="selectdate" value="@ViewBag.initDate" />
+    <input type="hidden" id="tablelist" value="@ViewBag.healthList" />
+    <div id="health_title" class="vehicle_title" data-label="paragraph">
+        <div id="Health_rtf">
+            <p style="text-align:left;">
+                <span style="font-size:18px;">@Resource.String.ihpleD_String_cn.page_report_FuelReport</span>
+            </p>
+        </div>
+    </div>
+    <div id="datepickerTip" class="datepickerTip" style="display:none"></div>
+    <div id="Setting_container_obu_view" class="Setting_container_obu_view">
+        <table id="selectContainer" class="Export_container_select">
+            <tr>
+                <td>
+                    <div style="font-family:'Microsoft YaHei';font-size:10pt;">
+                        <p>@Resource.String.ihpleD_String_cn.page_report_startdate&nbsp;<input id="date_timepicker_start" type="text" style="width:80px;">&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_report_enddate&nbsp;<input id="date_timepicker_end" type="text"style="width:80px;"></p>
+                    </div>
+                </td>
+                <td>
+                    <div id="searchData" style="position: absolute;left: 330px;top: 14px;">@Resource.String.ihpleD_String_cn.page_report_search</div>
+                </td>
+            </tr>
+        </table>
+        <table id="healthtable" style="left:20px;table-layout:fixed">
+            <tr style="line-height:50px;">
+                <td style="width:15%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_groupName</div></td>
+                <td style="width:15%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_vehicleName</div></td>
+                <td style="width:12%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_date</div></td>
+                <td style="width:14%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';">@Resource.String.ihpleD_String_cn.common_VehicleLicence</div></td>
+                <td style="width:12%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';line-height:normal;">@Resource.String.ihpleD_String_cn.page_report_drivingtime</br>@Resource.String.ihpleD_String_cn.page_report_timetip</div></td>
+                <td style="width:12%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';line-height:normal;">@Resource.String.ihpleD_String_cn.page_report_totalmiles</br>&nbsp;&nbsp;@Resource.String.ihpleD_String_cn.page_report_distancetip</div></td>
+                <td style="width:12%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';line-height:normal;">@Resource.String.ihpleD_String_cn.page_vehicles_FuelLog_AvgLMile</br>(@Resource.String.ihpleD_String_cn.page_report_fuelcost)</div></td>
+                <td style="width:10%;"><div style="font-weight:bold;font-size:13px;font-family:'Microsoft YaHei';line-height:normal;">@Resource.String.ihpleD_String_cn.page_report_Fuel</br>(@Resource.String.ihpleD_String_cn.common_Litre)</div></td>
+            </tr>
+        </table>
+        <div id="pageBar" style="width:466px;text-align:center;margin-left:49%;position:relative;left:-233px;display:none;"successflag =" true"></div>
+        @*modified by caoyandong*@
+            @*20140304caoyandong调整导出button位置*@
+            <div id="exportReport" class="Export_button" style="position: absolute;left: 90.7%;top: -46px;">@Resource.String.ihpleD_String_cn.page_report_ExportReport</div>
+            @*20140304caoyandong去掉返回button*@
+            @*<div id="exitHealth" class="Export_button" style="position: absolute;left: 772px;top: -46px;">返回</div>*@
+        
+        @*modified by caoyandong*@
+    </div>
+    <div id="idwaitingtipforInit"style="font-family:'Microsoft YaHei';font-size:13pt;left:-500px;display:none;">@Resource.String.ihpleD_String_cn.page_report_Initwaitting</div>
+    <div id ="waiting_pictureforInit" style="left:-500px;display:none;">
+        <img src="/Content//Common/images/loading_style.gif" style="width:75px;height:75px;">
+    </div>
+</section>

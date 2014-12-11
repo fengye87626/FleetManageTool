@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Landing";
+    ViewBag.Logo_Name = "logo";
+    ViewBag.Logo_Url = "~/Content/Common/images/title_logo.png";
+
+    //20140304caoyandong
+    ViewBag.Left_Dashboard_Background = "cls_unchoose";
+    ViewBag.Left_Vehicles_Background = "cls_unchoose";
+    ViewBag.Left_GeoFence_Background = "cls_choose";
+    ViewBag.Left_Reports_Background = "cls_unchoose";
+    ViewBag.Left_Settings_Background = "cls_unchoose";
+
+}
+
+<!--fengpan 20140617 下拉框插件-->
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap-select.min.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Bootstrap/js/bootstrap.min.js")?@Session["version"]"></script>
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap-select.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/Bootstrap/css/bootstrap.min.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<!--fengpan 20140617 下拉框插件-->
+<!-- Yueqq -->
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_GeoFence.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMapLib_InfoBox.js")?@Session["version"]"></script>
+<script type="text/javascript" src = "@Url.Content("~/Content/Common/js/BMap_api.js")?@Session["version"]"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui-1.8.24.js")?@Session["version"]" type = "text/javascript"></script>
+<!--chenyangwen 2014/3/1-->
+<!--chenyangwen 2014/3/1-->
+<script>
+    $(document).ready(function () {
+        ihpleDSaveGeofenceFlag = true;
+        ChangeLocationTime();
+        ChangeLeft("common_geofence_cover");
+    });
+</script>
+<!-- Yueqq -->
+
+<!-- chenyangwen -->
+<link href="@Url.Content("~/Content/Geofence/css/geofence.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/Content/Geofence/css/geo_name_vehicle_popup.css")?@Session["version"]" rel="stylesheet" type="text/css">
+<script src = "@Url.Content("~/Content/Geofence/js/geofence.js")?@Session["version"]" type = "text/javascript"> </script>
+<script src = "@Url.Content("~/Content/Geofence/js/geo_name_vehicle_popup.js")?@Session["version"]" type = "text/javascript"> </script>
+<input id="hiddenCompanyID" type="hidden" value="ABCSoft"/>
+<section>
+    <input id="Latitude" name="Latitude" type="hidden" value="@ViewBag.lat" />
+    <input id="Longitude" name="Longitude" type="hidden" value="@ViewBag.lng" />
+    <input id="zoomForSearch" name="zoom" type="hidden" value="@ViewBag.zoom" />
+    <input id="showTypeForSearch" name="showType" type="hidden" value="@ViewBag.showType" />
+
+    <div id="geofence_track_text" class="geofence_track_text" data-label="paragraph">
+        <p style="text-align:left;">
+            <span style="font-size:13px;color:#424242;">@Resource.String.ihpleD_String_cn.page_geofence_GeoTrack:</span>
+        </p>
+    </div>
+
+    <div id="geofence_selectgroup" class="geofence_selectgroup">
+        <select id="select_group" class="select_group" onmouseover="showtitle(this)" data-size="10" title="" data-width="100%">
+            
+        </select>
+    </div>
+    <div id="geofence_addgeofence_bg" class="geofence_addgeofence_bg_container" >@Resource.String.ihpleD_String_cn.page_dashboard_AddGeofence
+    </div>
+    <div id="geofence_unchoosed_bg" class="geofence_unchoosed_bg_container cursor_style">
+        <div id="geofence_unchoosed_bg_img" class="geofence_unchoosed_bg_normal detectCanvas" title="@Resource.String.ihpleD_String_cn.common_ListMode"></div>
+        <div id="geofence_showlist_bg_img" class="geofence_showlist_bg_normal detectCanvas" title="@Resource.String.ihpleD_String_cn.common_ListMode"></div>
+    </div>
+
+    <div id="geofence_choosed_bg" class="geofence_choosed_bg_container">
+        <div id="geofence_choosed_bg_img" class="geofence_choosed_bg_normal detectCanvas" title="@Resource.String.ihpleD_String_cn.common_MapMode"></div>
+        <div id="geofence_showmap_bg_img" class="geofence_showmap_bg_normal detectCanvas" title="@Resource.String.ihpleD_String_cn.common_MapMode"></div>
+    </div>
+
+    <div id="geofence_tablelist" class="geofence_tablelist" style="display:none;">
+  	    <table class="geofence_table_style" id="geofence_table">
+    	    
+        </table>
+    </div>
+
+    <div id="geofence_BMap" class="geofence_BMap_style">
+	<!--插入地图-->
+    </div>
+    @*20140308caoyandong-jquery*@
+    <div class ="user_error" style="display:none;"></div>
+    <div class ="OBU_error" style="display:none;"></div>
+    
+    <div id ="DeactiveGeofence_dialog" style="display:none;"></div>
+    <div id ="DeleteGeofence_dialog" style="display:none;"></div>
+    <div id ="DeleteGeoVehicleDialog" style="display:none;"></div>
+
+</section>
+<!-- chenyangwen -->

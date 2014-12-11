@@ -1,0 +1,1436 @@
+﻿div {
+    background-repeat:no-repeat;
+}
+
+span {
+    font-family:'Microsoft YaHei';
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    font-size:10pt;
+    /*color:#424242;*//*liangjiajie*/
+}
+.mmy_editButtion {
+    cursor: pointer;
+    position:relative;
+    float:left;
+    left:5px;
+    width:80px;
+    height:18px;
+    background-color:#FFFFFF;
+    border-radius:5px;
+    font-family:Microsoft YaHei;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:18px;
+    color:#424242;
+    margin:2px 2px 2px 2px;
+    border-color:#808080;
+    border-width:1px;
+    border-style:solid;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+select {
+    cursor:pointer;
+}
+.select_minute {
+    width:63px;
+    height:25px;
+    border-radius:5px;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    background-repeat:no-repeat;
+    background-image:url('../images/select_group_click.png');
+    background-position:43px;
+    border-radius:5px;
+}
+
+.right {
+    background-image:url("../images/Right.png");
+    position:absolute;
+    /*left:171px;*/
+    left:98.3%;
+    top:1px;
+    height:13px;
+    /*width:15px;*/
+    width:8.3%;
+}
+.right_psw {
+    background-image:url("../images/Right.png");
+    position:absolute;
+    /*left:165px;*/
+    left:107%;
+    top:3px;
+    height:13px;
+    /*width:15px;*/
+    width:9.7%;
+}
+.tenant_right {
+    background-image:url("../images/Right.png");
+    position:relative;
+    /*left:10px;*/
+    left:26.3%;
+    top:-20px;/*liangjiajie0311*/
+    height:13px;
+    /*width:15px;*/
+    width:39.5%;
+}
+.tenant_error {
+    background-image:url("../images/Error.png");
+    position:relative;
+    left:175px;
+    top:0px;
+    height:13px;
+    width:15px;
+}
+.error{
+    background-image:url("../images/Error.png");
+    font-family:'Microsoft YaHei';
+    position:absolute;
+    /*left:168px;*/
+    left:93.3%;
+    top:1px;
+    height:15px;
+    width:10%;
+    /*width:130px;*/
+    font-size:8pt;
+    color:#ff0000;
+}
+.error_psw{
+    background-image:url("../images/Error.png");
+    font-family:'Microsoft YaHei';
+    position:absolute;
+    /*left:165px;*/
+    left:107%;
+    top:3px;
+    height:15px;
+    /*width:130px;*/
+    width:10%;
+    font-size:8pt;
+    color:#ff0000;
+}
+.error_empty{
+    font-family:'Microsoft YaHei';
+    position:absolute;
+    /*left:163px;*/
+    left:93.7%;
+    top:3px;
+    height:13px;
+    /*width:130px;*/
+    width:10%;
+    font-size:8pt;
+    color:#ff0000;
+}
+.error_empty_psw{
+    font-family:'Microsoft YaHei';
+    position:absolute;
+    left:168px;
+    top:5px;
+    height:13px;
+    width:10%;
+    font-size:8pt;
+    color:#ff0000;
+}
+.p_style {
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    text-align:center;
+    
+}
+
+.Setting_title {
+    position:relative;
+    left:-25px;
+    top:16px;
+    width:140px;
+    height:30px;
+    font-family:'Microsoft YaHei';
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.Accunt_div {
+    position:relative;
+    left:15px;
+    top:0px;
+   /* width:650px;*/
+    width:75%;
+    height:150px;
+    /*background-color:#f1f1f1;*/
+}
+/*for view info*/
+#accunt_info div {
+    text-align:left;
+}
+.accunt_owner {
+    position:absolute;
+    /*left:35px;*/
+    left:5.4%;
+    top:20px;
+   /* width:300px;*/
+    width:46%;
+    height:20px;
+/*liangjiajie*/
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:bold;
+    color:#424242;
+}
+
+/*modified by caoyandong************************/
+/*20140228caoyandong*/
+.accunt_name {
+    position:absolute;
+    /*left:100px;*/
+    left:15.4%;
+    top:60px;
+    /*width:160px;*//*liangjiajie0314*/
+    width:24.7%;
+    height:20px;
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:11pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+}
+.accunt_name_tip {
+    position:absolute;
+    /*left:20px;*/
+    left:3%;
+    top:60px;
+    /*width:100px;*/
+    width:15.4%;
+    height:20px;
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+    float:left;
+}
+.accunt_mail {
+    position:absolute;
+    /*left:369px;*/
+    left:56.8%;
+    top:60px;
+    /*width:160px;*//*liangjiajie0314*/
+    width:24.6%;
+    height:22px;
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-weight:normal;
+    font-size:11pt;
+    color:#333333;
+    overflow:hidden;/*Redmine#邮箱可以无限长显示liangjiajie0306*/
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.accunt_mail_tip {
+    position:absolute;
+    top:60px;
+    /*left:283px;*/
+    left:43.5%;
+    height:20px;
+    /*width:100px;*/
+    width:15.4%;
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+    float:left;
+}
+.accunt_tel {
+    position:absolute;
+    /*left:650px;*/
+    left:100%;
+    top:61px;
+    /*width:160px;*//*liangjiajie0314*/
+    width:24.7%;
+    height:20px;
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-weight:normal;
+    font-size:10pt;
+    color:#333333;
+}
+.accunt_tel_tip {
+    position:absolute;
+    top:60px;
+    /*left:565px;*/
+    left:87%;
+    height:20px;
+    /*width:100px;*/
+    width:15.4%;
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+    float:left;
+}
+/*20140228caoyandong*/
+/*modified by caoyandong************************/
+
+/*for Edit_accunt_button*/
+
+/*modified by caoyandong************************/
+.accunt_owner_edit {
+    position:absolute;
+    top:20px;
+    /*left:35px;*/
+    left:5.4%;
+    height:20px;
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:bold;
+    color:#333333;
+}
+.accunt_name_edit {
+    position:absolute;
+    top:60px;
+    /*left:100px;*/
+    left:15.4%;
+    height:20px;
+
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:11pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+}
+.accunt_name_edit_tip {
+    position:absolute;
+    top:60px;
+    /*left:20px;*/
+    left:3%;
+    height:20px;
+
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+}
+.accunt_old_edit_tip {
+    position:absolute;
+    top:100px;
+    /*left:20px;*/
+    left:3%;
+    height:20px;
+
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+}
+.accunt_new_edit_tip {
+    position:absolute;
+    top:100px;
+    /*left:285px;*/
+    left:43.8%;
+    height:20px;
+
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+}
+.accunt_confirm_edit_tip {
+    position:absolute;
+    top:100px;
+    /*left:565px;*/
+    left:86.9%;
+    height:20px;
+
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+    width:80px;
+}
+.accunt_mail_edit_tip {
+    position:absolute;
+    top:60px;
+    /*left:283px;*/
+    left:43.5%;
+    height:20px;
+
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+}
+.accunt_tel_edit_tip {
+    position:absolute;
+    top:60px;
+    /*left:565px;*/
+    left:87%;
+    height:20px;
+
+    font-family:'Microsoft YaHei';
+    font-style:normal;
+    text-decoration:none;
+    font-size:12pt;/*liangjiajie*/
+    font-weight:normal;
+    color:#333333;
+    /*width:80px;*/
+    width:15.4%;
+}
+/*modified by caoyandong************************/
+
+
+/*.Edit_accunt_button_normal {
+    background-image: url('../images/Edit_accunt_button_normal.png');
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:119px;
+    height:31px;
+}*/
+
+/*modified by caoyandong************************/
+.Edit_accunt_button {
+	position:absolute;
+	/*left:730px;*/
+    left:108%;
+	top:20px;
+	/*width:119px;*/
+    width:18.3%;
+    height:25px;
+    background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:7px;
+    border-color:#808080;
+    line-height:25px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+}
+/*modified by caoyandong************************/
+
+/*.Edit_accunt_button_text {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:109px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}*/
+
+/*for edit info*/
+/*.accunt_edit_id {
+    position:absolute;
+    left:0px;
+    top:20px;
+
+}*/
+
+/*modified by caoyandong************************/
+.accunt_edit_mail {
+    float:left;
+    position:absolute;
+    /*left:369px;*/
+    left:56.8%;
+    top:60px;
+    height:23px;
+    /*width:180px;*/
+    width:27.7%;
+
+}
+.accunt_edit_tel {
+    position:absolute;
+    /*left:650px;*/
+    left:100%;
+    top:60px;
+
+}
+.accunt_edit_old_Password {
+    position:absolute;
+    /*left:100px;*/
+    left:15.4%;
+    top:100px;
+
+}
+.accunt_edit_new_Password {
+    position:absolute;
+    /*left:365px;*/
+    left:56.2%;
+    top:100px;
+
+}
+.accunt_edit_confirm_Password {
+    position:absolute;
+    /*left:646px;*/
+    left:99.4%;
+    top:100px;
+
+}
+/*modified by caoyandong************************/
+
+
+/*common for button bg*/
+.button_bg_img {
+    background-image:url('../images/button_normal.png');
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:72px;
+    height:31px;
+}
+.input_info_left {
+    position:absolute;
+    left:35px;/*liangjiajie28*/
+    top:170px;/*liangjiajie28*/
+    width:270px;
+    height:25px;
+    font-size:8pt;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    color:#aaa;
+}
+.input_info_right{
+    position:absolute;
+    left:375px;/*liangjiajie28*/
+    top:170px;/*liangjiajie28*/
+    width:300px;
+    height:25px;
+    font-size:8pt;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    color:#aaa;
+}
+/*for accunt edit confirm button*/
+.accunt_edit_confirm {
+    position:absolute;
+    
+    /*left:690px;*//*liangjiajie28*/
+    left:106%;
+    top:20px;/*liangjiajie28*/
+    /*width:70px;*/
+    width:10.8%;
+    height:25px;
+    background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:7px;
+    border-color:#808080;
+    line-height:25px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+}
+.accunt_edit_confirm_text {
+    position:absolute;
+	left:0px;
+	top:3px;
+	width:62px;
+	height:16px;
+	font-family:Arial;
+	text-align:left;
+	word-wrap:break-word;
+}
+
+
+/*for accunt edit return button*/
+.accunt_edit_return{
+    position:absolute;
+    /*left:778px;*//*liangjiajie28*/
+    left:119.7%;
+    top:20px;/*liangjiajie28*/
+    /*width:70px;*/
+    width:10.8%;
+    height:25px;
+    background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:7px;
+    border-color:#808080;
+    line-height:25px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+}
+/*modified by caoyandong*/
+
+.accunt_edit_return_text {
+    position:absolute;
+	left:0px;
+	top:3px;
+	width:62px;
+	height:16px;
+	font-family:Arial;
+	text-align:left;
+	word-wrap:break-word;
+}
+.Setting_line {
+    /*background-image: url('../images/Setting_line.png');*/
+    background-color:#d3d3d3;
+    position:absolute;
+    left:4.2%;
+    top:145px;
+    width:95.8%;
+    height:1px;
+    
+}
+
+.Setting_tab {
+    position:absolute;
+    /*left:30px;*/
+    /*left:3.6%;*/
+    left:4.3%;
+    top:174px;
+    /*width:842px;*/
+    width:95.7%;
+    height:36px;
+}
+#Setting_tenant {
+    position:relative;
+    /*left:6px;*/
+    top:0px;
+}
+#Setting_user {
+    position:relative;
+    /*left:25px;*/
+    left:2.5%;
+    top:0px;
+}
+#Setting_OBU {
+    position:relative;
+    /*left:45px;*/
+    left:5%;
+    top:0px;
+}
+#Setting_Group {
+    position:relative;
+    /*left:65px;*/
+    left:7.5%;
+    top:0px;
+}
+#Setting_Alert {
+    position:relative;
+    /*left:85px;*/
+    left:10%;
+    top:0px;
+}
+.setting_img_bg_normal {
+    background-color:#f1f1f1;
+    float:left;
+    /*width:110px;*/
+    width:14%;
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border:1px solid #ddd;
+    color:#424242;
+    cursor:default;
+}
+.setting_img_bg_disable {
+    background-color:#ddd;
+    float:left;
+    /*width:110px;*/
+    width:14%;
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border:1px solid #ddd;
+    color:#424242;
+    cursor:pointer;
+}
+.Setting_container {
+    position:absolute;
+    /*left:35px;*/
+    left:4.2%;
+    top:203px;
+    /*width:832px;*//*调整宽度liangjiajie0313*/
+    width:95.5%;
+    height:400px;
+}
+/*********Tenant***********/
+.Setting_container_tenant {
+    position:relative;
+    top:0px;
+    left:1px;
+    /*width:832px;*/
+    width:100%;
+    height:350px;/*公司Tab高度调整liangjiajie0313*/
+    background-color:#f1f1f1;
+    border:1px solid #ddd;
+}
+    .Setting_container_tenant td {
+            font-family:'Microsoft YaHei';
+            font-weight:normal;
+            font-style:normal;
+            text-decoration:none;
+            font-size:10pt;
+            color:#424242;
+            vertical-align:top;/*liangjiajie28*/
+    }
+.Setting_container_tenant_name {
+    position:relative;
+    left:15px;
+    top:25px;
+    width:842px;
+    height:50px;
+}
+.Setting_container_tenant_id {
+    position:relative;
+    left:15px;
+    top:25px;
+    width:842px;
+    height:50px;
+}
+.Setting_tenant_view {
+    position:relative;
+    top:10px;
+    left:2px;
+    /*-moz-user-select: none;*/ /*火狐*/
+    /*-webkit-user-select: none;*/  /*webkit浏览器*/
+    /*-ms-user-select: none;*/   /*IE10*/
+    /*-khtml-user-select: none;*/ /*早期浏览器*/
+    /*user-select: none;*//*#公司简介可以选择liangjiajie0308*/
+}
+.Setting_tenant_Edit {
+    position:relative;
+    top:10px;
+    left:2px;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+#Setting_container_tenant_btn_edit {
+    position:absolute;
+    top:5px;/*编辑按钮位置调整liangjiajie0308*/
+    /*left:700px;*/
+    left:85.9%;
+}
+#Setting_container_tenant_btn_confirm {
+    position:absolute;
+    top:290px;/*编辑按钮位置调整liangjiajie0308*/
+    /*left:600px;*/
+    left:73.5%;
+}
+#Setting_container_tenant_btn_return {
+    position:absolute;
+    top:290px;/*编辑按钮位置调整liangjiajie0308*/
+    /*left:700px;*/
+    left:85.7%;
+}
+
+
+/**********User***********/
+.Setting_container_user_title {
+    position:relative;
+    background-color:#F1F1F1;
+    width:inherit;
+    left:1px;
+    height:50px;
+    line-height:48px;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    border-width:1px 1px 1px 1px;
+    font-size:10pt;
+    /*font-weight:bold;*//*liangjiajie*/
+    border-style:solid;
+    border-color:#ddd;
+    font-weight:bolder;
+    /*mabiao 20140305 #585*/
+    /*padding:0px 0px 0px 70px;*/
+    /*padding:0px 0px 0px 30px;*/
+}
+
+.Setting_container_user_list {
+    position:relative;
+    background-color:#F1F1F1;
+    width:inherit;
+    height:50px;
+    line-height:48px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    left:1px;
+    border-width:0px 1px 1px 1px;
+    border-style:solid;
+    border-color:#ddd;
+}
+
+.Setting_container_user_list_form {
+    position:relative;
+    top:2px;
+    width:80px;
+    height:38px;
+    z-index:2;
+    
+}
+.Setting_container_user_list_table {
+    /*mabiao 20140305 #585*/
+    /*position:absolute;*/
+    position:relative;
+    float:left;
+    /*mabiao 20140305 #585*/
+    top:0px;
+    width:inherit;
+    height:50px;
+    line-height:48px;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    z-index:1;
+    /*mabiao 20140305 #585*/
+    /*padding:0px 0px 0px 70px;*/
+    /*padding:0px 0px 0px 30px;*/
+}
+
+    /*mabiao 20140305 #585*/
+    .Setting_container_user_list_table table {
+        line-height:48px;
+        font-size:10pt;
+        text-align:left;
+        font-family:Microsoft YaHei;
+    }
+    .Setting_container_user_title table {
+        line-height: 48px;
+        text-align: left;
+        font-family: Microsoft YaHei;
+        font-size: 10pt;
+        font-weight: bolder;
+    }
+
+.Setting_container_user_btn {
+    position:relative;
+    background-color:#F1F1F1;
+    width:inherit;
+    /*height:80px;*/
+    height:50px;
+    line-height:43px;
+    text-align:center;
+
+    font-family:Microsoft YaHei;
+    left:1px;
+    border-width:0px 1px 1px 1px;
+    border-style:solid;
+    border-color:#ddd;
+}
+/*mabiao 20140305 #585*/
+/*list中 删除 编辑 重置密码 */
+.cls_Setting_container_user_btn_edit,.cls_Setting_container_user_btn_del,.cls_Setting_container_user_btn_reset {
+    position:relative;
+    height:25px;
+    float:left;
+    top:12px;
+    margin-left:2.5%;
+    line-height:25px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+    color:blue;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+
+.cls_Setting_container_user_btn {
+    width:70px;
+    height:25px;
+    background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:7px;
+    border-color:#808080;
+    line-height:25px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+.cls_Setting_container_OBU_little_btn {
+    width:45px;
+    height:20px;
+    /*background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:5px;
+    border-color:#808080;*/
+    line-height:20px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+    color: blue;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.cls_Setting_container_OBU_Odometerlittle_btn {
+    width:60px;
+    height:20px;
+    /*background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:5px;
+    border-color:#808080;*/
+    line-height:20px;
+    font-size:10pt;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+    color: blue;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+#Setting_container_user_btn_add {
+    position:absolute;
+    /*top:45px;*/
+    top:12px;
+    /*left:35px;*/
+    left:4.4%;
+}
+#Setting_container_user_btn_edit {
+    position:absolute;
+    /*top:45px;*/
+    top:12px;
+    left:125px;
+}
+#Setting_container_user_btn_del {
+    position:absolute;
+    /*top:45px;*/
+    top:12px;
+    left:215px;
+}
+#Setting_container_user_btn_reset {
+    position:absolute;
+    /*top:45px;*/
+    top:12px;
+    left:305px;
+}
+/**********User***********/
+
+/********dialog******/
+#dialog_background {
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background:#FFF;
+    opacity:0.7;
+    z-index:10;
+
+    filter:Alpha(Opacity="70");
+    
+}
+
+#dialog {
+    position:fixed;
+    background-image:url('../images/popup_bk.png');
+    width:465px;
+    height:329px;
+    z-index:11;
+    opacity:1;
+    margin-top:20%;
+    top:-164px;
+    margin-left:50%;
+    left:-232px;
+    filter:Alpha(Opacity="100");
+}
+.dialog_title {
+    position:absolute;
+    top:10px;
+    left:17px;/*liangjiajie*/
+    font-family:Microsoft YaHei;
+    font-size:16px;
+}
+.dialog_text {
+    position:absolute;
+    top:137px;
+    left:30px;
+    width:400px;
+    height:100px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+}
+
+.dialog_text_1 {
+    position:absolute;
+    top:117px;
+    left:30px;
+    width:400px;
+    height:100px;
+    text-align:left;
+    font-family:Microsoft YaHei;
+    font-size:13pt;
+}
+
+.cls_dialog_sure {
+    line-height:30px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    border-width:1px;
+    border-color:#ddd;
+    border-style:solid;
+    background-color:#FFF;
+    border-radius:5px;
+    cursor:pointer;
+}
+#user_error,#user_back{
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:40px;
+    height:30px;
+}
+
+#user_sure {
+    position:absolute;
+    width:60px;
+    bottom:15px;
+    right:140px;
+    height:30px;
+}
+
+#user_copy {
+    position:absolute;
+    width:90px;
+    bottom:15px;
+    right:140px;
+    height:30px;
+}
+
+#user_edit_sure {
+    position:absolute;
+    top:10px;
+    right:17.5%;
+}
+#user_edit_back {
+    position:absolute;
+    top:10px;
+    right:5%;
+}
+/***********OBU**************/
+.popup_error_info {
+    position:absolute;
+    left:170px;
+    bottom:55px;
+    font-size:10pt;
+    color:#ff0000;
+    display:none;
+}
+
+.OBU_dialog_ESN {
+    position:relative;
+    left:100px;
+    top:100px;
+}
+.OBU_dialog_KEY {
+    position:relative;
+    left:100px;
+    top:130px;
+}
+.Setting_container_obu {
+    position:relative;
+    top:0px;
+    left:1px;
+    /*width:832px;*//*调整宽度liangjiajie0313*/
+     width:100%;
+    /*background-color:#f1f1f1;
+    border:1px solid #ddd;*/
+}
+
+.Setting_container_obu_view {
+    position:relative;
+    top:0px;
+}
+    .Setting_container_obu_view td {
+        /*text-align:left;
+        left:10px;
+        height:50px;
+        border-bottom:1px solid #ddd;
+        font-family:'Microsoft YaHei';
+        font-size:10pt;
+        font-weight:normal;
+        font-style:normal;*/
+        /*word-break:break-all;//liangjiajie*/
+    }
+
+/***********OBU**************/
+
+/************Group**********/
+
+#Setting_container_group {
+    position:relative;
+    /*width:832px;*//*调整宽度liangjiajie0313*/
+    width:100%;
+    height:467px;
+    left:1px;
+    background-color:#f1f1f1;
+    border:#ddd 1px solid;
+}
+
+#group_left {
+    position:absolute;
+    /*width:230px;*/
+    width:27.5%;
+    height:360px;
+    /*left:15px;*//*调整宽度liangjiajie0313*/
+    left:1.89%;
+    top:20px;
+}
+
+#group_middle {
+    position:absolute;
+    /*width:230px;*/
+    width:27.5%;
+    height:360px;
+    /*left:265px;*//*调整宽度liangjiajie0313*/
+    left:31.25%;
+    top:20px;
+}
+
+#group_right {
+    position:absolute;
+    /*width:230px;*/
+    width:27.5%;
+    height:360px;
+    /*left:585px;*//*调整宽度liangjiajie0313*/
+    left:70%;
+    top:20px;
+}
+
+.group_tile {
+    position:relative;
+    text-align:left;
+    font-size:10pt;
+    font-family:Microsoft YaHei;
+    font-weight:bolder;/*liangjiajie*/
+}
+
+.group_input {
+    position:relative;
+    background-color:#FFF;
+    height:350px;
+    width:100%;
+    border-width:1px;
+    border-color:#ddd;
+    border-style:solid;
+    overflow-y:auto;
+}
+
+#group_add_vehicle {
+   position:absolute;
+   /*left:505px;*//*调整宽度liangjiajie0313*/
+   left:60%;
+   top:160px;
+}
+
+#group_del_vehicle {
+   position:absolute;
+   /*left:505px;*//*调整宽度liangjiajie0313*/
+   left:60%;
+   top:200px;
+}
+
+/*mabiao for bug 20140219*/
+.group_li,.added_li,.notadded_li {
+    position:relative;
+    font-size:10pt;/*#857 liangjiajie0320*/
+    line-height:25px;/*#857 liangjiajie0320*/
+    text-align:left center;
+    font-family:Microsoft YaHei;
+    list-style-type:none;
+    cursor:default;
+    font-weight:normal;
+
+    white-space:nowrap;     /*强制不换行*/
+    overflow:hidden;            /*自动隐藏文字*/
+    text-overflow: ellipsis;    /*文字隐藏后添加省略号*/
+
+    -moz-user-select: none; /*火狐*//*#750 liangjiajie20140401*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+
+}
+/*mabiao for bug 20140219*/
+
+.group_choose,.added_choose,.notadded_choose {
+    background-color:#ddd;
+}
+
+#group_add_group {
+   position:absolute;
+   /*left:20px;*/
+   left:2.5%;
+   bottom:20px;
+}
+#group_edit_group {
+   position:absolute;
+   /*left:110px;*/
+   left:13.75%;
+   bottom:20px;
+}
+
+#group_del_group {
+   position:absolute;
+   /*left:200px;*/
+   left:25%;
+   bottom:20px;
+}
+
+#group_edit_sure {
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    /*background-color:#F1F1F1;*/
+}
+#group_edit_back {
+    position:absolute;
+    bottom:20px;
+    left:110px;
+    /*background-color:#F1F1F1;*/
+}
+
+#tenant_summary {
+    position:relative;
+    left:0px;
+    top:0px;
+    display:block;
+    width:250px; /*简介框位置调整liangjiajie0308*/
+    height:110px;
+    text-overflow:ellipsis; 
+    -o-text-overflow:ellipsis; 
+    overflow:auto; 
+    word-break:break-all;
+    border:1px solid #ddd;
+    /*white-space:nowrap;*/
+    -o-text-overflow: ellipsis; /* for Opera */ 
+    -moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+    -webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+
+}
+
+#tenant_mail {
+    position:relative;
+    left:0px;
+    top:0px;
+    display:block;
+    width:250px; /*简介框位置调整liangjiajie0308*/
+    height:90px;
+    text-overflow:ellipsis; 
+    -o-text-overflow:ellipsis; 
+    overflow:auto; 
+    word-break:break-all;
+    border:1px solid #ddd;
+    /*white-space:nowrap;*/
+    -o-text-overflow: ellipsis; /* for Opera */ 
+    -moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+    -webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+
+}
+/*fengpan alert阀值*/
+.Setting_container_alert {
+    position:relative;
+    left:1px;
+    background-color:#f1f1f1;
+    border:1px solid #ddd;
+    height:347px;
+}
+    .Setting_container_alert table {
+        font-size:10pt;
+    }
+    .Setting_container_alert tr {
+        height:39px;
+    }
+    .Setting_container_alert td {
+        font-family:'Microsoft YaHei';
+        vertical-align:top;
+    }
+.Setting_alert_threshold {
+    cursor:pointer;
+    color:blue;
+    width:35px;
+}
+.Setting_speed_alert {
+    color:blue;
+    display:none;
+    cursor:pointer;
+    padding-left:20px;
+}
+.Setting_prm_alert {
+    color:blue;
+    display:none;
+    cursor:pointer;
+    padding-left:20px;
+}
+.Setting_motion_alert {
+    color:blue;
+    display:none;
+    cursor:pointer;
+    padding-left:20px;
+}
+#Setting_container_alert_btn_edit {
+    position:absolute;
+    /*left:690px;*/
+    left:80%;
+    top:-15px;
+}
+#Setting_container_alert_btn_confirm {
+    position:absolute;
+    /*left:600px;*/
+    left:67.5%;
+    top:270px;
+    display:none;
+}
+#Setting_container_alert_btn_cancle {
+    position:absolute;
+    /*left:700px;*/
+    left:80%;
+    top:270px;
+    display:none;
+}
+/*fengpan alert阀值*/
+
+#dialog_form_OBU body { 
+    font-size: 62.5%; 
+}
+#dialog_form_user body { 
+    font-size: 62.5%; 
+}
+#dialog_form_group body { 
+    font-size: 62.5%; 
+}
+#dialog_form_group_edit body { 
+    font-size: 62.5%; 
+}
+#dialog_form_OBU input { 
+    display:block; 
+}
+#dialog_form_user input { 
+    display:block; 
+}
+#dialog_form_group input { 
+    display:block; 
+}
+#dialog_form_group_edit input { 
+    display:block; 
+}
+label { 
+    display:block; 
+}
+input.text { 
+    margin-bottom:12px; 
+    width:80%; 
+    padding: .4em; 
+    background-color:#ffffff;
+}
+.ui-button-text-only .ui-button-text { 
+    padding: 0em 1em;
+}
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+    border:1px solid #000000;
+    border-radius: 4px; 
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+.ui-button .ui-button-text {
+    line-height:1.5em;
+}
+.ui-dialog {
+    position:fixed;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0em; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+    background:#f3f3f3;
+    }
+
+.change_vehicl_logo {
+    background-repeat : no-repeat;
+    width : 14px;
+    height : 14px;
+    vertical-align:top;
+}

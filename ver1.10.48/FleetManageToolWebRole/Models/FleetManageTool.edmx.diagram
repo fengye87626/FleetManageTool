@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="900f76424e10482bbf99cd321fefd859" Name="关系图1">
+        <EntityTypeShape EntityType="FleetManageTool.Administrator" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Alert" Width="1.5" PointX="9.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.AlertConfiguration" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Customer" Width="1.5" PointX="5.25" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Diagnostic" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.DomainSetting" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.DTC" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.FleetUser" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.FleetUser_Role" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Geofence" Width="1.5" PointX="3" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Geofence_Vehicle" Width="1.5" PointX="12.75" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.HW_Model" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Logo" Width="1.5" PointX="5.25" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.MMY" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Notification" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Obu" Width="1.5" PointX="3" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Obu_Check" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Operate_Log" Width="1.5" PointX="3" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Parameter" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.RevisionRecord" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Role" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.SystemSetting" Width="1.5" PointX="3" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Tenant" Width="1.5" PointX="0.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Trip" Width="1.5" PointX="9.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Vehicle" Width="1.5" PointX="7.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Vehicle_AlertConfiguration" Width="1.5" PointX="9.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.Vehicle_Obu" Width="1.5" PointX="12.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.VehicleGroup" Width="1.5" PointX="3" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FleetManageTool.VehicleGroup_Vehicle" Width="1.5" PointX="12.75" PointY="30.5" IsExpanded="true" />
+        <AssociationConnector Association="FleetManageTool.FK_Alert_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_AlertConfiguration_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Notification_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Parameter_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Customer_Obu_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Customer_Tenant_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Vehicle_Customer_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_user_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_user_role_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_user_role_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_geofence_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Geofence_Vehicle_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Geofence_Vehicle_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_vehicle_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_obu_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_vehicle_obu_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Operate_Log_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_systemsetting_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_vehicle_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_vehiclegroup_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Trip_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_Vehicle_AlertConfiguration_0" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_vehicle_obu_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_vehiclegroup_vehicle_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FleetManageTool.FK_vehiclegroup_vehicle_0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

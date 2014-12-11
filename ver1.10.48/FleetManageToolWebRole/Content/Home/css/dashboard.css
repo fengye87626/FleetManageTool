@@ -1,0 +1,1902 @@
+div {
+    background-repeat: no-repeat;
+}
+
+.dashboard_num_load{
+    width:32px;
+    height:32px;
+    position:absolute;
+    left:41%;
+    /*background-image: url('../../Common/images/loading.gif');*/
+}
+.dashboard_num_load_long{
+    width:32px;
+    height:32px;
+    position:absolute;
+    left:44%;
+    background-image: url('../../Common/images/loading.gif');
+}
+
+select {
+    cursor:pointer;
+}
+
+a{
+	text-decoration:none;
+}
+
+td {
+    text-align:left;/*liangjiajie*/
+}
+
+.dashboard_p_center {
+    text-align:center;
+}
+
+.dashboard_p_left {
+    text-align:left;
+}
+
+
+.dashboard_span1 {
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+/*20140301caoyandong*/
+.dashboard_span1_0 {
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#000000;
+    position:absolute;
+    left:10px;
+}
+/*20140301caoyandong*/
+.dashboard_span2{
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#333333;
+    line-height: 15px;
+    display: block;
+    text-align: center
+}
+.dashboard_span3{
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_span4{
+    font-family:Microsoft YaHei;
+    font-size:48px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#000000;
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:82px;
+}
+.dashboard_span4_0{
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#000000;
+    position:absolute;
+    left:0px;
+    top:55px;
+    width:100%;
+    height:19px;
+}
+.dashboard_span4_1{
+    font-family:Microsoft YaHei;
+    font-size:48px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#000000;
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:82px;
+}
+.dashboard_span4_1_0{
+    font-family:Microsoft YaHei;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#000000;
+    position:absolute;
+    left:0px;
+    top:55px;
+    width:100%;
+}
+
+/*fengpan 20140604*/
+#dashboard_stopvehicle_long_num{
+	left:20.77%;
+}
+#dashboard_breakvehicle_long_num{
+	left:39.14%;
+}
+#dashboard_alertvehicle_long_num{
+	left:59%;
+}
+#dashboard_missvehicle_long_num{
+	left:77.5%;
+}
+
+/*20140301caoyandong*/
+/*20140227caoyandong*/
+.dashboard_span5{
+    font-family:Microsoft YaHei;
+    font-size:18px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.BMap {
+
+}
+
+/*tr {
+    border-bottom:1px solid #ddd;
+	margin-top:0px;
+	margin-bottom:25px;
+	display: inline-block;
+    vertical-align:middle;
+}*/
+/*modified by caoyandong*/
+.dashboard_vehicleslist {
+    position:absolute;
+    left:1%;
+    top:200px;
+    width:77.7%;
+    border-top:1px solid #ddd;
+    /*table-layout:fixed;*//*liangjiajie*/
+}
+    .dashboard_vehicleslist table {
+        border-spacing:0px 0px;
+        table-layout:fixed;/*liangjiajie*/
+        border-left:1px solid #ddd;
+        border-right:1px solid #ddd;
+    }
+    .dashboard_vehicleslist td {
+        padding-left:0px;/*liangjiajie0312*/
+        border-bottom:1px solid #ddd;
+    }
+    .dashboard_vehicleslist tr{
+        font-size:8pt;
+        vertical-align:central;
+        margin:0px 0px 0px 0px;
+    }
+
+.u142_1_normal {
+    background-image: url('../images/VehicleImage.png');
+}
+
+.u142_1_container {
+    position:absolute;
+    left:26px;
+    top:57px;
+    width:60px;
+    height:60px;
+	z-index:1;
+}
+
+#u142_1_img {
+    position:absolute;
+    left:-20px;
+    top:0px;
+    width:66px;
+    height:66px;
+}
+
+#u142_1_long_img {
+    position:absolute;
+    left:-20px;
+    top:10px;
+    width:66px;
+    height:66px;
+}
+
+.u142_2_container {
+    position:absolute;
+    left:26px;
+    top:137px;
+    width:40px;
+    height:40px;
+	z-index:1;
+}
+
+#u142_2_img {
+    position:absolute;
+    left:-20px;
+    top:0px;
+    width:66px;
+    height:66px;
+}
+
+#u142_2_long_img {
+    position:absolute;
+    left:-20px;
+    top:8px;
+    width:66px;
+    height:66px;
+}
+
+.u142_3_container {
+    position:absolute;
+    left:26px;
+    top:212px;
+    width:60px;
+    height:60px;
+	z-index:1;
+}
+
+#u142_3_img {
+    position:absolute;
+    left:-20px;
+    top:10px;
+    width:66px;
+    height:66px;
+    max-width:66px;
+    width: expression(this.width > 66 ? 66: true);
+}
+
+#u142_3_long_img {
+    position:absolute;
+    left:-20px;
+    top:8px;
+    width:66px;
+    height:66px;
+}
+
+.u142_4_container {
+    position:absolute;
+    left:26px;
+    top:287px;
+    width:60px;
+    height:60px;
+	z-index:1;
+}
+
+#u142_4_img {
+    position:absolute;
+    left:-20px;
+    top:6px;
+    width:66px;
+    height:66px;
+}
+
+
+#u142_4_long_img {
+    position:absolute;
+    left:-20px;
+    top:5px;
+    width:66px;
+    height:66px;
+}
+
+.u142_5_container {
+    position:absolute;
+    left:26px;
+    top:362px;
+    width:60px;
+    height:60px;
+	z-index:1;
+}
+
+#u142_5_img {
+    position:absolute;
+    left:-20px;
+    top:6px;
+    width:66px;
+    height:66px;
+}
+
+#u142_5_long_img {
+    position:absolute;
+    left:-20px;
+    top:5px;
+    width:66px;
+    height:66px;
+}
+
+.dashboard_title {
+    position:absolute;
+    left:1.5%;
+    top:0px;
+    width:140px;
+    height:22px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.dashboard_now_status {
+    position:absolute;
+    left:28px;
+    top:58px;
+    width:140px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.dashboard_status_bar_normal {
+    /*background-image: url('../images/dashboard_status_bar.png');*/
+}
+/*modified by caoyandong*/
+.dashboard_status_bar_container {
+    position:absolute;
+    /*left:10px;
+    top:57px;*/
+    width:79%;
+    height:103px;
+}
+
+#dashboard_status_bar_img {
+    /*background-image: url('../images/dashboard_status_bg.png');*/
+    position:absolute;
+    left:10px;
+    /*top:-1px;*/
+    width:98%;
+    height:100%;
+    background-size: 98% 100%;
+    background-position: center;
+    background-color:#f7f7f7;
+    border:1px solid #ddd;
+}
+/*modified by caoyandong*/
+.dashboard_drivevehicle_bg_normal {
+}
+
+.dashboard_drivevehicle_bg_container {
+    position:absolute;
+    left:22px;
+    top:110px;
+    width:111px;
+    height:121px;
+}
+
+#dashboard_drivevehicle_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:117px;
+    height:127px;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_drivevehicle_num {
+    position:absolute;
+    left:0%;
+    width:33.3%;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+    border-right:1px dashed #ddd;
+}
+.dashboard_drivevehicle_num:link {color: #000000}
+.dashboard_drivevehicle_num:visited {color: #000000}
+.dashboard_drivevehicle_num:hover {background-color: #ddd}
+.dashboard_drivevehicle_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+.dashboard_drivevehicle_text {
+    position:absolute;
+    left:28px;
+    top:107px;
+    width:100px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_stopvehicle_bg_normal {
+    background-image: url('../images/dashboard_status_bg.png');
+}
+
+.dashboard_stopvehicle_bg_container {
+    position:absolute;
+    left:143px;
+    top:110px;
+    width:111px;
+    height:121px;
+}
+
+#dashboard_stopvehicle_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:117px;
+    height:127px;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_stopvehicle_num {
+    position:absolute;
+    left:15.8%;
+    top:11px;
+    width:13.6%;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+    border-right:1px dashed #ddd;
+}
+.dashboard_stopvehicle_num:link {color: #000000}
+.dashboard_stopvehicle_num:visited {color: #000000}
+.dashboard_stopvehicle_num:hover {background-color: #ddd}
+.dashboard_stopvehicle_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+/*modified by caoyandong*/
+.dashboard_stopvehicle_text {
+    position:absolute;
+    left:154px;
+    top:107px;
+    width:89px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_breakvehicle_bg_normal {
+    background-image: url('../images/dashboard_status_bg.png');
+}
+
+.dashboard_breakvehicle_bg_container {
+    position:absolute;
+    left:264px;
+    top:110px;
+    width:111px;
+    height:121px;
+}
+
+#dashboard_breakvehicle_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:117px;
+    height:127px;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_breakvehicle_num {
+    position:absolute;
+    left:0%;
+    width:50%;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+    border-right:1px dashed #ddd;
+}
+.dashboard_breakvehicle_num:link {color: #000000}
+.dashboard_breakvehicle_num:visited {color: #000000}
+.dashboard_breakvehicle_num:hover {background-color: #ddd}
+.dashboard_breakvehicle_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+.dashboard_breakvehicle_text {
+    position:absolute;
+    left:277px;
+    top:107px;
+    width:89px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_alertvehicle_bg_normal {
+    background-image: url('../images/dashboard_status_bg.png');
+}
+
+.dashboard_alertvehicle_bg_container {
+    position:absolute;
+    left:385px;
+    top:110px;
+    width:111px;
+    height:121px;
+}
+
+#dashboard_alertvehicle_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:117px;
+    height:127px;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_alertvehicle_num {
+    position:absolute;
+    left:44.3%;
+    top:11px;
+    width:13.6%;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+    border-right:1px dashed #ddd;
+}
+.dashboard_alertvehicle_num:link {color: #000000}
+.dashboard_alertvehicle_num:visited {color: #000000}
+.dashboard_alertvehicle_num:hover {background-color: #ddd}
+.dashboard_alertvehicle_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+.dashboard_alertvehicle_text {
+    position:absolute;
+    left:385px;
+    top:107px;
+    width:111px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_missvehicle_bg_normal {
+    background-image: url('../images/dashboard_status_bg.png');
+}
+
+.dashboard_missvehicle_bg_container {
+    position:absolute;
+    left:506px;
+    top:110px;
+    width:111px;
+    height:121px;
+}
+
+#dashboard_missvehicle_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:117px;
+    height:127px;
+}
+/*20140301caoyandong*/
+.dashboard_missvehicle_num {
+    position:absolute;
+    left:57.9%;
+    top:11px;
+    width:13.6%;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+}
+.dashboard_missvehicle_num:link {color: #000000}
+.dashboard_missvehicle_num:visited {color: #000000}
+.dashboard_missvehicle_num:hover {background-color: #ddd}
+.dashboard_missvehicle_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+.dashboard_missvehicle_text {
+    position:absolute;
+    left:516px;
+    top:107px;
+    width:100px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.dashboard_nowlocation {
+    position:absolute;
+    left:28px;
+    top:154px;
+    width:140px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.dashboard_viewgroup_text {
+    position:absolute;
+    left:49%;
+    top:154px;
+    width:47px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.dashboard_unchoosed_bg_normal {
+    background-image: url('../images/dashboard_unchoosed_bg.png');
+    background-size: 96% 100%;
+}
+
+.dashboard_unchoosed_bg_container {
+    position:absolute;
+    left:69.4%;
+    top:167px;
+    width:39px;
+    height:25px;
+}
+/*modified by caoyandong*/
+.cursor_style {
+    cursor:pointer;
+}
+
+#dashboard_unchoosed_bg_img {
+    position:absolute;
+    /*left:-3px;*/
+    top:-3px;
+    width:39px;
+    height:31px;
+}
+
+.dashboard_showlist_bg_normal {
+    background-image: url('../images/dashboard_showlist_bg.png');
+}
+
+.dashboard_showlist_bg_container {
+    position:absolute;
+    left:64.8%;
+    top:227px;
+    width:16px;
+    height:16px;
+}
+/*modified by caoyandong*/
+#dashboard_showlist_bg_img {
+    position:absolute;
+    left:11px;
+    top:5px;
+    width:16px;
+    height:16px;
+}
+
+.dashboard_choosed_bg_normal {
+    background-image: url('../images/dashboard_choosed_bg.png');
+    background-size: 96% 100%;
+}
+
+.dashboard_choosed_bg_container {
+    position:absolute;
+    left:74%;
+    top:164px;
+    width:39px;
+    height:25px;
+}
+/*modified by caoyandong*/
+#dashboard_choosed_bg_img {
+    position:absolute;
+    /*left:-3px;*/
+    top:0;
+    width:100%;
+    height:31px;
+}
+
+.dashboard_showmap_bg_normal {
+    background-image: url('../images/dashboard_showmap_bg.png');
+}
+
+.dashboard_showmap_bg_container {
+    position:absolute;
+    left:69.6%;
+    top:227px;
+    width:13px;
+    height:17px;
+}
+/*modified by caoyandong*/
+#dashboard_showmap_bg_img {
+    position:absolute;
+    left:11px;
+    top:8px;
+    width:13px;
+    height:17px;
+}
+
+.dashboard_selectgroup {
+    position:absolute;
+    left:54%;
+    top:163px;
+    font-family:'Microsoft YaHei';
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    color:#333333;
+    width:14.5%;
+    height:25px;
+}
+
+/*modified by caoyandong*/
+.dashboard_BMap_style {
+    position:absolute;
+    left:0.5%;
+    top:195px;
+    width:77.5%;
+    height:602px;/*fengpan 20140408*/
+    margin:5px;
+}
+
+    
+.dashboard_addgeofence_btn_normal {
+    background-image: url('../images/dashboard_addgeofence_btn.png');
+}
+
+.dashboard_addgeofence_btn_container {
+    position:absolute;
+    left:22px;
+    top:766px;
+    width:202px;
+    height:45px;
+}
+
+#dashboard_addgeofence_btn_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:208px;
+    height:51px;
+}
+
+.dashboard_addgeofence_text {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:198px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+
+/*liangjiajie#283*/
+.dashboard_viewalltriplog_container {
+    position:absolute;
+    left:5%;
+    top:774px;
+    width:90%;
+    height:45px;
+    z-index:2;
+    border:1px solid #424242;
+    border-radius:5px;
+}
+/*liangjiajie#283*/
+
+
+.dashboard_viewalltriplog_text {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:100%;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.dashboard_addgeofence_bg_normal {
+    background-image: url('../images/dashboard_addgeofence_bg.png');
+}
+
+.dashboard_addgeofence_bg_container {
+    position:absolute;
+    left:10px;
+    top:755px;
+    width:619px;
+    height:69px;
+}
+
+#dashboard_addgeofence_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:625px;
+    height:75px;
+}
+
+.dashboard_addgeofence_long_bg_normal {
+    background-image: url('../images/dashboard_addgeofence_long_bg.png');
+}
+
+.dashboard_addgeofence_long_bg_container {
+    position:absolute;
+    left:10px;
+    top:755px;
+    width:837px;
+    height:69px;
+}
+
+#dashboard_addgeofence_long_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:843px;
+    height:75px;
+}
+
+.select_group {
+    width:100%;
+    height:25px;
+    border-radius:5px;
+    /* chenyangwen 2014/3/1 */
+    /*-webkit-appearance: none;
+    -moz-appearance:none;
+    appearance:none;
+    background-repeat:no-repeat;
+    background-image:url('../images/select_group_click.png');*/
+    /* chenyangwen 2014/3/1 */
+    background-position:103px;
+    border-radius:5px;
+}
+
+.cls_show_trip_log_img {
+    /*background-image: url('../images/u2_normal.png');*/
+    background-color:#f3f3f3;
+}
+
+.cls_Home_show_trip_log {
+    position:absolute;
+    left:79.5%;
+    top:0px;
+    width:20.5%;
+    height:824px;
+    z-index:1;
+}
+
+#show_trip_log_img {
+    position:absolute;
+    /*left:-3px;*/
+    top:-3px;
+    width:100%;
+    height:827px;/*liangjiajei #279bug*/
+}
+
+.cls_show_trip_log_text  {
+    position:absolute;
+    /*left:2px;*/
+    top:0px;
+    width:100%;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    /*word-wrap:break-word;*/
+}
+.cls_show_trip_log_text_text {
+    position:absolute;
+    left:5px;
+    top:10px;
+    /*width:140px;*/
+    height:14px;
+    font-family:Arial;
+    text-align:left;
+    /*word-wrap:break-word;*/
+}
+
+
+.cls_show_trip_log_text_select {
+    position:absolute;
+    left:70px;
+    top:16px;
+    width:55%;
+    height:25px;
+}
+
+.cls_show_trip_log {
+    position:absolute;
+    cursor:pointer;
+    background:url('../images/Hide-right.png');
+    left:-14px;
+    height:40px;
+    width:15px;
+}
+
+.cls_Home_hide_trip_log {
+    position:absolute;
+    left:98.7%;
+    top:0px;
+    width:1.2%;
+    height:824px;
+}
+
+.cls_hide_trip_log {
+    position:absolute;
+    cursor:pointer;
+    background:url('../images/Show-left.png');
+    left:-14px;
+    height:40px;
+    width:15px;
+}
+
+.cls_trip_log_bar {
+    position:absolute;
+    background:url('../images/Show&Hide_bar.png');
+    left:0px;
+    height:824px;
+    width:100%;
+}
+
+.cls_Home_show_vehicles {
+    position:absolute;
+    background-color:#FFFFFF;
+    left:90px;
+    top:48px;
+    width:127px;
+    height:100px;
+    border-style:solid ;
+    border-width:1px;
+    border-color:#808080;
+    border-radius:6px;
+}
+
+.cls_Home_choose_vehicle {
+    width:100%; 
+    border-radius:5px;
+    height:25px;
+    white-space:nowrap;
+    /*chenyangwen 2014/3/1*/
+    /*-webkit-appearance: none;
+    background-repeat:no-repeat;
+    background-image:url('../images/select_group_click.png');
+    background-position:103px;*/
+    /*chenyangwen 2014/3/1*/
+}
+/**右侧选车 triplog**/
+.cls_Home_trip_log {
+    position:relative;
+    left:7%;
+    top:60px;
+    width:93%;
+    height:800px;
+}
+.cls_Home_trip_log_detail {
+    position:relative;
+    width:inherit;
+    height:50px;
+}
+.cls_Home_trip_log_detail_left , .cls_Home_trip_log_alert_left{
+    position:relative;
+    float:left;
+    height:inherit;
+    width:14%;
+}
+.cls_Home_trip_log_detail_circle , .cls_Home_trip_log_alert_circle{
+    position:relative;
+    
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u68_normal_2.png');
+    width:100%;
+    height:26px;
+}
+.cls_Home_trip_log_alert_circle_red{
+    position:relative;
+    
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u68_normal_2-1.png');
+    /*width:inherit;*/
+    width:32px;
+    height:26px;
+}
+.cls_Home_trip_log_alert_circle_final {
+    position:relative;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u68_normal.png');
+    width:auto;
+    height:25px;
+}
+.cls_Home_trip_log_detail_line {
+    position:relative;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image:url('../images/u71_line.png');
+    width:inherit;
+    height:25px;
+}
+.cls_Home_trip_log_detail_right , .cls_Home_trip_log_alert_right{
+    position:relative;
+    float:left;
+    width:85%;
+    height:inherit;
+}
+.cls_Home_trip_log_detail_time , .cls_Home_trip_log_alert_time{
+    position:relative;
+    top:5px;
+    left:8%;
+    width:80%;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:9pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.cls_Home_trip_log_detail_info {
+    position:relative;
+    top:10px;
+    left:15px;
+    width:inherit;
+    height:13px;
+    font-family:Helvetica;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+
+}
+
+.cls_Home_trip_log_alert {
+    position:relative;
+    width:100%;
+    height:65px;
+}
+.cls_Home_trip_log_alert_line {
+    position:relative;
+    /*mabiao 20140307 TripLog 封装*/
+    width:4.4%;
+    background-color:#BCBCBC;
+    left:51%;
+    height:40px;
+    top:-2px;
+}
+.cls_Home_trip_log_alert_status {
+    position:relative;
+    top:10px;
+    left:8%;
+    width:92%;
+    height:13px;
+    font-family:Microsoft YaHei;
+    font-size:9pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#CC0000;
+    margin-bottom:5px;
+}
+.cls_Home_trip_log_alert_info {
+    position:relative;
+    top:10px;
+    left:8%;
+    width:92%;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:9pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    margin-bottom:3px;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+}
+
+.cls_Home_trip_log_day {
+    position:relative;
+    width:inherit;
+    height:55px;
+}
+.cls_Home_trip_log_day_date {
+    position:relative;
+    width:inherit;
+    height:20px;
+    top:5px;
+    font-family:Microsoft YaHei;
+    font-size:16px;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.cls_Home_trip_log_day_line {
+    position:relative;
+    background-repeat:no-repeat;
+    left:7%;
+    top:7px;
+    background-image:url('../images/u93_line.png');
+    width:inherit;
+    height:45px;
+}
+
+
+.dashboard_status_bar_long_normal {
+    /*background-image: url('../images/dashboard_status_bar_long.png');*/
+}
+
+.dashboard_status_bar_long_container {
+    position:absolute;
+    /*left:13px;
+    top:60px;*/
+    width:98.8%;
+    height:103px;
+}
+/*modified by caoyandong*/
+#dashboard_status_bar_long_img {
+    /*background-image: url('../images/dashboard_status_long_bg.png');*/
+    position:absolute;
+    /*left:-3px;
+    top:-4px;*/
+    width:98%;
+    height:103px;
+    background-position:center;
+    background-size:98.5% 100%;
+    background-color:#f7f7f7;
+    border:1px solid #ddd;
+    left:10px;
+}
+/*modified by caoyandong*/
+.dashboard_drivevehicle_long_bg_normal {
+
+}
+
+.dashboard_drivevehicle_long_bg_container {
+    position:absolute;
+    left:18px;
+    top:109px;
+    width:149px;
+    height:116px;
+}
+
+#dashboard_drivevehicle_long_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:155px;
+    height:122px;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_drivevehicle_long_num {
+    position:absolute;
+    left:2.2%;
+    top:11px;
+    width:18.5%;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+    border-right:1px dashed #ddd;
+}
+.dashboard_drivevehicle_long_num:link {color: #000000}
+.dashboard_drivevehicle_long_num:visited {color: #000000}
+.dashboard_drivevehicle_long_num:hover {background-color: #ddd}
+.dashboard_drivevehicle_long_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+/*20140227caoyandong*/
+.dashboard_drivevehicle_long_text {
+    position:absolute;
+    left:52px;
+    top:107px;
+    width:100px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_stopvehicle_long_bg_normal {
+    background-image: url('../images/dashboard_status_long_bg.png');
+}
+
+.dashboard_stopvehicle_long_bg_container {
+    position:absolute;
+    left:184px;
+    top:109px;
+    width:149px;
+    height:116px;
+}
+
+#dashboard_stopvehicle_long_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:155px;
+    height:122px;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_stopvehicle_long_num {
+    position:absolute;
+    left:182px;
+    top:68px;
+    width:161px;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+}
+.dashboard_stopvehicle_long_num:link {color: #000000}
+.dashboard_stopvehicle_long_num:visited {color: #000000}
+.dashboard_stopvehicle_long_num:hover {background-color: #ddd}
+.dashboard_stopvehicle_long_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+.dashboard_stopvehicle_long_text {
+    position:absolute;
+    left:214px;
+    top:107px;
+    width:89px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_breakvehicle_long_bg_normal {
+    background-image: url('../images/dashboard_status_long_bg.png');
+}
+
+.dashboard_breakvehicle_long_bg_container {
+    position:absolute;
+    left:353px;
+    top:109px;
+    width:149px;
+    height:116px;
+}
+
+#dashboard_breakvehicle_long_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:155px;
+    height:122px;
+}
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_breakvehicle_long_num {
+    position:absolute;
+    left:342px;
+    top:68px;
+    width:162px;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+}
+.dashboard_breakvehicle_long_num:link {color: #000000}
+.dashboard_breakvehicle_long_num:visited {color: #000000}
+.dashboard_breakvehicle_long_num:hover {background-color: #ddd}
+.dashboard_breakvehicle_long_num:active {color: #000000}
+/*20140301caoyandong*/
+/*modified by caoyandong*/
+/*20140227caoyandong*/
+.dashboard_breakvehicle_long_text {
+    position:absolute;
+    left:382px;
+    top:107px;
+    width:89px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_alertvehicle_long_bg_normal {
+    background-image: url('../images/dashboard_status_long_bg.png');
+}
+
+.dashboard_alertvehicle_long_bg_container {
+    position:absolute;
+    left:521px;
+    top:109px;
+    width:149px;
+    height:116px;
+}
+
+#dashboard_alertvehicle_long_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:155px;
+    height:122px;
+}
+/*modified by caoyandong*/
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_alertvehicle_long_num {
+    position:absolute;
+    left:511px;
+    top:68px;
+    width:165px;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+}
+.dashboard_alertvehicle_long_num:link {color: #000000}
+.dashboard_alertvehicle_long_num:visited {color: #000000}
+.dashboard_alertvehicle_long_num:hover {background-color: #ddd}
+.dashboard_alertvehicle_long_num:active {color: #000000}
+/*20140301caoyandong*/
+/*20140227caoyandong*/
+.dashboard_alertvehicle_long_text {
+    position:absolute;
+    left:538px;
+    top:107px;
+    width:111px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_missvehicle_long_bg_normal {
+    background-image: url('../images/dashboard_status_long_bg.png');
+}
+
+.dashboard_missvehicle_long_bg_container {
+    position:absolute;
+    left:687px;
+    top:109px;
+    width:149px;
+    height:116px;
+}
+
+#dashboard_missvehicle_long_bg_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:155px;
+    height:122px;
+}
+/*modified by caoyandong*/
+/*20140227caoyandong*/
+/*20140301caoyandong*/
+.dashboard_missvehicle_long_num {
+    position:absolute;
+    left:677px;
+    top:68px;
+    width:165px;
+    height:82px;
+    font-family:Arial;
+    text-align:center;
+    word-wrap:break-word;
+}
+.dashboard_missvehicle_long_num:link {color: #000000}
+.dashboard_missvehicle_long_num:visited {color: #000000}
+.dashboard_missvehicle_long_num:hover {background-color: #ddd}
+.dashboard_missvehicle_long_num:active {color: #000000}
+/*20140301caoyandong*/
+/*20140227caoyandong*/
+.dashboard_missvehicle_long_text {
+    position:absolute;
+    left:710px;
+    top:107px;
+    width:100px;
+    height:16px;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+/*modified by caoyandong*/
+.dashboard_vehicleslist img {
+    width:45px;
+    height:auto;
+    margin:0px;
+    padding:0px;
+}
+.dashboard_vehicleslist_long img {
+    width:45px;
+    height:auto;
+    margin:0px;
+    padding:0px;
+}
+.dashboard_vehicleslist_long {
+    position:absolute;
+    left:1%;
+    top:200px;/*modified by caoyandong*/
+    width:96.4%;/*liangjiajie*/
+    border-top:1px solid #ddd;
+    /*table-layout:fixed;*//*liangjiajie*/
+}
+    .dashboard_vehicleslist_long table {
+        border-spacing:0px 0px;
+        table-layout:fixed;/*liangjiajie*/
+        border-left:1px solid #ddd;
+        border-right:1px solid #ddd;
+    }
+    .dashboard_vehicleslist_long td {
+        border-bottom:1px solid #ddd;
+        padding-left:0px;/*liangjiajie0312*/
+    }
+    .dashboard_vehicleslist_long tr{
+        font-size:9pt;
+        vertical-align:central;
+        margin:0px 0px 0px 0px;
+    }
+
+.u142_container_long {
+    position:absolute;
+    left:36px;
+    top:60px;
+    width:60px;
+    height:60px;
+    z-index:2;
+}
+#u142_long_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:66px;
+    height:66px;
+}
+
+
+.VehiclesInfo_style {
+    position:absolute;
+    float:left;
+    top:5px;
+    left:5px;
+    width:296px;
+    height:80px;
+}
+.VehiclesInfo_left_style{
+    position:absolute;
+    float:left;
+    top:7px;
+    left:6px;
+    width:70px;
+    height:70px;
+}
+
+.VehiclesInfo_right_style{
+    position:absolute;
+    float:left;
+    top:7px;
+    left:80px;
+    width:213px;
+    height:70px;
+}
+
+.VehiclesInfo_Name_style {
+    position:relative;
+    top:0px;
+    left:0px;
+    width:130px;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    font-weight:bolder;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; 
+    text-overflow:ellipsis; 
+    overflow: hidden; 
+}
+
+.VehiclesInfo_Location_style{
+    position:absolute;
+    top:18px;
+    left:0px;
+    width:inherit;
+    height:18px;
+}
+.VehiclesInfo_Location_text_style {
+    position:relative;
+    float:left;
+    top:14px;
+    left:0px;
+    width:160px;
+    height:20px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+    white-space:nowrap; /*一行显示*/
+    text-overflow:ellipsis; /*显示...*/
+    overflow: hidden; /*缺少无效*/
+
+}
+
+.VehiclesInfo_Speed_style {
+    position:absolute;
+    float:left;
+    top:0px;
+    right:0px;
+    width:auto;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+.VehiclesInfo_EngineOnTime_style {
+    position:absolute;
+    float:left;
+    top:17px;
+    right:0px;
+    width:auto;
+    height:18px;
+    font-family:Microsoft YaHei;
+    font-size:13px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.VehiclesInfo_Status_icon_style {
+    position:absolute;
+    float:left;
+    left:-3px;
+    top:55px;
+    width:16px;
+    height:16px;
+    background-image:url('../images/HealthStatus_icon.png');
+    background-repeat:no-repeat;
+}
+
+.VehiclesInfo_Status_style{
+    position:absolute;
+    top:53px;
+    left:15px;
+    width:auto;
+    height:16px;
+    font-family:Microsoft YaHei;
+    font-size:11px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#FF0000;
+}
+
+.VehiclesInfo_Alert_icon_style {
+    position:absolute;
+    float:left;
+    top:55px;
+    left:64px;
+    width:16px;
+    height:16px;
+    background-image:url('../images/Alert_icon.png');
+    background-repeat:no-repeat;
+}
+
+.VehiclesInfo_Alert_style {
+    position:absolute;
+    float:left;
+    top:53px;
+    left:81px;
+    width:auto;
+    height:20px;
+    font-family:Microsoft YaHei;
+    font-size:11px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#FF0000;
+}
+
+.VehiclesInfo_view_detail_style {
+    position:absolute;
+    float:left;
+    top:52px;
+    right:0px; 
+    width:80px;
+    height:18px;
+    background-color:#FFF;
+    border-width:1px;
+    border-radius:5px;
+    border-color:#333333;
+    border-style:solid;
+    text-align:center;
+    vertical-align:middle;
+    font-family:Microsoft YaHei;
+    line-height:20px;
+    font-size:8pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    color:#424242;
+}
+
+.VehiclesInfo_Arrow_style {
+    position:absolute;
+    overflow:hidden;
+    float:left;
+    top:86px;
+    left:126px;
+    width: 40px;
+    height: 31px;
+    background-repeat:no-repeat;
+}
+
+.VehiclesInfo_ArrowIcon_style {
+    position:absolute;
+    float:left;
+    top: -10px;
+    left: 5px;
+    width: 31px;
+    height: 34px;
+    background-image:url('../images/arrow.png');
+    background-repeat:no-repeat;
+}
+
+.Dashaboard_List {
+	position:relative;
+    /*background-color:#FFF;*/
+    /*border:#808080 solid 1px;*/
+    /*border-radius:7px;*/
+    color:blue;/*liangjiajie0312*/
+    left:-8px;/*liangjiajie*/
+    width:100%;/*liangjiajie0312*/
+    font-family:Microsoft YaHei;
+    line-height:20px;
+    font-size:10pt;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+}
+/*liangjiajie*/
+.Dashaboard_List_title {
+	position:relative;
+    background-color:#FFF;
+    border:#f1f1f1 solid 1px;
+    left:-8px;
+    width:70px;
+}
+/*liangjiajie*/
+
+.cls_trip_log_detail_line_arrow {
+    position:relative;
+    background-repeat:no-repeat;
+    background-image:url('../images/arrows-3_40.png');
+    width:inherit;
+    height:40px;
+    width:9px;
+    left:5.5%;
+}
+.cls_Vehicles_trip_log_detail_Left_Start {
+    position:relative;
+    float:left;
+    background-image:url('../images/Clock_Start1.png');
+    background-repeat:no-repeat;
+    height:16px;
+    width:50%;
+    /*mabiao 20140301*/
+    cursor:default;
+}
+.cls_Vehicles_trip_log_detail_Left_End {
+    position:relative;
+    float:left;
+    background-image:url('../images/Clock_Leave.png');
+    background-repeat:no-repeat;
+    height:16px;
+    width:50%;
+    /*mabiao 20140301*/
+    cursor:default;
+}
+/*modified by caoyandong*/
+#dashaboard_short_lf {
+    position:absolute;
+    /*background:url('../images/Short_Lf.png');*/
+    background-size:100% 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+    width:57%;
+    height:81px;
+    left:1.5%;
+    top:11px;
+    background-color:#ededed;
+    border:1px solid #ddd;
+}
+/*background-color:black;*/
+/*20140301caoyandong*/
+.dashboard_span4 {
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+}
+.dashboard_span4:link {color: #000000}
+.dashboard_span4:visited {color: #000000}
+.dashboard_span4:hover {background-color: #ddd}
+.dashboard_span4:active {color: #000000}
+.dashboard_span4_1 {
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+}
+.dashboard_span4_1:link {color: #000000}
+.dashboard_span4_1:visited {color: #000000}
+.dashboard_span4_1:hover {background-color: #ddd}
+.dashboard_span4_1:active {color: #000000}
+
+#dashaboard_short_rg {
+    position:absolute;
+    /*background:url('../images/Short_Rg.png');*/
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    width:38%;
+    height:81px;
+    right:1.5%;
+    top:11px;
+    background-color:#ededed;
+    border:1px solid #ddd;
+}
+/*modified by caoyandong*/
+#dashaboard_long_lf {
+    position:absolute;
+    /*background:url('../images/Long_Lf.png');*/
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    width:55.5%;
+    height:81px;
+    left:2.2%;
+    top:11px;
+    background-color:#ededed;
+    border:1px solid #ddd;
+}
+
+#dashaboard_long_rg {
+    position:absolute;
+    /*background:url('../images/Long_Rg.png');*/
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+    width:37%;
+    height:81px;
+    left:59%;
+    top:11px;
+    background-color:#ededed;
+    border:1px solid #ddd;
+}
+/*modified by caoyandong*/
+.dashboard_map_hover {
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+	-o-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+/*fengpan 20140408*/
+.dashboard_button_hide_line_up {
+    height:2px;
+    background-color:#ddd;
+    top:56px;
+    left:1%;
+    width:77.5%;
+    position:relative;
+    display:none;
+}
+.dashboard_button_hide_button_up {
+    background-image:url('../images/Show-down.png');
+    position:relative;
+    /*left:34%;*/
+    top:55px;
+    width:79.5%;
+    height:15px;
+    display:none;
+    cursor:pointer;
+    background-position:center;
+}
+.dashboard_button_hide_line_down {
+    height:2px;
+    background-color:#ddd;
+    top:178px;
+    left:1%;
+    width:77.5%;
+    position:relative;
+}
+.dashboard_button_hide_button_down {
+    background-image:url('../images/Hide-up.png');
+    position:relative;
+    /*left:34%;*/
+    top:162px;
+    width:79.5%;
+    height:15px;
+    cursor:pointer;
+    background-position:center;
+}
+
+.dashboard_BMap_mother {
+    position:relative;
+    top:5px;
+}
+.dashboard_title_lable {
+    position:relative;
+    top:5px;
+    width:100%;
+}
+/*add by li-xiaofei for 684 on 2014/4/24*/
+.infoBox {
+   cursor:default;
+}
+/*add by li-xiaofei for 684 on 2014/4/24*/
+
+
+.ui-button-text-only .ui-button-text { 
+    padding: 0.1em 1em;
+}
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+    border:1px solid #000000;
+    border-radius: 4px; 
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+.ui-button .ui-button-text {
+    line-height:1.7em;
+}
+.ui-dialog {
+    position:fixed;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0em; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+    background:#f3f3f3;
+    }
+
+
+
+/*fengpan 20140617*/
+#dashboard_stopvehicle_num {
+    left:33.3%
+}
+#dashboard_breakvehicle_num {
+    left:66.7%
+}
+#dashboard_alertvehicle_num {
+    left:50%;
+}

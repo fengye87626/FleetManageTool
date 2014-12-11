@@ -1,0 +1,68 @@
+.table_stytle
+{
+    width:850px;
+	background:#F1F1F1;
+	border-style:solid;
+    border:1px solid #ddd;
+    border-bottom:0px solid #ddd;
+}
+#id_select {
+    width:848px;
+    height:45px;
+	background:#F1F1F1;
+	border-style:solid;
+    border:1px solid #ddd;
+    border-bottom:0px solid #ddd;
+}
+a {
+    text-decoration:none;
+}
+td {
+     height:45px;
+     border-bottom:1px solid #ddd;
+     padding-left:10px;
+}
+.Utilization {
+    width:850px;
+    position:relative;
+    left:10px;
+}
+
+.table_title
+{
+    position:relative;
+    left:10px;
+    font-size: 24px
+
+}
+
+.button_style {
+    width:70px;
+    height:25px;
+    background-color:#FFF;
+    border-width:1px;
+    border-style:solid;
+    border-radius:7px;
+    border-color:#808080;
+    line-height:25px;
+    font-size:11px;
+    text-align:center;
+    font-family:Microsoft YaHei;
+    cursor:pointer;
+
+}
+.button_div {
+    position:relative;
+    width:200px;
+    top:10px;
+    left:690px;
+}
+#button_confirm {
+    position:relative;
+    float:left;
+}
+#button_return {
+    position:relative;
+    float:left;
+    left:10px;
+}

@@ -1,0 +1,51 @@
+﻿/* jquery.page.js css  */  
+ul.pages {display:block;border:none;text-transform:uppercase;font-size:12px;padding:0;}  
+ul.pages li {list-style:none;float:left;border:0px solid #b36d41;text-decoration:none;margin:0 5px 0 0;padding:5px;}  
+ul.pages li:hover {border:0px solid #afdfe4;background-color:#afdfe4;}  
+ul.pages li.pgEmpty {border:0px solid #f0f0f0;color:#d9d6c3;}  
+ul.pages li.thpoint {border:none;cursor:auto; color:#000;background-color:#fff;font-weight: bolder;color:#868686;}  
+ul.pages li.pgCurrent {border: 0px double #fff;  border-color: #afdfe4;color:#FFF;font-weight:700;background-color:#afdfe4;} 
+#paper-error-dialog body { 
+    font-size: 62.5%; 
+}
+.ui-dialog .ui-state-error { 
+    padding: .3em; 
+}
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    display: none;
+}
+.ui-dialog .ui-dialog-title{
+    display: none;
+}
+.ui-button {
+    height:25px;
+    background-color:#fff;
+    border:1px solid #000000;
+    border-radius: 4px; 
+}
+span.ui-button-text {
+    background-color:white;
+    margin:0px;
+}
+/*.ui-button .ui-button-text {
+    line-height:1.7em;
+}*/
+.ui-dialog {
+    position:fixed;
+}
+.ui-dialog .ui-dialog-buttonpane button { 
+    margin: 0.1em .4em .1em 0em; 
+    cursor: pointer; 
+}
+.ui-dialog .ui-dialog-content {
+    overflow:hidden; 
+}
+.ui-widget-content {
+        background:#f3f3f3;
+}
+.ui-button-text-only .ui-button-text { 
+    padding: 0.1em 1em;
+}

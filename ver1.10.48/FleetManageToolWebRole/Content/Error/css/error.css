@@ -1,0 +1,78 @@
+﻿.errorImage {
+    top:50%;
+    left:50%;
+    height:500px;
+    width:500px;
+    margin: 0 auto;
+    text-align:center;
+    background-image:url("../images/x.png");
+    background-repeat:no-repeat;
+    background-position: center top; 
+}
+a {
+    text-decoration:underline;
+}
+.errorText {
+    position:relative;
+    top:210px;
+    font-size:15pt;
+    font-family:'Microsoft YaHei';
+}
+
+.body_center {
+    position:absolute;
+    margin:0px auto;
+    top:0px;
+    height:500px;
+    margin-left:50%;
+    width:500px;
+    left:-250px;
+}
+
+.info_div {
+    position:absolute;
+    background-color:#ddd;
+    top:180px;
+    width:500px;
+    height:250px;
+    border:#bbb solid 1px;
+}
+.code_div {
+    position:absolute;
+    width:150px;
+    height:250px;
+    float:left;
+}
+
+.error_code {
+    position:absolute;
+    color:#005fca;
+    font-size:40pt;
+    top:80px;
+    left:50px;
+    font-family:'Microsoft YaHei';
+}
+
+.text_div {
+    position:absolute;
+    left:150px;
+    width:350px;
+    height:250px;
+    float:left;
+}
+
+.error_text_div {
+    position:relative;
+    top:40px;
+    left:20px;
+    width:300px;
+    height:20px;
+    text-align:left;
+    margin:20px;
+}
+
+.error_text {
+    color:black;
+    font-size:13pt;
+    font-family:'Microsoft YaHei';
+}
